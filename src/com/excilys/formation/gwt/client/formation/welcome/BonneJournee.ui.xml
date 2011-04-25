@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<header>Bonne journée !</header>
+		<section class="center">
+			<p>N'oubliez pas de rallumer vos téléphones à la fin de la journée ;-)</p>
+		</section>
+	</div>
+</ui:UiBinder>

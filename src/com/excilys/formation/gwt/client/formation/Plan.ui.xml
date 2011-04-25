@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<header>Plan du cours</header>
+		<section>
+			<ul class="summary">
+				<li><a href="#chapter2slide1">Introduction</a></li>
+				<li><a href="#chapter3slide1">Environnement de développement</a></li>
+				<li><a href="#chapter4slide1">Hosted Mode</a></li>
+				<li><a href="#chapter5slide1">Widgets</a></li>
+				<li><a href="#chapter6slide1">Events</a></li>
+				<li><a href="#chapter7slide1">RPC</a></li>
+				<li><a href="#chapter8slide1">UiBinder</a></li>
+				<li><a href="#chapter9slide1">ClientBundle</a></li>
+				<li><a href="#chapter10slide1">Outils avancés</a></li>
+				<li><a href="#chapter11slide1">Questionnaires</a></li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

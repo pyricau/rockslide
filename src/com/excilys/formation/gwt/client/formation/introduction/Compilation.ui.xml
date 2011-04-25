@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<ui:image field="schema" src="compilation.png" />
+
+	<ui:style>
+		@sprite .schema {
+			gwt-image: 'schema';
+		}
+	</ui:style>
+
+	<div class="slide">
+		<header>Compilation</header>
+		<section>
+			<ul class="summary">
+				<li>Tout se passe à la compilation</li>
+				<li>Création de permutation</li>
+			</ul>
+			<div class="{style.schema}" />
+		</section>
+	</div>
+</ui:UiBinder>

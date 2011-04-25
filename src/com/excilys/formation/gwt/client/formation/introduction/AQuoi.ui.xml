@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<header>GWT, à quoi ça sert ?</header>
+		<section>
+			<ul class="summary">
+				<li>
+					RIA (
+					<span class="redtag">HTML</span>
+					/
+					<span class="yellowtag">Javascript</span>
+					/
+					<span class="greentag">CSS</span>
+					) développées en Java
+				</li>
+				<li>
+					Abstraction
+					<ul>
+						<li>Navigateurs</li>
+						<li>Javascript / Ajax</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

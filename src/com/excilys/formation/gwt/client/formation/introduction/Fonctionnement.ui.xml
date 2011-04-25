@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<ui:image field="schema" src="fonctionnement.png" />
+
+	<ui:style>
+		@sprite .schema {
+			gwt-image: 'schema';
+		}
+	</ui:style>
+
+	<div class="slide">
+		<header>
+			Fonctionnement
+		</header>
+		<section>
+			<div class="{style.schema}" />
+		</section>
+	</div>
+</ui:UiBinder>

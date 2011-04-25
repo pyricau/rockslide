@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	>
+	
+	<g:HTMLPanel addStyleNames="slide">
+		<header>Trop simple !</header>
+		<section>
+			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode" /> 
+			<example>
+				<g:Label>Salut tout le monde !</g:Label>
+				<g:Button ui:field="button">Cliquez moi</g:Button>
+			</example>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>
