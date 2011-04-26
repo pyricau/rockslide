@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<header>
+			Widgets GWT
+		</header>
+		<section>
+			<ul class="summary">
+				<li>
+					Le Showcase GWT détail des widgets disponibles :
+					<a href="http://gwt.google.com/samples/Showcase/Showcase.html">http://gwt.google.com/samples/Showcase/Showcase.html</a>
+				</li>
+				<li>Controls, list, menus, text input, popups, panels, tables, cell
+					widget, etc.</li>
+				<li>
+					Ces widgets sont de bas niveaux
+					<ul>
+						<li>Créer ses propres widgets à partir de composition</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>
