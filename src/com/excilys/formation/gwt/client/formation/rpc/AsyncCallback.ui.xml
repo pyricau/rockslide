@@ -1,6 +1,9 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'>
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
+	>
 
 	<ui:with field="brushes"
 		type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes" />
@@ -8,7 +11,7 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Mise en place d'un appel asynchrone</header>
 		<section>
-			<pre ui:field="codeSample" class="codeSample">
+			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
 public void sayHello() {
 	HelloServiceAsync helloService = GWT.create(HelloService.class);
 	helloService.sayHello(new AsyncCallback&lt;String&gt;(
@@ -28,10 +31,7 @@ public void sayHello() {
 			}
 		}
 	));
-}
-			</pre>
-			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode"
-				brush="{brushes.JAVA}" />
+}</pre></sl:CodeHighlighter>				
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder> 

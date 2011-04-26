@@ -53,7 +53,7 @@ public abstract class Chapter {
      *            Must be a UiBinder<Widget, CodeSlide>. The signature is Object
      *            because GWT.create is generic.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     protected final void addCodeSlide(Object uiBinder) {
         addPresentable(new CodeSlide((UiBinder<Widget, CodeSlide>) uiBinder));
     }

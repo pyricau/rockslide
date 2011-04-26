@@ -45,8 +45,8 @@ public class CodeHighlighter extends Composite implements HasHTML {
             if (parent != null) {
                 parent.clear();
             }
-            highlighter.setText(code);
             panel.setWidget(highlighter);
+            highlighter.setText(code);
         }
     }
 

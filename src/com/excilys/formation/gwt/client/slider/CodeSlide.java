@@ -5,13 +5,18 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class CodeSlide extends Composite implements Presentable {
+public class CodeSlide<T extends CodeSlide<T>> extends Composite implements Presentable {
 
     @UiField
     public CodeHighlighter sourceCode;
 
-    public CodeSlide(UiBinder<Widget, CodeSlide> uiBinder) {
-        initWidget(uiBinder.createAndBindUi(this));
+    public CodeSlide(UiBinder<Widget, T> uiBinder) {
+        initWidget(uiBinder.createAndBindUi(castThis()));
+    }
+
+    @SuppressWarnings("unchecked")
+    public T castThis() {
+        return (T) this;
     }
 
     @Override
