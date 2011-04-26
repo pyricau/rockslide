@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	 
+	<div class="slide">
+		<header>
+			Principe
+		</header>
+		<section>
+			<ul class="summary">
+				<li>Regroupement des ressources en Bundle</li>
+				<ul>
+					<li>Images</li>
+					<li>CSS</li>
+					<li>Fichiers texte</li>
+					<li>I18N</li>
+				</ul>
+				<li>Traitement à la compilation</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>
