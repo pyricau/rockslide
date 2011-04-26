@@ -5,17 +5,11 @@
 	>
 	
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
-	
-	<ui:style>
-		.codeSample {
-			display: none;
-		}
-	</ui:style>
-	
+
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Trop simple !</header>
 		<section>
-			<pre ui:field="codeSample" class="{style.codeSample}">
+			<pre ui:field="codeSample" class="codeSample">
 package fr.koala.gwt.introduction.client;
 // [...]
 public class Introduction implements EntryPoint {
