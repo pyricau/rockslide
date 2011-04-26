@@ -1,6 +1,5 @@
 package com.excilys.formation.gwt.client.formation.questionnaires;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
 import com.excilys.formation.gwt.client.slider.Chapter;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
 import com.google.gwt.core.client.GWT;
@@ -16,7 +15,6 @@ public class Questionnaires extends Chapter {
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
-        addSlide(FormationGwt.PLAN);
     }
 
 }
