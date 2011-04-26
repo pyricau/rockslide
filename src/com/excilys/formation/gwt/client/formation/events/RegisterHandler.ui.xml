@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
+	>
+	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<g:HTMLPanel addStyleNames="slide">
+		<header>Enregistrement de handler</header>
+		<section>
+			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
+public interface HasCancelActionHandler extends HasHandlers {
+  HandlerRegistration addCancelActionHandler(CancelActionHandler handler);
+}
+// [...]
+public class ChildView extends Composite implements HasCancelActionHandlers {
+
+  HandlerRegistration addCancelActionHandler(CancelActionHandler handler) {
+    return this.addHandler(handler, CancelActionEvent.TYPE);
+  }
+}
+// [...]
+public ParentView() {
+  ChildView myView = new ChildView();
+  myView.addCancelActionHandler(new CancelActionHandler() {
+    public void onCancelAction(CancelActionEvent event) {
+      // Gestion de l'évènement
+    }
+  });
+}</pre></sl:CodeHighlighter>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>

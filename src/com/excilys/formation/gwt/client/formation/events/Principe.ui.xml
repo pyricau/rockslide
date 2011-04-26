@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<header>Principe</header>
+		<section>
+			<ul class="summary">
+				<li>Couplage faible entre les composants</li>
+				<li>
+					Communication
+					<ul>
+						<li>avec son parent</li>
+						<li>avec l'ensemble de l'application</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>
