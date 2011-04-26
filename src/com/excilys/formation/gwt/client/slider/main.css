@@ -226,7 +226,7 @@ section.center {
 	width: 900px;
 }
 
-pre {
+pre.important {
 	text-align: left;
 	font-size: 16px;
 	font-family: Monaco, Courier;
@@ -242,7 +242,7 @@ pre {
 	-moz-column-count: 2;
 }
 
-pre select {
+pre.important select {
 	font-size: 16px;
 	font-family: Monaco, Courier;
 	border: 1px solid #c61800;
@@ -266,21 +266,21 @@ button.large {
 	font-size: 32px;
 }
 
-pre b {
+pre.important b {
 	font-weight: normal;
 	color: #c61800;
 	text-shadow: #c61800 0 0 1px;
 	/*letter-spacing: -1px;*/
 }
 
-pre em {
+pre.important em {
 	font-weight: normal;
 	font-style: normal;
 	color: #18a600;
 	text-shadow: #18a600 0 0 1px;
 }
 
-pre input[type="range"] {
+pre.important input[type="range"] {
 	height: 6px;
 	cursor: pointer;
 	width: auto;

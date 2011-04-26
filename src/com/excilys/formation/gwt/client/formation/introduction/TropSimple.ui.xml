@@ -2,6 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
 	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
 	>
 	
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
@@ -9,7 +10,7 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Trop simple !</header>
 		<section>
-			<pre ui:field="codeSample" class="codeSample">
+			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
 package fr.koala.gwt.introduction.client;
 // [...]
 public class Introduction implements EntryPoint {
@@ -27,9 +28,7 @@ public class Introduction implements EntryPoint {
         });
         RootPanel.get().add(button);
     }
-}
-			</pre>
-			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}" />
+}</pre></sl:CodeHighlighter>
 			<example>
 				<g:Label>Salut tout le monde !</g:Label>
 				<g:Button ui:field="button">Cliquez moi</g:Button>

@@ -9,4 +9,8 @@ public class ElementSlide extends Widget implements Presentable {
     public ElementSlide(UiBinder<Element, ElementSlide> uiBinder) {
         setElement(uiBinder.createAndBindUi(this));
     }
+
+    @Override
+    public void visible() {
+    }
 }

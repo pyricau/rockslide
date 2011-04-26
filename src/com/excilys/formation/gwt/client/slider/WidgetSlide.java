@@ -9,4 +9,8 @@ public class WidgetSlide extends Composite implements Presentable {
     public WidgetSlide(UiBinder<Widget, WidgetSlide> uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
+
+    @Override
+    public void visible() {
+    }
 }

@@ -2,11 +2,13 @@ package com.excilys.formation.gwt.client.formation.rpc;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt;
 import com.excilys.formation.gwt.client.slider.Chapter;
+import com.excilys.formation.gwt.client.slider.CodeSlide;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
+import com.google.gwt.user.client.ui.Widget;
 
 public class RPC extends Chapter {
 
@@ -31,6 +33,9 @@ public class RPC extends Chapter {
     @UiTemplate("Autres.ui.xml")
     interface Autres extends UiBinder<Element, ElementSlide> {}
 
+    @UiTemplate("AsyncCallback.ui.xml")
+    interface AsyncCallback extends UiBinder<Widget, CodeSlide<?>> {}
+
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
@@ -38,7 +43,7 @@ public class RPC extends Chapter {
         addSlide(GWT.create(CommunicationGWT.class));
         addSlide(GWT.create(CommunicationRPC.class));
         addSlide(GWT.create(API.class));
-        addPresentable(new AsyncCallback());
+        addCodeSlide(GWT.create(AsyncCallback.class));
         addSlide(GWT.create(Spring.class));
         addSlide(GWT.create(Autres.class));
         addSlide(FormationGwt.PLAN);
