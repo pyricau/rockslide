@@ -12,6 +12,7 @@ public abstract class Chapter {
     private final List<Presentable> slides = new ArrayList<Presentable>();
 
     public final List<Presentable> getSlides() {
+        slides.clear();
         buildSlides();
         return slides;
     }

@@ -99,6 +99,17 @@ public class Presentation extends Composite {
         changeSlideClass(getSlide(index + 1), "future");
         changeSlideClass(getSlide(index + 2), "far-future");
         History.newItem(SlideViewer.CHAPTER_PREFIX + currentChapter + SlideViewer.SLIDE_PREFIX + index, false);
+
+        slideVisible(index - 1);
+        slideVisible(index + 1);
+        slideVisible(index); // Must be last, has priority
+    }
+
+    private void slideVisible(int index) {
+        Presentable slide = getSlide(index);
+        if (slide != null) {
+            slide.visible();
+        }
     }
 
     /**
