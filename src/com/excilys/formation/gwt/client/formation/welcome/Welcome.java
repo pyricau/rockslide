@@ -16,11 +16,28 @@ public class Welcome extends Chapter {
     @UiTemplate("BonneJournee.ui.xml")
     interface BonneJournee extends UiBinder<Element, ElementSlide> {}
 
+    @UiTemplate("Auteurs.ui.xml")
+    interface Auteurs extends UiBinder<Element, ElementSlide> {}
+
+    @UiTemplate("PosesDesQuestions.ui.xml")
+    interface PosesDesQuestions extends UiBinder<Element, ElementSlide> {}
+
+    @UiTemplate("Whoswho.ui.xml")
+    interface Whoswho extends UiBinder<Element, ElementSlide> {}
+
+    @UiTemplate("Presentation.ui.xml")
+    interface Presentation extends UiBinder<Element, ElementSlide> {}
+
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
+        addSlide(GWT.create(Auteurs.class));
         addSlide(FormationGwt.PLAN);
+        addSlide(GWT.create(PosesDesQuestions.class));
+        addSlide(GWT.create(Whoswho.class));
+        addSlide(GWT.create(Presentation.class));
         addSlide(GWT.create(BonneJournee.class));
+        addSlide(FormationGwt.PLAN);
     }
 
 }

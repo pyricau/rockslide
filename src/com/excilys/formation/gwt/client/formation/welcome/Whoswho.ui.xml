@@ -2,9 +2,13 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
 	<div class="slide">
-		<header>Bonne journée !</header>
-		<section class="center">
-			N'oubliez pas de rallumer vos téléphones à la fin ;-)
+		<header>Ouech, t'es qui ?</header>
+		<section>
+			<ul>
+				<li>13.5 secondes chacun</li>
+				<li>C'est quoi ton blaze ?</li>
+				<li>Tu fais quoi ?</li>
+			</ul>
 		</section>
 	</div>
 </ui:UiBinder>

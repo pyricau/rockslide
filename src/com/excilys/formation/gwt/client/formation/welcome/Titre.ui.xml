@@ -1,10 +1,10 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
-	 
+
 	<div class="slide">
 		<section class="center intro">
 			<h1>Bienvenue</h1>
-			<h2>À la formation GWT</h2>
+			<h2>Formation GWT Excilys</h2>
 		</section>
 	</div>
 </ui:UiBinder>
