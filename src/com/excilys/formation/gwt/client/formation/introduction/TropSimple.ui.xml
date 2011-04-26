@@ -27,9 +27,8 @@ public class Introduction implements EntryPoint {
         });
         RootPanel.get().add(button);
     }
-}
-			</pre>
-			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}" />
+}</pre>
+			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}">Bugfix</syntax:Highlighter>
 			<example>
 				<g:Label>Salut tout le monde !</g:Label>
 				<g:Button ui:field="button">Cliquez moi</g:Button>
