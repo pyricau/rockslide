@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Widget;
 
 public abstract class Chapter {
 
@@ -19,15 +20,28 @@ public abstract class Chapter {
 
     /**
      * To be used with GWT.create(XXX.class), provided that XXX.class extends
-     * UiBinder<Element, Slide>
+     * UiBinder<Element, ElementSlide>
      * 
      * @param uiBinder
-     *            Must be a UiBinder<Element, Slide>. The signature is Object
-     *            because GWT.create is generic.
+     *            Must be a UiBinder<Element, ElementSlide>. The signature is
+     *            Object because GWT.create is generic.
      */
     @SuppressWarnings("unchecked")
     protected final void addSlide(Object uiBinder) {
         addPresentable(new ElementSlide((UiBinder<Element, ElementSlide>) uiBinder));
+    }
+
+    /**
+     * To be used with GWT.create(XXX.class), provided that XXX.class extends
+     * UiBinder<Widget, WidgetSlide>
+     * 
+     * @param uiBinder
+     *            Must be a UiBinder<Widget, WidgetSlide>. The signature is
+     *            Object because GWT.create is generic.
+     */
+    @SuppressWarnings("unchecked")
+    protected final void addWidgetSlide(Object uiBinder) {
+        addPresentable(new WidgetSlide((UiBinder<Widget, WidgetSlide>) uiBinder));
     }
 
     protected final void addPresentable(Presentable presentable) {

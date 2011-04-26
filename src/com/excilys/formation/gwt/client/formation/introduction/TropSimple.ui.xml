@@ -15,10 +15,10 @@ package fr.koala.gwt.introduction.client;
 public class Introduction implements EntryPoint {
  
     public void onModuleLoad() {
-        // Creation d'un texte
+        // Création d'un texte
         Label label = new Label("Salut tout le monde !");
         RootPanel.get().add(label);
-        // Creation d'un bouton
+        // Création d'un bouton
         Button button = new Button("Cliquez moi");
         button.addClickHandler(new ClickHandler() {
             public void onClick(ClickEvent event) {

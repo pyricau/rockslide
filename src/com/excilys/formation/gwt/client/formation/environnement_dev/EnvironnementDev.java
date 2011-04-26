@@ -13,9 +13,17 @@ public class EnvironnementDev extends Chapter {
     @UiTemplate("Titre.ui.xml")
     interface Titre extends UiBinder<Element, ElementSlide> {}
 
+    @UiTemplate("GWTDesigner.ui.xml")
+    interface GWTDesigner extends UiBinder<Element, ElementSlide> {}
+
+    @UiTemplate("SpeedTracer.ui.xml")
+    interface SpeedTracer extends UiBinder<Element, ElementSlide> {}
+
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
+        addSlide(GWT.create(GWTDesigner.class));
+        addSlide(GWT.create(SpeedTracer.class));
         addSlide(FormationGwt.PLAN);
     }
 
