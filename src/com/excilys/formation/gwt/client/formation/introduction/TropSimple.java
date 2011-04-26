@@ -1,9 +1,9 @@
 package com.excilys.formation.gwt.client.formation.introduction;
 
-import com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.excilys.formation.gwt.client.slider.Presentable;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.PreElement;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -18,15 +18,15 @@ public class TropSimple extends Composite implements Presentable {
 
     private static final Binder uiBinder = GWT.create(Binder.class);
 
-    @UiField(provided = true)
+    @UiField
     Highlighter sourceCode;
 
+    @UiField
+    PreElement codeSample;
+
     public TropSimple() {
-        // See http://alexgorbatchev.com/SyntaxHighlighter/manual/configuration/
-        // and http://code.google.com/p/gwt-syntaxhighlighter/
-        sourceCode = new Highlighter(Brushes.JAVA());
-        sourceCode.setText(CodeExamples.EXAMPLE);
         initWidget(uiBinder.createAndBindUi(this));
+        sourceCode.setText(codeSample.getInnerText());
     }
 
     @UiHandler("button")

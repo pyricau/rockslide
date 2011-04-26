@@ -4,10 +4,38 @@
 	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
 	>
 	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+	
+	<ui:style>
+		.codeSample {
+			display: none;
+		}
+	</ui:style>
+	
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Trop simple !</header>
 		<section>
-			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode" /> 
+			<pre ui:field="codeSample" class="{style.codeSample}">
+package fr.koala.gwt.introduction.client;
+// [...]
+public class Introduction implements EntryPoint {
+ 
+    public void onModuleLoad() {
+        // Creation d'un texte
+        Label label = new Label("Salut tout le monde !");
+        RootPanel.get().add(label);
+        // Creation d'un bouton
+        Button button = new Button("Cliquez moi");
+        button.addClickHandler(new ClickHandler() {
+            public void onClick(ClickEvent event) {
+                Window.alert("Mais c'est trop simple!");
+            }
+        });
+        RootPanel.get().add(button);
+    }
+}
+			</pre>
+			<syntax:Highlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}" />
 			<example>
 				<g:Label>Salut tout le monde !</g:Label>
 				<g:Button ui:field="button">Cliquez moi</g:Button>
