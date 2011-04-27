@@ -8,7 +8,7 @@
 			Showcase
 		</header>
 		<section>
-			<g:Frame url="http://gwt.google.com/samples/Showcase/Showcase.html" height="500px" width="700px" />
+			<g:Frame url="http://gwt.google.com/samples/Showcase/Showcase.html" height="500px" width="830px" />
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>
