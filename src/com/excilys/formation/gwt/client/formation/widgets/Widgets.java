@@ -15,6 +15,9 @@ public class Widgets extends Chapter {
     @UiTemplate("Titre.ui.xml")
     interface Titre extends UiBinder<Element, ElementSlide> {}
 
+    @UiTemplate("Presentation.ui.xml")
+    interface Presentation extends UiBinder<Element, ElementSlide> {}
+
     @UiTemplate("WidgetsGWT.ui.xml")
     interface WidgetsGWT extends UiBinder<Element, ElementSlide> {}
 
@@ -24,6 +27,7 @@ public class Widgets extends Chapter {
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
+        addSlide(GWT.create(Presentation.class));
         addSlide(GWT.create(WidgetsGWT.class));
         addVisibleSlide(GWT.create(Showcase.class));
         addSlide(FormationGwt.PLAN);
