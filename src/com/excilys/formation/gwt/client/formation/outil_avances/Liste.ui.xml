@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	 
+	<div class="slide">
+		<header>Quelques librairies interessantes</header>
+		<section>
+			<ul class="summary">
+				<li><strong>Visualisation API</strong>
+					<a href="http://code.google.com/apis/visualization/documentation/gallery.html">
+						http://code.google.com/apis/visualization/documentation/gallery.html
+					</a>
+				</li>			
+				<li><strong>Gxt</strong> <br/>
+					<a href="http://www.sencha.com/products/extgwt/examples/">
+						http://www.sencha.com/products/extgwt/examples/
+					</a>
+				</li>
+				<li><strong>SmartGWT</strong> <br/>
+					<a href="http://www.smartclient.com/smartgwt/showcase/">
+						http://www.smartclient.com/smartgwt/showcase/
+					</a>
+				</li>
+				<li><strong>Google-Gin</strong> <br/>
+					<a href="http://code.google.com/p/google-gin/">
+						http://code.google.com/p/google-gin/
+					</a>
+				</li>
+				<li><strong>gwt-dnd</strong> <br/>
+					<a href="http://allen-sauer.com/com.allen_sauer.gwt.dnd.demo.DragDropDemo/DragDropDemo.html#DualListExample">
+						http://allen-sauer.com/com.allen_sauer.gwt.dnd.demo.DragDropDemo/DragDropDemo.html#DualListExample
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

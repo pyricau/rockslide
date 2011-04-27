@@ -13,9 +13,17 @@ public class OutilsAvances extends Chapter {
     @UiTemplate("Titre.ui.xml")
     interface Titre extends UiBinder<Element, ElementSlide> {}
 
+    @UiTemplate("Liste.ui.xml")
+    interface Liste extends UiBinder<Element, ElementSlide> {}
+
+    @UiTemplate("Log.ui.xml")
+    interface Log extends UiBinder<Element, ElementSlide> {}
+
     @Override
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
+        addSlide(GWT.create(Log.class));
+        addSlide(GWT.create(Liste.class));
         addSlide(FormationGwt.PLAN);
     }
 

@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	 
+	<div class="slide">
+		<header>Journalisation</header>
+		<section>
+			<ul class="summary">
+				<li>Intégration de l'api java.util.logging</li>
+				<li>Il existe une multitude de handlers :</li>
+				<ul>
+					<li>SystemLogHandler</li>
+					<li>DevelopmentModeLogHandler</li>
+					<li>ConsoleLogHandler</li>
+					<li>FirebugLogHandler</li>
+					<li>PopupLogHandler</li>
+					<li>SimpleRemoteLogHandler</li>
+				</ul>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>
