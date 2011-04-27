@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider" 
 	>
 
 	<g:HTMLPanel addStyleNames="slide">
@@ -8,7 +9,9 @@
 			Showcase
 		</header>
 		<section>
-			<g:Frame url="http://gwt.google.com/samples/Showcase/Showcase.html" height="500px" width="830px" />
+			<sl:DelayedFrame ui:field="visibleWidget"
+	url="http://gwt.google.com/samples/Showcase/Showcase.html" height="500px"
+	width="830px" />
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

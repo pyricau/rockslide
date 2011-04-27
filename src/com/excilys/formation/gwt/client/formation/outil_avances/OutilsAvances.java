@@ -4,7 +4,7 @@ import com.excilys.formation.gwt.client.formation.FormationGwt;
 import com.excilys.formation.gwt.client.slider.Chapter;
 import com.excilys.formation.gwt.client.slider.CodeSlide;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
-import com.excilys.formation.gwt.client.slider.WidgetSlide;
+import com.excilys.formation.gwt.client.slider.VisibleSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -26,16 +26,16 @@ public class OutilsAvances extends Chapter {
     interface Visualization extends UiBinder<Element, ElementSlide> {}
 
     @UiTemplate("ExtGWT.ui.xml")
-    interface ExtGWT extends UiBinder<Widget, WidgetSlide> {}
+    interface ExtGWT extends UiBinder<Widget, VisibleSlide> {}
 
     @UiTemplate("SmartGWT.ui.xml")
-    interface SmartGWT extends UiBinder<Widget, WidgetSlide> {}
+    interface SmartGWT extends UiBinder<Widget, VisibleSlide> {}
 
     @UiTemplate("GoogleGin.ui.xml")
     interface GoogleGin extends UiBinder<Widget, CodeSlide<?>> {}
 
     @UiTemplate("GwtDnd.ui.xml")
-    interface GwtDnd extends UiBinder<Widget, WidgetSlide> {}
+    interface GwtDnd extends UiBinder<Widget, VisibleSlide> {}
 
     @Override
     protected void buildSlides() {
@@ -43,10 +43,10 @@ public class OutilsAvances extends Chapter {
         addSlide(GWT.create(Log.class));
         addSlide(GWT.create(Liste.class));
         addSlide(GWT.create(Visualization.class));
-        addWidgetSlide(GWT.create(ExtGWT.class));
-        addWidgetSlide(GWT.create(SmartGWT.class));
+        addVisibleSlide(GWT.create(ExtGWT.class));
+        addVisibleSlide(GWT.create(SmartGWT.class));
         addCodeSlide(GWT.create(GoogleGin.class));
-        addWidgetSlide(GWT.create(GwtDnd.class));
+        addVisibleSlide(GWT.create(GwtDnd.class));
         addSlide(FormationGwt.PLAN);
     }
 
