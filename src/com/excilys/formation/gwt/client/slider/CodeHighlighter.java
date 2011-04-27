@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
+import com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.Composite;
@@ -17,7 +18,17 @@ import com.google.gwt.user.client.ui.SimplePanel;
  */
 public class CodeHighlighter extends Composite implements HasHTML {
 
-    private static Map<Brush, Highlighter> highlighters = new HashMap<Brush, Highlighter>();
+    private final static Map<Brush, Highlighter> highlighters;
+
+    static {
+        highlighters = new HashMap<Brush, Highlighter>();
+
+        // Add a loader
+
+        getHighlighter(Brushes.JAVA());
+        getHighlighter(Brushes.XML());
+        getHighlighter(Brushes.JSCRIPT());
+    }
 
     private static Highlighter getHighlighter(Brush brush) {
         if (!highlighters.containsKey(brush)) {
@@ -31,6 +42,8 @@ public class CodeHighlighter extends Composite implements HasHTML {
     private String code;
 
     private final SimplePanel panel = new SimplePanel();
+
+    private boolean htmlScript;
 
     @UiConstructor
     public CodeHighlighter(Brush brush) {
@@ -46,6 +59,7 @@ public class CodeHighlighter extends Composite implements HasHTML {
                 parent.clear();
             }
             panel.setWidget(highlighter);
+            highlighter.setHtmlScript(htmlScript);
             highlighter.setText(code);
         }
     }
@@ -69,6 +83,10 @@ public class CodeHighlighter extends Composite implements HasHTML {
     @Override
     public String getHTML() {
         return "";
+    }
+
+    public void setHtmlScript(boolean htmlScript) {
+        this.htmlScript = htmlScript;
     }
 
 }
