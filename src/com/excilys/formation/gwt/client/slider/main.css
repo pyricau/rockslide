@@ -356,6 +356,12 @@ info {
 	font-family: Arial;
 }
 
+.nicetag {
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#88e), to(#eef) )");
+	background-color: #88e;
+	background: literal("-moz-linear-gradient(left top, #88e, #eef)");
+}
+
 .sh {
 	font-size: 20px;
 	margin-bottom: 10px;

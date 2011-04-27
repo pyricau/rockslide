@@ -1,8 +1,5 @@
 package com.excilys.formation.gwt.client.slider;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.uibinder.client.UiConstructor;
@@ -17,20 +14,15 @@ import com.google.gwt.user.client.ui.SimplePanel;
  */
 public class CodeHighlighter extends Composite implements HasHTML {
 
-    private static Map<Brush, Highlighter> highlighters = new HashMap<Brush, Highlighter>();
-
-    private static Highlighter getHighlighter(Brush brush) {
-        if (!highlighters.containsKey(brush)) {
-            highlighters.put(brush, new Highlighter(brush));
-        }
-        return highlighters.get(brush);
-    }
-
     private final Brush brush;
 
     private String code;
 
     private final SimplePanel panel = new SimplePanel();
+
+    private boolean htmlScript;
+
+    private int tabSize = 4;
 
     @UiConstructor
     public CodeHighlighter(Brush brush) {
@@ -39,13 +31,15 @@ public class CodeHighlighter extends Composite implements HasHTML {
     }
 
     public void visible() {
-        Highlighter highlighter = getHighlighter(brush);
+        Highlighter highlighter = HighlighterLoader.get().getHighlighter(brush);
         SimplePanel parent = (SimplePanel) highlighter.getParent();
         if (parent != panel) {
             if (parent != null) {
                 parent.clear();
             }
             panel.setWidget(highlighter);
+            highlighter.setHtmlScript(htmlScript);
+            highlighter.setTabSize(tabSize);
             highlighter.setText(code);
         }
     }
@@ -69,6 +63,14 @@ public class CodeHighlighter extends Composite implements HasHTML {
     @Override
     public String getHTML() {
         return "";
+    }
+
+    public void setHtmlScript(boolean htmlScript) {
+        this.htmlScript = htmlScript;
+    }
+
+    public void setTabSize(int tabSize) {
+        this.tabSize = tabSize;
     }
 
 }

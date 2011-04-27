@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
+	>
+	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<g:HTMLPanel addStyleNames="slide">
+		<header>UiBinder  <span class="nicetag">Impératif</span> <span class="keytag">=</span> <span class="greentag">Java</span></header>
+		<section>
+			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}">
+<pre>public class Cool extends Composite {
+
+    private static CoolBinder uiBinder = GWT.create(CoolBinder.class);
+
+    interface CoolBinder extends UiBinder&lt;Widget, Cool&gt; {}
+
+    @UiField
+    Button button;
+
+    @UiField
+    DivElement coolDiv;
+
+    public Cool() {
+        initWidget(uiBinder.createAndBindUi(this));
+        coolDiv.setInnerText("Coool");
+    }
+
+    @UiHandler("button")
+    void coolClick(ClickEvent e) {
+        Window.alert("Salut !");
+    }
+}</pre></sl:CodeHighlighter>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>

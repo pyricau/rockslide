@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<ui:image field="visualization" src="visualization.png" />
+
+	<ui:style>
+		@sprite .visualization {
+			gwt-image: 'visualization';
+		}
+	</ui:style>
+
+	<div class="slide">
+		<header>Visualization API</header>
+		<section>
+			<p>
+				<a
+					href="http://code.google.com/p/gwt-google-apis/wiki/VisualizationGettingStarted">http://code.google.com/p/gwt-google-apis/wiki/VisualizationGettingStarted</a>
+			</p>
+			<div class="{style.visualization}" />
+		</section>
+	</div>
+</ui:UiBinder>

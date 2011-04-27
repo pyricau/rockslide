@@ -3,6 +3,8 @@ package com.excilys.formation.gwt.client.slider;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes;
+import com.excilys.formation.gwt.client.slider.HighlighterLoader.HighlighterLoadHandler;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
@@ -30,7 +32,7 @@ public abstract class SlideViewer implements EntryPoint, ValueChangeHandler<Stri
 
             @Override
             public void execute() {
-                doModuleLoad();
+                preloadHighlighters();
             }
         });
     }
@@ -39,9 +41,24 @@ public abstract class SlideViewer implements EntryPoint, ValueChangeHandler<Stri
         Resources.instance.main().ensureInjected();
         loadChapters();
         presentation = new Presentation();
-        RootPanel.get().add(presentation);
+        RootPanel rootPanel = RootPanel.get();
+        rootPanel.add(presentation);
         initializeHistory();
         registerDocumentEvent(presentation);
+    }
+
+    private void preloadHighlighters() {
+        final LoadingWidget loadingWidget = new LoadingWidget();
+        RootPanel.get().add(loadingWidget);
+
+        HighlighterLoader.get().loadHighlighters(new HighlighterLoadHandler() {
+
+            @Override
+            public void onHighlightersLoaded() {
+                loadingWidget.removeFromParent();
+                doModuleLoad();
+            }
+        }, Brushes.JAVA(), Brushes.XML(), Brushes.JSCRIPT());
     }
 
     protected void add(Chapter chapter) {
