@@ -1,10 +1,6 @@
 package com.excilys.formation.gwt.client.slider;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
-import com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.Composite;
@@ -17,25 +13,6 @@ import com.google.gwt.user.client.ui.SimplePanel;
  * This trick is used to use only one Highlighter at a time.
  */
 public class CodeHighlighter extends Composite implements HasHTML {
-
-    private final static Map<Brush, Highlighter> highlighters;
-
-    static {
-        highlighters = new HashMap<Brush, Highlighter>();
-
-        // Add a loader
-
-        getHighlighter(Brushes.JAVA());
-        getHighlighter(Brushes.XML());
-        getHighlighter(Brushes.JSCRIPT());
-    }
-
-    private static Highlighter getHighlighter(Brush brush) {
-        if (!highlighters.containsKey(brush)) {
-            highlighters.put(brush, new Highlighter(brush));
-        }
-        return highlighters.get(brush);
-    }
 
     private final Brush brush;
 
@@ -54,7 +31,7 @@ public class CodeHighlighter extends Composite implements HasHTML {
     }
 
     public void visible() {
-        Highlighter highlighter = getHighlighter(brush);
+        Highlighter highlighter = HighlighterLoader.get().getHighlighter(brush);
         SimplePanel parent = (SimplePanel) highlighter.getParent();
         if (parent != panel) {
             if (parent != null) {
