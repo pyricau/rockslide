@@ -11,10 +11,10 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Mise en place d'un appel asynchrone</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
+			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode" brush="{brushes.JAVA}"><pre>
 public void sayHello() {
-	HelloServiceAsync helloService = GWT.create(HelloService.class);
-	helloService.sayHello(new AsyncCallback&lt;String&gt;(
+	HelloServiceAsync service = GWT.create(HelloService.class);
+	service.sayHello(new AsyncCallback&lt;String&gt;(
 		public void onSucess(String result){
 			Window.alert(result);
 		}
