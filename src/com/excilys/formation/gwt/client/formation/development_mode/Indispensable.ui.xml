@@ -8,7 +8,7 @@
 				<li>
 					Intégration à l'IDE, utilisation de navigateur
 					<ul>
-						<li>Outils de déboguage java puissants</li>
+						<li>Outils de débogage java puissants</li>
 						<li>Outils de développement web</li>
 					</ul>
 				</li>
@@ -16,7 +16,7 @@
 					Rapide
 					<ul>
 						<li>Pas de compilation</li>
-						<li>Déboguage à "chaud"</li>
+						<li>Débogage à "chaud"</li>
 					</ul>
 				</li>
 			</ul>
