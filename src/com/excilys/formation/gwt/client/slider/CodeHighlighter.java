@@ -45,6 +45,8 @@ public class CodeHighlighter extends Composite implements HasHTML {
 
     private boolean htmlScript;
 
+    private int tabSize = 4;
+
     @UiConstructor
     public CodeHighlighter(Brush brush) {
         this.brush = brush;
@@ -60,6 +62,7 @@ public class CodeHighlighter extends Composite implements HasHTML {
             }
             panel.setWidget(highlighter);
             highlighter.setHtmlScript(htmlScript);
+            highlighter.setTabSize(tabSize);
             highlighter.setText(code);
         }
     }
@@ -87,6 +90,10 @@ public class CodeHighlighter extends Composite implements HasHTML {
 
     public void setHtmlScript(boolean htmlScript) {
         this.htmlScript = htmlScript;
+    }
+
+    public void setTabSize(int tabSize) {
+        this.tabSize = tabSize;
     }
 
 }
