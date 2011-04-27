@@ -18,8 +18,11 @@ public class ClientBundle extends Chapter {
     @UiTemplate("Principe.ui.xml")
     interface Principe extends UiBinder<Element, ElementSlide> {}
 
-    @UiTemplate("TextData.ui.xml")
-    interface TextData extends UiBinder<Widget, CodeSlide<?>> {}
+    @UiTemplate("Utilisation.ui.xml")
+    interface Utilisation extends UiBinder<Widget, CodeSlide<?>> {}
+
+    @UiTemplate("Asynchronous.ui.xml")
+    interface Asynchronous extends UiBinder<Widget, CodeSlide<?>> {}
 
     @UiTemplate("I18N.ui.xml")
     interface I18N extends UiBinder<Widget, CodeSlide<?>> {}
@@ -28,7 +31,8 @@ public class ClientBundle extends Chapter {
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
         addSlide(GWT.create(Principe.class));
-        addCodeSlide(GWT.create(TextData.class));
+        addCodeSlide(GWT.create(Utilisation.class));
+        addCodeSlide(GWT.create(Asynchronous.class));
         addCodeSlide(GWT.create(I18N.class));
         addSlide(FormationGwt.PLAN);
     }

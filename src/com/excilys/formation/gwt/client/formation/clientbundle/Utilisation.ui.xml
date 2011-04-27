@@ -2,35 +2,27 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
 	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
-	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
-	>
-	
-	<ui:image field="schema" src="utilisation.png" />
-
-	<ui:style>
-		@sprite .schema {
-			gwt-image: 'schema';
-		}
-	</ui:style>
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'>
 	
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Utilisation</header>
 		<section>
-			<div class="{style.schema}" />
 			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
 public interface Resources extends ClientBundle {
 
-public static Resources INSTANCE = GWT.create(Resources.class);
-ImageResource add(); // add.png
+	public static Resources INSTANCE = 
+		GWT.create(Resources.class);
+		
+	ImageResource add(); // add.png
 
-@Source(“icon_rss.jpg”)
+	@Source(“icon_rss.jpg”)
 	ImageResource rss(); // icon_rss.jpg
 
-CssResource style(); // style.css
+	CssResource style(); // style.css
 
-TextResource labels(); // labels.txt
+	TextResource labels(); // labels.txt
 
 }</pre></sl:CodeHighlighter>
 		</section>
