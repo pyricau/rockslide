@@ -12,6 +12,8 @@ public class ShowNotesViewer {
         final HTML html = new HTML();
         rootPanel.add(html);
 
+        html.setHTML("<div>Waiting for show notes</div>");
+
         WindowHelper.registerListener(ShowNotesSender.LISTENER_NAME, new WindowMessageListener<String>() {
             @Override
             public void onMessage(String message) {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
+import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;
@@ -36,6 +37,11 @@ public abstract class Chapter {
     @SuppressWarnings("unchecked")
     protected final void addNotesSlide(Object uiBinder) {
         addPresentable(new ElementSlideNotes((UiBinder<Element, Object>) uiBinder));
+    }
+
+    @SuppressWarnings("unchecked")
+    protected final void addWidgetNotesSlide(Object uiBinder) {
+        addPresentable(new WidgetSlideNotes((UiBinder<Widget, Object>) uiBinder));
     }
 
     /**

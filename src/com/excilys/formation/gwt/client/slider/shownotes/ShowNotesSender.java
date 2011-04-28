@@ -17,10 +17,14 @@ public class ShowNotesSender {
     public void sendShowNotes(Presentable slide) {
         if (childWindow != null) {
             Element showNotesWidget = slide.getShowNotes();
+            String showNotesHTML;
             if (showNotesWidget != null) {
-                childWindow.sendMessage(LISTENER_NAME, showNotesWidget.getInnerHTML());
+                showNotesHTML = showNotesWidget.getInnerHTML();
+            } else {
+                showNotesHTML = "<div>Pas de notes</div>";
             }
 
+            childWindow.sendMessage(LISTENER_NAME, showNotesHTML);
         }
     }
 

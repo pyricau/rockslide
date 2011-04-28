@@ -53,8 +53,9 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
             String showNotesUrl = Location.createUrlBuilder() //
                     .removeParameter(SlideViewer.TRAINER_PARAM) //
                     .setParameter(PresentationEntryPoint.SHOW_NOTES_PARAM, "true") //
+                    .setHash(null) //
                     .buildString();
-            childWindow = ChildWindow.open(showNotesUrl, "shownotes", features);
+            childWindow = ChildWindow.open(showNotesUrl, "_blank", features);
             childWindow.registerListener("childLoaded", new WindowMessageListener<Void>() {
                 @Override
                 public void onMessage(Void message) {
