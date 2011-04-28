@@ -8,6 +8,16 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<ul>
+				<li>Expliquer le code Java</li>
+				<li>comment les deux fichiers sont associés (même nom)</li>
+				<li>C’est "createAndBindUi" qui instancie les objects déclarés dans le XML, et qui injecte les champs UiBinder</li>
+				<li>Vérifications à la compilation</li>
+				<li>Injection des éléments HTML / des widgets, et méthodes pour les événements (type du paramètre - eg ClickEvent - détermine le type d’event).</li>
+				<li>Le premier paramètre de l’interface UiBinder est le type de l'élément racine (souvent Widget ou Element), et le deuxième est la classe à laquelle le XML est bindé.</li>
+			</ul>
+		</div>
 		<header>UiBinder <span class="nicetag">Déclaratif</span> <span class="keytag">=</span> <span class="redtag">XML</span> <span class="keytag">+</span> <span class="redtag">HTML</span> <span class="keytag">+</span> <span class="yellowtag">CSS</span></header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.XML}"><pre>

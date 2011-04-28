@@ -8,6 +8,17 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<ul>
+				<li>Expliquer les différents éléments visibles à l’écran.</li>
+				<li>Absence de boucles de foreach (par opposition aux JSP / PHP / etc).</li>
+				<li>Un template n'exécute pas du code.</li>
+				<li>Un HTMLPanel est le seul à pouvoir contenir à la fois du HTML et des Widgets.</li>
+				<li>Le style CSS est validé à la compilation, et adapté à tous les browsers.</li>
+				<li>Expliquer comment lier une classe CSS à un widget, et pareil pour un élément.</li>
+			</ul>
+
+		</div>
 		<header>UiBinder  <span class="nicetag">Impératif</span> <span class="keytag">=</span> <span class="greentag">Java</span></header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>

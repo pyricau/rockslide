@@ -8,6 +8,15 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+		<ul>
+			<li>HTML + CSS a montré la voie</li>
+			<li>Aujourd'hui on retrouve ça en Flex, Android, et ça existe même sur Swing</li>
+			<li>Et donc, aussi sur GWT</li>
+			<li>Productivité/maintenabilité ++</li>
+			<li>Séparation structure / mise en forme / comportement</li>
+		</ul>
+		</div>
 		<header><span class="redtag">HTML</span> <span class="keytag">+</span> <span class="yellowtag">CSS</span> <span class="keytag">+</span> <span class="greentag">JS</span></header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JSCRIPT}" htmlScript="true"><pre>

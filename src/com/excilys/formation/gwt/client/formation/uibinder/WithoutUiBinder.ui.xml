@@ -8,6 +8,12 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<ul>
+				<li>Pas facile à lire.</li>
+				<li>Mélange comportement et structure</li>
+			</ul>
+		</div>
 		<header>Code lisible ?</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>	
