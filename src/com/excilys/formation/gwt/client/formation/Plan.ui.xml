@@ -5,16 +5,16 @@
 		<header>Plan du cours</header>
 		<section>
 			<ul class="summary">
-				<li><a href="#chapter2slide1">Introduction</a></li>
-				<li><a href="#chapter3slide1">Environnement de développement</a></li>
-				<li><a href="#chapter4slide1">Development Mode</a></li>
-				<li><a href="#chapter5slide1">Widgets</a></li>
-				<li><a href="#chapter6slide1">Events</a></li>
-				<li><a href="#chapter7slide1">RPC</a></li>
-				<li><a href="#chapter8slide1">UiBinder</a></li>
-				<li><a href="#chapter9slide1">ClientBundle</a></li>
-				<li><a href="#chapter10slide1">Outils avancés</a></li>
-				<li><a href="#chapter11slide1">Questionnaires</a></li>
+				<li><a href="#Chapter2Slide1">Introduction</a></li>
+				<li><a href="#Chapter3Slide1">Environnement de développement</a></li>
+				<li><a href="#Chapter4Slide1">Development Mode</a></li>
+				<li><a href="#Chapter5Slide1">Widgets</a></li>
+				<li><a href="#Chapter6Slide1">Events</a></li>
+				<li><a href="#Chapter7Slide1">RPC</a></li>
+				<li><a href="#Chapter8Slide1">UiBinder</a></li>
+				<li><a href="#Chapter9Slide1">ClientBundle</a></li>
+				<li><a href="#Chapter10Slide1">Outils avancés</a></li>
+				<li><a href="#Chapter11Slide1">Questionnaires</a></li>
 			</ul>
 		</section>
 	</div>

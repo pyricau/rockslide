@@ -15,14 +15,15 @@ import com.excilys.formation.gwt.client.formation.rpc.RPC;
 import com.excilys.formation.gwt.client.formation.uibinder.UIBinder;
 import com.excilys.formation.gwt.client.formation.welcome.Welcome;
 import com.excilys.formation.gwt.client.formation.widgets.Widgets;
+import com.excilys.formation.gwt.client.slider.ChapterHolder;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
-import com.excilys.formation.gwt.client.slider.SlideViewer;
+import com.excilys.formation.gwt.client.slider.PresentationEntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
 
-public class FormationGwt extends SlideViewer {
+public class FormationGwt extends PresentationEntryPoint {
 
     @UiTemplate("Plan.ui.xml")
     interface Plan extends UiBinder<Element, ElementSlide> {}
@@ -30,22 +31,22 @@ public class FormationGwt extends SlideViewer {
     public static final Plan PLAN = GWT.create(Plan.class);
 
     @Override
-    protected void loadChapters() {
-        add(new Welcome());
-        add(new Introduction());
-        add(new EnvironnementDev());
-        add(new DevelopmentMode());
-        add(new Widgets());
-        add(new Events());
-        add(new RPC());
-        add(new UIBinder());
-        add(new ClientBundle());
-        add(new OutilsAvances());
-        add(new Questionnaires());
+    public void loadChapters(ChapterHolder holder) {
+        holder.addChapter(new Welcome());
+        holder.addChapter(new Introduction());
+        holder.addChapter(new EnvironnementDev());
+        holder.addChapter(new DevelopmentMode());
+        holder.addChapter(new Widgets());
+        holder.addChapter(new Events());
+        holder.addChapter(new RPC());
+        holder.addChapter(new UIBinder());
+        holder.addChapter(new ClientBundle());
+        holder.addChapter(new OutilsAvances());
+        holder.addChapter(new Questionnaires());
     }
 
     @Override
-    protected void definePreloadedBrushes(List<Brush> brushes) {
+    public void definePreloadedBrushes(List<Brush> brushes) {
         brushes.add(Brushes.JAVA());
         brushes.add(Brushes.XML());
         brushes.add(Brushes.JSCRIPT());

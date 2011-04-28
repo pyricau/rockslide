@@ -3,7 +3,7 @@ package com.excilys.formation.gwt.client.slider;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Frame;
 
-public class DelayedFrame extends Frame implements Presentable {
+public class DelayedFrame extends Frame implements Visible {
 
     public String url;
 

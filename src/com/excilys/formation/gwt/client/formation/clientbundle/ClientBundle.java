@@ -3,6 +3,7 @@ package com.excilys.formation.gwt.client.formation.clientbundle;
 import com.excilys.formation.gwt.client.formation.FormationGwt;
 import com.excilys.formation.gwt.client.slider.Chapter;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
+import com.excilys.formation.gwt.client.slider.ElementSlideNotes;
 import com.excilys.formation.gwt.client.slider.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
@@ -13,7 +14,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class ClientBundle extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlideNotes> {}
 
     @UiTemplate("Principe.ui.xml")
     interface Principe extends UiBinder<Element, ElementSlide> {}
@@ -29,7 +30,7 @@ public class ClientBundle extends Chapter {
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
+        addNotesSlide(GWT.create(Titre.class));
         addSlide(GWT.create(Principe.class));
         addWidgetSlide(GWT.create(Utilisation.class));
         addWidgetSlide(GWT.create(Asynchronous.class));

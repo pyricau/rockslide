@@ -29,7 +29,12 @@ public abstract class Chapter {
      */
     @SuppressWarnings("unchecked")
     protected final void addSlide(Object uiBinder) {
-        addPresentable(new ElementSlide((UiBinder<Element, ElementSlide>) uiBinder));
+        addPresentable(new ElementSlide((UiBinder<Element, Object>) uiBinder));
+    }
+
+    @SuppressWarnings("unchecked")
+    protected final void addNotesSlide(Object uiBinder) {
+        addPresentable(new ElementSlideNotes((UiBinder<Element, Object>) uiBinder));
     }
 
     /**
@@ -42,7 +47,7 @@ public abstract class Chapter {
      */
     @SuppressWarnings("unchecked")
     protected final void addWidgetSlide(Object uiBinder) {
-        addPresentable(new WidgetSlide((UiBinder<Widget, WidgetSlide>) uiBinder));
+        addPresentable(new WidgetSlide((UiBinder<Widget, Object>) uiBinder));
     }
 
     /**
@@ -55,7 +60,7 @@ public abstract class Chapter {
      */
     @SuppressWarnings("unchecked")
     protected final void addVisibleSlide(Object uiBinder) {
-        addPresentable(new VisibleSlide((UiBinder<Widget, VisibleSlide>) uiBinder));
+        addPresentable(new VisibleSlide((UiBinder<Widget, Object>) uiBinder));
     }
 
     protected final void addPresentable(Presentable presentable) {

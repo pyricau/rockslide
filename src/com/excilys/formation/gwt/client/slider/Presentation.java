@@ -2,6 +2,7 @@ package com.excilys.formation.gwt.client.slider;
 
 import java.util.List;
 
+import com.excilys.formation.gwt.client.slider.window.ShowNotesSender;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -30,7 +31,10 @@ public class Presentation extends Composite {
     @UiField
     FlowPanel slidesPanel;
 
-    public Presentation() {
+    private final ShowNotesSender showNotesSender;
+
+    public Presentation(ShowNotesSender showNotesSender) {
+        this.showNotesSender = showNotesSender;
         initWidget(uiBinder.createAndBindUi(this));
     }
 
@@ -95,18 +99,22 @@ public class Presentation extends Composite {
         this.index = index;
         changeSlideClass(getSlide(index - 2), "far-past");
         changeSlideClass(getSlide(index - 1), "past");
-        changeSlideClass(getSlide(index), "current");
+        Presentable currentSlide = getSlide(index);
+        changeSlideClass(currentSlide, "current");
         changeSlideClass(getSlide(index + 1), "future");
         changeSlideClass(getSlide(index + 2), "far-future");
-        History.newItem(SlideViewer.CHAPTER_PREFIX + currentChapter + SlideViewer.SLIDE_PREFIX + index, false);
+        String historyToken = SlideViewer.CHAPTER_PREFIX + currentChapter + SlideViewer.SLIDE_PREFIX + index;
+        History.newItem(historyToken, false);
 
         slideVisible(index - 1);
         slideVisible(index + 1);
         slideVisible(index); // Must be last, has priority
+
+        showNotesSender.sendShowNotes(currentSlide);
     }
 
     private void slideVisible(int index) {
-        Presentable slide = getSlide(index);
+        Visible slide = getSlide(index);
         if (slide != null) {
             slide.visible();
         }

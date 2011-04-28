@@ -6,11 +6,16 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ElementSlide extends Widget implements Presentable {
 
-    public ElementSlide(UiBinder<Element, ElementSlide> uiBinder) {
+    public ElementSlide(UiBinder<Element, Object> uiBinder) {
         setElement(uiBinder.createAndBindUi(this));
     }
 
     @Override
     public void visible() {
+    }
+
+    @Override
+    public Element getShowNotes() {
+        return null;
     }
 }

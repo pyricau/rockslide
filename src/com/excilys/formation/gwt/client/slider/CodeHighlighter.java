@@ -19,6 +19,12 @@ import com.google.gwt.user.client.ui.SimplePanel;
  */
 public class CodeHighlighter extends Composite implements HasHTML {
 
+    private static boolean highlightersDisabled = false;
+
+    public static void disableHighlighters() {
+        highlightersDisabled = true;
+    }
+
     private String text;
 
     private SimplePanel panel = new SimplePanel();
@@ -48,17 +54,19 @@ public class CodeHighlighter extends Composite implements HasHTML {
     @UiConstructor
     public CodeHighlighter(final Brush brush) {
         initWidget(panel);
-        /*
-         * We must create the highlighter after all properties have been
-         * injected. I didn't any widget callback in UiBinder to do so... Let's
-         * use a ScheduledCommand!
-         */
-        Scheduler.get().scheduleDeferred(new ScheduledCommand() {
-            @Override
-            public void execute() {
-                HighlighterLoader.get().addHighlightedWidget(brush, CodeHighlighter.this);
-            }
-        });
+        if (!highlightersDisabled) {
+            /*
+             * We must create the highlighter after all properties have been
+             * injected. I didn't any widget callback in UiBinder to do so...
+             * Let's use a ScheduledCommand!
+             */
+            Scheduler.get().scheduleDeferred(new ScheduledCommand() {
+                @Override
+                public void execute() {
+                    HighlighterLoader.get().addHighlightedWidget(brush, CodeHighlighter.this);
+                }
+            });
+        }
     }
 
     void prepareHighlighter(Highlighter highlighter) {

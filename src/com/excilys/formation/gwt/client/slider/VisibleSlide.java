@@ -2,16 +2,15 @@ package com.excilys.formation.gwt.client.slider;
 
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class VisibleSlide extends Composite implements Presentable {
+public class VisibleSlide extends WidgetSlide implements Presentable {
 
     @UiField
-    public Presentable visibleWidget;
+    public Visible visibleWidget;
 
-    public VisibleSlide(UiBinder<Widget, VisibleSlide> uiBinder) {
-        initWidget(uiBinder.createAndBindUi(this));
+    public VisibleSlide(UiBinder<Widget, Object> uiBinder) {
+        super(uiBinder);
     }
 
     @Override

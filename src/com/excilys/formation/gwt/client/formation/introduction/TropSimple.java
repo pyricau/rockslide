@@ -1,6 +1,5 @@
 package com.excilys.formation.gwt.client.formation.introduction;
 
-import com.excilys.formation.gwt.client.slider.Presentable;
 import com.excilys.formation.gwt.client.slider.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -9,9 +8,9 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Widget;
 
-public class TropSimple extends WidgetSlide implements Presentable {
+public class TropSimple extends WidgetSlide {
 
-    interface Binder extends UiBinder<Widget, WidgetSlide> {}
+    interface Binder extends UiBinder<Widget, Object> {}
 
     private static final Binder uiBinder = GWT.create(Binder.class);
 
