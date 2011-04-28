@@ -23,10 +23,15 @@
 	
 	&lt;g:HTMLPanel&gt;
 	
-		&lt;div ui:field="coolDiv" class="{style.cool}"&gt;Cool text&lt;/div&gt;
+		&lt;div ui:field="coolDiv" class="{style.cool}"&gt;
+			Cool text
+		&lt;/div&gt;
 		
 		&lt;g:ScrollPanel&gt;
-			&lt;g:Button ui:field="button" styleName="{style.cool}" /&gt;
+			&lt;g:Button
+				ui:field="button"
+				styleName="{style.cool}"
+			/&gt;
 		&lt;/g:ScrollPanel&gt;
 		
 	&lt;/g:HTMLPanel&gt;

@@ -13,7 +13,8 @@
 			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}">
 <pre>public class Cool extends Composite {
 
-    private static CoolBinder uiBinder = GWT.create(CoolBinder.class);
+    private static CoolBinder uiBinder = 
+        GWT.create(CoolBinder.class);
 
     interface CoolBinder extends UiBinder&lt;Widget, Cool&gt; {}
 
