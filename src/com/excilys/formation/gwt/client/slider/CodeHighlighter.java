@@ -1,7 +1,6 @@
 package com.excilys.formation.gwt.client.slider;
 
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
-import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.uibinder.client.UiConstructor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasHTML;
@@ -18,11 +17,13 @@ public class CodeHighlighter extends Composite implements HasHTML {
 
     private String code;
 
-    private final SimplePanel panel = new SimplePanel();
-
     private boolean htmlScript;
 
     private int tabSize = 4;
+
+    private SimplePanel panel = new SimplePanel();
+
+    private boolean visible;
 
     @UiConstructor
     public CodeHighlighter(Brush brush) {
@@ -31,22 +32,20 @@ public class CodeHighlighter extends Composite implements HasHTML {
     }
 
     public void visible() {
-        Highlighter highlighter = HighlighterLoader.get().getHighlighter(brush);
-        SimplePanel parent = (SimplePanel) highlighter.getParent();
-        if (parent != panel) {
-            if (parent != null) {
-                parent.clear();
-            }
-            panel.setWidget(highlighter);
-            highlighter.setHtmlScript(htmlScript);
-            highlighter.setTabSize(tabSize);
-            highlighter.setText(code);
+        if (!visible) {
+            visible = true;
+            HighlighterLoader.get().getHighlightedWidget(panel, brush, code, htmlScript, tabSize);
         }
     }
 
     @Override
     public void setHTML(String html) {
         code = html.replaceAll("<pre>", "").replaceAll("</pre>", "");
+        // code = "//" + htmlScript + " " + tabSize + "\n" + code;
+        // Widget highlightedWidget =
+        // HighlighterLoader.get().getHighlightedWidget(brush, code, htmlScript,
+        // tabSize);
+        // initWidget(highlightedWidget);
     }
 
     // UNUSED

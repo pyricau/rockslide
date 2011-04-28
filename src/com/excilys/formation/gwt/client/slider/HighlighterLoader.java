@@ -8,6 +8,10 @@ import com.alexgorbatchev.syntaxhighlighter.client.BrushHelper;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.RepeatingCommand;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.HTML;
+import com.google.gwt.user.client.ui.SimplePanel;
 
 public class HighlighterLoader {
 
@@ -26,7 +30,26 @@ public class HighlighterLoader {
     private HighlighterLoader() {
     }
 
-    public Highlighter getHighlighter(Brush brush) {
+    public void getHighlightedWidget(SimplePanel panel, Brush brush, String code, boolean htmlScript, int tabSize) {
+        Highlighter highlighter = getHighlighter(brush);
+
+        SimplePanel parent = (SimplePanel) highlighter.getParent();
+
+        if (parent != null) {
+            Element clone = DOM.clone(highlighter.getElement(), true);
+            HTML cloneWidget = HTML.wrap(clone);
+            parent.clear();
+            parent.setWidget(cloneWidget);
+        }
+
+        panel.setWidget(highlighter);
+
+        highlighter.setHtmlScript(htmlScript);
+        highlighter.setTabSize(tabSize);
+        highlighter.setText(code);
+    }
+
+    private Highlighter getHighlighter(Brush brush) {
         Highlighter highlighter = highlighters.get(brush);
 
         if (highlighter == null) {
