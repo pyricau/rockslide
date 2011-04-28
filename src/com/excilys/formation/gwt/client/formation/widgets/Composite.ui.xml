@@ -20,22 +20,18 @@
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
 public class ImageWithCaption extends Composite {
-
-    private Image image;
-
-    private Label caption;
-
+ 
     public ImageWithCaption(Image image, String caption) {
         VerticalPanel mainPanel = new VerticalPanel();
-        this.image = image;
-        this.caption = new Label(caption);
 
-        mainPanel.add(this.image);
-        mainPanel.add(this.caption);
-
+        Label captionLabel = new Label(caption);
+ 
+        mainPanel.add(image);
+        mainPanel.add(captionLabel);
+ 
         initWidget(mainPanel);
     }
-
+ 
 }</pre></sl:CodeHighlighter>
 		</section>
 		<div class="{style.container}">
