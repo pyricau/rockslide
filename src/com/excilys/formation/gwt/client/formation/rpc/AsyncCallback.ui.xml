@@ -11,27 +11,28 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Mise en place d'un appel asynchrone</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode" brush="{brushes.JAVA}"><pre>
-public void sayHello() {
-	HelloServiceAsync service = GWT.create(HelloService.class);
-	service.sayHello(new AsyncCallback&lt;String&gt;(
-		public void onSucess(String result){
-			Window.alert(result);
-		}
-		
-		public void onFailure(Throwable caught) {
-			try {
-				throw caught;
-			} catch (MyException1 me1) {
-				// Traitement spécial pour MyException1
-			} catch (MyException2 me2) {
-				// Traitement spécial pour MyException2
-			} catch (Throwable t) {
-				// Traitement d’une erreur inconnue
-			}
-		}
-	));
-}</pre></sl:CodeHighlighter>				
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public void sayHello() {
+					HelloServiceAsync service = GWT.create(HelloService.class);
+					service.sayHello(new AsyncCallback&lt;String&gt;(
+						public void onSucess(String result){
+							Window.alert(result);
+						}
+						
+						public void onFailure(Throwable caught) {
+							try {
+								throw caught;
+							} catch (MyException1 me1) {
+								// Traitement spécial pour MyException1
+							} catch (MyException2 me2) {
+								// Traitement spécial pour MyException2
+							} catch (Throwable t) {
+								// Traitement d’une erreur inconnue
+							}
+						}
+					));
+				}</pre>
+			</sl:CodeHighlighter>				
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder> 

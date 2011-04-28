@@ -10,33 +10,34 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>UiBinder <span class="nicetag">Déclaratif</span> <span class="keytag">=</span> <span class="redtag">XML</span> <span class="keytag">+</span> <span class="redtag">HTML</span> <span class="keytag">+</span> <span class="yellowtag">CSS</span></header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.XML}">
-<pre>&lt;!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent"&gt;
-&lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui"&gt;
-	
-	&lt;ui:style&gt;
-		.cool { 
-			font-weight: bolder; 
-		}
-	&lt;/ui:style&gt;
-	
-	&lt;g:HTMLPanel&gt;
-	
-		&lt;div ui:field="coolDiv" class="{style.cool}"&gt;
-			Cool text
-		&lt;/div&gt;
-		
-		&lt;g:ScrollPanel&gt;
-			&lt;g:Button
-				ui:field="button"
-				styleName="{style.cool}"
-			/&gt;
-		&lt;/g:ScrollPanel&gt;
-		
-	&lt;/g:HTMLPanel&gt;
-	
-&lt;/ui:UiBinder&gt;</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.XML}"><pre>
+				&lt;!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent"&gt;
+				&lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+					xmlns:g="urn:import:com.google.gwt.user.client.ui"&gt;
+					
+					&lt;ui:style&gt;
+						.cool { 
+							font-weight: bolder; 
+						}
+					&lt;/ui:style&gt;
+					
+					&lt;g:HTMLPanel&gt;
+					
+						&lt;div ui:field="coolDiv" class="{style.cool}"&gt;
+							Cool text
+						&lt;/div&gt;
+						
+						&lt;g:ScrollPanel&gt;
+							&lt;g:Button
+								ui:field="button"
+								styleName="{style.cool}"
+							/&gt;
+						&lt;/g:ScrollPanel&gt;
+						
+					&lt;/g:HTMLPanel&gt;
+					
+				&lt;/ui:UiBinder&gt;</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

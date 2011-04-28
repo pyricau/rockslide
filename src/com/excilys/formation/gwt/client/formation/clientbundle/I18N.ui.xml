@@ -11,20 +11,21 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Internationalisation</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-public interface MyMessages extends Messages {
-
-  String helloWorld();
-  String loginError(String username);
-
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public interface MyMessages extends Messages {
+				
+				  String helloWorld();
+				  String loginError(String username);
+				
+				}</pre>
+			</sl:CodeHighlighter>
 	<ul class="summary">
 		<li>
 			Fichier MyMessages_en.properties :
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.PLAIN}"><pre>
 				helloWorld = hello, world
 				loginError = username {0} is unknown</pre>
-				</sl:CodeHighlighter>
+			</sl:CodeHighlighter>
 		</li>
 		<li>
 			Fichier MyMessages_fr.properties :

@@ -11,36 +11,35 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Chargement de données texte</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-
-public interface Resources extends ClientBundle {
-
-	// une ressource synchrone
-	TextResource labels();  
-	
-	// une ressource asynchrone
-	@Source(“big_labels.txt”)
-    ExternalTextResource big_labels_async(); 
-}
-
-
-// synchrone 
-String labels = Resources.INSTANCE.labels().getText();
-
-// asynchrone
-Resources.INSTANCE.big_labels_async().getText(
-		new ResourceCallback&lt;TextResource&gt;() {
-			@Override
-			public void onError(ResourceException re) {
-				// gestion de l'erreur de récupération				
-			}
-		
-			@Override
-			public void onSuccess(TextResource resource) {
-				String labels = resource.getText();				
-			}				
-		});
-</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public interface Resources extends ClientBundle {
+				
+					// une ressource synchrone
+					TextResource labels();  
+					
+					// une ressource asynchrone
+					@Source(“big_labels.txt”)
+				    ExternalTextResource big_labels_async(); 
+				}
+				
+				
+				// synchrone 
+				String labels = Resources.INSTANCE.labels().getText();
+				
+				// asynchrone
+				Resources.INSTANCE.big_labels_async().getText(
+						new ResourceCallback&lt;TextResource&gt;() {
+							@Override
+							public void onError(ResourceException re) {
+								// gestion de l'erreur de récupération				
+							}
+						
+							@Override
+							public void onSuccess(TextResource resource) {
+								String labels = resource.getText();				
+							}				
+						});</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

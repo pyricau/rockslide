@@ -10,21 +10,22 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header><span class="redtag">HTML</span> <span class="keytag">+</span> <span class="yellowtag">CSS</span> <span class="keytag">+</span> <span class="greentag">JS</span></header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JSCRIPT}" htmlScript="true">
-<pre>&lt;html&gt;
-	&lt;head&gt;
-		&lt;style type="text/css"&gt;
-			body {
-			    background-color: red;
-			}
-		&lt;/style&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-	    &lt;script type="text/javascript"&gt;
-			alert('Hello world!');
-    	&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JSCRIPT}" htmlScript="true"><pre>
+				&lt;html&gt;
+					&lt;head&gt;
+						&lt;style type="text/css"&gt;
+							body {
+							    background-color: red;
+							}
+						&lt;/style&gt;
+					&lt;/head&gt;
+					&lt;body&gt;
+					    &lt;script type="text/javascript"&gt;
+							alert('Hello world!');
+				    	&lt;/script&gt;
+					&lt;/body&gt;
+				&lt;/html&gt;</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

@@ -9,22 +9,23 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Utilisation</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-public interface Resources extends ClientBundle {
-
-	public static Resources INSTANCE = 
-		GWT.create(Resources.class);
-		
-	ImageResource add(); // add.png
-
-	@Source(“icon_rss.jpg”)
-	ImageResource rss(); // icon_rss.jpg
-
-	CssResource style(); // style.css
-
-	TextResource labels(); // labels.txt
-
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public interface Resources extends ClientBundle {
+				
+					public static Resources INSTANCE = 
+						GWT.create(Resources.class);
+						
+					ImageResource add(); // add.png
+				
+					@Source(“icon_rss.jpg”)
+					ImageResource rss(); // icon_rss.jpg
+				
+					CssResource style(); // style.css
+				
+					TextResource labels(); // labels.txt
+				
+				}</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

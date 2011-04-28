@@ -10,28 +10,29 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Évènement personnalisé</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-public class CancelActionEvent 
-  extends GwtEvent&lt;CancelActionHandler&gt; {
-
-  private static final Type&lt;CancelActionHandler&gt; TYPE = 
-    new Type&lt;CancelActionHandler&gt;();
-
-  @Override
-  protected void dispatch(CancelActionHandler handler) {
-    handler.onCancelAction(this);
-  }
-
-  @Override
-  public GwtEvent.Type&lt;CancelActionHandler&gt; getAssociatedType() {
-    return TYPE;
-  }
-
-}
-// [...]
-public interface CancelActionHandler extends EventHandler {
-  void onCancelAction(CancelActionEvent event);
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public class CancelActionEvent 
+				  extends GwtEvent&lt;CancelActionHandler&gt; {
+				
+				  private static final Type&lt;CancelActionHandler&gt; TYPE = 
+				    new Type&lt;CancelActionHandler&gt;();
+				
+				  @Override
+				  protected void dispatch(CancelActionHandler handler) {
+				    handler.onCancelAction(this);
+				  }
+				
+				  @Override
+				  public GwtEvent.Type&lt;CancelActionHandler&gt; getAssociatedType() {
+				    return TYPE;
+				  }
+				
+				}
+				// [...]
+				public interface CancelActionHandler extends EventHandler {
+				  void onCancelAction(CancelActionEvent event);
+				}</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

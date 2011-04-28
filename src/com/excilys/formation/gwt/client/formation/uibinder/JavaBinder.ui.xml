@@ -10,30 +10,31 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>UiBinder  <span class="nicetag">Impératif</span> <span class="keytag">=</span> <span class="greentag">Java</span></header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}">
-<pre>public class Cool extends Composite {
-
-    private static CoolBinder uiBinder = 
-        GWT.create(CoolBinder.class);
-
-    interface CoolBinder extends UiBinder&lt;Widget, Cool&gt; {}
-
-    @UiField
-    Button button;
-
-    @UiField
-    DivElement coolDiv;
-
-    public Cool() {
-        initWidget(uiBinder.createAndBindUi(this));
-        coolDiv.setInnerText("Coool");
-    }
-
-    @UiHandler("button")
-    void coolClick(ClickEvent e) {
-        Window.alert("Salut !");
-    }
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public class Cool extends Composite {
+				
+				    private static CoolBinder uiBinder = 
+				        GWT.create(CoolBinder.class);
+				
+				    interface CoolBinder extends UiBinder&lt;Widget, Cool&gt; {}
+				
+				    @UiField
+				    Button button;
+				
+				    @UiField
+				    DivElement coolDiv;
+				
+				    public Cool() {
+				        initWidget(uiBinder.createAndBindUi(this));
+				        coolDiv.setInnerText("Coool");
+				    }
+				
+				    @UiHandler("button")
+				    void coolClick(ClickEvent e) {
+				        Window.alert("Salut !");
+				    }
+				}</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

@@ -19,13 +19,14 @@
 		<header>EventBus</header>
 		<section>
 			<div class="{style.schema}" />
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-eventBus.addHandler(CancelActionEvent.TYPE, 
-new CancelActionHandler() {
-    public void onCancelAction() {
-        // Gestion de l'évènement
-    }
-});</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				eventBus.addHandler(CancelActionEvent.TYPE, 
+				new CancelActionHandler() {
+				    public void onCancelAction() {
+				        // Gestion de l'évènement
+				    }
+				});</pre>
+			</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

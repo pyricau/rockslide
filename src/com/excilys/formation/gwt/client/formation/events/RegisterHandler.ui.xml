@@ -10,30 +10,31 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Enregistrement de handler</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-public interface HasCancelActionHandler extends HasHandlers {
-  HandlerRegistration addCancelActionHandler(
-    CancelActionHandler handler);
-}
-// [...]
-public class ChildView extends Composite 
-  implements HasCancelActionHandlers {
-
-  HandlerRegistration addCancelActionHandler(
-    CancelActionHandler handler) {
-    
-    return this.addHandler(handler, CancelActionEvent.TYPE);
-  }
-}
-// [...]
-public ParentView() {
-  ChildView myView = new ChildView();
-  myView.addCancelActionHandler(new CancelActionHandler() {
-    public void onCancelAction(CancelActionEvent event) {
-      // Gestion de l'évènement
-    }
-  });
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+					public interface HasCancelActionHandler extends HasHandlers {
+					  HandlerRegistration addCancelActionHandler(
+					    CancelActionHandler handler);
+					}
+					// [...]
+					public class ChildView extends Composite 
+					  implements HasCancelActionHandlers {
+					
+					  HandlerRegistration addCancelActionHandler(
+					    CancelActionHandler handler) {
+					    
+					    return this.addHandler(handler, CancelActionEvent.TYPE);
+					  }
+					}
+					// [...]
+					public ParentView() {
+					  ChildView myView = new ChildView();
+					  myView.addCancelActionHandler(new CancelActionHandler() {
+					    public void onCancelAction(CancelActionEvent event) {
+					      // Gestion de l'évènement
+					    }
+					  });
+					}</pre>
+				</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
 </ui:UiBinder>

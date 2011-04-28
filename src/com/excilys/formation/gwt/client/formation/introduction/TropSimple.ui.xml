@@ -10,25 +10,26 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Trop simple !</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>
-package fr.koala.gwt.introduction.client;
-// [...]
-public class Introduction implements EntryPoint {
- 
-    public void onModuleLoad() {
-        // Création d'un texte
-        Label label = new Label("Salut tout le monde !");
-        RootPanel.get().add(label);
-        // Création d'un bouton
-        Button button = new Button("Cliquez moi");
-        button.addClickHandler(new ClickHandler() {
-            public void onClick(ClickEvent event) {
-                Window.alert("Mais c'est trop simple!");
-            }
-        });
-        RootPanel.get().add(button);
-    }
-}</pre></sl:CodeHighlighter>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				package fr.koala.gwt.introduction.client;
+				// [...]
+				public class Introduction implements EntryPoint {
+				 
+				    public void onModuleLoad() {
+				        // Création d'un texte
+				        Label label = new Label("Salut tout le monde !");
+				        RootPanel.get().add(label);
+				        // Création d'un bouton
+				        Button button = new Button("Cliquez moi");
+				        button.addClickHandler(new ClickHandler() {
+				            public void onClick(ClickEvent event) {
+				                Window.alert("Mais c'est trop simple!");
+				            }
+				        });
+				        RootPanel.get().add(button);
+				    }
+				}</pre>
+			</sl:CodeHighlighter>
 			<example>
 				<g:Label>Salut tout le monde !</g:Label>
 				<g:Button ui:field="button">Cliquez moi</g:Button>
