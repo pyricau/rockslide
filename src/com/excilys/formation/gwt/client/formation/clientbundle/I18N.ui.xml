@@ -20,18 +20,18 @@ public interface MyMessages extends Messages {
 }</pre></sl:CodeHighlighter>
 	<ul class="summary">
 		<li>
-			Fichier MyMessages_en.properties :<br/>
-			  <p>
-			  	helloWorld = hello, world <br/>
-			  	loginError = username {0} is unknown
-			</p>
+			Fichier MyMessages_en.properties :
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.PLAIN}"><pre>
+				helloWorld = hello, world
+				loginError = username {0} is unknown</pre>
+				</sl:CodeHighlighter>
 		</li>
 		<li>
-			Fichier MyMessages_fr.properties :<br/>
-			  <p>
-			  	helloWorld = Salut o/ <br/>
-			  	loginError = Utilisateur inconnu : {0}
-			</p>
+			Fichier MyMessages_fr.properties :
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.PLAIN}"><pre>
+				helloWorld = Salut o/
+				loginError = Utilisateur inconnu : {0}</pre>
+			</sl:CodeHighlighter>			
 		</li>
 	</ul>			
 		</section>

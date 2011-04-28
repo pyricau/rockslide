@@ -49,6 +49,7 @@ public class FormationGwt extends SlideViewer {
         brushes.add(Brushes.JAVA());
         brushes.add(Brushes.XML());
         brushes.add(Brushes.JSCRIPT());
+        brushes.add(Brushes.PLAIN());
     }
 
 }

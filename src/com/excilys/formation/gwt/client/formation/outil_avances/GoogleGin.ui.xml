@@ -24,8 +24,10 @@ bind(Image.class).annotatedWith(BackOfCard.class)
 public class DefaultCardGrid extends CardGrid {
 
   @Inject
-  public DefaultCardGrid(@BackOfCard Provider&lt;Image&gt; backOfCard,
-      @Rows int rows, @Columns int columns) {
+  public DefaultCardGrid(
+	  @BackOfCard Provider&lt;Image&gt; backOfCard,
+      @Rows int rows,
+      @Columns int columns) {
  
   }
 }
