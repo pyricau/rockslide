@@ -11,25 +11,29 @@
 		<header>Code lisible ?</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" ui:field="sourceCode"  brush="{brushes.JAVA}"><pre>	
-	// Code issue d'une vraie application		
-	participationStatusPanel.clear();
+// Code issue d'une vraie application		
+participationStatusPanel.clear();
 
-	FlexTable table = new FlexTable();
-	addContent(table);
+FlexTable table = new FlexTable();
+addContent(table);
 
-	HorizontalPanel buttons = new HorizontalPanel();
+HorizontalPanel buttons = new HorizontalPanel();
 
-	DockPanel result = new DockPanel();
-	result.add(table, DockPanel.CENTER);
-	table.setSize("100%", "100%");
-	result.setCellHorizontalAlignment(table, HasHorizontalAlignment.ALIGN_CENTER);
-	result.setCellVerticalAlignment(table, HasVerticalAlignment.ALIGN_MIDDLE);
-	result.add(buttons, DockPanel.SOUTH);
-	result.setCellHorizontalAlignment(buttons, HasHorizontalAlignment.ALIGN_RIGHT);
-	result.setCellVerticalAlignment(buttons, HasVerticalAlignment.ALIGN_BOTTOM);
-	result.setSize("100%", "100%");
+DockPanel result = new DockPanel();
+result.add(table, DockPanel.CENTER);
+table.setSize("100%", "100%");
+result.setCellHorizontalAlignment(table, 
+    HasHorizontalAlignment.ALIGN_CENTER);
+result.setCellVerticalAlignment(table, 
+    HasVerticalAlignment.ALIGN_MIDDLE);
+result.add(buttons, DockPanel.SOUTH);
+result.setCellHorizontalAlignment(buttons, 
+    HasHorizontalAlignment.ALIGN_RIGHT);
+result.setCellVerticalAlignment(buttons, 
+    HasVerticalAlignment.ALIGN_BOTTOM);
+result.setSize("100%", "100%");
 
-	participationStatusPanel.add(table);
+participationStatusPanel.add(table);
 </pre></sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
