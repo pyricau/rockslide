@@ -2,9 +2,9 @@ package com.excilys.formation.gwt.client.formation.outil_avances;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt;
 import com.excilys.formation.gwt.client.slider.Chapter;
-import com.excilys.formation.gwt.client.slider.CodeSlide;
 import com.excilys.formation.gwt.client.slider.ElementSlide;
 import com.excilys.formation.gwt.client.slider.VisibleSlide;
+import com.excilys.formation.gwt.client.slider.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -32,7 +32,7 @@ public class OutilsAvances extends Chapter {
     interface SmartGWT extends UiBinder<Widget, VisibleSlide> {}
 
     @UiTemplate("GoogleGin.ui.xml")
-    interface GoogleGin extends UiBinder<Widget, CodeSlide<?>> {}
+    interface GoogleGin extends UiBinder<Widget, WidgetSlide> {}
 
     @UiTemplate("GwtDnd.ui.xml")
     interface GwtDnd extends UiBinder<Widget, VisibleSlide> {}
@@ -45,7 +45,7 @@ public class OutilsAvances extends Chapter {
         addSlide(GWT.create(Visualization.class));
         addVisibleSlide(GWT.create(ExtGWT.class));
         addVisibleSlide(GWT.create(SmartGWT.class));
-        addCodeSlide(GWT.create(GoogleGin.class));
+        addWidgetSlide(GWT.create(GoogleGin.class));
         addVisibleSlide(GWT.create(GwtDnd.class));
         addSlide(FormationGwt.PLAN);
     }

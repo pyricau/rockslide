@@ -1,5 +1,9 @@
 package com.excilys.formation.gwt.client.formation;
 
+import java.util.List;
+
+import com.alexgorbatchev.syntaxhighlighter.client.Brush;
+import com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes;
 import com.excilys.formation.gwt.client.formation.clientbundle.ClientBundle;
 import com.excilys.formation.gwt.client.formation.development_mode.DevelopmentMode;
 import com.excilys.formation.gwt.client.formation.environnement_dev.EnvironnementDev;
@@ -38,6 +42,13 @@ public class FormationGwt extends SlideViewer {
         add(new ClientBundle());
         add(new OutilsAvances());
         add(new Questionnaires());
+    }
+
+    @Override
+    protected void definePreloadedBrushes(List<Brush> brushes) {
+        brushes.add(Brushes.JAVA());
+        brushes.add(Brushes.XML());
+        brushes.add(Brushes.JSCRIPT());
     }
 
 }

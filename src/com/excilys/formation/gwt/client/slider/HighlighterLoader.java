@@ -1,6 +1,7 @@
 package com.excilys.formation.gwt.client.slider;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
@@ -8,11 +9,13 @@ import com.alexgorbatchev.syntaxhighlighter.client.BrushHelper;
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.RepeatingCommand;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.SimplePanel;
 
+/**
+ * See http://code.google.com/p/gwt-syntaxhighlighter/issues/detail?id=11
+ * 
+ * This trick is used to use only one Highlighter for each brush at a time.
+ */
 public class HighlighterLoader {
 
     private static final HighlighterLoader INSTANCE = new HighlighterLoader();
@@ -30,23 +33,18 @@ public class HighlighterLoader {
     private HighlighterLoader() {
     }
 
-    public void getHighlightedWidget(SimplePanel panel, Brush brush, String code, boolean htmlScript, int tabSize) {
+    public void addHighlightedWidget(Brush brush, CodeHighlighter wrapper) {
         Highlighter highlighter = getHighlighter(brush);
 
         SimplePanel parent = (SimplePanel) highlighter.getParent();
 
         if (parent != null) {
-            Element clone = DOM.clone(highlighter.getElement(), true);
-            HTML cloneWidget = HTML.wrap(clone);
+            HighlighterClone clone = HighlighterClone.cloneHighlighter(highlighter);
             parent.clear();
-            parent.setWidget(cloneWidget);
+            parent.setWidget(clone);
         }
 
-        panel.setWidget(highlighter);
-
-        highlighter.setHtmlScript(htmlScript);
-        highlighter.setTabSize(tabSize);
-        highlighter.setText(code);
+        wrapper.prepareHighlighter(highlighter);
     }
 
     private Highlighter getHighlighter(Brush brush) {
@@ -59,8 +57,7 @@ public class HighlighterLoader {
         return highlighter;
     }
 
-    public void loadHighlighters(final HighlighterLoadHandler handler, final Brush... brushes) {
-
+    public void loadHighlighters(final List<Brush> brushes, final HighlighterLoadHandler handler) {
         checkAlreadyLoaded();
         checkNotEmpty(brushes);
         load(brushes);
@@ -73,19 +70,19 @@ public class HighlighterLoader {
         }
     }
 
-    private void checkNotEmpty(final Brush... brushes) {
-        if (brushes == null || brushes.length == 0) {
+    private void checkNotEmpty(final List<Brush> brushes) {
+        if (brushes == null || brushes.size() == 0) {
             throw new IllegalArgumentException("brushes should not be null or empty");
         }
     }
 
-    private void load(final Brush... brushes) {
+    private void load(final List<Brush> brushes) {
         for (Brush brush : brushes) {
             highlighters.put(brush, new Highlighter(brush));
         }
     }
 
-    private void scheduleCallback(final HighlighterLoadHandler handler, final Brush... brushes) {
+    private void scheduleCallback(final HighlighterLoadHandler handler, final List<Brush> brushes) {
         Scheduler.get().scheduleFixedDelay(new RepeatingCommand() {
 
             @Override

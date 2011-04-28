@@ -58,19 +58,6 @@ public abstract class Chapter {
         addPresentable(new VisibleSlide((UiBinder<Widget, VisibleSlide>) uiBinder));
     }
 
-    /**
-     * To be used with GWT.create(XXX.class), provided that XXX.class extends
-     * UiBinder<Widget, CodeSlide>
-     * 
-     * @param uiBinder
-     *            Must be a UiBinder<Widget, CodeSlide>. The signature is Object
-     *            because GWT.create is generic.
-     */
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    protected final void addCodeSlide(Object uiBinder) {
-        addPresentable(new CodeSlide((UiBinder<Widget, CodeSlide>) uiBinder));
-    }
-
     protected final void addPresentable(Presentable presentable) {
         slides.add(presentable);
     }
