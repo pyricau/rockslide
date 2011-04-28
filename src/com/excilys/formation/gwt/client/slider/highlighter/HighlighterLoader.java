@@ -1,4 +1,4 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.highlighter;
 
 import java.util.HashMap;
 import java.util.List;

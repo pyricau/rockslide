@@ -1,8 +1,9 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.slides;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Widget;

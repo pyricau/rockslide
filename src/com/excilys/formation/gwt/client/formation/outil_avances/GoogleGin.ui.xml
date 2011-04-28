@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
 	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
-	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider.highlighter'
 	>
 	
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>

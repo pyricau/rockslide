@@ -1,4 +1,4 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.highlighter;
 
 import com.alexgorbatchev.syntaxhighlighter.client.Highlighter;
 import com.google.gwt.dom.client.Element;

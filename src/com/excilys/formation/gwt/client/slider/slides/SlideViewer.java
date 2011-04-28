@@ -1,12 +1,15 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.slides;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
-import com.excilys.formation.gwt.client.slider.HighlighterLoader.HighlighterLoadHandler;
+import com.excilys.formation.gwt.client.slider.PresentationBuilder;
+import com.excilys.formation.gwt.client.slider.PresentationEntryPoint;
+import com.excilys.formation.gwt.client.slider.highlighter.HighlighterLoader;
+import com.excilys.formation.gwt.client.slider.highlighter.HighlighterLoader.HighlighterLoadHandler;
+import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;
 import com.excilys.formation.gwt.client.slider.window.ChildWindow;
-import com.excilys.formation.gwt.client.slider.window.ShowNotesSender;
 import com.excilys.formation.gwt.client.slider.window.WindowMessageListener;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
@@ -150,13 +153,13 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 		var handleBodyKeyDown = function(event) {
 			switch (event.keyCode) {
 			case 37: // left arrow
-				presentation.@com.excilys.formation.gwt.client.slider.Presentation::displayPreviousSlide()();
+				presentation.@com.excilys.formation.gwt.client.slider.slides.Presentation::displayPreviousSlide()();
 				break;
 			case 39: // right arrow
-				presentation.@com.excilys.formation.gwt.client.slider.Presentation::displayNextSlide()();
+				presentation.@com.excilys.formation.gwt.client.slider.slides.Presentation::displayNextSlide()();
 				break;
 			case 51: // 3
-				presentation.@com.excilys.formation.gwt.client.slider.Presentation::switch3D()();
+				presentation.@com.excilys.formation.gwt.client.slider.slides.Presentation::switch3D()();
 				break;
 			}
 		}
@@ -173,9 +176,9 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 									- e.changedTouches[0].pageX;
 							var SWIPE_SIZE = 150;
 							if (pixelsMoved > SWIPE_SIZE) {
-								presentation.@com.excilys.formation.gwt.client.slider.Presentation::displayNextSlide()();
+								presentation.@com.excilys.formation.gwt.client.slider.slides.Presentation::displayNextSlide()();
 							} else if (pixelsMoved < -SWIPE_SIZE) {
-								presentation.@com.excilys.formation.gwt.client.slider.Presentation::displayPreviousSlide()();
+								presentation.@com.excilys.formation.gwt.client.slider.slides.Presentation::displayPreviousSlide()();
 							}
 						}, false);
     }-*/;

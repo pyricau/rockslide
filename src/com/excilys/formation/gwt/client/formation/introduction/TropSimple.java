@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.introduction;
 
-import com.excilys.formation.gwt.client.slider.WidgetSlide;
+import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;

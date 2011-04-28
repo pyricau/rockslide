@@ -1,6 +1,5 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.shownotes;
 
-import com.excilys.formation.gwt.client.slider.window.ShowNotesSender;
 import com.excilys.formation.gwt.client.slider.window.WindowHelper;
 import com.excilys.formation.gwt.client.slider.window.WindowMessageListener;
 import com.google.gwt.user.client.ui.HTML;

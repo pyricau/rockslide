@@ -1,9 +1,9 @@
 package com.excilys.formation.gwt.client.formation.rpc;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt;
-import com.excilys.formation.gwt.client.slider.Chapter;
-import com.excilys.formation.gwt.client.slider.ElementSlide;
-import com.excilys.formation.gwt.client.slider.WidgetSlide;
+import com.excilys.formation.gwt.client.slider.slides.Chapter;
+import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
+import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;

@@ -1,4 +1,4 @@
-package com.excilys.formation.gwt.client.slider;
+package com.excilys.formation.gwt.client.slider.slides;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;

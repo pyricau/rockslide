@@ -1,7 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
-	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider" 
+	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider.slides" 
 	>
 
 	<g:HTMLPanel addStyleNames="slide">

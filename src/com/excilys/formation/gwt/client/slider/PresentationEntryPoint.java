@@ -1,5 +1,7 @@
 package com.excilys.formation.gwt.client.slider;
 
+import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesViewer;
+import com.excilys.formation.gwt.client.slider.slides.SlideViewer;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window.Location;
 
