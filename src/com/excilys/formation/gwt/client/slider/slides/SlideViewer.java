@@ -6,6 +6,7 @@ import java.util.List;
 import com.alexgorbatchev.syntaxhighlighter.client.Brush;
 import com.excilys.formation.gwt.client.slider.PresentationBuilder;
 import com.excilys.formation.gwt.client.slider.PresentationEntryPoint;
+import com.excilys.formation.gwt.client.slider.Resources;
 import com.excilys.formation.gwt.client.slider.highlighter.HighlighterLoader;
 import com.excilys.formation.gwt.client.slider.highlighter.HighlighterLoader.HighlighterLoadHandler;
 import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;

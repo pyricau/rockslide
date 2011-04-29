@@ -1,0 +1,32 @@
+body {
+	color: #080000;
+	font-family: Georgia,"Times New Roman",serif;
+    text-align: left;
+    font-size: 2em;
+    padding: 0;
+    line-height: 1em;
+    background-color: #FDFDFA;
+    margin: 1em 1.5em 1em 1.5em;
+}
+
+p, div {
+	line-height: 155%;
+}
+
+h1 {
+    border-bottom: 2px solid #CDCDCC;
+    clear: both;
+    font-size: 1.7em;
+    margin: 4px 0 0;
+    padding: 0.2em 0 0.3em;
+    line-height: 125%;
+    color: #333333;
+}
+
+ul, ol {
+	margin: 1em 0 1em 1em;	
+}
+
+li {
+	line-height: 150%;
+}

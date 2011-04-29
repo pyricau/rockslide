@@ -1,4 +1,4 @@
-package com.excilys.formation.gwt.client.slider.slides;
+package com.excilys.formation.gwt.client.slider;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
@@ -11,5 +11,8 @@ public interface Resources extends ClientBundle {
 
     @NotStrict
     CssResource main();
+
+    @NotStrict
+    CssResource shownotes();
 
 }
