@@ -11,6 +11,8 @@ import com.excilys.formation.gwt.client.slider.highlighter.HighlighterLoader.Hig
 import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;
 import com.excilys.formation.gwt.client.slider.window.ChildWindow;
 import com.excilys.formation.gwt.client.slider.window.WindowMessageListener;
+import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.core.client.Scheduler.RepeatingCommand;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.History;
@@ -85,10 +87,21 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     private void startLoading() {
         loadingWidget = new LoadingWidget();
         RootPanel.get().add(loadingWidget);
+        Scheduler.get().scheduleFixedDelay(new RepeatingCommand() {
+
+            @Override
+            public boolean execute() {
+                if (loadingWidget != null) {
+                    loadingWidget.showSlowLoadingWarning();
+                }
+                return false;
+            }
+        }, 3000);
     }
 
     private void stopLoading() {
         loadingWidget.removeFromParent();
+        loadingWidget = null;
     }
 
     private void loadSlideModule() {

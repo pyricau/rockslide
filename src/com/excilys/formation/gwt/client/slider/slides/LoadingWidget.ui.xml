@@ -3,16 +3,31 @@
 
 	<ui:image field="loader" src="ajaxLoader.gif" />
 
-	<ui:style>
+	<ui:style type="com.excilys.formation.gwt.client.slider.slides.LoadingWidget.Style">
 		@sprite .loader {
 			gwt-image: 'loader';
 			margin-right: 10px;
 			float: left;
 		}
+		
+		.hidden {
+			display: none;
+		}
 	</ui:style>
 
 	<div>
 		<div class="{style.loader}" />
-		<p>Chargement en cours</p>
+		<p>Loading slides</p>
+		<div ui:field="slowLoading" class="{style.hidden}">
+			<p>
+				Loading seems to take longer than expected.
+				<br />
+				If you are viewing this presentation in trainer mode, please check
+				that your browser is configured to allow pop ups (the shownotes are
+				opened in a new window), then refresh the page.
+				<br />
+				Otherwise, you shall consider reporting an issue.
+			</p>
+		</div>
 	</div>
 </ui:UiBinder> 
