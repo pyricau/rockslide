@@ -97,7 +97,13 @@ public class Presentation extends Composite {
         changeSlideClass(currentSlide, "current");
         changeSlideClass(chapter.getSlideOrNull(index + 1), "future");
         changeSlideClass(chapter.getSlideOrNull(index + 2), "far-future");
-        String historyToken = chapterName + SlideViewer.SLIDE_PREFIX + chapter.getSlideName(index);
+
+        String historyToken;
+        if (index == 0) {
+            historyToken = chapterName;
+        } else {
+            historyToken = chapterName + SlideViewer.SLIDE_PREFIX + chapter.getSlideName(index);
+        }
 
         History.newItem(historyToken, false);
 
