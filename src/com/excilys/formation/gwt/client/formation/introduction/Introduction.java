@@ -11,7 +11,9 @@ import com.google.gwt.uibinder.client.UiTemplate;
 public class Introduction extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("AQuoi.ui.xml")
     interface AQuoi extends UiBinder<Element, ElementSlide> {}
@@ -24,7 +26,7 @@ public class Introduction extends Chapter {
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
+        addSlide(Titre.binder);
         addSlide(GWT.create(AQuoi.class));
         addSlide(GWT.create(Fonctionnement.class));
         addSlide(GWT.create(Compilation.class));
