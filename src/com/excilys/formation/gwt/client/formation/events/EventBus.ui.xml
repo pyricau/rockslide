@@ -22,7 +22,7 @@
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
 				eventBus.addHandler(CancelActionEvent.TYPE, 
 				new CancelActionHandler() {
-				    public void onCancelAction() {
+				    public void onCancelAction(CancelActionEvent event) {
 				        // Gestion de l'évènement
 				    }
 				});</pre>

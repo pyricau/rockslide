@@ -7,7 +7,7 @@
 			<ul class="summary">
 				<li>Partage du modèle entre client et serveur</li>
 				<li>Pas de session à gérer (services stateless)</li>
-				<li>Appels asynchrone</li>
+				<li>Appels asynchrones</li>
 				<li>Sérialisation des données</li>
 			</ul>
 		</section>

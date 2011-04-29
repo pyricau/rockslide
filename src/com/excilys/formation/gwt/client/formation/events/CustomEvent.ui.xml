@@ -14,7 +14,7 @@
 				public class CancelActionEvent 
 				  extends GwtEvent&lt;CancelActionHandler&gt; {
 				
-				  private static final Type&lt;CancelActionHandler&gt; TYPE = 
+				  public static final Type&lt;CancelActionHandler&gt; TYPE = 
 				    new Type&lt;CancelActionHandler&gt;();
 				
 				  @Override
