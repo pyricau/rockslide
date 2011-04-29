@@ -5,16 +5,16 @@
 		<header>Plan du cours</header>
 		<section>
 			<ul class="summary">
-				<li><a href="#Chapter2Slide1">Introduction</a></li>
-				<li><a href="#Chapter3Slide1">Environnement de développement</a></li>
-				<li><a href="#Chapter4Slide1">Development Mode</a></li>
-				<li><a href="#Chapter5Slide1">Widgets</a></li>
-				<li><a href="#Chapter6Slide1">Events</a></li>
-				<li><a href="#Chapter7Slide1">RPC</a></li>
-				<li><a href="#Chapter8Slide1">UiBinder</a></li>
-				<li><a href="#Chapter9Slide1">ClientBundle</a></li>
-				<li><a href="#Chapter10Slide1">Outils avancés</a></li>
-				<li><a href="#Chapter11Slide1">Questionnaires</a></li>
+				<li><a href="#Introduction">Introduction</a></li>
+				<li><a href="#EnvironnementDev">Environnement de développement</a></li>
+				<li><a href="#DevelopmentMode">Development Mode</a></li>
+				<li><a href="#Widgets">Widgets</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#RPC">RPC</a></li>
+				<li><a href="#UIBinder">UiBinder</a></li>
+				<li><a href="#ClientBundle">ClientBundle</a></li>
+				<li><a href="#OutilsAvances">Outils avancés</a></li>
+				<li><a href="#Questionnaires">Questionnaires</a></li>
 			</ul>
 		</section>
 	</div>

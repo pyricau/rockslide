@@ -23,14 +23,14 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
     public static final String TRAINER_PARAM = "trainer";
 
-    public static final String CHAPTER_PREFIX = "Chapter";
-    public static final String SLIDE_PREFIX = "Slide";
+    public static final String SLIDE_PREFIX = "_";
 
     private Presentation presentation;
 
-    private int currentChapter;
+    private int currentChapter = -1;
 
     private final List<Chapter> chapters = new ArrayList<Chapter>();
+    private final List<String> chapterNames = new ArrayList<String>();
 
     private ChildWindow childWindow;
 
@@ -118,11 +118,25 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
     @Override
     public void addChapter(Chapter chapter) {
+        chapter.setHolderName(ClassHelper.getSimpleName(presentationBuilder));
         chapters.add(chapter);
+        String chapterName = chapter.getName();
+        chapterName = chapterName.replace("_", "");
+        String realChapterName;
+        if (chapterNames.contains(chapterName)) {
+            int i = 1;
+            do {
+                i++;
+                realChapterName = chapterName + i;
+            } while (chapterNames.contains(realChapterName));
+        } else {
+            realChapterName = chapterName;
+        }
+        chapterNames.add(realChapterName);
     }
 
     private void displayChapter(int chapterIndex) {
-        displaySlide(chapterIndex, 1);
+        displaySlide(chapterIndex, 0);
     }
 
     private void displaySlide(int chapterIndex, int slideIndex) {
@@ -130,34 +144,26 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
         chapterIndex = checkChapterIndex(chapterIndex);
         if (chapterIndex != currentChapter) {
             currentChapter = chapterIndex;
-            Chapter chapter = chapters.get(chapterIndex - 1);
-            presentation.updateSlides(chapterIndex, chapter.getSlides());
+            Chapter chapter = chapters.get(chapterIndex);
+            String chapterName = chapterNames.get(currentChapter);
+            presentation.updateSlides(chapterName, chapter);
         }
         presentation.displaySlide(slideIndex);
     }
 
     private int checkChapterIndex(int chapterIndex) {
-        if (chapterIndex < 1) {
-            chapterIndex = 1;
-        } else if (chapterIndex > chapters.size()) {
-            chapterIndex = chapters.size();
+        if (chapterIndex < 0) {
+            chapterIndex = 0;
+        } else if (chapterIndex >= chapters.size()) {
+            chapterIndex = chapters.size() - 1;
         }
         return chapterIndex;
-    }
-
-    private int checkSlideIndex(int slideIndex, List<Presentable> slides) {
-        if (slideIndex < 1) {
-            slideIndex = 1;
-        } else if (slideIndex > slides.size()) {
-            slideIndex = slides.size();
-        }
-        return slideIndex;
     }
 
     private void initializeHistory() {
         History.addValueChangeHandler(this);
         if ("".equals(History.getToken())) {
-            displayChapter(1);
+            displayChapter(0);
         } else {
             History.fireCurrentHistoryState();
         }
@@ -200,29 +206,39 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     @Override
     public void onValueChange(ValueChangeEvent<String> event) {
         String token = event.getValue();
-        int slideNumber = parseSlideNumber(token);
-        int chapterNumber = parseChapterNumber(token);
+        String chapterName = parseChapterName(token);
 
-        displaySlide(chapterNumber, slideNumber);
+        int chapterIndex = chapterNames.indexOf(chapterName);
+
+        if (chapterIndex == -1) {
+            chapterIndex = 0;
+        }
+
+        Chapter chapter = chapters.get(chapterIndex);
+
+        String slideName = parseSlideName(token);
+
+        int slideIndex = chapter.getSlideIndex(slideName);
+
+        displaySlide(chapterIndex, slideIndex);
     }
 
-    private static int parseSlideNumber(String token) {
-        String number = token.substring(token.indexOf(SLIDE_PREFIX) + SLIDE_PREFIX.length());
-        // If parsing fails, go to first slide
-        return parseIntOr1(number);
+    private static String parseSlideName(String token) {
+        int slidePrefixIndex = token.indexOf(SLIDE_PREFIX);
+        if (slidePrefixIndex != -1) {
+            return token.substring(slidePrefixIndex + SLIDE_PREFIX.length());
+        } else {
+            return "";
+        }
+
     }
 
-    private static int parseChapterNumber(String token) {
-        String number = token.substring(token.indexOf(CHAPTER_PREFIX) + CHAPTER_PREFIX.length(), token.indexOf(SLIDE_PREFIX));
-        // If parsing fails, go to first chapter
-        return parseIntOr1(number);
-    }
-
-    private static int parseIntOr1(String number) {
-        try {
-            return Integer.parseInt(number);
-        } catch (Exception e) {
-            return 1;
+    private static String parseChapterName(String token) {
+        int slidePrefixIndex = token.indexOf(SLIDE_PREFIX);
+        if (slidePrefixIndex != -1) {
+            return token.substring(0, slidePrefixIndex);
+        } else {
+            return token;
         }
     }
 }

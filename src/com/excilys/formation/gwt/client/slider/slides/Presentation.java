@@ -1,7 +1,5 @@
 package com.excilys.formation.gwt.client.slider.slides;
 
-import java.util.List;
-
 import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -19,12 +17,13 @@ public class Presentation extends Composite {
 
     interface PresentationUiBinder extends UiBinder<Widget, Presentation> {}
 
-    /** Slides from the presentation */
-    private List<Presentable> slides;
+    /** Chapter holding slides for the presentation */
+    private Chapter chapter;
+
     /** Index of the displayed slide */
     private int index;
 
-    private int currentChapter;
+    private String chapterName;
 
     @UiField
     FlowPanel presentation;
@@ -38,15 +37,13 @@ public class Presentation extends Composite {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
-    public void updateSlides(int chapterIndex, List<Presentable> slides) {
-        if (slides != null && slides.size() > 0) {
-            index = 1;
-            currentChapter = chapterIndex;
-            this.slides = slides;
-            slidesPanel.clear();
-            for (Presentable presentable : slides) {
-                slidesPanel.add(presentable.asWidget());
-            }
+    public void updateSlides(String chapterName, Chapter chapter) {
+        index = 0;
+        this.chapterName = chapterName;
+        this.chapter = chapter;
+        slidesPanel.clear();
+        for (Presentable presentable : chapter) {
+            slidesPanel.add(presentable.asWidget());
         }
     }
 
@@ -54,7 +51,7 @@ public class Presentation extends Composite {
      * Display the previous slide Nothing done if the actual is the first one
      */
     public void displayPreviousSlide() {
-        if (!isFirstPage()) {
+        if (!chapter.isFirstSlide(index)) {
             displaySlide(index - 1);
         }
     }
@@ -63,7 +60,7 @@ public class Presentation extends Composite {
      * Display the next slide Nothing done if the actual is the last one
      */
     public void displayNextSlide() {
-        if (!isLastPage()) {
+        if (!chapter.isLastSlide(index)) {
             displaySlide(index + 1);
         }
     }
@@ -74,11 +71,8 @@ public class Presentation extends Composite {
      * @param index
      */
     public void displaySlide(int index) {
-        if (index < 1) {
-            index = 1;
-        } else if (index > slides.size()) {
-            index = slides.size();
-        }
+
+        index = chapter.checkIndex(index);
 
         if (Math.abs(index - this.index) > 1) {
 
@@ -89,21 +83,22 @@ public class Presentation extends Composite {
                 slideClass = "far-future";
             }
 
-            changeSlideClass(getSlide(this.index - 2), slideClass);
-            changeSlideClass(getSlide(this.index - 1), slideClass);
-            changeSlideClass(getSlide(this.index), slideClass);
-            changeSlideClass(getSlide(this.index + 1), slideClass);
-            changeSlideClass(getSlide(this.index + 2), slideClass);
+            changeSlideClass(chapter.getSlideOrNull(this.index - 2), slideClass);
+            changeSlideClass(chapter.getSlideOrNull(this.index - 1), slideClass);
+            changeSlideClass(chapter.getSlideOrNull(this.index), slideClass);
+            changeSlideClass(chapter.getSlideOrNull(this.index + 1), slideClass);
+            changeSlideClass(chapter.getSlideOrNull(this.index + 2), slideClass);
         }
 
         this.index = index;
-        changeSlideClass(getSlide(index - 2), "far-past");
-        changeSlideClass(getSlide(index - 1), "past");
-        Presentable currentSlide = getSlide(index);
+        changeSlideClass(chapter.getSlideOrNull(index - 2), "far-past");
+        changeSlideClass(chapter.getSlideOrNull(index - 1), "past");
+        Presentable currentSlide = chapter.getSlideOrNull(index);
         changeSlideClass(currentSlide, "current");
-        changeSlideClass(getSlide(index + 1), "future");
-        changeSlideClass(getSlide(index + 2), "far-future");
-        String historyToken = SlideViewer.CHAPTER_PREFIX + currentChapter + SlideViewer.SLIDE_PREFIX + index;
+        changeSlideClass(chapter.getSlideOrNull(index + 1), "future");
+        changeSlideClass(chapter.getSlideOrNull(index + 2), "far-future");
+        String historyToken = chapterName + SlideViewer.SLIDE_PREFIX + chapter.getSlideName(index);
+
         History.newItem(historyToken, false);
 
         slideVisible(index - 1);
@@ -114,35 +109,9 @@ public class Presentation extends Composite {
     }
 
     private void slideVisible(int index) {
-        Visible slide = getSlide(index);
+        Visible slide = chapter.getSlideOrNull(index);
         if (slide != null) {
             slide.visible();
-        }
-    }
-
-    /**
-     * Is the slide displayed currently the first of the presentation
-     * 
-     * @return
-     */
-    private boolean isFirstPage() {
-        return index <= 1;
-    }
-
-    /**
-     * Is the slide displayed currently the last of the presentation
-     * 
-     * @return
-     */
-    private boolean isLastPage() {
-        return index >= slides.size();
-    }
-
-    private Presentable getSlide(int slideNumber) {
-        if (slideNumber > 0 && slideNumber <= slides.size()) {
-            return slides.get(slideNumber - 1);
-        } else {
-            return null;
         }
     }
 

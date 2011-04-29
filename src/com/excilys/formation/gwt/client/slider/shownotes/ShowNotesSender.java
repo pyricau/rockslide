@@ -15,7 +15,7 @@ public class ShowNotesSender {
     }
 
     public void sendShowNotes(Presentable slide) {
-        if (childWindow != null) {
+        if (slide != null && childWindow != null) {
             Element showNotesWidget = slide.getShowNotes();
             String showNotesHTML;
             if (showNotesWidget != null) {
