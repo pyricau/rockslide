@@ -10,30 +10,24 @@
 	<g:HTMLPanel addStyleNames="slide">
 		<header>Enregistrement de handler</header>
 		<section>
-			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
-					public interface HasCancelActionHandler extends HasHandlers {
-					  HandlerRegistration addCancelActionHandler(
-					    CancelActionHandler handler);
-					}
-					// [...]
-					public class ChildView extends Composite 
-					  implements HasCancelActionHandlers {
-					
-					  HandlerRegistration addCancelActionHandler(
-					    CancelActionHandler handler) {
-					    
-					    return this.addHandler(handler, CancelActionEvent.TYPE);
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}" tabSize="2"><pre>
+					public class MyActionView extends Composite {
+					  // [...]
+					  private void userCanceledAction() {
+					    fireEvent(new CancelActionEvent());
 					  }
 					}
 					// [...]
-					public ParentView() {
-					  ChildView myView = new ChildView();
-					  myView.addCancelActionHandler(new CancelActionHandler() {
+					public void createMyActionView() {
+					  MyActionView view = new MyActionView();
+					  view.addHandler(new CancelActionHandler() {
 					    public void onCancelAction(CancelActionEvent event) {
 					      // Gestion de l'évènement
 					    }
-					  });
-					}</pre>
+					  }, CancelActionEvent.TYPE);
+					  // [...]
+					}
+					</pre>
 				</sl:CodeHighlighter>
 		</section>
 	</g:HTMLPanel>
