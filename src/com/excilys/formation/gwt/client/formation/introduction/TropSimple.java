@@ -1,26 +1,27 @@
 package com.excilys.formation.gwt.client.formation.introduction;
 
-import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
+import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Widget;
 
-public class TropSimple extends WidgetSlide {
+public class TropSimple extends WidgetSlideNotes {
 
-    interface Binder extends UiBinder<Widget, Object> {}
-
-    private static final Binder uiBinder = GWT.create(Binder.class);
+    @UiTemplate("TropSimple.ui.xml")
+    interface Binder extends UiBinder<Widget, TropSimple> {
+        Binder binder = GWT.create(Binder.class);
+    }
 
     public TropSimple() {
-        super(uiBinder);
+        super(Binder.binder);
     }
 
     @UiHandler("button")
     void clicked(ClickEvent e) {
         Window.alert("Mais c'est trop simple !");
     }
-
 }

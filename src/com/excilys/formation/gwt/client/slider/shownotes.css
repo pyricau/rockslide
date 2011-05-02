@@ -13,6 +13,11 @@ p, div {
 	line-height: 155%;
 }
 
+.details {
+    font-size: 0.5em;
+    line-height: 150%;
+}
+
 h1 {
     border-bottom: 2px solid #CDCDCC;
     clear: both;

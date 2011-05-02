@@ -8,6 +8,12 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<ul>
+				<li>Ressemble à du Swing (orienté event)</li>
+				<li>Démo !</li>
+			</ul>
+		</div>
 		<header>Trop simple !</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>

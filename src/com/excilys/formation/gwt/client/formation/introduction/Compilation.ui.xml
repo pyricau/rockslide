@@ -10,6 +10,22 @@
 	</ui:style>
 
 	<div class="slide">
+		<div ui:field="notes">
+		
+			<pre class="details">
+* Java + XML => HTMl, Javascript, CSS
+* Tout se passe à la compilation !
+      o DeferredBinding au lieu du chargement dynamique de classes
+* Compilation de permutations pour chaque cible
+      o Navigateur
+      o Locale
+      o Custom
+* Optimisation du code généré
+      o Obfuscation et minification du code javascript à la demande
+      o Code mort supprimé
+      o Optimisation et obfuscation des CSS
+			</pre>
+		</div>
 		<header>Compilation</header>
 		<section>
 			<ul class="summary">

@@ -7,8 +7,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class WidgetSlide extends Composite implements Presentable {
 
-    public WidgetSlide(UiBinder<Widget, Object> uiBinder) {
-        initWidget(uiBinder.createAndBindUi(this));
+    public WidgetSlide(UiBinder<?, ?> uiBinder) {
+        initWidget(cast(uiBinder).createAndBindUi(this));
+    }
+
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    private static UiBinder<Widget, Object> cast(UiBinder uiBinder) {
+        return uiBinder;
     }
 
     @Override
