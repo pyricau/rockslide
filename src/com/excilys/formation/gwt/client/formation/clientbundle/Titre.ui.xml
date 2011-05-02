@@ -2,10 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 	 
 	<div class="slide">
-		<div ui:field="notes">
-			<h1>Mes notes</h1>
-			<p>Des notes de ouf</p>
-		</div>
+		<div ui:field="notes">45min 16h50 - 17h35</div>
 		<section class="center intro">
 			<h1>Client Bundle</h1>
 			<h2>Formation GWT</h2>

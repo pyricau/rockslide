@@ -2,6 +2,27 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 	 
 	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Application Web contient nombreuses ressources statiques (images, CSS, chaines…)
+*  1 ressource = 1 requête HTTP
+
+GWT propose le regroupement des ressources en Bundle
+*  1 requête HTTP = plusieurs ressources
+*  Images encodées en base64
+
+Bundle créé à la compilation
+
+*  intégré au code javascript
+*  Erreur de compilation si une ressource manque
+*  Optimisation des feuilles de style (classes regroupées, commentaires supprimés, obfuscation)
+
+
+Utiliser plusieurs bundle pour éviter le chargement de toutes les ressources
+*  Un Bundle contenant les ressources communes
+*  Un Bundle par module			
+			</pre>
+		</div>	
 		<header>
 			Principe
 		</header>

@@ -9,6 +9,30 @@
 		type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes" />
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Doc : http://code.google.com/intl/fr/webtoolkit/doc/latest/DevGuideI18n.html
+Utilisation d’un module supplémentaire : com.google.gwt.i18n.I18N
+Nécessite de passer un paramètre au client pour définir la locale utilisée par le navigateur :
+
+* Paramètre de requête : http://www.example.org/myapp.html?locale=fr_CA
+* Paramètre meta dans la page html (name="gwt:property" content="locale=ja_JP")
+
+Pour chaque locale, ajouter la conf dans le fichier *.gwt.xml : &lt;extend-property name="locale" values="fr"/&gt;
+
+Basée sur des fichiers properties, (idem MessageBundle en java)
+
+Avantages :
+
+* le binding des propriétés dans une interface permet de savoir quels sont les propriétés non utilisées
+* Une erreur est lancée à la compilation si l’i18n n’est pas complète/correcte (manque d’un paramètre dans une chaîne ou manque simplement)
+* Permet de gérer le pluriel dans les chaînes (annotation @PluralText)
+
+Inconvénients :
+
+    * Chaque locale ajoutée génère des permutations supplémentaires lors de la compilation			
+			</pre>
+		</div>
 		<header>Internationalisation</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
