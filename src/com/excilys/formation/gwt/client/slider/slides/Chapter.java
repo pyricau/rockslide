@@ -7,7 +7,9 @@ import java.util.List;
 
 import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
 import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Widget;
 
 public abstract class Chapter implements Iterable<Presentable> {
 
@@ -106,15 +108,15 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Element, ElementSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    protected final void addSlide(UiBinder<?, ?> uiBinder) {
+    protected final void addSlide(UiBinder<Element, ElementSlide> uiBinder) {
         addPresentable(new ElementSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
-    protected final void addNotesSlide(UiBinder<?, ?> uiBinder) {
+    protected final void addNotesSlide(UiBinder<Element, ElementSlideNotes> uiBinder) {
         addPresentable(new ElementSlideNotes(uiBinder), getUiBinderName(uiBinder));
     }
 
-    protected final void addWidgetNotesSlide(UiBinder<?, ?> uiBinder) {
+    protected final void addWidgetNotesSlide(UiBinder<Widget, WidgetSlideNotes> uiBinder) {
         addPresentable(new WidgetSlideNotes(uiBinder), getUiBinderName(uiBinder));
     }
 
@@ -126,7 +128,7 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Widget, WidgetSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    protected final void addWidgetSlide(UiBinder<?, ?> uiBinder) {
+    protected final void addWidgetSlide(UiBinder<Widget, WidgetSlide> uiBinder) {
         addPresentable(new WidgetSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
@@ -138,7 +140,7 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Widget, VisibleSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    protected final void addVisibleSlide(UiBinder<?, ?> uiBinder) {
+    protected final void addVisibleSlide(UiBinder<Widget, VisibleSlide> uiBinder) {
         addPresentable(new VisibleSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
