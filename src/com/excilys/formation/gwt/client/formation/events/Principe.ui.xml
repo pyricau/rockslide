@@ -2,6 +2,15 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
 	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Les évènements dans l’architecture d’une RIA permettent d’assurer un couplage faible entre les différents composants de l’application.
+=>Maintenabilité et Evolutivité
+Communication :
+* Avec son parent
+* L’ensemble de l’application
+			</pre>
+		</div>
 		<header>Principe</header>
 		<section>
 			<ul class="summary">

@@ -2,6 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 	 
 	<div class="slide">
+		<div ui:field="notes">45min, 13h20 - 14h05</div>
 		<section class="center intro">
 			<h1>Gestion des évènements</h1>
 			<h2>Formation GWT</h2>

@@ -1,9 +1,9 @@
 package com.excilys.formation.gwt.client.formation.events;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
+import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
+import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
-import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
-import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -13,37 +13,37 @@ import com.google.gwt.user.client.ui.Widget;
 public class Events extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {
+    interface Titre extends UiBinder<Element, ElementSlideNotes> {
         Titre binder = GWT.create(Titre.class);
     }
 
     @UiTemplate("Principe.ui.xml")
-    interface Principe extends UiBinder<Element, ElementSlide> {
+    interface Principe extends UiBinder<Element, ElementSlideNotes> {
         Principe binder = GWT.create(Principe.class);
     }
 
     @UiTemplate("CustomEvent.ui.xml")
-    interface CustomEvent extends UiBinder<Widget, WidgetSlide> {
+    interface CustomEvent extends UiBinder<Widget, WidgetSlideNotes> {
         CustomEvent binder = GWT.create(CustomEvent.class);
     }
 
     @UiTemplate("RegisterHandler.ui.xml")
-    interface RegisterHandler extends UiBinder<Widget, WidgetSlide> {
+    interface RegisterHandler extends UiBinder<Widget, WidgetSlideNotes> {
         RegisterHandler binder = GWT.create(RegisterHandler.class);
     }
 
     @UiTemplate("EventBus.ui.xml")
-    interface EventBus extends UiBinder<Widget, WidgetSlide> {
+    interface EventBus extends UiBinder<Widget, WidgetSlideNotes> {
         EventBus binder = GWT.create(EventBus.class);
     }
 
     @Override
     protected void buildSlides() {
-        addSlide(Titre.binder);
-        addSlide(Principe.binder);
-        addWidgetSlide(CustomEvent.binder);
-        addWidgetSlide(RegisterHandler.binder);
-        addWidgetSlide(EventBus.binder);
+        addNotesSlide(Titre.binder);
+        addNotesSlide(Principe.binder);
+        addWidgetNotesSlide(CustomEvent.binder);
+        addWidgetNotesSlide(RegisterHandler.binder);
+        addWidgetNotesSlide(EventBus.binder);
         addSlide(Plan.binder);
     }
 

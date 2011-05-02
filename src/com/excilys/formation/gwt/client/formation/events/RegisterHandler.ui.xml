@@ -8,6 +8,18 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Permet la communication avec son parent
+* 1 Event = 1 Handler
+
+* Évènement personnalisé hérite de GWTEvent,  Handler hérite de EventHandler
+
+* Utilisation de composants personnalisés
+      o Hérite de Composite
+      o Implémente une interface “custom” héritant de HasHandlers	
+			</pre>
+		</div>
 		<header>Enregistrement de handler</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}" tabSize="2"><pre>

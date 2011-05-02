@@ -16,6 +16,12 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Bus événementiel (singleton) permettant aux composants de l’application de communiquer ensemble
+* A utiliser avec un niveau de granularité adapté
+			</pre>
+		</div>	
 		<header>EventBus</header>
 		<section>
 			<div class="{style.schema}" />

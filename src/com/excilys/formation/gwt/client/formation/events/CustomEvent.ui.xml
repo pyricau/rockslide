@@ -8,6 +8,19 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* émetteur/écouteur
+* Évenement
+      o Natif (DOM) :
+            + Click, Mouse, Focus, Keyboard, …
+            + addDomHandler
+      o Logique :
+            + Close, Resize
+            + addHandler
+* Définition des types d'évènements émis par un widget dans ces interfaces de types HasHanlders (HasValueChangeHandlers, HasClickHandlers, ...)				
+			</pre>
+		</div>
 		<header>Évènement personnalisé</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
