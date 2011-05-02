@@ -10,11 +10,13 @@ import com.google.gwt.uibinder.client.UiTemplate;
 public class Questionnaires extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
+        addSlide(Titre.binder);
     }
 
 }

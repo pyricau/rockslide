@@ -6,8 +6,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class ElementSlide extends Widget implements Presentable {
 
-    public ElementSlide(UiBinder<Element, Object> uiBinder) {
-        setElement(uiBinder.createAndBindUi(this));
+    public ElementSlide(UiBinder<?, ?> uiBinder) {
+        setElement(cast(uiBinder).createAndBindUi(this));
+    }
+
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    private static UiBinder<Element, Object> cast(UiBinder uiBinder) {
+        return uiBinder;
     }
 
     @Override

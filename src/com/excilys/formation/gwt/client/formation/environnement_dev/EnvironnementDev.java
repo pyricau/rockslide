@@ -11,19 +11,25 @@ import com.google.gwt.uibinder.client.UiTemplate;
 public class EnvironnementDev extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("GWTDesigner.ui.xml")
-    interface GWTDesigner extends UiBinder<Element, ElementSlide> {}
+    interface GWTDesigner extends UiBinder<Element, ElementSlide> {
+        GWTDesigner binder = GWT.create(GWTDesigner.class);
+    }
 
     @UiTemplate("SpeedTracer.ui.xml")
-    interface SpeedTracer extends UiBinder<Element, ElementSlide> {}
+    interface SpeedTracer extends UiBinder<Element, ElementSlide> {
+        SpeedTracer binder = GWT.create(SpeedTracer.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(GWTDesigner.class));
-        addSlide(GWT.create(SpeedTracer.class));
+        addSlide(Titre.binder);
+        addSlide(GWTDesigner.binder);
+        addSlide(SpeedTracer.binder);
         addSlide(Plan.binder);
     }
 

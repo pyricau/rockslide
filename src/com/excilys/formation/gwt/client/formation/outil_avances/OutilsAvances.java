@@ -14,39 +14,55 @@ import com.google.gwt.user.client.ui.Widget;
 public class OutilsAvances extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("Log.ui.xml")
-    interface Log extends UiBinder<Element, ElementSlide> {}
+    interface Log extends UiBinder<Element, ElementSlide> {
+        Log binder = GWT.create(Log.class);
+    }
 
     @UiTemplate("Liste.ui.xml")
-    interface Liste extends UiBinder<Element, ElementSlide> {}
+    interface Liste extends UiBinder<Element, ElementSlide> {
+        Liste binder = GWT.create(Liste.class);
+    }
 
     @UiTemplate("Visualization.ui.xml")
-    interface Visualization extends UiBinder<Element, ElementSlide> {}
+    interface Visualization extends UiBinder<Element, ElementSlide> {
+        Visualization binder = GWT.create(Visualization.class);
+    }
 
     @UiTemplate("ExtGWT.ui.xml")
-    interface ExtGWT extends UiBinder<Widget, VisibleSlide> {}
+    interface ExtGWT extends UiBinder<Widget, VisibleSlide> {
+        ExtGWT binder = GWT.create(ExtGWT.class);
+    }
 
     @UiTemplate("SmartGWT.ui.xml")
-    interface SmartGWT extends UiBinder<Widget, VisibleSlide> {}
+    interface SmartGWT extends UiBinder<Widget, VisibleSlide> {
+        SmartGWT binder = GWT.create(SmartGWT.class);
+    }
 
     @UiTemplate("GoogleGin.ui.xml")
-    interface GoogleGin extends UiBinder<Widget, WidgetSlide> {}
+    interface GoogleGin extends UiBinder<Widget, WidgetSlide> {
+        GoogleGin binder = GWT.create(GoogleGin.class);
+    }
 
     @UiTemplate("GwtDnd.ui.xml")
-    interface GwtDnd extends UiBinder<Widget, VisibleSlide> {}
+    interface GwtDnd extends UiBinder<Widget, VisibleSlide> {
+        GwtDnd binder = GWT.create(GwtDnd.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(Log.class));
-        addSlide(GWT.create(Liste.class));
-        addSlide(GWT.create(Visualization.class));
-        addVisibleSlide(GWT.create(ExtGWT.class));
-        addVisibleSlide(GWT.create(SmartGWT.class));
-        addWidgetSlide(GWT.create(GoogleGin.class));
-        addVisibleSlide(GWT.create(GwtDnd.class));
+        addSlide(Titre.binder);
+        addSlide(Log.binder);
+        addSlide(Liste.binder);
+        addSlide(Visualization.binder);
+        addVisibleSlide(ExtGWT.binder);
+        addVisibleSlide(SmartGWT.binder);
+        addWidgetSlide(GoogleGin.binder);
+        addVisibleSlide(GwtDnd.binder);
         addSlide(Plan.binder);
     }
 

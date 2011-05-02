@@ -7,9 +7,7 @@ import java.util.List;
 
 import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
 import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
-import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Widget;
 
 public abstract class Chapter implements Iterable<Presentable> {
 
@@ -108,19 +106,16 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Element, ElementSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    @SuppressWarnings("unchecked")
-    protected final void addSlide(Object uiBinder) {
-        addPresentable(new ElementSlide((UiBinder<Element, Object>) uiBinder), getUiBinderName(uiBinder));
+    protected final void addSlide(UiBinder<?, ?> uiBinder) {
+        addPresentable(new ElementSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
-    @SuppressWarnings("unchecked")
-    protected final void addNotesSlide(Object uiBinder) {
-        addPresentable(new ElementSlideNotes((UiBinder<Element, Object>) uiBinder), getUiBinderName(uiBinder));
+    protected final void addNotesSlide(UiBinder<?, ?> uiBinder) {
+        addPresentable(new ElementSlideNotes(uiBinder), getUiBinderName(uiBinder));
     }
 
-    @SuppressWarnings("unchecked")
-    protected final void addWidgetNotesSlide(Object uiBinder) {
-        addPresentable(new WidgetSlideNotes((UiBinder<Widget, Object>) uiBinder), getUiBinderName(uiBinder));
+    protected final void addWidgetNotesSlide(UiBinder<?, ?> uiBinder) {
+        addPresentable(new WidgetSlideNotes(uiBinder), getUiBinderName(uiBinder));
     }
 
     /**
@@ -131,9 +126,8 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Widget, WidgetSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    @SuppressWarnings("unchecked")
-    protected final void addWidgetSlide(Object uiBinder) {
-        addPresentable(new WidgetSlide((UiBinder<Widget, Object>) uiBinder), getUiBinderName(uiBinder));
+    protected final void addWidgetSlide(UiBinder<?, ?> uiBinder) {
+        addPresentable(new WidgetSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
     /**
@@ -144,9 +138,8 @@ public abstract class Chapter implements Iterable<Presentable> {
      *            Must be a UiBinder<Widget, VisibleSlide>. The signature is
      *            Object because GWT.create is generic.
      */
-    @SuppressWarnings("unchecked")
-    protected final void addVisibleSlide(Object uiBinder) {
-        addPresentable(new VisibleSlide((UiBinder<Widget, Object>) uiBinder), getUiBinderName(uiBinder));
+    protected final void addVisibleSlide(UiBinder<?, ?> uiBinder) {
+        addPresentable(new VisibleSlide(uiBinder), getUiBinderName(uiBinder));
     }
 
     protected final void addPresentable(Presentable presentable) {

@@ -13,39 +13,55 @@ import com.google.gwt.user.client.ui.Widget;
 public class RPC extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("CommunicationClassique.ui.xml")
-    interface CommunicationClassique extends UiBinder<Element, ElementSlide> {}
+    interface CommunicationClassique extends UiBinder<Element, ElementSlide> {
+        CommunicationClassique binder = GWT.create(CommunicationClassique.class);
+    }
 
     @UiTemplate("CommunicationGWT.ui.xml")
-    interface CommunicationGWT extends UiBinder<Element, ElementSlide> {}
+    interface CommunicationGWT extends UiBinder<Element, ElementSlide> {
+        CommunicationGWT binder = GWT.create(CommunicationGWT.class);
+    }
 
     @UiTemplate("CommunicationRPC.ui.xml")
-    interface CommunicationRPC extends UiBinder<Element, ElementSlide> {}
+    interface CommunicationRPC extends UiBinder<Element, ElementSlide> {
+        CommunicationRPC binder = GWT.create(CommunicationRPC.class);
+    }
 
     @UiTemplate("API.ui.xml")
-    interface API extends UiBinder<Element, ElementSlide> {}
+    interface API extends UiBinder<Element, ElementSlide> {
+        API binder = GWT.create(API.class);
+    }
 
     @UiTemplate("Spring.ui.xml")
-    interface Spring extends UiBinder<Element, ElementSlide> {}
+    interface Spring extends UiBinder<Element, ElementSlide> {
+        Spring binder = GWT.create(Spring.class);
+    }
 
     @UiTemplate("Autres.ui.xml")
-    interface Autres extends UiBinder<Element, ElementSlide> {}
+    interface Autres extends UiBinder<Element, ElementSlide> {
+        Autres binder = GWT.create(Autres.class);
+    }
 
     @UiTemplate("AsyncCallback.ui.xml")
-    interface AsyncCallback extends UiBinder<Widget, WidgetSlide> {}
+    interface AsyncCallback extends UiBinder<Widget, WidgetSlide> {
+        AsyncCallback binder = GWT.create(AsyncCallback.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(CommunicationClassique.class));
-        addSlide(GWT.create(CommunicationGWT.class));
-        addSlide(GWT.create(CommunicationRPC.class));
-        addSlide(GWT.create(API.class));
-        addWidgetSlide(GWT.create(AsyncCallback.class));
-        addSlide(GWT.create(Spring.class));
-        addSlide(GWT.create(Autres.class));
+        addSlide(Titre.binder);
+        addSlide(CommunicationClassique.binder);
+        addSlide(CommunicationGWT.binder);
+        addSlide(CommunicationRPC.binder);
+        addSlide(API.binder);
+        addWidgetSlide(AsyncCallback.binder);
+        addSlide(Spring.binder);
+        addSlide(Autres.binder);
         addSlide(Plan.binder);
     }
 

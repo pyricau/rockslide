@@ -14,27 +14,37 @@ import com.google.gwt.user.client.ui.Widget;
 public class Widgets extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("Presentation.ui.xml")
-    interface Presentation extends UiBinder<Element, ElementSlide> {}
+    interface Presentation extends UiBinder<Element, ElementSlide> {
+        Presentation binder = GWT.create(Presentation.class);
+    }
 
     @UiTemplate("WidgetsGWT.ui.xml")
-    interface WidgetsGWT extends UiBinder<Element, ElementSlide> {}
+    interface WidgetsGWT extends UiBinder<Element, ElementSlide> {
+        WidgetsGWT binder = GWT.create(WidgetsGWT.class);
+    }
 
     @UiTemplate("Showcase.ui.xml")
-    interface Showcase extends UiBinder<Widget, VisibleSlide> {}
+    interface Showcase extends UiBinder<Widget, VisibleSlide> {
+        Showcase binder = GWT.create(Showcase.class);
+    }
 
     @UiTemplate("Composite.ui.xml")
-    interface Composite extends UiBinder<Widget, WidgetSlide> {}
+    interface Composite extends UiBinder<Widget, WidgetSlide> {
+        Composite binder = GWT.create(Composite.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(Presentation.class));
-        addSlide(GWT.create(WidgetsGWT.class));
-        addVisibleSlide(GWT.create(Showcase.class));
-        addWidgetSlide(GWT.create(Composite.class));
+        addSlide(Titre.binder);
+        addSlide(Presentation.binder);
+        addSlide(WidgetsGWT.binder);
+        addVisibleSlide(Showcase.binder);
+        addWidgetSlide(Composite.binder);
         addSlide(Plan.binder);
     }
 

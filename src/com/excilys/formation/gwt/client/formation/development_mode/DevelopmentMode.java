@@ -11,15 +11,19 @@ import com.google.gwt.uibinder.client.UiTemplate;
 public class DevelopmentMode extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("Indispensable.ui.xml")
-    interface Indispensable extends UiBinder<Element, ElementSlide> {}
+    interface Indispensable extends UiBinder<Element, ElementSlide> {
+        Indispensable binder = GWT.create(Indispensable.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(Indispensable.class));
+        addSlide(Titre.binder);
+        addSlide(Indispensable.binder);
         addSlide(Plan.binder);
     }
 

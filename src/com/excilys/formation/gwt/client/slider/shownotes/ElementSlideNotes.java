@@ -10,7 +10,7 @@ public class ElementSlideNotes extends ElementSlide {
     @UiField
     public Element notes;
 
-    public ElementSlideNotes(UiBinder<Element, Object> uiBinder) {
+    public ElementSlideNotes(UiBinder<?, ?> uiBinder) {
         super(uiBinder);
         notes.removeFromParent();
     }

@@ -13,27 +13,37 @@ import com.google.gwt.user.client.ui.Widget;
 public class Events extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {}
+    interface Titre extends UiBinder<Element, ElementSlide> {
+        Titre binder = GWT.create(Titre.class);
+    }
 
     @UiTemplate("Principe.ui.xml")
-    interface Principe extends UiBinder<Element, ElementSlide> {}
+    interface Principe extends UiBinder<Element, ElementSlide> {
+        Principe binder = GWT.create(Principe.class);
+    }
 
     @UiTemplate("CustomEvent.ui.xml")
-    interface CustomEvent extends UiBinder<Widget, WidgetSlide> {}
+    interface CustomEvent extends UiBinder<Widget, WidgetSlide> {
+        CustomEvent binder = GWT.create(CustomEvent.class);
+    }
 
     @UiTemplate("RegisterHandler.ui.xml")
-    interface RegisterHandler extends UiBinder<Widget, WidgetSlide> {}
+    interface RegisterHandler extends UiBinder<Widget, WidgetSlide> {
+        RegisterHandler binder = GWT.create(RegisterHandler.class);
+    }
 
     @UiTemplate("EventBus.ui.xml")
-    interface EventBus extends UiBinder<Widget, WidgetSlide> {}
+    interface EventBus extends UiBinder<Widget, WidgetSlide> {
+        EventBus binder = GWT.create(EventBus.class);
+    }
 
     @Override
     protected void buildSlides() {
-        addSlide(GWT.create(Titre.class));
-        addSlide(GWT.create(Principe.class));
-        addWidgetSlide(GWT.create(CustomEvent.class));
-        addWidgetSlide(GWT.create(RegisterHandler.class));
-        addWidgetSlide(GWT.create(EventBus.class));
+        addSlide(Titre.binder);
+        addSlide(Principe.binder);
+        addWidgetSlide(CustomEvent.binder);
+        addWidgetSlide(RegisterHandler.binder);
+        addWidgetSlide(EventBus.binder);
         addSlide(Plan.binder);
     }
 
