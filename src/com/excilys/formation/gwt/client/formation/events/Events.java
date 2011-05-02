@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.events;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
@@ -34,7 +34,7 @@ public class Events extends Chapter {
         addWidgetSlide(GWT.create(CustomEvent.class));
         addWidgetSlide(GWT.create(RegisterHandler.class));
         addWidgetSlide(GWT.create(EventBus.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

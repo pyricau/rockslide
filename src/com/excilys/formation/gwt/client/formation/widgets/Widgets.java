@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.widgets;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.excilys.formation.gwt.client.slider.slides.VisibleSlide;
@@ -35,7 +35,7 @@ public class Widgets extends Chapter {
         addSlide(GWT.create(WidgetsGWT.class));
         addVisibleSlide(GWT.create(Showcase.class));
         addWidgetSlide(GWT.create(Composite.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

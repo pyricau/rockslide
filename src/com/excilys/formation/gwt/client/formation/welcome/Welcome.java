@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.welcome;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.google.gwt.core.client.GWT;
@@ -32,12 +32,12 @@ public class Welcome extends Chapter {
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
         addSlide(GWT.create(Auteurs.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
         addSlide(GWT.create(PosesDesQuestions.class));
         addSlide(GWT.create(Whoswho.class));
         addSlide(GWT.create(Presentation.class));
         addSlide(GWT.create(BonneJournee.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

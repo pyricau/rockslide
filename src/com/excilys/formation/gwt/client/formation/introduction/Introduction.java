@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.introduction;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.google.gwt.core.client.GWT;
@@ -31,7 +31,7 @@ public class Introduction extends Chapter {
         addSlide(GWT.create(Fonctionnement.class));
         addSlide(GWT.create(Compilation.class));
         addPresentable(new TropSimple());
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

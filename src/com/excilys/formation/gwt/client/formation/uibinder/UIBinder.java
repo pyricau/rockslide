@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.uibinder;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
@@ -42,7 +42,7 @@ public class UIBinder extends Chapter {
         addWidgetNotesSlide(GWT.create(HtmlCssJs.class));
         addWidgetNotesSlide(GWT.create(XmlBinder.class));
         addWidgetNotesSlide(GWT.create(JavaBinder.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

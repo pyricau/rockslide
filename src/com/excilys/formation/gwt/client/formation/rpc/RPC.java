@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.rpc;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
@@ -46,7 +46,7 @@ public class RPC extends Chapter {
         addWidgetSlide(GWT.create(AsyncCallback.class));
         addSlide(GWT.create(Spring.class));
         addSlide(GWT.create(Autres.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

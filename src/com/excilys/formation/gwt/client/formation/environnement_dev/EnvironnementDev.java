@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.environnement_dev;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.google.gwt.core.client.GWT;
@@ -24,7 +24,7 @@ public class EnvironnementDev extends Chapter {
         addSlide(GWT.create(Titre.class));
         addSlide(GWT.create(GWTDesigner.class));
         addSlide(GWT.create(SpeedTracer.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

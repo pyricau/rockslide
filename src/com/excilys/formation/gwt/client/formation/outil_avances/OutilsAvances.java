@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.outil_avances;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.excilys.formation.gwt.client.slider.slides.VisibleSlide;
@@ -47,7 +47,7 @@ public class OutilsAvances extends Chapter {
         addVisibleSlide(GWT.create(SmartGWT.class));
         addWidgetSlide(GWT.create(GoogleGin.class));
         addVisibleSlide(GWT.create(GwtDnd.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

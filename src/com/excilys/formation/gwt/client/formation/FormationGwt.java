@@ -26,9 +26,9 @@ import com.google.gwt.uibinder.client.UiTemplate;
 public class FormationGwt extends PresentationEntryPoint {
 
     @UiTemplate("Plan.ui.xml")
-    interface Plan extends UiBinder<Element, ElementSlide> {}
-
-    public static final Plan PLAN = GWT.create(Plan.class);
+    public interface Plan extends UiBinder<Element, ElementSlide> {
+        Plan binder = GWT.create(Plan.class);
+    }
 
     @Override
     public void loadChapters(ChapterHolder holder) {

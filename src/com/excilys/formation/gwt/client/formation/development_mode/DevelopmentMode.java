@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.development_mode;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
 import com.google.gwt.core.client.GWT;
@@ -20,7 +20,7 @@ public class DevelopmentMode extends Chapter {
     protected void buildSlides() {
         addSlide(GWT.create(Titre.class));
         addSlide(GWT.create(Indispensable.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }

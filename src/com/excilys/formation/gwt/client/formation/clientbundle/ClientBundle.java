@@ -1,6 +1,6 @@
 package com.excilys.formation.gwt.client.formation.clientbundle;
 
-import com.excilys.formation.gwt.client.formation.FormationGwt;
+import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
 import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
@@ -35,7 +35,7 @@ public class ClientBundle extends Chapter {
         addWidgetSlide(GWT.create(Utilisation.class));
         addWidgetSlide(GWT.create(Asynchronous.class));
         addWidgetSlide(GWT.create(I18N.class));
-        addSlide(FormationGwt.PLAN);
+        addSlide(Plan.binder);
     }
 
 }
