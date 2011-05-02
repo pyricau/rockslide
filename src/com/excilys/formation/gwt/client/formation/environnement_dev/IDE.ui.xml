@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Intégration à des IDE java par plugin (Eclipse, Netbeans, IntelliJ, JDevelopper)
+* Development Mode
+      o Tester “à chaud l’application”
+      o Éviter la recompilation complète de l’application à chaque modification
+			</pre>
+		</div>
+		<header>IDE</header>
+		<section>
+			<ul>
+				<li>Plugins</li>
+				<li>DevMode</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

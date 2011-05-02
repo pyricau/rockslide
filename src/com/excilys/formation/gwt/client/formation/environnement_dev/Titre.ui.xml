@@ -2,6 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 	 
 	<div class="slide">
+		<div ui:field="notes">1h, 9h35 - 10h35 (puis pause 15 min)</div>
 		<section class="center intro">
 			<h1>Environnement de développement</h1>
 			<h2>Formation GWT</h2>

@@ -10,6 +10,11 @@
 	</ui:style>
 
 	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Outils WYSIWYG permettant de créer l’IHM GWT			
+			</pre>
+		</div>
 		<header>
 			GWT Designer
 		</header>
