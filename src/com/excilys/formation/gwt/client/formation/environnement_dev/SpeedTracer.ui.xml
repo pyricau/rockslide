@@ -13,8 +13,8 @@
 		<div ui:field="notes">
 			<pre class="details">
 o Extension de google chrome
-o Outil de profilling pour détecter et résoudre des problèmes de performance
-o (montrer utilisation rapide sur http://code.google.com/intl/fr-FR/webtoolkit/speedtracer/bad-layout.html)			
+o Outil de profiling pour détecter et résoudre des problèmes de performance
+o Montrer utilisation rapide sur http://code.google.com/intl/fr-FR/webtoolkit/speedtracer/bad-layout.html	
 			</pre>
 		</div>	
 		<header>
