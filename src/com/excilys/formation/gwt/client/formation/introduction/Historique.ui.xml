@@ -4,11 +4,11 @@
 	<div class="slide">
 		<div ui:field="notes">
 			<pre class="details">
-				* Première release (1.0) en mai 2006
-				* Dernière release (2.2) en février 2011
-				* Évolution
-				o Outils, Emulation de la JRE
-				o UIBinder, Code splitting, ...
+* Première release (1.0) en mai 2006
+* Dernière release (2.2) en février 2011
+* Évolution
+o Outils, Emulation de la JRE
+o UIBinder, Code splitting, ...
 			</pre>
 		</div>
 		<header>Historique</header>
