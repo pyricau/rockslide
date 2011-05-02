@@ -25,9 +25,15 @@ public class EnvironnementDev extends Chapter {
         SpeedTracer binder = GWT.create(SpeedTracer.class);
     }
 
+    @UiTemplate("IDE.ui.xml")
+    interface IDE extends UiBinder<Element, ElementSlideNotes> {
+        IDE binder = GWT.create(IDE.class);
+    }
+
     @Override
     protected void buildSlides() {
         addNotesSlide(Titre.binder);
+        addNotesSlide(IDE.binder);
         addNotesSlide(GWTDesigner.binder);
         addNotesSlide(SpeedTracer.binder);
         addSlide(Plan.binder);
