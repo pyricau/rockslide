@@ -3,6 +3,13 @@
 	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider.slides" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Librairie de composants graphiques
+* LGPL donc attention !
+* Beaucoup de composants intéressants
+			</pre>
+		</div>
 		<header>
 			Smart GWT
 		</header>

@@ -1,10 +1,11 @@
 package com.excilys.formation.gwt.client.formation.outil_avances;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
+import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
+import com.excilys.formation.gwt.client.slider.shownotes.VisibleSlideNotes;
+import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
-import com.excilys.formation.gwt.client.slider.slides.VisibleSlide;
-import com.excilys.formation.gwt.client.slider.slides.WidgetSlide;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -14,12 +15,12 @@ import com.google.gwt.user.client.ui.Widget;
 public class OutilsAvances extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {
+    interface Titre extends UiBinder<Element, ElementSlideNotes> {
         Titre binder = GWT.create(Titre.class);
     }
 
     @UiTemplate("Log.ui.xml")
-    interface Log extends UiBinder<Element, ElementSlide> {
+    interface Log extends UiBinder<Element, ElementSlideNotes> {
         Log binder = GWT.create(Log.class);
     }
 
@@ -29,40 +30,40 @@ public class OutilsAvances extends Chapter {
     }
 
     @UiTemplate("Visualization.ui.xml")
-    interface Visualization extends UiBinder<Element, ElementSlide> {
+    interface Visualization extends UiBinder<Element, ElementSlideNotes> {
         Visualization binder = GWT.create(Visualization.class);
     }
 
     @UiTemplate("ExtGWT.ui.xml")
-    interface ExtGWT extends UiBinder<Widget, VisibleSlide> {
+    interface ExtGWT extends UiBinder<Widget, VisibleSlideNotes> {
         ExtGWT binder = GWT.create(ExtGWT.class);
     }
 
     @UiTemplate("SmartGWT.ui.xml")
-    interface SmartGWT extends UiBinder<Widget, VisibleSlide> {
+    interface SmartGWT extends UiBinder<Widget, VisibleSlideNotes> {
         SmartGWT binder = GWT.create(SmartGWT.class);
     }
 
     @UiTemplate("GoogleGin.ui.xml")
-    interface GoogleGin extends UiBinder<Widget, WidgetSlide> {
+    interface GoogleGin extends UiBinder<Widget, WidgetSlideNotes> {
         GoogleGin binder = GWT.create(GoogleGin.class);
     }
 
     @UiTemplate("GwtDnd.ui.xml")
-    interface GwtDnd extends UiBinder<Widget, VisibleSlide> {
+    interface GwtDnd extends UiBinder<Widget, VisibleSlideNotes> {
         GwtDnd binder = GWT.create(GwtDnd.class);
     }
 
     @Override
     protected void buildSlides() {
-        addSlide(Titre.binder);
-        addSlide(Log.binder);
+        addNotesSlide(Titre.binder);
+        addNotesSlide(Log.binder);
         addSlide(Liste.binder);
-        addSlide(Visualization.binder);
-        addVisibleSlide(ExtGWT.binder);
-        addVisibleSlide(SmartGWT.binder);
-        addWidgetSlide(GoogleGin.binder);
-        addVisibleSlide(GwtDnd.binder);
+        addNotesSlide(Visualization.binder);
+        addVisibleNotesSlide(ExtGWT.binder);
+        addVisibleNotesSlide(SmartGWT.binder);
+        addWidgetNotesSlide(GoogleGin.binder);
+        addVisibleNotesSlide(GwtDnd.binder);
         addSlide(Plan.binder);
     }
 

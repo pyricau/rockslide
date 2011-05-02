@@ -8,6 +8,15 @@
 	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Framework d’IoC
+* basé sur guice
+* implémente JSR-330 : @Inject
+* n’implémente qu’une partie des fonctionnalités de Guice
+* Attention ! non intégrable (joliement) avec uiBinder
+			</pre>
+		</div>
 		<header>Google Gin</header>
 		<section>
 			<p><a href="http://code.google.com/p/google-gin">http://code.google.com/p/google-gin</a></p>

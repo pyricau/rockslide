@@ -3,6 +3,13 @@
 	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider.slides" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Librairie de drag and drop.
+* Sera MASSIVEMENT intégrée dans le futur Capico réécris entièrement en GWT dans le courant de l’année 2025.
+* Écrite par le gars qui a écrit gwt-log
+			</pre>
+		</div>
 		<header>
 			gwt-dnd
 		</header>

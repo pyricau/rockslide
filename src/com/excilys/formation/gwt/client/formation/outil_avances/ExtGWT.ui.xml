@@ -3,6 +3,14 @@
 	xmlns:sl="urn:import:com.excilys.formation.gwt.client.slider.slides" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Librairie de composants graphiques.
+* Payante !
+* wrapper de ext-js
+* Composants très avancés et surtout très sexy
+			</pre>
+		</div>
 		<header>
 			Ext GWT
 		</header>
