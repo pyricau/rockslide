@@ -1,6 +1,7 @@
 package com.excilys.formation.gwt.client.formation.uibinder;
 
 import com.excilys.formation.gwt.client.formation.FormationGwt.Plan;
+import com.excilys.formation.gwt.client.slider.shownotes.ElementSlideNotes;
 import com.excilys.formation.gwt.client.slider.shownotes.WidgetSlideNotes;
 import com.excilys.formation.gwt.client.slider.slides.Chapter;
 import com.excilys.formation.gwt.client.slider.slides.ElementSlide;
@@ -13,7 +14,7 @@ import com.google.gwt.user.client.ui.Widget;
 public class UIBinder extends Chapter {
 
     @UiTemplate("Titre.ui.xml")
-    interface Titre extends UiBinder<Element, ElementSlide> {
+    interface Titre extends UiBinder<Element, ElementSlideNotes> {
         Titre binder = GWT.create(Titre.class);
     }
 
@@ -49,7 +50,7 @@ public class UIBinder extends Chapter {
 
     @Override
     protected void buildSlides() {
-        addSlide(Titre.binder);
+        addNotesSlide(Titre.binder);
         addWidgetNotesSlide(WithoutUiBinder.binder);
         addSlide(Solution.binder);
         addSlide(UI.binder);
