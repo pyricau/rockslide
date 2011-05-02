@@ -9,6 +9,15 @@
 		type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes" />
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">	
+			<pre class="details">
+* Côté client
+      o Création proxy client par deferred bindding (GWT.create())
+      o Invocation du service avec création de l’ AsyncCallBack
+* Traitement des exceptions déclarés et non attendues dans le callback
+      o Recommandation google : traitement des exceptions	
+			</pre>
+		</div>	
 		<header>Mise en place d'un appel asynchrone</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>

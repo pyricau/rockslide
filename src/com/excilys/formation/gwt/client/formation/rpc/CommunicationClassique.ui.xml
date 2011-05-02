@@ -10,6 +10,11 @@
 	</ui:style>
 
 	<div class="slide">
+		<div ui:field="notes">	
+			<pre class="details">
+1 page => Pas d’échange HTML à chaque appel			
+			</pre>
+		</div>	
 		<header>Application Web classique</header>
 		<section>
 			<ul class="summary">

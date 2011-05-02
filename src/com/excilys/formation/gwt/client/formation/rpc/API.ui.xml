@@ -10,6 +10,15 @@
 	</ui:style>
 
 	<div class="slide">
+		<div ui:field="notes">	
+			<pre class="details">
+* Côté serveur :
+      o Une interface de définition du service
+      o Une interface asynchrone correspondante
+      o Une implémentation du service
+      o Déclaration de la servlet dans le web.xml	
+			</pre>
+		</div>
 		<header>API</header>
 		<section>
 			<div class="summary">
