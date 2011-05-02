@@ -2,6 +2,72 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
 	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Widget
+
+* Classe racine : UIObject
+* Mise en forme à réaliser avec CSS (éviter d’utiliser les attributs des widgets)
+      o Générique
+      o standard CSS connue par tout le monde
+* GWT propose
+      o un widget pour chaque balise HTML de base
+            + Elements de formulaire
+            + Image, Label, Bouton, …
+      o Des widgets plus avancés
+            + Arbre
+            + Editeur de texte
+* Les widgets de base peuvent être trouvés sur http://code.google.com/intl/fr/webtoolkit/doc/latest/RefWidgetGallery.html
+* Des implémentations simple se trouvent sur le showcase : http://gwt.google.com/samples/Showcase/Showcase.html
+* Redéfinition et composition pour définir des widgets de plus haut niveau
+
+Panels
+
+* Un panel est un conteneur de widget qui possède des fonctions permettant d’agencer les widgets qu’il contient
+
+* RootPanel : Conteneur racine de l’application
+      o Tout les widgets l’ont pour parent (ou grand parent)
+      o Accessible via sa méthode static get()
+      o Une bonne pratique est d’y ajouter les Widgets dans EntryPoint.onModuleLoad();
+* VerticalPanel : Agencement vertical dans l’ordre d’ajout
+* HorizontalPanel : Agencement horizontal dans l’ordre d’ajout
+* DockPanel : Positionne les widgets par point cardinaux
+* FormPanel : Permet d’agencer des widgets dans un formulaire HTML
+      o Ne pas utiliser pour envoyer des formulaires web au serveur (RPC powa!)
+      o N’est pas un panel de layout !
+* StackPanel : Agencement vertical des widgets
+      o Un seul élement visible à la fois
+* TabPanel + TabBar : Agence des widgets par onglet
+* Composite : Permet d’encapsuler un ou plusieurs widgets
+      o Utilisation par héritage
+      o À Utiliser avec un DesignPattern Facade pour n’exposer qu’une interface minimum d’interaction
+
+* La compilation de ces panels créé des balise HTML &lt;table&gt;
+      o Déprécié dans les normes du W3C
+      o Interprétation différente selon le navigateur
+      o diminue l'accessibilité de l’application
+* GWT 2.0 ajoute l’utilisation de Layout
+      o Séparation du contenu de la forme avec utilisation du CSS
+      o Utilisation de &lt;div&gt;
+      o Utilisation du moteur de rendu du navigateur
+      o Déclaration du &lt;!Doctype html&gt; obligatoire
+
+Popup, FlexTable et Menu
+
+* PopupPanel : Contenu modal
+* Dialogbox : Contenu modal déplaçable
+* FlexTable : Tableau dynamique avancée
+      o Ne supporte pas de fonctions évoluées de tri, pagination
+      o Instanciation + API à 2 balles
+* CellTable : Tableau dynamique taillé pour accueillir beaucoup de données
+      o Paginé automatiquement
+      o Triable (depuis 2.2 uniquement)
+      o Contrôle de la largeur des colonnes
+* Menu : Menu d’application
+      o API intuitive
+      o Widget prêt à l’emploi (c’est pas souvent!)	
+			</pre>
+		</div>
 		<header>
 			Widgets GWT
 		</header>

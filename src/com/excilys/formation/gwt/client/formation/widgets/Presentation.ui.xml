@@ -13,6 +13,22 @@
 	</ui:style>
 
 	<div class="slide">
+		<div ui:field="notes">
+			<pre class="details">
+Note : durant ce cours il est intéressant d’alterner slide et Showcase.
+
+* Principaux objets de GWT
+      o La classe DOM : manipulation de la structure HTML
+            + createDiv(), createForm(), etc... pour créer des éléments DOM
+            + appendChild(), insertChild() pour ajouter des éléments DOM
+            + getElementById(), getParent()  pour récupérer un élement du DOM
+      o La classes Window : permettant d'interagir avec le navigateur
+            + alert(), confirm() pour afficher des fenêtres de dialogue
+            + getClientHeight(), getClientWidth() pour obtenir les taille de la zone d’affichage du navigateur
+      o Widget : Composant graphique
+      o Panel : Conteneur de Widgets (mise en page)					
+			</pre>
+		</div>	
 		<header>
 			Presentation
 		</header>

@@ -16,6 +16,12 @@
 	</ui:style>
 
 	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Utilisation de la classe Composite
+* initWidget() avec en paramètre le widget principal à "wrapper"
+			</pre>
+		</div>	
 		<header>Composite</header>
 		<section>
 			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
