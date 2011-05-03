@@ -51,7 +51,10 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
                     + "resizable=yes," //
                     + "scrollbars=yes," //
                     + "status=no," //
-                    + "dependent=true";
+                    + "dependent=true,"//
+                    + "width=1200," //
+                    + "height=600" //
+            ;
 
             String showNotesUrl = Location.createUrlBuilder() //
                     .removeParameter(SlideViewer.TRAINER_PARAM) //
