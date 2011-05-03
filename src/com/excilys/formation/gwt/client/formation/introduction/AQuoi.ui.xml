@@ -3,6 +3,15 @@
 
 	<div>
 		<div ui:field="notes">
+			<ul>
+			<li>Compabilité navigateurs</li>
+			<li>Deux modes
+				<ul>
+					<li>Module = Widget dans JSP</li>
+					<li>RIA : SPI</li>
+				</ul>
+			</li>
+			</ul>
 			<pre class="details">
 * Permet de créer des applications web dynamiques standards (HTML / Javascript / CSS) développées en Java
 * Abstraction du code javascript/Ajax
