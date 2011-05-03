@@ -5,7 +5,7 @@
 		<div ui:field="notes">
 			<pre class="details">
 * Première release (1.0) en mai 2006
-* Dernière release (2.2) en février 2011
+* Dernière release (2.3) le 3 mai 2011
 * Évolution
 o Outils, Emulation de la JRE
 o UIBinder, Code splitting, ...
@@ -19,8 +19,8 @@ o UIBinder, Code splitting, ...
 					Mai 2006
 				</li>
 				<li>
-					<span class="nicetag">GWT 2.2</span>
-					Février 2011
+					<span class="nicetag">GWT 2.3</span>
+					3 Mai 2011 (tout chaud !)
 				</li>
 				<li>
 					<strong>Évolutions</strong>
@@ -28,6 +28,8 @@ o UIBinder, Code splitting, ...
 						<li>Outillage</li>
 						<li>Best practices</li>
 						<li>UI en XML</li>
+						<li>Google APIs</li>
+						<li>Local Storage</li>
 					</ul>
 				</li>
 			</ul>
