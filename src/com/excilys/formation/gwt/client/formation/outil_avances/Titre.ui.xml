@@ -1,7 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 	 
-	<div class="slide">
+	<div>
 		<div ui:field="notes">1h, 17h35 - 18h35</div>
 		<section class="center intro">
 			<h1>Outils avancés</h1>

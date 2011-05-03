@@ -14,7 +14,7 @@
 		}
 	</ui:style>
 
-	<div class="slide">
+	<div>
 		<header>Steal this slideshow!</header>
 		<section>
 			<div class="{style.space}">

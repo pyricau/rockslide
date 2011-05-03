@@ -1,7 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
-	<div class="slide">
+	<div>
 		<div ui:field="notes">
 			<pre class="details">
 * Première release (1.0) en mai 2006

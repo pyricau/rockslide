@@ -9,7 +9,7 @@
 		}
 	</ui:style>
 
-	<div class="slide">
+	<div>
 		<div ui:field="notes">	
 			<pre class="details">
 1 page => Pas d’échange HTML à chaque appel			

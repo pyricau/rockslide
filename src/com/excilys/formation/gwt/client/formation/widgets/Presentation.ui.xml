@@ -12,7 +12,7 @@
 	}
 	</ui:style>
 
-	<div class="slide">
+	<div>
 		<div ui:field="notes">
 			<pre class="details">
 Note : durant ce cours il est intéressant d’alterner slide et Showcase.
