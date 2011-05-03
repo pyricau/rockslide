@@ -3,8 +3,6 @@ package com.excilys.formation.gwt.client.slider.slides;
 import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;
 import com.google.gwt.core.client.Duration;
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.event.dom.client.MouseWheelEvent;
-import com.google.gwt.event.dom.client.MouseWheelHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.History;
@@ -40,17 +38,6 @@ public class Presentation extends Composite {
     public Presentation(ShowNotesSender showNotesSender) {
         this.showNotesSender = showNotesSender;
         initWidget(uiBinder.createAndBindUi(this));
-
-        addDomHandler(new MouseWheelHandler() {
-            @Override
-            public void onMouseWheel(MouseWheelEvent event) {
-                if (event.getDeltaY() > 0) {
-                    displayNextSlide();
-                } else {
-                    displayPreviousSlide();
-                }
-            }
-        }, MouseWheelEvent.getType());
     }
 
     public void updateSlides(String chapterName, Chapter chapter) {
