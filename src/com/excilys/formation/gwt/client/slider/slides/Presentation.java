@@ -1,6 +1,7 @@
 package com.excilys.formation.gwt.client.slider.slides;
 
 import com.excilys.formation.gwt.client.slider.shownotes.ShowNotesSender;
+import com.google.gwt.core.client.Duration;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.MouseWheelEvent;
 import com.google.gwt.event.dom.client.MouseWheelHandler;
@@ -26,6 +27,8 @@ public class Presentation extends Composite {
     private int index;
 
     private String chapterName;
+
+    private Duration duration;
 
     @UiField
     FlowPanel presentation;
@@ -86,6 +89,12 @@ public class Presentation extends Composite {
      * @param index
      */
     public void displaySlide(int index) {
+
+        if (duration != null && duration.elapsedMillis() < 200) {
+            return;
+        }
+
+        duration = new Duration();
 
         index = chapter.checkIndex(index);
 
