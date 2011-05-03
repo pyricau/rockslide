@@ -43,7 +43,9 @@ public class Presentation extends Composite {
         this.chapter = chapter;
         slidesPanel.clear();
         for (Presentable presentable : chapter) {
-            slidesPanel.add(presentable.asWidget());
+            Widget slideWidget = presentable.asWidget();
+            slideWidget.setStyleName("slide");
+            slidesPanel.add(slideWidget);
         }
     }
 
