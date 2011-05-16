@@ -108,6 +108,7 @@ public class Presentation extends Composite {
             historyToken = chapterName + SlideViewer.SLIDE_PREFIX + chapter.getSlideName(index);
         }
 
+        Analytics.trackModuleRelativePageView(historyToken);
         History.newItem(historyToken, false);
 
         slideVisible(index - 1);
