@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	 
+	<div>
+		<div ui:field="notes">20 min, 9h15 - 9h35</div>
+		<section class="center intro">
+			<h1>Introduction</h1>
+			<h2>Formation GWT</h2>
+		</section>
+	</div>
+</ui:UiBinder>

@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	 
+	<div>
+		<div ui:field="notes">
+			<pre class="details">
+    * GWT 2.1 intègre directement l’API de logging standard de java : java.util.logging (JUL)
+    * Utilisation :
+
+Logger logger = Logger.getLogger(“MyClassName”);
+
+logger.log(Level.Severe, “Mince alors!”);
+
+    * La configuration du système de log se fait dans  le fichier de configuration du module (*.gwt.xml) 
+
+   &lt;inherits name="com.google.gwt.logging.Logging"/&gt;
+   &lt;!-- Le niveau de Log --&gt;
+   &lt;set-property name="gwt.logging.logLevel" value="SEVERE"/&gt;
+   &lt;!-- Permet de desactiver (ou pas) le logging --&gt;
+   &lt;set-property name="gwt.logging.enabled" value="TRUE"/&gt;
+   &lt;!-- Définition des handlers de log utilisés --&gt;
+   &lt;set-property name="gwt.logging.consoleHandler" value="ENABLED"/&gt;
+   &lt;set-property name="gwt.logging.developmentModeHandler" value="ENABLED" /&gt;
+
+    * La désactivation des logs et l’utilisation des niveaux de logs va optimiser le code javascript généré en supprimant les appels non nécessaire
+    * Il existe de nombreux handlers :
+          o SystemLogHandler : Log les messages dans la sortie standard. Attention la sortie standard n’est accessible qu’en Dev Mode.
+          o DevelopmentModeLogHandler : Log les messages dans la console de Dev Mode.
+          o ConsoleLogHandler : Log les messages dans la console javascript. Cette console est utilisée (et donc visible) par Firebug Lite (pour IE), Safari et Chrome.
+          o FirebugLogHandler : Log les messages directement dans firebug.
+          o PopupLogHandler : Log les messages dans une popup qui apparaitra au démarage de l’application.
+          o SimpleRemoteLogHandler : Log les messages dans la console du serveur. Cet handler utilise des appels RPC, il faut donc l’utiliser avec parcimonie. Pour cet handler, il faut déclarer une servlet suppplémentaire dans le web.xml
+
+
+
+
+
+  &lt;servlet&gt;
+   &lt;servlet-name&gt;remoteLoggingServlet&lt;/servlet-name&gt;
+   &lt;servlet-class&gt;com.google.gwt.logging.server.RemoteLoggingServiceImpl&lt;/servlet-class&gt;
+ &lt;/servlet&gt;
+ 
+ &lt;servlet-mapping&gt;
+   &lt;servlet-name&gt;remoteLoggingServlet&lt;/servlet-name&gt;
+   &lt;url-pattern&gt;logexample/remote_logging&lt;/url-pattern&gt;
+ &lt;/servlet-mapping&gt;
+
+    * L’utilisation de java.util.logging n’est cependant presque plus utilisé
+          o Différentes manières de logguer dans une application (client/serveur)
+
+
+Ptet expliquer comment configurer des niveaux de logs différents en fonction des combinaisons GWT (genre utiliser la combinaison GWT avec les logs si ya un param log=true dans la page...)
+			</pre>
+		</div>
+		<header>Journalisation</header>
+		<section>
+			<ul class="summary">
+				<li>Intégration de l'api java.util.logging</li>
+				<li>Il existe une multitude de handlers :</li>
+				<ul>
+					<li>SystemLogHandler</li>
+					<li>DevelopmentModeLogHandler</li>
+					<li>ConsoleLogHandler</li>
+					<li>FirebugLogHandler</li>
+					<li>PopupLogHandler</li>
+					<li>SimpleRemoteLogHandler</li>
+				</ul>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

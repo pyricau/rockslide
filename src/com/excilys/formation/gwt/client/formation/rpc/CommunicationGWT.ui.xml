@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<ui:image field="communicationGWT" src="communication-GWT.png" />
+
+	<ui:style>
+		@sprite .communicationGWT {
+			gwt-image: 'communicationGWT';
+		}
+	</ui:style>
+
+	<div>
+		<div ui:field="notes">	
+			<pre class="details">
+Seulement des échanges de données			
+			</pre>
+		</div>	
+		<header>Application Web GWT</header>
+		<section>
+			<ul class="summary">
+				<li>
+					1 seule page HTML + échange de données
+					<div class="{style.communicationGWT}" />
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

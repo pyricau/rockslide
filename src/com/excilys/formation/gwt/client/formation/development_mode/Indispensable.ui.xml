@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div>
+		<div ui:field="notes">
+			<pre class="details">
+Principe général
+
+* Indispensable pour le développement d’application GWT
+* Débogage très pratique
+      o Outils de débogage intégrés à l’IDE
+      o Debug à distance (eh oui en prod!)
+      o Debug à chaud (F5)
+      o Debug sur navigateur => utilisation de Firebug
+* Successeur au hosted mode
+* Utilisation d’un plugin supporté par la plupart des navigateurs (pratique pour utiliser Firebug)
+* Communication avec le shell par TCP/IP		
+
+Shell
+
+* Pilote à distance le navigateur via le plugin
+      o Plugin interagit avec le moteur javascript du navigateur
+      o Le navigateur n’a qu’un rôle d’affichage
+* Instancié par com.google.dev.DevMode
+* Affiche les différentes erreurs et les RuntimeException
+			</pre>
+		</div>	
+		<header>Indispensable pour développer</header>
+		<section>
+			<ul class="summary">
+				<li>
+					Intégration à l'IDE, utilisation du navigateur
+					<ul>
+						<li>Outils de débogage java puissants</li>
+						<li>Outils de développement web</li>
+					</ul>
+				</li>
+				<li>
+					Rapide
+					<ul>
+						<li>Pas de compilation</li>
+						<li>Débogage à "chaud"</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div>
+		<header>Ouech, t'es qui ?</header>
+		<section>
+			<ul>
+				<li>13.5 secondes chacun</li>
+				<li>C'est quoi ton blaze ?</li>
+				<li>Tu fais quoi ?</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

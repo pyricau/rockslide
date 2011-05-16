@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	<div>
+		<div ui:field="notes">	
+			<pre class="details">
+* DeRPC (Direct-Eval RPC)
+      o Refonte du mécanisme RPC (depuis 2.0)
+      o Meilleures performances ? Pas sur!
+            + Echange de code et non de données => Désérialisation plus rapide (eval())
+            + Plus de fichier .gwt.rpc
+* JSON
+      o Sérialisation/Désérialisation moins coûteuse
+      o Encodage/Décodage long et pas forcément optimisé. Diff: Décodage plus rapide (eval) mais encodage lent et surtout très couteux pour des structures en arbre avec des références fortes
+      o Plus compliqué à mettre en place
+      o Idéal pour échange avec un back-end non java
+      o Forte diminution du couplage client/serveur
+      o Possibilité de mutualiser les services exposés par le serveur avec une appli mobile par exemple.
+* RequestBuilder
+      o Requête HTTP classique
+      o Échanger du contenu XML/HTML
+      o Échange avec un Web-Services ou un back end non java			
+			</pre>
+		</div>	
+		<header>Autres méthodes de communication</header>
+		<section>
+			<ul class="summary">
+				<li>DeRPC (Direct-Eval RPC)</li>
+				<li>JSON</li>
+				<li>RequestBuilder</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

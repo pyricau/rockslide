@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider.highlighter'
+	>
+	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Permet la communication avec son parent
+* 1 Event = 1 Handler
+
+* Évènement personnalisé hérite de GWTEvent,  Handler hérite de EventHandler
+
+* Utilisation de composants personnalisés
+      o Hérite de Composite
+      o Implémente une interface “custom” héritant de HasHandlers	
+			</pre>
+		</div>
+		<header>Enregistrement de handler</header>
+		<section>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}" tabSize="2"><pre>
+					public class MyActionView extends Composite {
+					  // [...]
+					  private void userCanceledAction() {
+					    fireEvent(new CancelActionEvent());
+					  }
+					}
+					// [...]
+					public void createMyActionView() {
+					  MyActionView view = new MyActionView();
+					  view.addHandler(new CancelActionHandler() {
+					    public void onCancelAction(CancelActionEvent event) {
+					      // Gestion de l'évènement
+					    }
+					  }, CancelActionEvent.TYPE);
+					  // [...]
+					}
+					</pre>
+				</sl:CodeHighlighter>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>

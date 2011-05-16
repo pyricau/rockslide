@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<ui:image field="schema" src="gwtdesigner.png" />
+
+	<ui:style>
+		@sprite .schema {
+			gwt-image: 'schema';
+		}
+	</ui:style>
+
+	<div>
+		<div ui:field="notes">
+			<pre class="details">
+Outils WYSIWYG permettant de créer l’IHM GWT			
+			</pre>
+		</div>
+		<header>
+			GWT Designer
+		</header>
+		<section>
+			<div class="{style.schema}" />
+		</section>
+	</div>
+</ui:UiBinder>

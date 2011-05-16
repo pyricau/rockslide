@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div>
+		<div ui:field="notes">	
+			<pre class="details">
+* Les objets échangés sont des objets Java sérialisés
+      o Partage du modèle entre le client et le serveur (pas de duplication du modèle)
+      o Débogage simplifié
+      o Pas de session à gérer côté serveur (diminution de la charge, services stateless)
+      o Le serveur d’applications devient alors simplement un fourniseur de services
+* Appel asynchrone avec les XMLHTTPRequest de AJAX
+      o Pas “d’écran blanc”
+      o Pas de blocage du navigateur
+      
+* Les objets échangés doivent
+      o Implémenter java.io.Serializable
+      o Posséder des propriétés sérialisables ou déclarées transientes
+      o Avoir un constructeur vide
+* Mécanisme de sérialisation propre à GWT      
+
+* Des fichiers *.gwt.rpc sont créés à la compilation
+      o Descriptifs des services et des types sérialisés
+      o Contenu dans le war de l’application
+			</pre>
+		</div>	
+		<header>Communication via RPC</header>
+		<section>
+			<ul class="summary">
+				<li>Partage du modèle entre client et serveur</li>
+				<li>Pas de session à gérer (services stateless)</li>
+				<li>Appels asynchrones</li>
+				<li>Sérialisation des données</li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

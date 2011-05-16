@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider.highlighter'
+	>
+
+	<ui:with field="brushes"
+		type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes" />
+
+	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">	
+			<pre class="details">
+* Côté client
+      o Création proxy client par deferred bindding (GWT.create())
+      o Invocation du service avec création de l’ AsyncCallBack
+* Traitement des exceptions déclarés et non attendues dans le callback
+      o Recommandation google : traitement des exceptions	
+			</pre>
+		</div>	
+		<header>Mise en place d'un appel asynchrone</header>
+		<section>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				public void sayHello() {
+					HelloServiceAsync service = GWT.create(HelloService.class);
+					service.sayHello(new AsyncCallback&lt;String&gt;(
+						public void onSucess(String result){
+							Window.alert(result);
+						}
+						
+						public void onFailure(Throwable caught) {
+							try {
+								throw caught;
+							} catch (MyException1 me1) {
+								// Traitement spécial pour MyException1
+							} catch (MyException2 me2) {
+								// Traitement spécial pour MyException2
+							} catch (Throwable t) {
+								// Traitement d’une erreur inconnue
+							}
+						}
+					));
+				}</pre>
+			</sl:CodeHighlighter>				
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder> 

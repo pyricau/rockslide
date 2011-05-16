@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div>
+		<header>Plan du cours</header>
+		<section>
+			<ul class="summary">
+				<li><a href="#Introduction">Introduction</a></li>
+				<li><a href="#EnvironnementDev">Environnement de développement</a></li>
+				<li><a href="#DevelopmentMode">Development Mode</a></li>
+				<li><a href="#Widgets">Widgets</a></li>
+				<li><a href="#Events">Events</a></li>
+				<li><a href="#RPC">RPC</a></li>
+				<li><a href="#UIBinder">UiBinder</a></li>
+				<li><a href="#ClientBundle">ClientBundle</a></li>
+				<li><a href="#OutilsAvances">Outils avancés</a></li>
+				<li><a href="#Questionnaires">Questionnaires</a></li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

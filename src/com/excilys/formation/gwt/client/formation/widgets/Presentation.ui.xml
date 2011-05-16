@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder 
+	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+	.container {
+		text-align:center;
+	}	
+	.list {
+		text-align:left;
+	}
+	</ui:style>
+
+	<div>
+		<div ui:field="notes">
+			<pre class="details">
+Note : durant ce cours il est intéressant d’alterner slide et Showcase.
+
+* Principaux objets de GWT
+      o La classe DOM : manipulation de la structure HTML
+            + createDiv(), createForm(), etc... pour créer des éléments DOM
+            + appendChild(), insertChild() pour ajouter des éléments DOM
+            + getElementById(), getParent()  pour récupérer un élement du DOM
+      o La classes Window : permettant d'interagir avec le navigateur
+            + alert(), confirm() pour afficher des fenêtres de dialogue
+            + getClientHeight(), getClientWidth() pour obtenir les taille de la zone d’affichage du navigateur
+      o Widget : Composant graphique
+      o Panel : Conteneur de Widgets (mise en page)					
+			</pre>
+		</div>	
+		<header>
+			Presentation
+		</header>
+		<section class="{style.container}">
+			<ul class="summary {style.list}">
+				<li>classe DOM</li>
+				<li>classe Window</li>
+				<li>Widgets</li>
+				<li>Panel</li>
+			</ul>
+			<img src="http://yuml.me/diagram/scruffy/class/%5BWindow%7C+alert();+confirm();+getClientWidth()%7Bbg:green%7D%5D"/>
+			<img src="http://yuml.me/diagram/scruffy/class/%5BDOM%7C+createDiv();+appendChild();+getElementById()%7Bbg:orange%7D%5D"/>
+			<img src="http://yuml.me/diagram/scruffy/class/[UIObject%7Bbg:blue%7D]%5E-[Widget%7Bbg:yellow%7D],[Panel]%3C%3E-%3E[Widget],[Widget]%5E-[Panel%7Bbg:red%7D]"/>
+		</section>
+	</div>
+</ui:UiBinder>

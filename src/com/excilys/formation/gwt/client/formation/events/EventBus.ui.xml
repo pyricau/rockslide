@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:com.excilys.formation.gwt.client.slider.highlighter'
+	>
+	
+	<ui:image field="schema" src="eventbus.png" />
+
+	<ui:style>
+		@sprite .schema {
+			gwt-image: 'schema';
+		}
+	</ui:style>
+	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+			<pre class="details">
+* Bus événementiel (singleton) permettant aux composants de l’application de communiquer ensemble
+* A utiliser avec un niveau de granularité adapté
+			</pre>
+		</div>	
+		<header>EventBus</header>
+		<section>
+			<div class="{style.schema}" />
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+				eventBus.addHandler(CancelActionEvent.TYPE, 
+				new CancelActionHandler() {
+				    public void onCancelAction(CancelActionEvent event) {
+				        // Gestion de l'évènement
+				    }
+				});</pre>
+			</sl:CodeHighlighter>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>
