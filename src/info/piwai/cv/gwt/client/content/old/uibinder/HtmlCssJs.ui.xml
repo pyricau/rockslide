@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+	xmlns:sl='urn:import:info.piwai.cv.gwt.client.slider.highlighter'
+	>
+	
+	<ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<g:HTMLPanel addStyleNames="slide">
+		<div ui:field="notes">
+		<ul>
+			<li>HTML + CSS a montré la voie</li>
+			<li>Aujourd'hui on retrouve ça en Flex, Android, et ça existe même sur Swing</li>
+			<li>Et donc, aussi sur GWT</li>
+			<li>Productivité/maintenabilité ++</li>
+			<li>Séparation structure / mise en forme / comportement</li>
+		</ul>
+		</div>
+		<header><span class="redtag">HTML</span> <span class="keytag">+</span> <span class="yellowtag">CSS</span> <span class="keytag">+</span> <span class="greentag">JS</span></header>
+		<section>
+			<sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JSCRIPT}" htmlScript="true"><pre>
+				&lt;html&gt;
+					&lt;head&gt;
+						&lt;style type="text/css"&gt;
+							body {
+							    background-color: red;
+							}
+						&lt;/style&gt;
+					&lt;/head&gt;
+					&lt;body&gt;
+					    &lt;script type="text/javascript"&gt;
+							alert('Hello world!');
+				    	&lt;/script&gt;
+					&lt;/body&gt;
+				&lt;/html&gt;</pre>
+			</sl:CodeHighlighter>
+		</section>
+	</g:HTMLPanel>
+</ui:UiBinder>

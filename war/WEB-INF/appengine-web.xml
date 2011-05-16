@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-	<application>excilys-gwt-slides</application>
+	<application>cv-piwai</application>
 	<version>1</version>
 	<static-files>
         <include path="/index.html" />
         <include path="/main.css" />
         <include path="/src/**/*.*" />
         <include path="/src/*" />
-        <include path="/slides/**/*.*" />
-        <include path="/slides/*" />
+        <include path="/cv/**/*.*" />
+        <include path="/cv/*" />
     </static-files>
     <resource-files>
         <exclude path="/src/**/*.*" />
-        <exclude path="/slides/**/*.*" />
+        <exclude path="/cv/**/*.*" />
     </resource-files>
 	<!-- Configure java.util.logging -->
 	<system-properties>
