@@ -36,9 +36,9 @@ public class Welcome extends Chapter {
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
-        addWidgetSlide(StealThisSlideshow.binder);
         addWidgetSlide(SoftwareDeveloper.binder);
         addSlide(SocialCoder.binder);
+        addWidgetSlide(StealThisSlideshow.binder);
         addSlide(Sections.binder);
     }
 }
