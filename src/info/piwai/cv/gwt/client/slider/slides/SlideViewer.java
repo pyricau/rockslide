@@ -211,6 +211,9 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     @Override
     public void onValueChange(ValueChangeEvent<String> event) {
         String token = event.getValue();
+
+        Analytics.trackModuleRelativePageView(token);
+
         String chapterName = parseChapterName(token);
 
         int chapterIndex = chapterNames.indexOf(chapterName);
