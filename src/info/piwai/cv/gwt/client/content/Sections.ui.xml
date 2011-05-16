@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+	<div>
+		<header>Sections</header>
+		<section>
+			<ul class="summary">
+				<li><a href="#Welcome">Welcome</a></li>
+				<li><a href="#Jobs">Jobs</a></li>
+				<li><a href="#Projects">Projects</a></li>
+				<li><a href="#Skills">Skills</a></li>
+				<li><a href="#Education">Education</a></li>
+			</ul>
+		</section>
+	</div>
+</ui:UiBinder>

@@ -1,5 +1,6 @@
 package info.piwai.cv.gwt.client.content.welcome;
 
+import info.piwai.cv.gwt.client.content.CV.Sections;
 import info.piwai.cv.gwt.client.slider.slides.Chapter;
 import info.piwai.cv.gwt.client.slider.slides.ElementSlide;
 import info.piwai.cv.gwt.client.slider.slides.WidgetSlide;
@@ -38,5 +39,6 @@ public class Welcome extends Chapter {
         addWidgetSlide(StealThisSlideshow.binder);
         addWidgetSlide(SoftwareDeveloper.binder);
         addSlide(SocialCoder.binder);
+        addSlide(Sections.binder);
     }
 }
