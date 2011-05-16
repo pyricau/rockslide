@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <ui:image field="piwai" src="piwai_logo.png" />
+    <ui:image field="blog" src="blog_screenshot.png" />
+    <ui:image field="jug" src="piwai_parisjug.jpg" />
+    
+    <ui:style>
+        @sprite .piwai {
+            gwt-image: 'piwai';
+            float:left;
+            margin-right: 20px;
+        }
+        @sprite .blog {
+            gwt-image: 'blog';
+            float:left;
+            margin-right: 20px;
+        }
+        @sprite .jug {
+            gwt-image: 'jug';
+            float:left;
+            margin-right: 20px;
+        }           
+        .clear {
+            clear:both;
+        }
+        .centerTwitter {
+            line-height: 80px;
+        }
+        .centerBlog {
+            line-height: 160px;
+        }        
+        .centerJug {
+            line-height: 160px;
+        }         
+        .small {
+        	font-size: 15px;
+        }
+    </ui:style>
+    
+
+    <div>
+        <header>I am also a social coder</header>
+        <section>
+            <div class="{style.centerTwitter}"><div class="{style.piwai}"/><p>Follow <a href="http://twitter.com/piwai">@Piwai</a> on twitter</p><div class="{style.clear}"/></div>
+            
+            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I write technical articles on the Excilys <a href="http://blog.excilys.com/author/pyricau/">blog</a> &amp; <a href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a></p><div class="{style.clear}"/></div>
+            
+            <div class="{style.centerJug}"><div class="{style.jug}"/><p>I usually attend the <a href="http://www.parisjug.org">ParisJUG</a>, say hello if you do too!</p><div class="{style.clear}"/></div>
+            
+            <div class="{style.small}">This photo was taken by <a href="http://www.flickr.com/photos/52029823@N02/">José Paumard</a>.</div>
+        </section>
+    </div>
+</ui:UiBinder>

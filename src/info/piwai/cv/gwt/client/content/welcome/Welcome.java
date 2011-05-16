@@ -27,10 +27,16 @@ public class Welcome extends Chapter {
         SoftwareDeveloper binder = GWT.create(SoftwareDeveloper.class);
     }
 
+    @UiTemplate("SocialCoder.ui.xml")
+    interface SocialCoder extends UiBinder<Element, ElementSlide> {
+        SocialCoder binder = GWT.create(SocialCoder.class);
+    }
+
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
         addWidgetSlide(StealThisSlideshow.binder);
         addWidgetSlide(SoftwareDeveloper.binder);
+        addSlide(SocialCoder.binder);
     }
 }

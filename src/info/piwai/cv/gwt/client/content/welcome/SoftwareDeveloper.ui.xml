@@ -45,8 +45,11 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
             <div class="{style.center}"><div class="{style.sourceforge}"/><p>on <a href="http://sourceforge.net/users/insa_piwai">SourceForge</a> (2006-2009)</p><div class="{style.clear}"/></div>
                 <sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
                     System.out.println("I write a lot of Java code,");
+                    
                     response.getWriter().println("mainly for JEE backends,");
+                    
                     Window.alert("usually coupled with GWT frontends,");
+                    
                     Toast.makeText(this, "and I also write Android related code!",
                         Toast.LENGTH_LONG).show();
                     </pre>
