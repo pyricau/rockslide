@@ -25,7 +25,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 		<header>Steal this slideshow!</header>
 		<section>
 			<div class="{style.space}">
-    			<p>GWT written slides, hosted on AppEngine</p>
+    			<p>GWT written slides, hosted on AppEngine.</p>
                 <sl:CodeHighlighter addStyleNames="sh" brush="{brushes.XML}"><pre>
                     &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
                       &lt;div&gt;
