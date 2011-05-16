@@ -6,13 +6,13 @@
         <section
             class="center intro">
             <h1>Hello!</h1>
-            <p>I am <strong>Pierre-Yves Ricau.</strong></p>
-            <p>This is my online Curriculum Vitae.</p>
+            <p>I am <strong>Pierre-Yves Ricau</strong></p>
+            <p>This is my online Curriculum Vitae</p>
             <p>
                 Press
                 <span
                     class="keytag">→</span>
-                to advance.
+                to advance
             </p>
         </section>
     </div>

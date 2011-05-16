@@ -19,6 +19,7 @@ public class CV extends PresentationEntryPoint {
     @Override
     public void definePreloadedBrushes(List<Brush> brushes) {
         brushes.add(Brushes.XML());
+        brushes.add(Brushes.JAVA());
     }
 
 }

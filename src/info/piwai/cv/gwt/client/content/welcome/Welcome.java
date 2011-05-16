@@ -17,14 +17,20 @@ public class Welcome extends Chapter {
         Hello binder = GWT.create(Hello.class);
     }
 
-    @UiTemplate("Steal.ui.xml")
-    interface Steal extends UiBinder<Widget, WidgetSlide> {
-        Steal binder = GWT.create(Steal.class);
+    @UiTemplate("StealThisSlideshow.ui.xml")
+    interface StealThisSlideshow extends UiBinder<Widget, WidgetSlide> {
+        StealThisSlideshow binder = GWT.create(StealThisSlideshow.class);
+    }
+
+    @UiTemplate("SoftwareDeveloper.ui.xml")
+    interface SoftwareDeveloper extends UiBinder<Widget, WidgetSlide> {
+        SoftwareDeveloper binder = GWT.create(SoftwareDeveloper.class);
     }
 
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
-        addWidgetSlide(Steal.binder);
+        addWidgetSlide(StealThisSlideshow.binder);
+        addWidgetSlide(SoftwareDeveloper.binder);
     }
 }
