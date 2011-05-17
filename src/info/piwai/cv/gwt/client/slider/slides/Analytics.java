@@ -23,7 +23,7 @@ public class Analytics {
 		try {
 			if ($wnd._gat) {
 				// setup tracking object with account
-				var pageTracker = $wnd._gat._getTracker("UA-20749630-1");
+				var pageTracker = $wnd._gat._getTracker("UA-5875795-15");
 
 				pageTracker._setRemoteServerMode();
 
