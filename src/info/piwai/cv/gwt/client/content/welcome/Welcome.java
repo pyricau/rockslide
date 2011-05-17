@@ -23,9 +23,9 @@ public class Welcome extends Chapter {
         StealThisSlideshow binder = GWT.create(StealThisSlideshow.class);
     }
 
-    @UiTemplate("SoftwareDeveloper.ui.xml")
-    interface SoftwareDeveloper extends UiBinder<Widget, WidgetSlide> {
-        SoftwareDeveloper binder = GWT.create(SoftwareDeveloper.class);
+    @UiTemplate("SoftwareEngineer.ui.xml")
+    interface SoftwareEngineer extends UiBinder<Widget, WidgetSlide> {
+        SoftwareEngineer binder = GWT.create(SoftwareEngineer.class);
     }
 
     @UiTemplate("SocialCoder.ui.xml")
@@ -36,7 +36,7 @@ public class Welcome extends Chapter {
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
-        addWidgetSlide(SoftwareDeveloper.binder);
+        addWidgetSlide(SoftwareEngineer.binder);
         addSlide(SocialCoder.binder);
         addWidgetSlide(StealThisSlideshow.binder);
         addSlide(Sections.binder);

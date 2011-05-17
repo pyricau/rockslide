@@ -1,5 +1,6 @@
 package info.piwai.cv.gwt.client.content;
 
+import info.piwai.cv.gwt.client.content.contact.Contact;
 import info.piwai.cv.gwt.client.content.education.Education;
 import info.piwai.cv.gwt.client.content.jobs.Jobs;
 import info.piwai.cv.gwt.client.content.projects.Projects;
@@ -32,6 +33,7 @@ public class CV extends PresentationEntryPoint {
         holder.addChapter(new Projects());
         holder.addChapter(new Skills());
         holder.addChapter(new Education());
+        holder.addChapter(new Contact());
     }
 
     @Override

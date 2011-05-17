@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <section
+            class="center intro">
+            <h1>Contact Me</h1>
+            <h2>WIP, not available yet.</h2>
+        </section>
+    </div>
+</ui:UiBinder>

@@ -37,14 +37,14 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	</ui:style>
 
 	<g:HTMLPanel>
-		<header>I am a software developer</header>
+		<header>I am a Software Engineer</header>
 		<section>
             <h2>Need proofs? Read my code &amp; commit logs:</h2>
 			<div class="{style.center}"><div class="{style.github}"/><p>on <a href="https://github.com/pyricau">Github</a> (2011)</p><div class="{style.clear}"/></div>
             <div class="{style.center}"><div class="{style.googlecode}"/><p>on <a href="http://code.google.com/u/py.ricau">Google Code</a> (2009-2011)</p><div class="{style.clear}"/></div>
             <div class="{style.center}"><div class="{style.sourceforge}"/><p>on <a href="http://sourceforge.net/users/insa_piwai">SourceForge</a> (2006-2009)</p><div class="{style.clear}"/></div>
                 <sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
-                    System.out.println("I write a lot of Java code,");
+                    System.out.println("I write a lot of Java code (SCJP 91%),");
                     
                     response.getWriter().println("mainly for JEE backends,");
                     
