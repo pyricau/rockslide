@@ -180,7 +180,7 @@ section {
 	overflow: hidden;
 }
 
-a {
+a, a:visited {
 	color: inherit;
 	display: inline-block;
 	text-decoration: none;
@@ -369,4 +369,16 @@ info {
 
 .codeSample {
 	display: none;
+}
+
+/*
+ OVERRIDING GWT DEFAULT STYLE
+*/
+
+.gwt-Button {
+	font-size: 100%;
+}
+
+.Caption {
+	font-size: 30px;
 }

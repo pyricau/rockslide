@@ -38,6 +38,7 @@ public class Welcome extends Chapter {
         addSlide(Hello.binder);
         addWidgetSlide(SoftwareEngineer.binder);
         addSlide(SocialCoder.binder);
+        addPresentable(new JobOffers());
         addWidgetSlide(StealThisSlideshow.binder);
         addSlide(Sections.binder);
     }

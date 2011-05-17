@@ -1,0 +1,34 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    >
+    
+    <ui:style>
+    	.close {
+    		float:right;
+    		font-size: 20px;
+    	}
+    	.contact {
+    		font-size: 20px;
+    	}
+    	.items {
+    		font-size: 20px;
+    		margin: 10px;
+    	}
+    	.tip {
+    		font-size: 15px;
+    	}
+    </ui:style>
+    
+    <g:HTMLPanel>
+        <div>
+            <div class="{style.items}"><g:CheckBox ui:field="checkbox1">Strong <strong>technical</strong> culture</g:CheckBox></div>
+            <div class="{style.items}"><g:CheckBox ui:field="checkbox2">Located in <strong>Paris</strong>, or accepting <strong>telecommuting</strong></g:CheckBox></div>
+            <div class="{style.items}"><g:CheckBox ui:field="checkbox3"><a href="http://en.wikipedia.org/wiki/Google#Innovation_Time_Off">Innovation Time Off</a></g:CheckBox></div>
+            <div class="{style.items}"><g:CheckBox ui:field="checkbox4">Small teams</g:CheckBox></div>
+            <div class="{style.tip}">(Check the boxes to enable this button)</div>
+            <div><g:Button addStyleNames="{style.contact}" ui:field="contactMeButton">Contact me</g:Button><g:Button addStyleNames="{style.close}" ui:field="closeButton">Nevermind</g:Button></div>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>
