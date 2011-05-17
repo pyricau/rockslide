@@ -180,7 +180,7 @@ section {
 	overflow: hidden;
 }
 
-a, a:visited {
+a, a:visited, a:hover {
 	color: inherit;
 	display: inline-block;
 	text-decoration: none;
