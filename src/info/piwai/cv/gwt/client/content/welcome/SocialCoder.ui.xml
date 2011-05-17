@@ -43,9 +43,9 @@
     <div>
         <header>I am also a social coder</header>
         <section>
-            <div class="{style.centerTwitter}"><div class="{style.piwai}"/><p>Follow <a href="http://twitter.com/piwai">@Piwai</a> on twitter</p><div class="{style.clear}"/></div>
+            <div class="{style.centerTwitter}"><div class="{style.piwai}"/><p>Follow <a href="http://twitter.com/piwai">@Piwai</a> on twitter!</p><div class="{style.clear}"/></div>
             
-            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I write technical articles on the Excilys <a href="http://blog.excilys.com/author/pyricau/">blog</a> &amp; <a href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a></p><div class="{style.clear}"/></div>
+            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I write technical articles on the Excilys <a href="http://blog.excilys.com/author/pyricau/">blog.</a> &amp; <a href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a></p><div class="{style.clear}"/></div>
             
             <div class="{style.centerJug}"><div class="{style.jug}"/><p>I usually attend the <a href="http://www.parisjug.org">ParisJUG</a>, say hello if you do too!</p><div class="{style.clear}"/></div>
             
