@@ -4,15 +4,18 @@
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
     >
     <ui:style>
+    	.items {
+    		margin-bottom: 50px;
+    	}
     </ui:style>
 
     <g:HTMLPanel>
         <header>Job Offers</header>
         <section class="summary">
             <ul>
-                <li>I work in Paris for <a href="https://www.excilys.com/">Excilys</a>, a great software service group.</li>
-                <li>I am currently <strong>not</strong> looking for a job.</li>
-                <li>However, if you match <g:Button ui:field="description">this description</g:Button> you can <a href="#Contact">contact me</a> with a job offer.</li>
+                <li class="{style.items}">I work in Paris for <a href="https://www.excilys.com/">Excilys</a>, a great software service group</li>
+                <li class="{style.items}">I am currently <strong>not</strong> looking for a job</li>
+                <li class="{style.items}">However, if you match <g:Button ui:field="description">this description</g:Button> you can <a href="#Contact">contact me</a> with a job offer</li>
             </ul>
         </section>
     </g:HTMLPanel>
