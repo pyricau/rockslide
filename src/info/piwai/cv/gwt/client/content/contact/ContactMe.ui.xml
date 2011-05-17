@@ -4,9 +4,17 @@
 
     <div>
         <section
-            class="center intro">
+            class="intro">
             <h1>Contact Me</h1>
-            <h2>WIP, not available yet.</h2>
+            <ul class="summary">
+                <li>A piece of advice:
+                    <ul>
+                        <li>Be direct, don't beat around the bush.</li>
+                        <li>I don't like grammatical mistakes. They make me feel like you don't care.</li>
+                    </ul>
+                 </li>
+                <li>My email: <strong>py.ricau</strong> at <strong>gmail</strong></li>
+            </ul>
         </section>
     </div>
 </ui:UiBinder>

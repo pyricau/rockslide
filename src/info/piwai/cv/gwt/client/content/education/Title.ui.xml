@@ -4,9 +4,13 @@
 
     <div>
         <section
-            class="center intro">
+            class="intro">
             <h1>Education</h1>
-            <h2>WIP, not available yet.</h2>
+			<ul class="summary">
+				<li>2004 - 2009: <a href="#Education_INSARouen">INSA Rouen</a> (School of Engineering)</li>
+				<li>2008: <a href="#Education_KTH">KTH</a> (Royal Institute of Technology)</li>
+                <li>2001 - 2004: <a href="#Education_Schweitzer">Lycée Albert Schweitzer</a></li>
+			</ul>
         </section>
     </div>
 </ui:UiBinder>

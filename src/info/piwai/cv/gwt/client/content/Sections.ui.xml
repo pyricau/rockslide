@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
 	<div>
-		<header>Sections</header>
+		<header>More</header>
 		<section>
 			<ul class="summary">
 				<li><a href="#Welcome">Welcome</a></li>

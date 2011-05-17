@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <header>Lycée Albert Schweitzer </header>
+        <section class="summary">
+            <ul>
+                <li>2001-2004 Baccalauréat (A level) mention Bien (with honors), Scientific, european class (more english courses) </li>
+            </ul>
+        </section>
+    </div>
+</ui:UiBinder>
