@@ -10,7 +10,7 @@
         <header>Job Offers</header>
         <section class="summary">
             <ul>
-                <li>I work in Paris for <a href="https://www.excilys.com/">Excilys</a>, a great software service company.</li>
+                <li>I work in Paris for <a href="https://www.excilys.com/">Excilys</a>, a great software service group.</li>
                 <li>I am currently <strong>not</strong> looking for a job.</li>
                 <li>However, if you match <g:Button ui:field="description">this description</g:Button> you can <a href="#Contact">contact me</a> with a job offer.</li>
             </ul>

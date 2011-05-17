@@ -2,7 +2,7 @@ package info.piwai.cv.gwt.client.content;
 
 import info.piwai.cv.gwt.client.content.contact.Contact;
 import info.piwai.cv.gwt.client.content.education.Education;
-import info.piwai.cv.gwt.client.content.jobs.Jobs;
+import info.piwai.cv.gwt.client.content.experience.Experience;
 import info.piwai.cv.gwt.client.content.projects.Projects;
 import info.piwai.cv.gwt.client.content.skills.Skills;
 import info.piwai.cv.gwt.client.content.welcome.Welcome;
@@ -29,7 +29,7 @@ public class CV extends PresentationEntryPoint {
     @Override
     public void loadChapters(ChapterHolder holder) {
         holder.addChapter(new Welcome());
-        holder.addChapter(new Jobs());
+        holder.addChapter(new Experience());
         holder.addChapter(new Projects());
         holder.addChapter(new Skills());
         holder.addChapter(new Education());
