@@ -43,11 +43,11 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                     &lt;/ui:UiBinder&gt;</pre>
                 </sl:CodeHighlighter>
                 </li>
-                <li>Based on a project created for a <a href="https://github.com/pyricau/slides-formation-gwt">GWT training</a></li>
+                <li>Based on a project created for a <a target="_blank" href="https://github.com/pyricau/slides-formation-gwt">GWT training</a></li>
                 </ul>
             </div>
 			<div class="{style.fork}">
-    			<h1>Fork me on <a href="https://github.com/pyricau/cv-piwai">Github!</a></h1>
+    			<h1>Fork me on <a target="_blank" href="https://github.com/pyricau/cv-piwai">Github!</a></h1>
     			<div class="{style.octocat}" />
 			</div>
 		</section>
