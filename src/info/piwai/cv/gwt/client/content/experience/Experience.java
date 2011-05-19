@@ -1,7 +1,7 @@
 package info.piwai.cv.gwt.client.content.experience;
 
 import info.piwai.cv.gwt.client.content.CV.Sections;
-import info.piwai.cv.gwt.client.slider.slides.Chapter;
+import info.piwai.cv.gwt.client.content.HeaderChapter;
 import info.piwai.cv.gwt.client.slider.slides.ElementSlide;
 
 import com.google.gwt.core.client.GWT;
@@ -9,7 +9,7 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
 
-public class Experience extends Chapter {
+public class Experience extends HeaderChapter {
 
     @UiTemplate("Title.ui.xml")
     interface Title extends UiBinder<Element, ElementSlide> {

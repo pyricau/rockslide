@@ -11,16 +11,17 @@ import java.util.List;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public abstract class Chapter implements Iterable<Presentable> {
+public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget {
 
     private static final String IMPL_SUFFIX = "Impl";
     private List<Presentable> slides;
     private final List<String> slideNames = new ArrayList<String>();
     private String holderName;
 
-    public final Presentable getSlide(int slideIndex) {
+    public final HasHeaderWidget getSlide(int slideIndex) {
         return ensureSlides().get(doCheckIndex(slideIndex));
     }
 
@@ -169,5 +170,10 @@ public abstract class Chapter implements Iterable<Presentable> {
 
     public void setHolderName(String holderName) {
         this.holderName = holderName;
+    }
+
+    @Override
+    public IsWidget getHeaderWidget() {
+        return null;
     }
 }

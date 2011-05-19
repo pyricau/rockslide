@@ -19,6 +19,26 @@ div.presentation {
 	background: inherit;
 }
 
+.presentationHeader {
+	color: #FFFFFF;
+    font-size: 20px;
+    height: 50px;
+    left: 0;
+    margin-top: -400px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.presentationHeader a, .presentationHeader a:visited, .presentationHeader a:hover {
+	color: inherit;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 110%;
+	border-bottom: 2px solid #FFFFFF;
+}
+
 div.slides {
 	width: 100%;
 	height: 100%;

@@ -4,5 +4,6 @@
 	<g:FlowPanel ui:field="presentation" styleName="presentation">
 		<g:FlowPanel ui:field="slidesPanel" styleName="slides">
 		</g:FlowPanel>
+        <g:SimplePanel ui:field="header" styleName="presentationHeader"/>
 	</g:FlowPanel>
 </ui:UiBinder> 

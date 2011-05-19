@@ -1,7 +1,7 @@
 package info.piwai.cv.gwt.client.content.welcome;
 
 import info.piwai.cv.gwt.client.content.CV.Sections;
-import info.piwai.cv.gwt.client.slider.slides.Chapter;
+import info.piwai.cv.gwt.client.content.HeaderChapter;
 import info.piwai.cv.gwt.client.slider.slides.ElementSlide;
 import info.piwai.cv.gwt.client.slider.slides.WidgetSlide;
 
@@ -11,7 +11,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Welcome extends Chapter {
+public class Welcome extends HeaderChapter {
 
     @UiTemplate("Hello.ui.xml")
     interface Hello extends UiBinder<Element, ElementSlide> {

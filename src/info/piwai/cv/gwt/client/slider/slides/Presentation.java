@@ -8,7 +8,9 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class Presentation extends Composite {
@@ -30,6 +32,9 @@ public class Presentation extends Composite {
     FlowPanel presentation;
     @UiField
     FlowPanel slidesPanel;
+
+    @UiField
+    SimplePanel header;
 
     private final ShowNotesSender showNotesSender;
 
@@ -100,6 +105,12 @@ public class Presentation extends Composite {
         changeSlideClass(currentSlide, "current");
         changeSlideClass(chapter.getSlideOrNull(index + 1), "future");
         changeSlideClass(chapter.getSlideOrNull(index + 2), "far-future");
+
+        IsWidget headerWidget = currentSlide.getHeaderWidget();
+        if (headerWidget == null) {
+            headerWidget = chapter.getHeaderWidget();
+        }
+        header.setWidget(headerWidget);
 
         String historyToken;
         if (index == 0) {

@@ -2,6 +2,7 @@ package info.piwai.cv.gwt.client.slider.slides;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
 public class ElementSlide extends Widget implements Presentable {
@@ -21,6 +22,11 @@ public class ElementSlide extends Widget implements Presentable {
 
     @Override
     public Element getShowNotes() {
+        return null;
+    }
+
+    @Override
+    public IsWidget getHeaderWidget() {
         return null;
     }
 }
