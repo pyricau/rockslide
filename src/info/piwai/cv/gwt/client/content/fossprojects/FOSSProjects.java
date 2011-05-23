@@ -1,4 +1,4 @@
-package info.piwai.cv.gwt.client.content.projects;
+package info.piwai.cv.gwt.client.content.fossprojects;
 
 import info.piwai.cv.gwt.client.content.CV.Sections;
 import info.piwai.cv.gwt.client.content.HeaderChapter;
@@ -9,7 +9,7 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
 
-public class Projects extends HeaderChapter {
+public class FOSSProjects extends HeaderChapter {
 
     @UiTemplate("Title.ui.xml")
     interface Title extends UiBinder<Element, ElementSlide> {

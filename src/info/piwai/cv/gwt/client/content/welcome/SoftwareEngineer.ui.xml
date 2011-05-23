@@ -39,7 +39,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	<g:HTMLPanel>
 		<header>I am a Software Engineer</header>
 		<section>
-            <h1>&amp; a craftsman developer</h1>
+            <h1>&amp; a Craftsman Developer</h1>
             <h2>Need proofs? Read my code &amp; commit logs:</h2>
 			<div class="{style.center}"><div class="{style.github}"/><p>on <a target="_blank" href="https://github.com/pyricau">Github</a> (2011)</p><div class="{style.clear}"/></div>
             <div class="{style.center}"><div class="{style.googlecode}"/><p>on <a target="_blank" href="http://code.google.com/u/py.ricau">Google Code</a> (2009-2011)</p><div class="{style.clear}"/></div>
