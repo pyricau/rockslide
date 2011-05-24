@@ -2,11 +2,56 @@
 <ui:UiBinder
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
+    <ui:style>
+    	.foss {
+    		font-size: 30%;
+    	}
+    	.left {
+    		float:left;
+    		width: 50%;
+    	}
+    	.right {
+    		float:left;
+    		width: 50%;
+    	}
+    	.title {
+    		font-size: 100%;
+    		color: black;
+			font-family: 'LeagueGothic';
+			padding: 0;
+			margin: 0;
+			margin-top: -5px;
+			letter-spacing: -1px;    		
+    	}
+    	.container {
+    		margin-top: 40px;
+    	}
+    </ui:style>
+
     <div>
         <section
-            class="center intro">
-            <h1>Projects</h1>
-            <h2>WIP, not available yet.</h2>
+            class="intro">
+            <h1>FOSS Projects</h1>
+            <div class="{style.foss}"><a href="http://en.wikipedia.org/wiki/Free_and_open_source_software">FOSS</a> means <strong>F</strong>ree and <strong>O</strong>pen <strong>S</strong>ource <strong>S</strong>oftware</div>
+            <div class="{style.container}">
+                <div class="{style.left}">
+                    <div class="{style.title}">Hot projects</div>
+                    <ul class="summary">
+                    	<li><a href="#">AndroidAnnotations</a></li>
+                        <li><a href="#">GWT landslide</a></li>
+                        <li><a href="#">FunkyJFunctional</a></li>
+                    </ul>
+                </div>
+                <div class="{style.right}">
+                    <div class="{style.title}">Miscellaneous</div>
+                    <ul class="summary">
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">GWT</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">PHP</a></li>
+                    </ul>
+                 </div>
+            </div>                 
         </section>
     </div>
 </ui:UiBinder>
