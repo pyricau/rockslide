@@ -6,10 +6,10 @@
 		<section>
 			<ul class="summary">
 				<li><a href="#Welcome">Welcome</a></li>
+                <li><a href="#Skills">Skills</a></li>                
 				<li><a href="#Experience">Experience</a></li>
                 <li><a href="#Education">Education</a></li>
 				<li><a href="#FOSSProjects">FOSS Projects</a></li>
-				<li><a href="#Skills">Skills</a></li>
                 <li><a href="#Contact">Contact me</a></li>
 			</ul>
 		</section>
