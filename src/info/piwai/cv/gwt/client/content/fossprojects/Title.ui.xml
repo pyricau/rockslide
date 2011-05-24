@@ -37,18 +37,18 @@
                 <div class="{style.left}">
                     <div class="{style.title}">Hot projects</div>
                     <ul class="summary">
-                    	<li><a href="#">AndroidAnnotations</a></li>
-                        <li><a href="#">GWT landslide</a></li>
-                        <li><a href="#">FunkyJFunctional</a></li>
+                    	<li><a href="#FOSSProjects_AndroidAnnotations">AndroidAnnotations</a></li>
+                        <li><a href="#FOSSProjects_GWTLandlisde">GWT Landslide</a></li>
+                        <li><a href="#FOSSProjects_FunkyJFunctional">FunkyJFunctional</a></li>
                     </ul>
                 </div>
                 <div class="{style.right}">
                     <div class="{style.title}">Miscellaneous</div>
                     <ul class="summary">
-                        <li><a href="#">Android</a></li>
-                        <li><a href="#">GWT</a></li>
-                        <li><a href="#">C++</a></li>
-                        <li><a href="#">PHP</a></li>
+                        <li><a href="#FOSSProjects_Android">Android</a></li>
+                        <li><a href="#FOSSProjects_GWT">GWT</a></li>
+                        <li><a href="#FOSSProjects_C++">C++</a></li>
+                        <li><a href="#FOSSProjects_PHP">PHP</a></li>
                     </ul>
                  </div>
             </div>                 

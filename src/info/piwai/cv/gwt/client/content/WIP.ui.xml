@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <header><span ui:field="header"></span></header>
+        <section>
+            <p>Work in progress, page not available yet</p>
+        </section>
+    </div>
+</ui:UiBinder>
