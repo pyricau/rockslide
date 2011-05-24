@@ -20,12 +20,26 @@ public class FOSSProjects extends HeaderChapter {
     @Override
     protected void buildSlides() {
         addSlide(Title.binder);
+
+        // Add a code sample
         addPresentable(new WIP("AndroidAnnotations"), "AndroidAnnotations");
+
+        // Name will change.. code sample too
         addPresentable(new WIP("GWT Landlisde"), "GWTLandlisde");
+
+        // Code sample too
         addPresentable(new WIP("FunkyJFunctional"), "FunkyJFunctional");
+
+        // involved in maven android community, worked on RoboGuice
         addPresentable(new WIP("Android"), "Android");
+
+        // Projects from google code
         addPresentable(new WIP("GWT"), "GWT");
+
+        // 2H4U, OpenGF
         addPresentable(new WIP("C++"), "C++");
+
+        // Plagiasi, Bisouland
         addPresentable(new WIP("PHP"), "PHP");
         addSlide(Sections.binder);
     }
