@@ -10,9 +10,9 @@ body {
 div.presentation {
 	position: absolute;
 	width: 1500px;
-	height: 1000px;
+	height: 800px;
 	margin-left: -750px;
-	margin-top: -500px;
+	margin-top: -400px;
 	left: 50%;
 	top: 50%;
 	display: block;
