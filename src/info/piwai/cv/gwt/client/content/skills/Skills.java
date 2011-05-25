@@ -36,7 +36,8 @@ public class Skills extends HeaderChapter {
          */
         addPresentable(new WIP("Dev Tools"), "DevTools");
 
-        // Android 2.2, Spring 3.0 (IoC/MVC/AOP), Hibernate, GWT 2.0, Guice,
+        // Android (list apps on market), Spring 3.0 (IoC/MVC/AOP), Hibernate,
+        // GWT 2.0, Guice,
         // RoboGuice, JUnit 4, Mockito, APT, CodeModel, Gson, Jackson, JEE 5,
         // JAX-RS, EJB3, ejb3unit, RRDTool, RRD4J, symfony (1.0 et 1.2), Ruby On
         // Rails, SDL, script.aculo.us, Prototype, Struts
