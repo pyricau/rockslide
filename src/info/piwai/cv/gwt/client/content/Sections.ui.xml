@@ -2,8 +2,8 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
 	<div>
-		<header>More</header>
-		<section>
+		<div class="header">More</div>
+		<div class="section">
 			<ul class="summary">
 				<li><a href="#Welcome">Welcome</a></li>
                 <li><a href="#Skills">Skills</a></li>                
@@ -12,6 +12,6 @@
 				<li><a href="#FOSSProjects">FOSS Projects</a></li>
                 <li><a href="#Contact">Contact me</a></li>
 			</ul>
-		</section>
+		</div>
 	</div>
 </ui:UiBinder>

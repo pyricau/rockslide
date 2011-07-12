@@ -3,8 +3,7 @@
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
     <div>
-        <section
-            class="intro">
+        <div class="section intro">
             <h1>Contact Me</h1>
             <ul class="summary">
                 <li>A piece of advice:
@@ -15,6 +14,6 @@
                  </li>
                 <li>My email: <a href="mailto:py.ricau@gmail.com"><strong>py.ricau</strong>@<strong>gmail</strong>.com</a></li>
             </ul>
-        </section>
+        </div>
     </div>
 </ui:UiBinder>

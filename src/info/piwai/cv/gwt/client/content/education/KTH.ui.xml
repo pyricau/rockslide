@@ -3,12 +3,12 @@
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
     <div>
-        <header>Kungliga Tekniska högskolan</header>
-        <section class="summary">
+        <div class="header">Kungliga Tekniska högskolan</div>
+        <div class="section summary">
             <ul>
                 <li>August-December 2008: ICT - Information &amp; Communication Technology department</li>
                 <li>I did my last semester of engineering in Stockholm, Sweden, in the <strong>Royal Institute of Technology.</strong></li>
             </ul>
-        </section>
+        </div>
     </div>
 </ui:UiBinder>

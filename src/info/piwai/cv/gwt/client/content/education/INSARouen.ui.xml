@@ -3,12 +3,12 @@
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
     <div>
-        <header>INSA Rouen</header>
-        <section class="summary">
-            <ul>
+        <div class="header">INSA Rouen</div>
+        <div class="section">
+            <ul class="summary">
                 <li>2004-2009 INSA Rouen: a French School of Engineering</li>
                 <li>Master’s Degree in Engineering, specialized in Architecture of IT Systems ("Diplôme d'Ingénieur en Architecture des Systèmes d'Information")</li>
             </ul>
-        </section>
+        </div>
     </div>
 </ui:UiBinder>

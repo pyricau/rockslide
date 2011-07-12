@@ -19,7 +19,6 @@ public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget 
     private static final String IMPL_SUFFIX = "Impl";
     private List<Presentable> slides;
     private final List<String> slideNames = new ArrayList<String>();
-    private String holderName;
 
     public final HasHeaderWidget getSlide(int slideIndex) {
         return ensureSlides().get(doCheckIndex(slideIndex));
@@ -84,16 +83,16 @@ public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget 
 
     private String getUiBinderName(Object uiBinder) {
         String uiBinderClassSimpleName = ClassHelper.getSimpleName(uiBinder.getClass());
-        String chapterClassSimpleName = ClassHelper.getSimpleName(getClass());
+
+        int separatorIndex = uiBinderClassSimpleName.indexOf('_');
 
         String nameWithoutChapterClassName;
-        if (uiBinderClassSimpleName.startsWith(chapterClassSimpleName)) {
-            nameWithoutChapterClassName = uiBinderClassSimpleName.replaceFirst(chapterClassSimpleName, "");
-        } else if (uiBinderClassSimpleName.startsWith(holderName)) {
-            nameWithoutChapterClassName = uiBinderClassSimpleName.replaceFirst(holderName, "");
+        if (separatorIndex != -1) {
+            nameWithoutChapterClassName = uiBinderClassSimpleName.substring(separatorIndex);
         } else {
             nameWithoutChapterClassName = uiBinderClassSimpleName;
         }
+
         if (nameWithoutChapterClassName.endsWith(IMPL_SUFFIX)) {
             int finalNameLength = nameWithoutChapterClassName.length() - IMPL_SUFFIX.length();
             return nameWithoutChapterClassName.substring(0, finalNameLength);
@@ -166,10 +165,6 @@ public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget 
     public final String getSlideName(int slideIndex) {
         ensureSlides();
         return slideNames.get(doCheckIndex(slideIndex));
-    }
-
-    public void setHolderName(String holderName) {
-        this.holderName = holderName;
     }
 
     @Override

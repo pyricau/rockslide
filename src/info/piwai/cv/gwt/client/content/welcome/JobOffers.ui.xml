@@ -24,8 +24,8 @@
     </ui:style>
 
     <g:HTMLPanel>
-        <header>Job Offers</header>
-        <section class="summary">
+        <div class="header">Job Offers</div>
+        <div class="section summary">
             <ul>
                 <li class="{style.items}">I work in Paris for <a target="_blank" href="https://www.excilys.com/">Excilys</a>, a great software service group</li>
                 <li class="{style.items}">I am currently <strong>not</strong> looking for a job</li>
@@ -33,6 +33,6 @@
                 <li><div class="{style.center}"><div class="{style.linkedin}"/>Tired of <span class="keytag">←</span> <span class="keytag">→</span> ? See my <a target="_blank" href="http://www.linkedin.com/in/piwai">LinkedIn profile</a><div class="{style.clear}"/></div>
                 </li>
             </ul>
-        </section>
+        </div>
     </g:HTMLPanel>
 </ui:UiBinder>

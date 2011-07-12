@@ -1,7 +1,65 @@
+/* ******************************* */
+/* white slide, grey background */
+/* @def baseColor #CAD700; */
+/* @def leftColor #1D1900; */
+/* @def leftColor2 #55C9C9; */
+/* @def rightColor #FFFFFF; */
+/* @def rightColor2 #EBE3D3; */
+/* @def backgroundColor rightColor2; */
+/* @def slideColor rightColor; */
+/* @def headerColor leftColor; */
+/* @def headerText rightColor; */
+/* @def slideHeaderColor leftColor; */
+/* @def titleColor leftColor; */
+/* @def sectionTextColor leftColor; */
+/* ******************************* */
+/* grey slide, white background */
+/* @def baseColor #CAD700; */
+/* @def leftColor #1D1900; */
+/* @def leftColor2 #55C9C9; */
+/* @def rightColor #FFFFFF; */
+/* @def rightColor2 #EBE3D3; */
+/* @def backgroundColor rightColor; */
+/* @def slideColor rightColor2; */
+/* @def headerColor leftColor; */
+/* @def headerText baseColor; */
+/* @def slideHeaderColor leftColor; */
+/* @def titleColor leftColor; */
+/* @def sectionTextColor leftColor; */
+/* ******************************* */
+/* Eco design */
+/* @def baseColor #33332D; */
+/* @def leftColor #CCCC9F; */
+/* @def leftColor2 #FFF8E3; */
+/* @def rightColor #9FB4CC; */
+/* @def rightColor2 #DB4105; */
+/* @def backgroundColor rightColor; */
+/* @def slideColor leftColor2; */
+/* @def headerColor leftColor; */
+/* @def headerText baseColor; */
+/* @def slideHeaderColor baseColor; */
+/* @def titleColor rightColor2; */
+/* @def sectionTextColor baseColor; */
+/* ******************************* */
+/* chemical brothers */
+@def baseColor #BDA21D;
+@def leftColor #FFFEFC;
+@def leftColor2 #282F36;
+@def rightColor #BFBC5B;
+@def rightColor2 #D2E098;
+@def backgroundColor rightColor2;
+@def slideColor leftColor;
+@def headerColor leftColor2;
+@def headerText slideColor;
+@def slideHeaderColor leftColor2;
+@def titleColor baseColor;
+@def sectionTextColor leftColor2;
+
+@def headerHeight 50px;
 
 body {
 	font: 14px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-	background: #778;
+	background: backgroundColor;
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
@@ -20,23 +78,24 @@ div.presentation {
 }
 
 .presentationHeader {
-	color: #FFFFFF;
-    font-size: 20px;
-    height: 50px;
-    left: 0;
-    margin-top: -400px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
+	color: slideHeaderColor;
+	font-size: 20px;
+	height: 50px;
+	left: 0;
+	margin-top: -400px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
 }
 
-.presentationHeader a, .presentationHeader a:visited, .presentationHeader a:hover {
+.presentationHeader a,.presentationHeader a:visited,.presentationHeader a:hover
+	{
 	color: inherit;
 	display: inline-block;
 	text-decoration: none;
 	line-height: 110%;
-	border-bottom: 2px solid #FFFFFF;
+	border-bottom: 2px solid slideHeaderColor;
 }
 
 div.slides {
@@ -61,23 +120,23 @@ div.slide {
 	left: 50%;
 	top: 50%;
 	margin-top: -350px;
-	background: literal("-webkit-gradient(linear, left bottom, left top, from(#bbd), to(#fff) )");
+	background-color: slideColor;
 	-webkit-transition: margin 0.25s ease-in-out;
-	background-color: #eee;
-	background: literal("-moz-linear-gradient(left bottom, #bbd, #fff)");
 	-moz-transition: margin 0.25s ease-in-out;
 	-o-transition: margin 0.25s ease-in-out;
 	border-top-left-radius: 20px;
 	-moz-border-radius-topleft: 20px;
 	border-bottom-right-radius: 20px;
 	-moz-border-radius-bottomright: 20px;
+	border: 1px solid headerColor;
+	box-shadow: 5px 5px 10px headerColor;
 }
 
 div.slide p {
 	font-size: 20px;
 }
 
-section.intro p {
+div.section.intro p {
 	font-size: 35px;
 }
 
@@ -87,6 +146,15 @@ button {
 
 .summary {
 	font-size: 30px;
+	list-style-type: square;
+}
+
+.tableOfContent {
+	width: 100%;
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 250px;
+	margin: 5px;
 }
 
 .bullets {
@@ -124,43 +192,44 @@ body.three-d div.slides {
 	-o-transform: literal("translateX(50px) scale(0.8) rotateY(10deg)");
 }
 
-/* Content */
-@font-face {
-	font-family: 'Junction';
-	src: url(src/Junction02.otf);
-}
-
-@font-face {
-	font-family: 'LeagueGothic';
-	src: url(src/LeagueGothic.otf);
-}
-
-header {
-	font-family: 'Junction';
+div.header {
+	font-family: 'Arial';
 	font-weight: normal;
-	font-size: 50px;
-	letter-spacing: -.05em;
-	color: white;
-	color: black;
+	font-size: 40px;
+	text-shadow: black 1px 1px 2px;
 	text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
 	position: absolute;
-	left: 30px;
+	left: 0px;
+	right: 20px;
 	top: 25px;
+	height: headerHeight;
 	margin: 0;
-	padding: 0;
+	padding-left: 270px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	background-color: headerColor;
+	color: headerText;
+	
+	
 }
 
 .intro h1 {
-	color: black;
+	color: titleColor;
 	padding: 0;
 	margin: 0;
 	letter-spacing: -2px;
 	font-size: 96px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .intro h2 {
-	color: black;
-	font-family: 'LeagueGothic';
+	color: titleColor;
+	font-family: 'Arial';
 	padding: 0;
 	margin: 0;
 	margin-top: -5px;
@@ -177,8 +246,8 @@ h1 {
 }
 
 h2 {
-	font-family: 'Junction';
-	color: black;
+	font-family: 'Arial';
+	color: titleColor;
 	font-size: 20px;
 	margin-left: 20px;
 	margin-top: 50px;
@@ -188,11 +257,10 @@ h2:first-child {
 	margin-top: 0;
 }
 
-section {
-	font-family: 'Junction';
+div.section {
+	font-family: 'Arial';
 	font-size: 50px;
-	color: #3f3f3f;
-	text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+	color: sectionTextColor;
 	margin-left: 30px;
 	margin-right: 30px;
 	margin-top: 100px;
@@ -200,44 +268,38 @@ section {
 	overflow: hidden;
 }
 
-a, a:visited, a:hover {
+a,a:visited,a:hover {
 	color: inherit;
 	display: inline-block;
 	text-decoration: none;
 	line-height: 110%;
-	border-bottom: 2px solid #3f3f3f;
+	border-bottom: 2px solid sectionTextColor;
 }
 
-#wmap a {
-	line-height: 100%;
-	border-bottom: none;
-}
-
-section.left {
+div.section.left {
 	float: left;
 	width: 390px;
 }
 
-section.small {
+div.section.small {
 	font-size: 24px;
 }
 
-section.small ul {
+div.section.small ul {
 	margin: 0 0 0 15px;
 	padding: 0;
 }
 
-section.small li {
+div.section.small li {
 	padding-bottom: 0;
 }
 
 h2 {
 	padding: 0;
 	margin: 15px 0 5px 0;
-	/*        font-family: GG240;*/
 }
 
-section.center {
+div.section.center {
 	line-height: 180%;
 	text-align: center;
 	display: table-cell;
@@ -262,12 +324,6 @@ pre.important {
 	-moz-column-count: 2;
 }
 
-pre.important select {
-	font-size: 16px;
-	font-family: Monaco, Courier;
-	border: 1px solid #c61800;
-}
-
 input {
 	font-size: 16px;
 	font-family: Helvetica;
@@ -284,37 +340,6 @@ button {
 
 button.large {
 	font-size: 32px;
-}
-
-pre.important b {
-	font-weight: normal;
-	color: #c61800;
-	text-shadow: #c61800 0 0 1px;
-	/*letter-spacing: -1px;*/
-}
-
-pre.important em {
-	font-weight: normal;
-	font-style: normal;
-	color: #18a600;
-	text-shadow: #18a600 0 0 1px;
-}
-
-pre.important input[type="range"] {
-	height: 6px;
-	cursor: pointer;
-	width: auto;
-}
-
-example {
-	font-size: 16px;
-	display: block;
-	padding: 10px 20px;
-	color: black;
-	background: rgba(255, 255, 255, 0.4);
-	border-radius: 8px;
-	margin-bottom: 10px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 li {
@@ -334,10 +359,9 @@ info {
 	-moz-text-stroke-width: 1px;
 }
 
-
-.nicetag, .yellowtag, .greentag, .redtag, .keytag {
-	font-family: 'Junction';
-	color: black;
+.nicetag,.yellowtag,.greentag,.redtag,.keytag,.greytag {
+	font-family: 'Arial';
+	color: sectionTextColor;
 	display: inline-block;
 	padding: 6px 10px 3px 10px;
 	font-size: 25px;
@@ -348,10 +372,10 @@ info {
 	position: relative;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
-	background: white;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
-	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+	background: slideColor;
+	box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-webkit-box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-moz-box-shadow: rgba(40, 47, 54.1) 0 2px 5px;
 }
 
 .yellowtag {
@@ -370,6 +394,12 @@ info {
 	background: literal("-webkit-gradient(linear, left top, left bottom, from(#e88), to(#fee) )");
 	background-color: #e88;
 	background: literal("-moz-linear-gradient(left top, #e88, #fee)");
+}
+
+.greytag {
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#DEDEDE), to(#eef) )");
+	background-color: #DEDEDE;
+	background: literal("-moz-linear-gradient(left top, #DEDEDE, #eef)");
 }
 
 .keytag {
@@ -394,7 +424,6 @@ info {
 /*
  OVERRIDING GWT DEFAULT STYLE
 */
-
 .gwt-Button {
 	font-size: 100%;
 }

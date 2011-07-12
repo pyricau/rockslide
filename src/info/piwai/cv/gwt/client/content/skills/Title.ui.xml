@@ -29,8 +29,7 @@
     </ui:style>
 
     <div>
-        <section
-            class="intro">
+        <div class="section intro">
             <h1>Skills</h1>
             <div class="{style.superhero}">&amp; other superhero powers</div>
             <div class="{style.container}">
@@ -52,7 +51,7 @@
                     </ul>
                  </div>
             </div>                 
-        </section>
+        </div>
     </div>
         
 </ui:UiBinder>

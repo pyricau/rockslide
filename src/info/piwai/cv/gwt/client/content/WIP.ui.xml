@@ -3,9 +3,9 @@
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
     <div>
-        <header><span ui:field="header"></span></header>
-        <section>
+        <div class="header"><span ui:field="header"></span></div>
+        <div class="section">
             <p>Work in progress, page not available yet</p>
-        </section>
+        </div>
     </div>
 </ui:UiBinder>
