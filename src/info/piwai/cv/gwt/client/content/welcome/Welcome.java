@@ -33,12 +33,18 @@ public class Welcome extends HeaderChapter {
         SocialCoder binder = GWT.create(SocialCoder.class);
     }
 
+    @UiTemplate("StuffILike.ui.xml")
+    interface StuffILike extends UiBinder<Element, ElementSlide> {
+        StuffILike binder = GWT.create(StuffILike.class);
+    }
+
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
         addWidgetSlide(SoftwareEngineer.binder);
         addSlide(SocialCoder.binder);
         addPresentable(new JobOffers());
+        addSlide(StuffILike.binder);
         addWidgetSlide(StealThisSlideshow.binder);
         addSlide(Sections.binder);
     }

@@ -192,19 +192,20 @@ body.three-d div.slides {
 	-o-transform: literal("translateX(50px) scale(0.8) rotateY(10deg)");
 }
 
-div.header {
+@sprite div.header {
+	gwt-image: "photo";
+	width: auto;
 	font-family: 'Arial';
 	font-weight: normal;
 	font-size: 40px;
 	text-shadow: black 1px 1px 2px;
 	text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
-	position: absolute;
-	left: 0px;
-	right: 20px;
-	top: 25px;
-	height: headerHeight;
+	background-position: 50px 11px;
 	margin: 0;
-	padding-left: 270px;
+	margin-right: 20px;
+	margin-top: 25px;
+	height: headerHeight;
+	padding-left: 140px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-top-right-radius: 20px;
@@ -213,8 +214,6 @@ div.header {
 	-moz-border-radius-bottomright: 20px;
 	background-color: headerColor;
 	color: headerText;
-	
-	
 }
 
 .intro h1 {
@@ -263,7 +262,7 @@ div.section {
 	color: sectionTextColor;
 	margin-left: 30px;
 	margin-right: 30px;
-	margin-top: 100px;
+	margin-top: 5px;
 	display: block;
 	overflow: hidden;
 }
