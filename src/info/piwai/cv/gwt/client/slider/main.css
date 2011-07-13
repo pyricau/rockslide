@@ -359,7 +359,7 @@ info {
 	-moz-text-stroke-width: 1px;
 }
 
-.nicetag,.yellowtag,.greentag,.redtag,.keytag,.greytag {
+.nicetag,.yellowtag,.greentag,.redtag,.keytag,.greytag,.themetag {
 	font-family: 'Arial';
 	color: sectionTextColor;
 	display: inline-block;
@@ -406,6 +406,12 @@ info {
 	font-family: Arial;
 }
 
+.themetag {
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#BFBC5B), to(#D2E098) )");
+	background-color: #BFBC5B;
+	background: literal("-moz-linear-gradient(left top, #BFBC5B, #D2E098)");
+}
+
 .nicetag {
 	background: literal("-webkit-gradient(linear, left top, left bottom, from(#88e), to(#eef) )");
 	background-color: #88e;
@@ -419,6 +425,29 @@ info {
 
 .codeSample {
 	display: none;
+}
+
+.intro .subtitle {
+    font-size: 30%;
+}
+.intro .left {
+    float:left;
+    width: 50%;
+}
+.intro .right {
+    float:left;
+    width: 50%;
+}
+.intro .title {
+    font-size: 100%;
+    font-family: 'LeagueGothic';
+    padding: 0;
+    margin: 0;
+    margin-top: -5px;
+    letter-spacing: -1px;           
+}
+.intro .container {
+    margin-top: 40px;
 }
 
 /*

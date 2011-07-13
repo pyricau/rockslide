@@ -5,6 +5,7 @@
     <div>
         <div class="section intro">
             <h1>Education</h1>
+            <div class="subtitle">"Education is what remains after one has forgotten everything he learned in school" - Albert Einstein</div>
 			<ul class="summary">
 				<li>2004 - 2009: <a href="#Education_INSARouen">INSA Rouen</a> (School of Engineering)</li>
 				<li>2008: <a href="#Education_KTH">KTH</a> (Royal Institute of Technology)</li>

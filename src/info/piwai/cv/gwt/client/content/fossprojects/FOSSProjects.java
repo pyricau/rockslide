@@ -30,6 +30,9 @@ public class FOSSProjects extends HeaderChapter {
         // Code sample too
         addPresentable(new WIP("FunkyJFunctional"), "FunkyJFunctional");
 
+        // old one and forplay new implementation
+        addPresentable(new WIP("2H4U"), "2H4U");
+
         // involved in maven android community, worked on RoboGuice, mavenized
         // ACRA
         addPresentable(new WIP("Android"), "Android");
