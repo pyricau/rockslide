@@ -2,7 +2,6 @@
 <ui:UiBinder
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
-
     <div>
         <div class="section intro">
             <h1>Skills</h1>

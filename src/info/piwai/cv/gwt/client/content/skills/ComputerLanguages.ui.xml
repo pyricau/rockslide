@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Computer Languages</div>
+        <div class="section">
+            <ul class="summary">
+                <li>Expert: Java 5/6 (SCJP 91%)</li>
+                <li>Well known: XML, XHTML / HTML 5, CSS, Javascript</li>
+                <li>Some time ago: PHP 5, C, C++, DarkBasic Pro, LaTeX</li>
+                <li>Played with: Ruby, Python, Prolog, ADA, ForPlay</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>

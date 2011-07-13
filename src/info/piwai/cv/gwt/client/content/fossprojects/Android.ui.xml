@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Android</div>
+        <div class="section">
+            <ul class="summary">
+                <li>Worked on <a href="http://code.google.com/p/roboguice">RoboGuice</a></li>
+                <li>Mavenized <a href="http://code.google.com/p/acra">ACRA</a></li>
+                <li>Created <a href="#FOSSProjects_AndroidAnnotations">AndroidAnnotations</a></li>
+                <li>A few contributions to the maven android community</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>

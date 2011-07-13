@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Functional Skills</div>
+        <div class="section">
+            <ul class="summary">
+                <li>JCDecaux: logistics, supervision, maintenance</li>
+                <li>bfinance: tenders, finance, cash management &amp; asset management</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>

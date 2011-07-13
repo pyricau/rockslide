@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Spoken Languages</div>
+        <div class="section">
+            <ul class="summary">
+                <li>French: native speaker</li>
+                <li>English: quite fluent, technical</li>
+                <li>Spanish: understood if spoken slowly</li>
+                <li>Swedish: got some lessons, but forgot most of those</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>

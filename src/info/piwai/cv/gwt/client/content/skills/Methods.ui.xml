@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Methods</div>
+        <div class="section">
+            <ul class="summary">
+                <li>TDD &amp; test first: I like those.</li>
+                <li>Scrum: had some experiences, knows quite some theory, but lacks a bit of real field background</li>
+                <li>ISO 9001v2000: Used in a 6 months project... Frankly? I find it boring</li>
+                <li>GTD: I love this method!</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>
