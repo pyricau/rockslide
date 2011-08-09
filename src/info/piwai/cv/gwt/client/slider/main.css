@@ -70,7 +70,7 @@ div.presentation {
 	width: 1500px;
 	height: 800px;
 	margin-left: -750px;
-	margin-top: -400px;
+	margin-top: -420px;
 	left: 50%;
 	top: 50%;
 	display: block;
@@ -80,9 +80,9 @@ div.presentation {
 .presentationHeader {
 	color: slideHeaderColor;
 	font-size: 20px;
-	height: 50px;
+	height: 70px;
 	left: 0;
-	margin-top: -400px;
+	margin-top: -420px;
 	position: absolute;
 	text-align: center;
 	top: 50%;
