@@ -26,10 +26,10 @@
             clear:both;
         }
         .centerTwitter {
-            line-height: 80px;
+            line-height: 40px;
         }
         .centerBlog {
-            line-height: 160px;
+            line-height: 80px;
         }        
         .centerJug {
             line-height: 160px;
@@ -43,9 +43,18 @@
     <div>
         <div class="header">I am also a social coder</div>
         <div class="section">
-            <div class="{style.centerTwitter}"><div class="{style.piwai}"/><p>Follow <a target="_blank" href="http://twitter.com/piwai">@Piwai</a> on twitter!</p><div class="{style.clear}"/></div>
+            <div class="{style.centerTwitter}"><div class="{style.piwai}"/>
+            <p>Meet me on Twitter!<br />
+            <iframe
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              src="http://platform.twitter.com/widgets/follow_button.html?screen_name=Piwai&amp;button=grey&amp;link_color=282F36&amp;text_color=282F36"
+              style="width:300px; height:20px;">
+            </iframe></p><div class="{style.clear}"/></div>
             
-            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I write technical articles on the Excilys <a target="_blank" href="http://blog.excilys.com/author/pyricau/">blog</a> &amp; <a target="_blank" href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a></p><div class="{style.clear}"/></div>
+            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I wrote more then 20 technical articles on the Excilys <a target="_blank" href="http://blog.excilys.com/author/pyricau/">blog</a> &amp; <a target="_blank" href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a>.<br />
+            I now have my <a target="_blank" href="http://blog.piwai.info">own blog</a>.</p><div class="{style.clear}"/></div>
             
             <div class="{style.centerJug}"><div class="{style.jug}"/><p>I usually attend the <a target="_blank" href="http://www.parisjug.org">ParisJUG</a>, say hello if you do too!</p><div class="{style.clear}"/></div>
             
