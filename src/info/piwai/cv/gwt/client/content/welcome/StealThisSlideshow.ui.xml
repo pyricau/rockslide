@@ -37,7 +37,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                           &lt;h1&gt;Hello!&lt;/h1&gt;
                           &lt;p&gt;I am Pierre-Yves Ricau.&lt;/p&gt;
                           &lt;p&gt;This is my online Curriculum Vitae.&lt;/p&gt;
-                          &lt;p&gt;Press &lt;span class="keytag"&gt;→&lt;/span&gt; to advance.&lt;/p&gt;
+                          &lt;p&gt;Press ← → to navigate.&lt;/p&gt;
                         &lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/ui:UiBinder&gt;</pre>
