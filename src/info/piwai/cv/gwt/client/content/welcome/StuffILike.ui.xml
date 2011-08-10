@@ -9,9 +9,9 @@ xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
 		<div class="section">
      	  <h2>...when I don't write code!</h2>
 		  <ul>
-            <li><strong>Rollerskating</strong> (often at the Paris <a href="http://www.pari-roller.com">Friday Night Fever</a>)</li>
+            <li><strong>Rollerskating</strong> (often at the Paris <a target="_blank" href="http://www.pari-roller.com">Friday Night Fever</a>)</li>
             <li><strong>Skiing</strong> <span class="themetag">&lt;brag&gt;</span> <em>I dare you to slalom ski on one feet</em> <span class="themetag">&lt;/brag&gt;</span></li>
-            <li><strong>Cooking</strong> (feels like coding, except you can't TDD)</li>
+            <li><strong>Cooking</strong> (feels like coding, except you can't use <a target="_blank" href="http://en.wikipedia.org/wiki/Test-driven_development">TDD</a>)</li>
           </ul>
 		</div>
 	</div>
