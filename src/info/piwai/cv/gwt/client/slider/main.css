@@ -149,6 +149,10 @@ button {
 	list-style-type: square;
 }
 
+ul {
+	list-style-type: square;	
+}
+
 .tableOfContent {
 	width: 100%;
 	font-size: 30px;
@@ -447,6 +451,10 @@ info {
 }
 .intro .container {
     margin-top: 40px;
+}
+
+ul.needspace {
+	margin:0;
 }
 
 /*

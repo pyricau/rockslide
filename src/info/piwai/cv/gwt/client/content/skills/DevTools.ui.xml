@@ -5,11 +5,31 @@
     <div>
         <div class="header">Dev Tools</div>
         <div class="section">
-            <ul class="summary">
-                <li>Build: Maven, Hudson/Jenkins, Sonar</li>
-                <li>VCS: Git, SVN</li>
-                <li>Eclipse</li>
-                <li>Hacker tools: Firebug, Charles Proxy, nmap</li>
+            <span class="nicetag">Build</span> <span class="greytag">IDE</span> <span class="yellowtag">VCS</span> <span class="redtag">Hacker Tools</span> 
+            <ul class="needspace">
+              <li>Pretty good<br />
+                <span class="nicetag">Maven</span>
+                <span class="greytag">Eclipse</span>
+                <span class="redtag">Firebug</span>
+              </li>
+              <li>Well known<br />
+                <span class="nicetag">Hudson/Jenkins</span>
+                <span class="yellowtag">Git</span>
+                <span class="redtag">SoapUI</span>
+                <span class="redtag">Tamper Data</span>
+                <span class="redtag">nmap</span>
+              </li>
+              <li>Played with<br />
+                <span class="nicetag">Sonar</span>
+                <span class="greytag">Netbeans</span>
+                <span class="redtag">Charles Proxy</span>
+                <span class="redtag">JMeter</span>
+              </li>
+              <li>Some time ago<br />
+                <span class="nicetag">Ant</span>
+                <span class="greytag">Code::Blocks</span>
+                <span class="yellowtag">SVN</span>
+              </li>
             </ul>
         </div>
     </div>

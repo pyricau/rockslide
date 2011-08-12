@@ -5,11 +5,32 @@
     <div>
         <div class="header">Computer Languages</div>
         <div class="section">
-            <ul class="summary">
-                <li>Expert: Java 5/6 (SCJP 91%)</li>
-                <li>Well known: XML, XHTML / HTML 5, CSS, Javascript</li>
-                <li>Some time ago: PHP 5, C, C++, DarkBasic Pro, LaTeX</li>
-                <li>Played with: Ruby, Python, Prolog, ADA, ForPlay</li>
+            <span class="nicetag">Imperative</span> <span class="greytag">Weird</span> <span class="redtag">Declarative</span>
+            <ul class="needspace">
+                <li>Expert<br />
+                  <span class="nicetag">Java 6</span>
+                  <span class="keytag">(SCJP 91%)</span>
+                </li>
+                <li>Well known<br />
+                  <span class="nicetag">Javascript</span>
+                  <span class="greytag">CSS</span>
+                  <span class="redtag">XML</span>
+                  <span class="redtag">XHTML / HTML</span>
+                </li>
+                <li>Played with<br />
+                  <span class="nicetag">Ruby</span>
+                  <span class="nicetag">Python</span>
+                  <span class="nicetag">ADA</span>
+                  <span class="greytag">Prolog</span>
+                  <span class="redtag">HTML 5</span>
+                </li>
+                <li>Some time ago<br />
+                  <span class="nicetag">PHP 5</span>
+                  <span class="nicetag">C</span>
+                  <span class="nicetag">C++</span>
+                  <span class="nicetag">DarkBasic Pro</span>
+                  <span class="redtag">LaTeX</span>
+                </li>
             </ul>
         </div>
     </div>

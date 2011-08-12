@@ -19,4 +19,7 @@ public interface Resources extends ClientBundle {
     @Source("info/piwai/cv/gwt/assets/photo.jpg")
     ImageResource photo();
 
+    @Source("info/piwai/cv/gwt/assets/2stars.png")
+    ImageResource twoStars();
+
 }

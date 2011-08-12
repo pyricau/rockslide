@@ -5,12 +5,24 @@
     <div>
         <div class="header">Methods</div>
         <div class="section">
-            <ul class="summary">
-                <li>TDD &amp; test first: I like those.</li>
-                <li>Scrum: had some experiences, knows quite some theory, but lacks a bit of real field background</li>
-                <li>ISO 9001v2000: Used in a 6 months project... Frankly? I find it boring</li>
-                <li>GTD: I love this method!</li>
-            </ul>
+            <span class="nicetag">Tech</span> <span class="redtag">Project Management</span>
+            <ul class="needspace">
+              <li>Experienced<br />
+                <span class="nicetag">TDD</span>
+                <span class="nicetag">Continuous Integration</span>
+                <span class="nicetag">UML</span>
+                <span class="redtag">GTD</span>
+              </li>
+              <li>Need more practice<br />
+                <span class="nicetag">Continuous Deployment</span>
+                <span class="nicetag">XP</span>
+                <span class="redtag">Scrum</span>
+              </li>
+              <li>Bored<br />
+                <span class="redtag">ISO 9001v2000</span>
+                <span class="redtag">V-Model</span>
+              </li>
+            </ul>        
         </div>
     </div>
 </ui:UiBinder>

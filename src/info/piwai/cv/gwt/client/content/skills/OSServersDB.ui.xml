@@ -5,10 +5,26 @@
     <div>
         <div class="header">OS / Servers / Databases</div>
         <div class="section">
-            <ul class="summary">
-                <li>Servers: JBoss, WebSphere AS, Tomcat Web Servers, Apache</li>
-                <li>OS: Linux, Android, Ubuntu, MacOS, Windows </li>
-                <li>DB: MySQL, SQLite, PostgreSQL, Oracle</li>
+            <span class="nicetag">OS</span> <span class="greytag">Servers</span> <span class="redtag">Databases</span>
+            <ul class="needspace">
+              <li>Well known<br />
+                <span class="nicetag">Ubuntu</span>
+                <span class="nicetag">Android</span>
+                <span class="greytag">Tomcat</span>
+                <span class="greytag">Apache</span>
+                <span class="redtag">MySQL</span>
+              </li>
+              <li>Played with<br />
+                <span class="nicetag">Mac OS</span>
+                <span class="redtag">SQLite</span>
+                <span class="redtag">Oracle</span>
+                <span class="redtag">PostgreSQL</span>
+              </li>
+              <li>Some time ago<br />
+                <span class="nicetag">Windows</span>
+                <span class="greytag">JBoss</span>
+                <span class="greytag">WebSphere AS</span>
+              </li>
             </ul>
         </div>
     </div>

@@ -5,12 +5,21 @@
     <div>
         <div class="header">Spoken Languages</div>
         <div class="section">
-            <ul class="summary">
-                <li>French: native speaker</li>
-                <li>English: quite fluent, technical</li>
-                <li>Spanish: understood if spoken slowly</li>
-                <li>Swedish: got some lessons, but forgot most of those</li>
-            </ul>
+            <span class="nicetag">Baguette</span> <span class="greytag">Baked beans</span> <span class="yellowtag">Tortilla!</span> <span class="redtag">Köttbullar</span> 
+            <ul class="needspace">
+                <li>Native speaker<br />
+                  <span class="nicetag">French</span>
+                </li>
+                <li>Fluent, technical<br />
+                  <span class="greytag">English</span>
+                </li>
+                <li>Understood if spoken slowly<br />
+                  <span class="yellowtag">Spanish</span>
+                </li>
+                <li>Jag talar inte svenska<br />
+                  <span class="redtag">Swedish</span>
+                </li>
+            </ul>        
         </div>
     </div>
 </ui:UiBinder>
