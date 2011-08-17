@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.7.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.7.0/distro-source/core/src/gwt-module.dtd">
+<module>
+    <!-- Inherit the core Web Toolkit stuff.                        -->
+    <inherits name='com.google.gwt.user.User'/>
+
+    <!-- Inherit the logging system -->
+    <inherits name="com.google.gwt.logging.Logging"/>
+    <set-property name="gwt.logging.enabled" value="FALSE"/>
+
+    <!-- Set up the theming system -->
+    <define-property name="syntaxhighlighter.theme" values="Default,Django,Eclipse,Emacs,FadeToGrey,MDUltra,Midnight,RDark"/>
+    <set-property name="syntaxhighlighter.theme" value="Default"/>
+
+    <!-- Define the Generators -->
+    <generate-with class="com.alexgorbatchev.syntaxhighlighter.compiler.BrushGenerator">
+        <when-type-assignable class="com.alexgorbatchev.syntaxhighlighter.client.Brush" />
+    </generate-with>
+    
+    <generate-with class="com.alexgorbatchev.syntaxhighlighter.compiler.ThemeGenerator">
+        <when-type-assignable class="com.alexgorbatchev.syntaxhighlighter.client.Theme" />
+    </generate-with>
+</module>

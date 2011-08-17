@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>info.piwai.rockslide</groupId>
+        <artifactId>rockslide-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>info.piwai.rockslide</groupId>
+    <artifactId>rockslide</artifactId>
+
+    <name>Rockslide</name>
+    <description>Rockslide generates dynamic web slideshows with GWT.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+        </dependency>
+		<dependency> <!-- Needed for syntax highlighter -->
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+		</dependency>
+       <!-- <dependency>
+            <groupId>com.alexgorbatchev</groupId>
+            <artifactId>gwt-syntaxhighlighter</artifactId>
+        </dependency> -->
+    </dependencies>
+
+    <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.java</include>
+          <include>**/*.gwt.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.java</include>
+          <include>**/*.gwt.xml</include>
+          <include>**/*.css</include>
+          <include>**/*.js</include>
+        </includes>
+      </resource>
+    </resources>
+    <plugins>
+                        <!--<plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-source-plugin</artifactId>
+                                <version>2.1.2</version>
+                                <executions>
+                                        <execution>
+                                                <id>attach-sources</id>
+                                                <phase>package</phase>
+                                                <goals>
+                                                        <goal>jar-no-fork</goal>
+                                                </goals>
+                                        </execution>
+                                </executions>
+                        </plugin>-->
+    </plugins>
+
+    </build>
+
+</project>

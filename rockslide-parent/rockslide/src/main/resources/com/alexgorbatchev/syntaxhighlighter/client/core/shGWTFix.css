@@ -1,0 +1,12 @@
+/*
+Simple little fix to the CSS stylesheet for the SyntaxHighlighter which makes
+the Highlighter fit nicely within a GWT Widget without annoying scrollbars
+getting in the way.
+*/
+.syntaxhighlighter {
+    margin: 0px !important;
+    padding: 0px !important;
+    overflow: visible !important;
+    width: auto !important;
+    height: auto !important;
+}
