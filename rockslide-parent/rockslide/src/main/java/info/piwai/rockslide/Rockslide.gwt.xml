@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-	<inherits name='info.piwai.cv.gwt.Rockslide' />
+
+	<inherits name='com.google.gwt.user.User' />
+    
+	<inherits name='com.alexgorbatchev.syntaxhighlighter.Highlighter'/>
+	
+	<set-property name="syntaxhighlighter.theme" value="Eclipse"/>
+
+	<source path='client' />
+
 </module>

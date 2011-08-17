@@ -1,28 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>info.piwai.rockslide</groupId>
-        <artifactId>rockslide-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
+  <parent>
     <groupId>info.piwai.rockslide</groupId>
-    <artifactId>documentation</artifactId>
-    <packaging>war</packaging>
+    <artifactId>rockslide-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
-    <name>Documentation</name>
-    <description>Online doc that uses Rockslide.</description>
+  <groupId>info.piwai.rockslide</groupId>
+  <artifactId>documentation</artifactId>
+  <packaging>war</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>info.piwai.rockslide</groupId>
-            <artifactId>rockslide</artifactId>
-        </dependency>
-    </dependencies>
+  <name>Documentation</name>
+  <description>Online doc that uses Rockslide.</description>
 
-    <build>
+  <dependencies>
+    <dependency>
+      <groupId>info.piwai.rockslide</groupId>
+      <artifactId>rockslide</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
 
     <plugins>
       <plugin>
@@ -30,15 +33,14 @@
         <artifactId>gwt-maven-plugin</artifactId>
         <version>2.3.0-1</version>
 
-      <configuration>
-							<modules>
-								<module>info.piwai.cv.gwt.Documentation</module>
-							</modules>
-        <compileSourcesArtifacts>
-          <!-- <artifact>com.alexgorbatchev:gwt-syntaxhighlighter</artifact>  Needed ? -->
-<compileSourcesArtifact>info.piwai.rockslide:rockslide</compileSourcesArtifact>
-        </compileSourcesArtifacts>
-      </configuration>
+        <configuration>
+          <modules>
+            <module>info.piwai.rockslide.Documentation</module>
+          </modules>
+          <compileSourcesArtifacts>
+            <compileSourcesArtifact>info.piwai.rockslide:rockslide</compileSourcesArtifact>
+          </compileSourcesArtifacts>
+        </configuration>
 
         <executions>
           <execution>
@@ -51,6 +53,6 @@
       </plugin>
     </plugins>
 
-    </build>
+  </build>
 
 </project>

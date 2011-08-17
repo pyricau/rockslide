@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+xmlns:sl='urn:import:info.piwai.rockslide.client.highlighter'
+xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+xmlns:g='urn:import:com.google.gwt.user.client.ui'
+>
+
+    <ui:image field="github" src="github_logo.png" />
+    <ui:image field="googlecode" src="googlecode_logo.png" />
+    <ui:image field="sourceforge" src="sourceforge_logo.png" />
+    
+    <ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+
+	<ui:style>
+		@sprite .github {
+			gwt-image: 'github';
+ 			float:left;
+ 			margin-right: 20px;
+		}
+		@sprite .googlecode {
+			gwt-image: 'googlecode';
+ 			float:left;
+ 			margin-right: 20px;
+		}
+		@sprite .sourceforge {
+			gwt-image: 'sourceforge';
+ 			float:left;
+ 			margin-right: 20px; 			
+		}
+		.clear {
+			clear:both;
+		}
+		.center {
+			line-height: 64px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div class="header">I am a Software Engineer</div>
+		<div class="section">
+            <h1>&amp; a Craftsman Developer</h1>
+            <h2>Need proofs? Read my code &amp; commit logs:</h2>
+			<div class="{style.center}"><div class="{style.github}"/><p>on <a target="_blank" href="https://github.com/pyricau">Github</a> (2011)</p><div class="{style.clear}"/></div>
+            <div class="{style.center}"><div class="{style.googlecode}"/><p>on <a target="_blank" href="http://code.google.com/u/py.ricau">Google Code</a> (2009-2011)</p><div class="{style.clear}"/></div>
+            <div class="{style.center}"><div class="{style.sourceforge}"/><p>on <a target="_blank" href="http://sourceforge.net/users/insa_piwai">SourceForge</a> (2006-2009)</p><div class="{style.clear}"/></div>
+                <sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+                    System.out.println("I write a lot of Java code (SCJP 91%),");
+                    
+                    response.getWriter().println("mainly for JEE backends,");
+                    
+                    Window.alert("usually coupled with GWT frontends,");
+                    
+                    Toast.makeText(this, "and I also write Android related code!",
+                        Toast.LENGTH_LONG).show();
+                    </pre>
+                </sl:CodeHighlighter>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

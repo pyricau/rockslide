@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='documentation'>
+
+    <inherits name="com.google.gwt.user.theme.standard.Standard" /> 
+
+    <inherits name='info.piwai.rockslide.Rockslide'/>
+
+    <source path='client' />
+    
+    <script src="../ga.js"/>
+
+    <entry-point class='info.piwai.rockslide.client.Documentation' />
+
+</module>
