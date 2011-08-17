@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="section intro">
+            <h1>Skills</h1>
+            <div class="subtitle">&amp; other superhero powers</div>
+            <div class="container">
+                <div class="left">
+                    <div class="title">Tech</div>
+                    <ul class="summary">
+                        <li><a href="#Skills_ComputerLanguages">Computer Languages</a></li>
+                        <li><a href="#Skills_DevTools">Dev Tools</a></li>
+                        <li><a href="#Skills_Frameworks">Frameworks</a></li>
+                        <li><a href="#Skills_OS-Servers-DB">OS / Servers / Databases</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="title">Other</div>
+                    <ul class="summary">
+                        <li><a href="#Skills_SpokenLanguages">Spoken Languages</a></li>
+                        <li><a href="#Skills_Methods">Methods</a></li>
+                        <li><a href="#Skills_Functional-Skills">Functional Skills</a></li>
+                    </ul>
+                 </div>
+            </div>                 
+        </div>
+    </div>
+        
+</ui:UiBinder>

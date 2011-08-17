@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <ui:image field="piwai" src="piwai_logo.png" />
+    <ui:image field="blog" src="blog_screenshot.png" />
+    <ui:image field="jug" src="piwai_parisjug.jpg" />
+    
+    <ui:style>
+        @sprite .piwai {
+            gwt-image: 'piwai';
+            float:left;
+            margin-right: 20px;
+        }
+        @sprite .blog {
+            gwt-image: 'blog';
+            float:left;
+            margin-right: 20px;
+        }
+        @sprite .jug {
+            gwt-image: 'jug';
+            float:left;
+            margin-right: 20px;
+        }           
+        .clear {
+            clear:both;
+        }
+        .centerTwitter {
+            line-height: 40px;
+        }
+        .centerBlog {
+            line-height: 80px;
+        }        
+        .centerJug {
+            line-height: 160px;
+        }         
+        .small {
+        	font-size: 15px;
+        }
+    </ui:style>
+    
+
+    <div>
+        <div class="header">I am also a social coder</div>
+        <div class="section">
+            <div class="{style.centerTwitter}"><div class="{style.piwai}"/>
+            <p>Meet me on Twitter!<br />
+            <iframe
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              src="http://platform.twitter.com/widgets/follow_button.html?screen_name=Piwai&amp;button=grey&amp;link_color=282F36&amp;text_color=282F36"
+              style="width:300px; height:20px;">
+            </iframe></p><div class="{style.clear}"/></div>
+            
+            <div class="{style.centerBlog}"><div class="{style.blog}"/><p>I wrote more then 20 technical articles on the Excilys <a target="_blank" href="http://blog.excilys.com/author/pyricau/">blog</a> &amp; <a target="_blank" href="http://labs.excilys.com/author/pyricauexcilys-com/">labs</a>.<br />
+            I now have my <a target="_blank" href="http://blog.piwai.info">own blog</a>.</p><div class="{style.clear}"/></div>
+            
+            <div class="{style.centerJug}"><div class="{style.jug}"/><p>I usually attend the <a target="_blank" href="http://www.parisjug.org">ParisJUG</a>, say hello if you do too!</p><div class="{style.clear}"/></div>
+            
+            <div class="{style.small}">This photo was taken by <a target="_blank" href="http://www.flickr.com/photos/52029823@N02/">José Paumard</a>.</div>
+        </div>
+    </div>
+</ui:UiBinder>

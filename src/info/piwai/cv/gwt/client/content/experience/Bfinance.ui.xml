@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">bfinance</div>
+        <div class="section">
+            <p>
+                My current mission is to develop applications that deal with cash management,
+                as well as
+                financing and banking relationship analysis, for
+                <a
+                    target="_blank" href="http://www.bfinance.com">bfinance</a>
+                , as a JEE &amp; GWT Software Engineer.
+            </p>
+        </div>
+    </div>
+</ui:UiBinder>

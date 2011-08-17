@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder">
+
+    <div>
+        <div class="header">Trainer</div>
+        <div class="section">
+            <h1>GWT Trainer</h1>
+            <ul class="summary">
+                <li>May 2011: gave a one day training course to 8 Excilys consultants (<a href="http://excilys-gwt-slides.appspot.com/">slides</a>, in French)</li>
+            </ul>        
+            <h1>Android Trainer</h1>
+            <ul class="summary">
+                <li>February 2011: gave twice a one day <a href="https://github.com/pyricau/FormationAndroid">training course</a> to 8 Excilys consultants</li>
+                <li>December 2010: gave a 4-day <a href="http://www.orsys.fr/formation-java-google-android.asp?sdid=0">training course</a> to 12 persons at Orsys</li>
+            </ul>
+        </div>
+    </div>
+</ui:UiBinder>
