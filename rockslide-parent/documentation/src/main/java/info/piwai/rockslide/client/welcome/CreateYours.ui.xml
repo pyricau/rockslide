@@ -22,11 +22,11 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	</ui:style>
 
 	<g:HTMLPanel>
-		<div class="header">Steal this slideshow!</div>
+		<div class="header">Create your slideshow!</div>
 		<div class="section">
 			<div class="summary">
                 <ul>
-    			<li>GWT written slides, hosted on AppEngine
+    			<li>GWT &amp; UiBinder written slides
                 <rs:Code addStyleNames="{style.code}"><pre>
                     &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
                       &lt;div&gt;
@@ -40,11 +40,11 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                     &lt;/ui:UiBinder&gt;</pre>
                 </rs:Code>
                 </li>
-                <li>Based on a project created for a <a target="_blank" href="https://github.com/pyricau/slides-formation-gwt">GWT training</a></li>
+                <li>It's really easy!</li>
                 </ul>
             </div>
 			<div class="{style.fork}">
-    			<h1>Fork me on <a target="_blank" href="https://github.com/pyricau/cv-piwai">Github!</a></h1>
+    			<h1>Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">Github!</a></h1>
     			<div class="{style.octocat}" />
 			</div>
 		</div>

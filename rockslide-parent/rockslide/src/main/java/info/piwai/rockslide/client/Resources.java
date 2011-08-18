@@ -17,7 +17,7 @@ public interface Resources extends ClientBundle {
     CssResource shownotes();
 
     // TODO move to app
-    @Source("info/piwai/rockslide/assets/photo.jpg")
+    @Source("info/piwai/rockslide/assets/photo.png")
     ImageResource photo();
 
 }

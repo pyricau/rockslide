@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+>
+
+    <div>
+		<div class="header">Some title</div>
+		<div class="section">
+     	  <h2>... and some content !</h2>
+		  <ul>
+            <li><strong>Rockslide</strong> is named after <a target="_blank" href="https://github.com/adamzap/landslide">Landslide</a></li>
+            <li><strong>Needs</strong> <span class="themetag">&lt;help&gt;</span> <em>Any help appreciated!</em> <span class="themetag">&lt;/help&gt;</span></li>
+            <li><strong>You</strong> can do anything!</li>
+          </ul>
+		</div>
+	</div>
+</ui:UiBinder>

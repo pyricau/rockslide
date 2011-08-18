@@ -18,34 +18,28 @@ public class Welcome extends HeaderChapter {
         Hello binder = GWT.create(Hello.class);
     }
 
-    @UiTemplate("StealThisSlideshow.ui.xml")
-    interface StealThisSlideshow extends UiBinder<Widget, WidgetSlide> {
-        StealThisSlideshow binder = GWT.create(StealThisSlideshow.class);
+    @UiTemplate("CreateYours.ui.xml")
+    interface CreateYours extends UiBinder<Widget, WidgetSlide> {
+        CreateYours binder = GWT.create(CreateYours.class);
     }
 
-    @UiTemplate("SoftwareEngineer.ui.xml")
-    interface SoftwareEngineer extends UiBinder<Widget, WidgetSlide> {
-        SoftwareEngineer binder = GWT.create(SoftwareEngineer.class);
+    @UiTemplate("Intro.ui.xml")
+    interface Intro extends UiBinder<Widget, WidgetSlide> {
+        Intro binder = GWT.create(Intro.class);
     }
 
-    @UiTemplate("SocialCoder.ui.xml")
-    interface SocialCoder extends UiBinder<Element, ElementSlide> {
-        SocialCoder binder = GWT.create(SocialCoder.class);
-    }
 
-    @UiTemplate("StuffILike.ui.xml")
-    interface StuffILike extends UiBinder<Element, ElementSlide> {
-        StuffILike binder = GWT.create(StuffILike.class);
+    @UiTemplate("SomePage.ui.xml")
+    interface SomePage extends UiBinder<Element, ElementSlide> {
+        SomePage binder = GWT.create(SomePage.class);
     }
 
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
-        addWidgetSlide(SoftwareEngineer.binder);
-        addSlide(SocialCoder.binder);
-        addPresentable(new JobOffers());
-        addSlide(StuffILike.binder);
-        addWidgetSlide(StealThisSlideshow.binder);
+        addWidgetSlide(Intro.binder);
+        addSlide(SomePage.binder);
+        addWidgetSlide(CreateYours.binder);
         addSlide(Sections.binder);
     }
 }
