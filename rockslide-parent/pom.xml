@@ -68,15 +68,16 @@
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>com.google.gwt</groupId>
-        <artifactId>gwt-dev</artifactId>
-        <version>${gwtVersion}</version>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>1.0.0.GA</version>
         <scope>compile</scope>
       </dependency>
       <dependency>
-        <groupId>com.alexgorbatchev</groupId>
-        <artifactId>gwt-syntaxhighlighter</artifactId>
-        <version>1.1.1</version>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>1.0.0.GA</version>
+        <classifier>sources</classifier>
         <scope>compile</scope>
       </dependency>
     </dependencies>

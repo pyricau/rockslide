@@ -4,11 +4,15 @@
     <inherits name="com.google.gwt.user.theme.standard.Standard" /> 
 
     <inherits name='info.piwai.rockslide.Rockslide'/>
+    <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
+    
+    <stylesheet src="styles/shThemeEclipse.css"/>
 
+    <!-- TODO use public package -->
+    <script src="../ga.js"/>
+    
     <source path='client' />
     
-    <script src="../ga.js"/>
-
     <entry-point class='info.piwai.rockslide.client.Documentation' />
 
 </module>

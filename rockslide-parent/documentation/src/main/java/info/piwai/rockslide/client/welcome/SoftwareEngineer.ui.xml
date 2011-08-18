@@ -1,8 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder
 xmlns:ui='urn:ui:com.google.gwt.uibinder'
-xmlns:sl='urn:import:info.piwai.rockslide.client.highlighter'
-xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+xmlns:rs='urn:import:info.piwai.rockslide.sh.client'
 xmlns:g='urn:import:com.google.gwt.user.client.ui'
 >
 
@@ -10,7 +9,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
     <ui:image field="googlecode" src="googlecode_logo.png" />
     <ui:image field="sourceforge" src="sourceforge_logo.png" />
     
-    <ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
+    <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
 
 	<ui:style>
 		@sprite .github {
@@ -44,7 +43,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 			<div class="{style.center}"><div class="{style.github}"/><p>on <a target="_blank" href="https://github.com/pyricau">Github</a> (2011)</p><div class="{style.clear}"/></div>
             <div class="{style.center}"><div class="{style.googlecode}"/><p>on <a target="_blank" href="http://code.google.com/u/py.ricau">Google Code</a> (2009-2011)</p><div class="{style.clear}"/></div>
             <div class="{style.center}"><div class="{style.sourceforge}"/><p>on <a target="_blank" href="http://sourceforge.net/users/insa_piwai">SourceForge</a> (2006-2009)</p><div class="{style.clear}"/></div>
-                <sl:CodeHighlighter addStyleNames="sh" brush="{brushes.JAVA}"><pre>
+                <rs:Code firstLine="3" highlight="5" brush="{java.brush}"><pre>
                     System.out.println("I write a lot of Java code (SCJP 91%),");
                     
                     response.getWriter().println("mainly for JEE backends,");
@@ -54,7 +53,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                     Toast.makeText(this, "and I also write Android related code!",
                         Toast.LENGTH_LONG).show();
                     </pre>
-                </sl:CodeHighlighter>
+                </rs:Code>
 		</div>
 	</g:HTMLPanel>
 </ui:UiBinder>

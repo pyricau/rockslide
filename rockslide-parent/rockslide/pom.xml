@@ -22,10 +22,6 @@
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
     </dependency>
-    <dependency> <!-- Needed only for syntax highlighter -->
-      <groupId>com.google.gwt</groupId>
-      <artifactId>gwt-dev</artifactId>
-    </dependency>
   </dependencies>
 
   <build>
@@ -35,17 +31,18 @@
         <includes>
           <include>**/*.java</include>
           <include>**/*.gwt.xml</include>
+          <include>**/*.ui.xml</include>
+          <include>**/*.css</include>
+          <include>**/*.gif</include>
         </includes>
       </resource>
       <resource>
         <directory>src/main/resources</directory>
         <includes>
-          <include>**/*.java</include>
-          <include>**/*.gwt.xml</include>
           <include>**/*.css</include>
-          <include>**/*.js</include>
+          <include>**/*.js</include>          
         </includes>
-      </resource>
+      </resource>      
     </resources>
   </build>
 

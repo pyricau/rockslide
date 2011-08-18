@@ -3,8 +3,6 @@ package info.piwai.rockslide.client.slides;
 import info.piwai.rockslide.client.PresentationBuilder;
 import info.piwai.rockslide.client.PresentationEntryPoint;
 import info.piwai.rockslide.client.Resources;
-import info.piwai.rockslide.client.highlighter.HighlighterLoader;
-import info.piwai.rockslide.client.highlighter.HighlighterLoader.HighlighterLoadHandler;
 import info.piwai.rockslide.client.shownotes.ShowNotesSender;
 import info.piwai.rockslide.client.window.ChildWindow;
 import info.piwai.rockslide.client.window.WindowMessageListener;
@@ -12,7 +10,6 @@ import info.piwai.rockslide.client.window.WindowMessageListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.alexgorbatchev.syntaxhighlighter.client.Brush;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.core.client.Scheduler.RepeatingCommand;
 import com.google.gwt.dom.client.NativeEvent;
@@ -71,27 +68,12 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
             childWindow.registerListener("childLoaded", new WindowMessageListener<Void>() {
                 @Override
                 public void onMessage(Void message) {
-                    doPreloadHighlighters();
+                    loadSlideModule();
                 }
             });
         } else {
-            doPreloadHighlighters();
+            loadSlideModule();
         }
-    }
-
-    private void doPreloadHighlighters() {
-
-        ArrayList<Brush> brushes = new ArrayList<Brush>();
-
-        presentationBuilder.definePreloadedBrushes(brushes);
-
-        HighlighterLoader.get().loadHighlighters(brushes, new HighlighterLoadHandler() {
-
-            @Override
-            public void onHighlightersLoaded() {
-                loadSlideModule();
-            }
-        });
     }
 
     private void startLoading() {

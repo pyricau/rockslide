@@ -23,25 +23,28 @@
       <groupId>info.piwai.rockslide</groupId>
       <artifactId>rockslide</artifactId>
     </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <classifier>sources</classifier>
+    </dependency>    
   </dependencies>
 
   <build>
-
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
         <version>2.3.0-1</version>
-
         <configuration>
           <modules>
             <module>info.piwai.rockslide.Documentation</module>
           </modules>
-          <compileSourcesArtifacts>
-            <compileSourcesArtifact>info.piwai.rockslide:rockslide</compileSourcesArtifact>
-          </compileSourcesArtifacts>
         </configuration>
-
         <executions>
           <execution>
             <goals>
@@ -49,10 +52,8 @@
             </goals>
           </execution>
         </executions>
-
       </plugin>
     </plugins>
-
   </build>
 
 </project>

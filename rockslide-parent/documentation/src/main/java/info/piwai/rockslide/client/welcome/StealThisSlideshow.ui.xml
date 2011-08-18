@@ -1,12 +1,9 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder
 xmlns:ui='urn:ui:com.google.gwt.uibinder'
-xmlns:sl='urn:import:info.piwai.rockslide.client.highlighter'
-xmlns:syntax='urn:import:com.alexgorbatchev.syntaxhighlighter.client'
+xmlns:rs='urn:import:info.piwai.rockslide.sh.client'
 xmlns:g='urn:import:com.google.gwt.user.client.ui'
 >
-
-    <ui:with field="brushes" type="com.alexgorbatchev.syntaxhighlighter.client.Brush.Brushes"/>
 
 	<ui:image field="octocat" src="octocat_social.png" />
 
@@ -30,7 +27,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 			<div class="summary">
                 <ul>
     			<li>GWT written slides, hosted on AppEngine
-                <sl:CodeHighlighter addStyleNames="sh {style.code}" brush="{brushes.XML}"><pre>
+                <rs:Code addStyleNames="{style.code}"><pre>
                     &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
                       &lt;div&gt;
                         &lt;div class="section center intro"&gt;
@@ -41,7 +38,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                         &lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/ui:UiBinder&gt;</pre>
-                </sl:CodeHighlighter>
+                </rs:Code>
                 </li>
                 <li>Based on a project created for a <a target="_blank" href="https://github.com/pyricau/slides-formation-gwt">GWT training</a></li>
                 </ul>

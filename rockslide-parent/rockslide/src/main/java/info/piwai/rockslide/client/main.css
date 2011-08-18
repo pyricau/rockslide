@@ -1,46 +1,3 @@
-/* ******************************* */
-/* white slide, grey background */
-/* @def baseColor #CAD700; */
-/* @def leftColor #1D1900; */
-/* @def leftColor2 #55C9C9; */
-/* @def rightColor #FFFFFF; */
-/* @def rightColor2 #EBE3D3; */
-/* @def backgroundColor rightColor2; */
-/* @def slideColor rightColor; */
-/* @def headerColor leftColor; */
-/* @def headerText rightColor; */
-/* @def slideHeaderColor leftColor; */
-/* @def titleColor leftColor; */
-/* @def sectionTextColor leftColor; */
-/* ******************************* */
-/* grey slide, white background */
-/* @def baseColor #CAD700; */
-/* @def leftColor #1D1900; */
-/* @def leftColor2 #55C9C9; */
-/* @def rightColor #FFFFFF; */
-/* @def rightColor2 #EBE3D3; */
-/* @def backgroundColor rightColor; */
-/* @def slideColor rightColor2; */
-/* @def headerColor leftColor; */
-/* @def headerText baseColor; */
-/* @def slideHeaderColor leftColor; */
-/* @def titleColor leftColor; */
-/* @def sectionTextColor leftColor; */
-/* ******************************* */
-/* Eco design */
-/* @def baseColor #33332D; */
-/* @def leftColor #CCCC9F; */
-/* @def leftColor2 #FFF8E3; */
-/* @def rightColor #9FB4CC; */
-/* @def rightColor2 #DB4105; */
-/* @def backgroundColor rightColor; */
-/* @def slideColor leftColor2; */
-/* @def headerColor leftColor; */
-/* @def headerText baseColor; */
-/* @def slideHeaderColor baseColor; */
-/* @def titleColor rightColor2; */
-/* @def sectionTextColor baseColor; */
-/* ******************************* */
 /* chemical brothers */
 @def baseColor #BDA21D;
 @def leftColor #FFFEFC;
@@ -70,7 +27,7 @@ div.presentation {
 	width: 1500px;
 	height: 800px;
 	margin-left: -750px;
-	margin-top: -420px;
+	margin-top: -400px;
 	left: 50%;
 	top: 50%;
 	display: block;
@@ -80,9 +37,9 @@ div.presentation {
 .presentationHeader {
 	color: slideHeaderColor;
 	font-size: 20px;
-	height: 70px;
+	height: 50px;
 	left: 0;
-	margin-top: -420px;
+	margin-top: -400px;
 	position: absolute;
 	text-align: center;
 	top: 50%;
