@@ -97,7 +97,7 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     }
 
     private void loadSlideModule() {
-        Resources.instance.main().ensureInjected();
+        Resources.instance.slides().ensureInjected();
         presentationBuilder.loadChapters(this);
 
         presentation = new Presentation(new ShowNotesSender(childWindow));

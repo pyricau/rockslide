@@ -3,6 +3,6 @@
 
 	<div>
     <a href="#Welcome">Welcome</a> |  Nothing Else
-    
     </div>
+    
 </ui:UiBinder>

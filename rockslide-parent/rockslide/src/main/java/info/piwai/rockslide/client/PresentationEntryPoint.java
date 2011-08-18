@@ -12,6 +12,7 @@ public abstract class PresentationEntryPoint implements EntryPoint, Presentation
 
     @Override
     public void onModuleLoad() {
+        // TODO add a split point ? Or maybe use two different entry points ?
         String showNotes = Location.getParameter(SHOW_NOTES_PARAM);
         if ("true".equals(showNotes)) {
             ShowNotesViewer showNotesViewer = new ShowNotesViewer();

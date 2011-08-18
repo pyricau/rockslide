@@ -6,7 +6,7 @@
         <div class="section center intro">
             <h1>Hello!</h1>
             <p>Welcome to <strong>Rockslide</strong> documentation</p>
-            <p>Press <span class="themetag">←</span> <span class="themetag">→</span> to navigate</p>
+            <p>Press <span class="tag">←</span> <span class="tag">→</span> to navigate</p>
         </div>
     </div>
 </ui:UiBinder>

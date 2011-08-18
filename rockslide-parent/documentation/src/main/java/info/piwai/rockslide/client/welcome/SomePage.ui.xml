@@ -9,7 +9,7 @@ xmlns:ui='urn:ui:com.google.gwt.uibinder'
      	  <h2>... and some content !</h2>
 		  <ul>
             <li><strong>Rockslide</strong> is named after <a target="_blank" href="https://github.com/adamzap/landslide">Landslide</a></li>
-            <li><strong>Needs</strong> <span class="themetag">&lt;help&gt;</span> <em>Any help appreciated!</em> <span class="themetag">&lt;/help&gt;</span></li>
+            <li><strong>Needs</strong> <span class="tag">&lt;help&gt;</span> <em>Any help appreciated!</em> <span class="tag">&lt;/help&gt;</span></li>
             <li><strong>You</strong> can do anything!</li>
           </ul>
 		</div>

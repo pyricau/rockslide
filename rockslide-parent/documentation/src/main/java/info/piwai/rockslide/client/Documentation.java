@@ -16,13 +16,17 @@ public class Documentation extends PresentationEntryPoint {
     public interface Sections extends UiBinder<Element, ElementSlide> {
         Sections binder = GWT.create(Sections.class);
     }
+    
+    @Override
+    public void onModuleLoad() {
+        DocumentationResources.instance.documentation().ensureInjected();
+        SyntaxHighlighter.toolbar = false;
+        
+        super.onModuleLoad();
+    }
 
     @Override
     public void loadChapters(ChapterHolder holder) {
-        
-        // TODO create an entry point init method
-        SyntaxHighlighter.toolbar = false;
-        
         holder.addChapter(new Welcome());
     }
 
