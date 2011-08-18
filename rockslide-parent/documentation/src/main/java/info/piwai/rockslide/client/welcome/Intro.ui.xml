@@ -8,6 +8,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
     <ui:image field="github" src="github_logo.png" />
     
     <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+    
 
 	<ui:style>
 		@sprite .github {

@@ -1,15 +1,15 @@
-@def baseColor #BDA21D;
-@def leftColor #FFFEFC;
-@def leftColor2 #282F36;
-@def rightColor #BFBC5B;
-@def rightColor2 #D2E098;
-@def backgroundColor rightColor2;
-@def slideColor leftColor;
-@def headerColor leftColor2;
-@def headerText slideColor;
-@def slideHeaderColor leftColor2;
-@def titleColor baseColor;
-@def sectionTextColor leftColor2;
+@def slideTitles #8f1e1c;
+@def slideBackground #FFFFFF;
+@def presentationBackground #d7cbb5;
+@def slideContent #2a2a2a;
+
+@def slideColor slideBackground;
+@def backgroundColor presentationBackground;
+@def headerColor slideContent;
+@def headerText slideBackground;
+@def slideHeaderColor slideContent;
+@def titleColor slideTitles;
+@def sectionTextColor slideContent;
 
 body {
 	background: backgroundColor;
@@ -69,8 +69,8 @@ a,a:visited,a:hover {
 	box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
 	-webkit-box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
 	-moz-box-shadow: rgba(40, 47, 54.1) 0 2px 5px;
-	background: literal("-webkit-gradient(linear, left top, left bottom, from(#BFBC5B), to(#D2E098) )");
-	background-color: #BFBC5B;
-	background: literal("-moz-linear-gradient(left top, #BFBC5B, #D2E098)");
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#C4baa4), to(#e5dbc5) )");
+	background-color: #e5dbc5;
+	background: literal("-moz-linear-gradient(left top, #C4baa4, #e5dbc5)");
 }
 

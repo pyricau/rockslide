@@ -4,13 +4,15 @@
     <inherits name="com.google.gwt.user.theme.standard.Standard" /> 
 
     <inherits name='info.piwai.rockslide.Rockslide'/>
+    
+    <!-- Syntax Highlighting -->
     <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
+    <inherits name='info.piwai.rockslide.sh.xml.XmlSH'/>
+    <stylesheet src="styles/shThemeEclipse.css"/>
     
     <!-- Injects ga.js -->
     <inherits name='info.piwai.rockslide.ga.SlideAnalytics'/>
     
-    <stylesheet src="styles/shThemeEclipse.css"/>
-
     <source path='client' />
     
     <entry-point class='info.piwai.rockslide.client.Documentation' />

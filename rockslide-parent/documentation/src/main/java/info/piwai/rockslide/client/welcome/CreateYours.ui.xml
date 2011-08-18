@@ -7,7 +7,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 
 	<ui:image field="octocat" src="octocat_social.png" />
   
-    <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+    <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
 
 	<ui:style>
 		@sprite .octocat {
@@ -24,7 +24,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
           <h1>GWT &amp; UiBinder written slides</h1>
                 <ul>
                   <li>It's really easy!
-                  <rs:Code brush="{java.brush}"><pre>
+                  <rs:Code brush="{xml.brush}"><pre>
                       &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
                         &lt;div&gt;
                           &lt;div class="section intro"&gt;
