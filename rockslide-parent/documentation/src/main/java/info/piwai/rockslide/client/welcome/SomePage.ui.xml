@@ -6,7 +6,7 @@ xmlns:ui='urn:ui:com.google.gwt.uibinder'
     <div>
 		<div class="header">Some title</div>
 		<div class="section">
-     	  <h2>... and some content !</h2>
+     	  <h1>... and some content !</h1>
 		  <ul>
             <li><strong>Rockslide</strong> is named after <a target="_blank" href="https://github.com/adamzap/landslide">Landslide</a></li>
             <li><strong>Needs</strong> <span class="tag">&lt;help&gt;</span> <em>Any help appreciated!</em> <span class="tag">&lt;/help&gt;</span></li>

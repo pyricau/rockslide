@@ -118,9 +118,6 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
                     case KeyCodes.KEY_RIGHT:
                         presentation.displayNextSlide();
                         break;
-                    case 51:
-                        presentation.switch3D();
-                        break;
                     }
                 }
             }

@@ -3,7 +3,7 @@
     xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
     <div>
-        <div class="section center intro">
+        <div class="section intro">
             <h1>Hello!</h1>
             <p>Welcome to <strong>Rockslide</strong> documentation</p>
             <p>Press <span class="tag">←</span> <span class="tag">→</span> to navigate</p>

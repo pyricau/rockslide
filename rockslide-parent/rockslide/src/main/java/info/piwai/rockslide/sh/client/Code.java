@@ -40,7 +40,7 @@ public class Code extends Composite implements HasHTML {
     @UiConstructor
     public Code() {
         initWidget(panel);
-        addStyleName("sh");
+        addStyleName("rs-code");
     }
 
     @Override

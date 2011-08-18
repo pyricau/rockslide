@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-
     <inherits name='info.piwai.rockslide.Rockslide'/>
 
-	<script src="shCore.js"/>
-    
-	<stylesheet src="styles/shCore.css"/>
-  
-    <source path='client' />
+	<script src="ga.js"/>
 </module>

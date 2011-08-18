@@ -9,9 +9,15 @@ import com.google.gwt.user.client.Window.Location;
 public abstract class PresentationEntryPoint implements EntryPoint, PresentationBuilder {
 
     public static final String SHOW_NOTES_PARAM = "showNotes";
+    
+    public void init() {
+    }
 
     @Override
-    public void onModuleLoad() {
+    public final void onModuleLoad() {
+        
+        init();
+        
         // TODO add a split point ? Or maybe use two different entry points ?
         String showNotes = Location.getParameter(SHOW_NOTES_PARAM);
         if ("true".equals(showNotes)) {

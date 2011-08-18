@@ -6,11 +6,11 @@
     <inherits name='info.piwai.rockslide.Rockslide'/>
     <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
     
+    <!-- Injects ga.js -->
+    <inherits name='info.piwai.rockslide.ga.SlideAnalytics'/>
+    
     <stylesheet src="styles/shThemeEclipse.css"/>
 
-    <!-- TODO use public package -->
-    <script src="../ga.js"/>
-    
     <source path='client' />
     
     <entry-point class='info.piwai.rockslide.client.Documentation' />

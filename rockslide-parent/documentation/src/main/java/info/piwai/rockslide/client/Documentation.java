@@ -1,5 +1,6 @@
 package info.piwai.rockslide.client;
 
+import info.piwai.rockslide.client.slides.Analytics;
 import info.piwai.rockslide.client.slides.ChapterHolder;
 import info.piwai.rockslide.client.slides.ElementSlide;
 import info.piwai.rockslide.client.welcome.Welcome;
@@ -16,13 +17,25 @@ public class Documentation extends PresentationEntryPoint {
     public interface Sections extends UiBinder<Element, ElementSlide> {
         Sections binder = GWT.create(Sections.class);
     }
-    
+
     @Override
-    public void onModuleLoad() {
+    public void init() {
+
+        /**
+         * Custom CSS injection
+         */
         DocumentationResources.instance.documentation().ensureInjected();
+
+        /**
+         * Default options of SyntaxHighlighter
+         */
         SyntaxHighlighter.toolbar = false;
-        
-        super.onModuleLoad();
+
+        /**
+         * Will only work if the module info.piwai.rockslide.ga.SlideAnalytics
+         * is imported
+         */
+        Analytics.enable("UA-XXX");
     }
 
     @Override

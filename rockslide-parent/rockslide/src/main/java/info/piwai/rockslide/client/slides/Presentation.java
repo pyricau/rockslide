@@ -9,13 +9,11 @@ import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class Presentation extends Composite {
 
-    private static final String THREE_D_STYLE = "three-d";
     private static PresentationUiBinder uiBinder = GWT.create(PresentationUiBinder.class);
 
     interface PresentationUiBinder extends UiBinder<Widget, Presentation> {}
@@ -143,11 +141,4 @@ public class Presentation extends Composite {
         }
     }
 
-    public void switch3D() {
-        if (RootPanel.get().getStyleName().contains(THREE_D_STYLE)) {
-            RootPanel.get().removeStyleName(THREE_D_STYLE);
-        } else {
-            RootPanel.get().addStyleName(THREE_D_STYLE);
-        }
-    }
 }

@@ -12,14 +12,9 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	<ui:style>
 		@sprite .github {
 			gwt-image: 'github';
- 			float:left;
- 			margin-right: 20px;
-		}
-		.clear {
-			clear:both;
-		}
-		.center {
-			line-height: 64px;
+			width: auto;
+ 			padding-left: 64px;
+ 			line-height: 64px;
 		}
 	</ui:style>
 
@@ -27,14 +22,18 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 		<div class="header">Rockslide generates...</div>
 		<div class="section">
             <h1>... dynamic GWT slideshows</h1>
-            <h2>And Yes, GWT is cool!</h2>
-			<div class="{style.center}"><div class="{style.github}"/><p>This project lives on <a target="_blank" href="https://github.com/pyricau/rockslide">Github</a></p><div class="{style.clear}"/></div>
-                <rs:Code firstLine="42" highlight="44" brush="{java.brush}"><pre>
-                    System.out.println("You can include code in your slides,");
-                    
-                    response.getWriter().println("thanks to the great SyntaxHighlighter library !");
-                    </pre>
-                </rs:Code>
-		</div>
+            <ul>
+              <li>Yes, GWT is cool!</li>
+              <li><div class="{style.github}" >This project lives on <a target="_blank" href="https://github.com/pyricau/rockslide">Github</a></div></li>
+            </ul>
+            
+			
+            <rs:Code firstLine="42" highlight="44" brush="{java.brush}"><pre>
+                System.out.println("You can include code in your slides,");
+                
+                System.out.println("thanks to SyntaxHighlighter !");
+                </pre>
+            </rs:Code>
+            </div>
 	</g:HTMLPanel>
 </ui:UiBinder>
