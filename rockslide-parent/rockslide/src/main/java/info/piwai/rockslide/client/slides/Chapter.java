@@ -16,8 +16,12 @@ import com.google.gwt.user.client.ui.Widget;
 public abstract class Chapter implements Iterable<Presentable> {
 
     private static final String IMPL_SUFFIX = "Impl";
+    
     private List<Presentable> slides;
+    
     private final List<String> slideNames = new ArrayList<String>();
+    
+    private TableOfContentFactory tableOfContentFactory;
 
     public final Presentable getSlide(int slideIndex) {
         return ensureSlides().get(doCheckIndex(slideIndex));
@@ -128,6 +132,11 @@ public abstract class Chapter implements Iterable<Presentable> {
     protected final void addPresentable(Presentable presentable) {
         addPresentable(presentable, ClassHelper.getSimpleName(presentable.getClass()));
     }
+    
+    protected final void addPresentationMap() {
+        Presentable tableOfContent = tableOfContentFactory.buildTableOfContent();
+        addPresentable(tableOfContent, tableOfContent.toString());
+    }
 
     protected final void addPresentable(Presentable presentable, String slideName) {
         slides.add(presentable);
@@ -171,6 +180,10 @@ public abstract class Chapter implements Iterable<Presentable> {
     public final String getSlideName(int slideIndex) {
         ensureSlides();
         return slideNames.get(doCheckIndex(slideIndex));
+    }
+
+    public void setSlideMapFactory(TableOfContentFactory slideMapFactory) {
+        this.tableOfContentFactory = slideMapFactory;
     }
 
 }

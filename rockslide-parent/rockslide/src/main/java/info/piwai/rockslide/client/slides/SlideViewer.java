@@ -101,6 +101,11 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     private void loadSlideModule() {
         Resources.instance.slides().ensureInjected();
         presentationBuilder.loadChapters(this);
+        
+        TableOfContentFactory presentationMapFactory = presentationBuilder.buildTableOfContentFactory(this);
+        for(Chapter chapter : chapters) {
+            chapter.setSlideMapFactory(presentationMapFactory);
+        }
 
         presentation = new Presentation(new ShowNotesSender(childWindow), presentationBuilder);
         stopLoading();

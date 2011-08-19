@@ -1,6 +1,5 @@
 package info.piwai.rockslide.client.welcome;
 
-import info.piwai.rockslide.client.Documentation.Chapters;
 import info.piwai.rockslide.client.slides.Chapter;
 import info.piwai.rockslide.client.slides.ElementSlide;
 import info.piwai.rockslide.client.slides.WidgetSlide;
@@ -40,6 +39,6 @@ public class Welcome extends Chapter {
         addWidgetSlide(Intro.binder);
         addSlide(SomePage.binder);
         addWidgetSlide(CreateYours.binder);
-        addSlide(Chapters.binder);
+        addPresentationMap();
     }
 }

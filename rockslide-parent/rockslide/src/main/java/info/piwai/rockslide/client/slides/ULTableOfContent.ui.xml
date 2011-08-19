@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+  xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:rs="urn:import:info.piwai.rockslide.client.slides"
+>
+	<g:HTMLPanel>
+		<h1>Table of contents</h1>
+		<div class="section">
+			<rs:ULPanel ui:field="ulPanel" />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

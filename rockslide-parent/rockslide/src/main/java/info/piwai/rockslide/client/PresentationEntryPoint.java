@@ -1,7 +1,10 @@
 package info.piwai.rockslide.client;
 
 import info.piwai.rockslide.client.shownotes.ShowNotesViewer;
+import info.piwai.rockslide.client.slides.ChapterHolder;
+import info.piwai.rockslide.client.slides.TableOfContentFactory;
 import info.piwai.rockslide.client.slides.SlideViewer;
+import info.piwai.rockslide.client.slides.UlTableOfContentFactory;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -54,6 +57,14 @@ public abstract class PresentationEntryPoint implements EntryPoint, Presentation
     @Override
     public IsWidget getHeaderWidget() {
         return null;
+    }
+    
+    /**
+     * May be overriden to provide other implementations of PresentationMapFactory
+     */
+    @Override
+    public TableOfContentFactory buildTableOfContentFactory(ChapterHolder chapterHolder) {
+        return new UlTableOfContentFactory(chapterHolder);
     }
     
 }
