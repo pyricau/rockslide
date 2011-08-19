@@ -147,12 +147,15 @@ public abstract class Chapter implements Iterable<Presentable> {
     }
 
     /**
-     * May be overriden if you want to change the chapter history name
+     * May be overriden if you want to change the chapter history name (defaults to chapter class name)
      */
     public String getHistoryName() {
         return ClassHelper.getSimpleName(getClass());
     }
     
+    /**
+     * May be overriden to change the chapter readable name (defaults to history name)
+     */
     public String getReadableName() {
         return getHistoryName();
     }

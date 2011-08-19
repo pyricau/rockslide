@@ -45,6 +45,7 @@ public class Documentation extends PresentationEntryPoint {
     @Override
     public void loadChapters(ChapterHolder holder) {
         holder.addChapter(new Welcome());
+        holder.addChapter(new Welcome());
         
         header = new PresentationHeader(holder);
     }

@@ -1,8 +1,5 @@
 package info.piwai.rockslide.client.slides;
 
-import info.piwai.rockslide.client.slides.Chapter;
-import info.piwai.rockslide.client.slides.ChapterHolder;
-
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
@@ -15,7 +12,7 @@ public class PresentationHeader extends Composite {
         FlowPanel holder = new FlowPanel();
         
         boolean first = true;
-        for(Chapter chapter : chapterHolder.getChapters()) {
+        for(ChapterName chapterName : chapterHolder.getChapterNames()) {
             if (first) {
                 first = false;
             } else {
@@ -23,8 +20,8 @@ public class PresentationHeader extends Composite {
                 holder.add(separator);
             }
             
-            String readableName = chapter.getReadableName();
-            String historyName = chapter.getHistoryName();
+            String readableName = chapterName.getReadableName();
+            String historyName = chapterName.getHistoryName();
             
             Anchor anchor = new Anchor(readableName);
             anchor.setHref("#"+historyName);

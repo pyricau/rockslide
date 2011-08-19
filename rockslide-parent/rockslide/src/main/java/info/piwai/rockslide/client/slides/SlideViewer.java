@@ -42,6 +42,8 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
     private LoadingWidget loadingWidget;
 
+    private List<ChapterName> chapterNamesHolder = new ArrayList<ChapterName>();
+
     public SlideViewer(PresentationBuilder presentationBuilder) {
         this.presentationBuilder = presentationBuilder;
     }
@@ -127,19 +129,20 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     @Override
     public void addChapter(Chapter chapter) {
         chapters.add(chapter);
-        String chapterName = chapter.getHistoryName();
-        chapterName = chapterName.replace("_", "");
-        String realChapterName;
-        if (chapterNames.contains(chapterName)) {
+        String historyName = chapter.getHistoryName();
+        historyName = historyName.replace("_", "");
+        String finalHistoryName;
+        if (chapterNames.contains(historyName)) {
             int i = 1;
             do {
                 i++;
-                realChapterName = chapterName + i;
-            } while (chapterNames.contains(realChapterName));
+                finalHistoryName = historyName + i;
+            } while (chapterNames.contains(finalHistoryName));
         } else {
-            realChapterName = chapterName;
+            finalHistoryName = historyName;
         }
-        chapterNames.add(realChapterName);
+        chapterNames.add(finalHistoryName);
+        chapterNamesHolder.add(new ChapterName(finalHistoryName, chapter.getReadableName()));
     }
 
     private void displayChapter(int chapterIndex) {
@@ -219,7 +222,8 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     }
 
     @Override
-    public List<Chapter> getChapters() {
-        return chapters;
+    public List<ChapterName> getChapterNames() {
+        return chapterNamesHolder ;
     }
+
 }

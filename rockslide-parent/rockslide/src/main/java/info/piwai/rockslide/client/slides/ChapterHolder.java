@@ -6,6 +6,6 @@ public interface ChapterHolder {
 
     void addChapter(Chapter chapter);
     
-    List<Chapter> getChapters();
+    List<ChapterName> getChapterNames();
 
 }
