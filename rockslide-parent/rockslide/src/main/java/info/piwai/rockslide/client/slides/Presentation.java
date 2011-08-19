@@ -36,9 +36,14 @@ public class Presentation extends Composite {
 
     private final ShowNotesSender showNotesSender;
 
-    public Presentation(ShowNotesSender showNotesSender) {
+    public Presentation(ShowNotesSender showNotesSender, HasHeaderWidget hasHeaderWidget) {
         this.showNotesSender = showNotesSender;
         initWidget(uiBinder.createAndBindUi(this));
+        
+        IsWidget headerWidget = hasHeaderWidget.getHeaderWidget();
+        if (headerWidget != null) {
+            header.setWidget(headerWidget);
+        }
     }
 
     public void updateSlides(String chapterName, Chapter chapter) {
@@ -103,12 +108,6 @@ public class Presentation extends Composite {
         changeSlideClass(currentSlide, "current");
         changeSlideClass(chapter.getSlideOrNull(index + 1), "future");
         changeSlideClass(chapter.getSlideOrNull(index + 2), "far-future");
-
-        IsWidget headerWidget = currentSlide.getHeaderWidget();
-        if (headerWidget == null) {
-            headerWidget = chapter.getHeaderWidget();
-        }
-        header.setWidget(headerWidget);
 
         String historyToken;
         if (index == 0) {

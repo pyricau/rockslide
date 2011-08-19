@@ -100,7 +100,7 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
         Resources.instance.slides().ensureInjected();
         presentationBuilder.loadChapters(this);
 
-        presentation = new Presentation(new ShowNotesSender(childWindow));
+        presentation = new Presentation(new ShowNotesSender(childWindow), presentationBuilder);
         stopLoading();
         RootPanel rootPanel = RootPanel.get();
         rootPanel.add(presentation);
@@ -127,7 +127,7 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
     @Override
     public void addChapter(Chapter chapter) {
         chapters.add(chapter);
-        String chapterName = chapter.getName();
+        String chapterName = chapter.getHistoryName();
         chapterName = chapterName.replace("_", "");
         String realChapterName;
         if (chapterNames.contains(chapterName)) {
@@ -216,5 +216,10 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
         } else {
             return token;
         }
+    }
+
+    @Override
+    public List<Chapter> getChapters() {
+        return chapters;
     }
 }

@@ -1,7 +1,7 @@
 package info.piwai.rockslide.client.welcome;
 
-import info.piwai.rockslide.client.HeaderChapter;
-import info.piwai.rockslide.client.Documentation.Sections;
+import info.piwai.rockslide.client.Documentation.Chapters;
+import info.piwai.rockslide.client.slides.Chapter;
 import info.piwai.rockslide.client.slides.ElementSlide;
 import info.piwai.rockslide.client.slides.WidgetSlide;
 
@@ -11,7 +11,7 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.Widget;
 
-public class Welcome extends HeaderChapter {
+public class Welcome extends Chapter {
 
     @UiTemplate("Hello.ui.xml")
     interface Hello extends UiBinder<Element, ElementSlide> {
@@ -40,6 +40,6 @@ public class Welcome extends HeaderChapter {
         addWidgetSlide(Intro.binder);
         addSlide(SomePage.binder);
         addWidgetSlide(CreateYours.binder);
-        addSlide(Sections.binder);
+        addSlide(Chapters.binder);
     }
 }

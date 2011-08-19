@@ -11,16 +11,15 @@ import java.util.List;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
-public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget {
+public abstract class Chapter implements Iterable<Presentable> {
 
     private static final String IMPL_SUFFIX = "Impl";
     private List<Presentable> slides;
     private final List<String> slideNames = new ArrayList<String>();
 
-    public final HasHeaderWidget getSlide(int slideIndex) {
+    public final Presentable getSlide(int slideIndex) {
         return ensureSlides().get(doCheckIndex(slideIndex));
     }
 
@@ -148,12 +147,16 @@ public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget 
     }
 
     /**
-     * May be overriden if you want to change the chapter name
+     * May be overriden if you want to change the chapter history name
      */
-    public String getName() {
+    public String getHistoryName() {
         return ClassHelper.getSimpleName(getClass());
     }
-
+    
+    public String getReadableName() {
+        return getHistoryName();
+    }
+    
     /**
      * Returns the slide index. The
      */
@@ -167,8 +170,4 @@ public abstract class Chapter implements Iterable<Presentable>, HasHeaderWidget 
         return slideNames.get(doCheckIndex(slideIndex));
     }
 
-    @Override
-    public IsWidget getHeaderWidget() {
-        return null;
-    }
 }

@@ -31,7 +31,7 @@
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
       <classifier>sources</classifier>
-    </dependency>    
+    </dependency>
   </dependencies>
 
   <build>
@@ -40,13 +40,13 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
         <version>2.3.0-1</version>
-        <configuration>
-          <modules>
-            <module>info.piwai.rockslide.Documentation</module>
-          </modules>
-        </configuration>
         <executions>
           <execution>
+            <configuration>
+              <modules>
+                <module>info.piwai.rockslide.Documentation</module>
+              </modules>
+            </configuration>
             <goals>
               <goal>compile</goal>
             </goals>

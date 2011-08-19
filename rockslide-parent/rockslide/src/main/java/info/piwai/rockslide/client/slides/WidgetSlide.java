@@ -3,7 +3,6 @@ package info.piwai.rockslide.client.slides;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.IsWidget;
 import com.google.gwt.user.client.ui.Widget;
 
 public class WidgetSlide extends Composite implements Presentable {
@@ -23,11 +22,6 @@ public class WidgetSlide extends Composite implements Presentable {
 
     @Override
     public Element getShowNotes() {
-        return null;
-    }
-
-    @Override
-    public IsWidget getHeaderWidget() {
         return null;
     }
 }
