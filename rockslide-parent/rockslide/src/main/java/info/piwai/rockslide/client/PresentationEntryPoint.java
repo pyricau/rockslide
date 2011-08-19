@@ -51,4 +51,9 @@ public abstract class PresentationEntryPoint implements EntryPoint, Presentation
         }
     }
     
+    @Override
+    public IsWidget getHeaderWidget() {
+        return null;
+    }
+    
 }
