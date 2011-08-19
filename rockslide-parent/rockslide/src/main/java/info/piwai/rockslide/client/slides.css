@@ -5,13 +5,13 @@ body {
 	overflow: hidden;
 }
 
-h1 {
+h2 {
 	font-size: 40px;
 	padding: 0;
 	margin: 0;
 }
 
-h2 {
+h3 {
 	font-size: 30px;
 	padding: 0;
 	margin: 0;
@@ -123,7 +123,7 @@ div.slide {
 	margin-left: 1500px;
 }
 
-div.header {
+h1 {
 	font-family: 'Arial';
 	font-weight: normal;
 	font-size: 45px;
@@ -163,7 +163,7 @@ div.section {
 	width: 900px;
 }
 
-.intro h1 {
+.intro h2 {
 	padding: 0;
 	margin: 0;
 	letter-spacing: -2px;

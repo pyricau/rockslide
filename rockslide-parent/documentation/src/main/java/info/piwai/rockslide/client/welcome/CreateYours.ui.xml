@@ -19,29 +19,28 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	</ui:style>
 
 	<g:HTMLPanel>
-		<div class="header">Create your slideshow!</div>
+		<h1>Create your slideshow!</h1>
 		<div class="section">
-          <h1>GWT &amp; UiBinder written slides</h1>
-                <ul>
-                  <li>It's really easy!
-                  <rs:Code brush="{xml.brush}"><pre>
-                      &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
-                        &lt;div&gt;
-                          &lt;div class="section intro"&gt;
-                            &lt;h1&gt;Hello!&lt;/h1&gt;
-                            &lt;p&gt;Welcome to Rockslide documentation&lt;/p&gt;
-                            &lt;p&gt;Press ← → to navigate.&lt;/p&gt;
-                          &lt;/div&gt;
-                        &lt;/div&gt;
-                      &lt;/ui:UiBinder&gt;
-                      </pre>
-                  </rs:Code>
-                  </li>
-                  <li>
-                    <div class="{style.octocat}" >Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">Github!</a></div>
-                  </li>
-                </ul>
- 
+          <h2>GWT &amp; UiBinder written slides</h2>
+          <ul>
+            <li>It's really easy!
+            <rs:Code brush="{xml.brush}"><pre>
+                &lt;ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"&gt;
+                  &lt;div&gt;
+                    &lt;div class="section intro"&gt;
+                      &lt;h2&gt;Hello!&lt;/h2&gt;
+                      &lt;p&gt;Welcome to Rockslide documentation&lt;/p&gt;
+                      &lt;p&gt;Press ← → to navigate.&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/ui:UiBinder&gt;
+                </pre>
+            </rs:Code>
+            </li>
+            <li>
+              <div class="{style.octocat}" >Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">Github!</a></div>
+            </li>
+          </ul>
 		</div>
 	</g:HTMLPanel>
 </ui:UiBinder>

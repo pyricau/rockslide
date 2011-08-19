@@ -29,18 +29,18 @@ div.slide {
 	box-shadow: 5px 5px 10px headerColor;
 }
 
-@sprite div.header {
+@sprite h1 {
 	gwt-image: "headerLogo";
 	width: auto;
 	background-color: headerColor;
 	color: headerText;
 }
 
-h1 {
+h2 {
 	color: titleColor;
 }
 
-h2 {
+h3 {
 	color: titleColor;
 }
 

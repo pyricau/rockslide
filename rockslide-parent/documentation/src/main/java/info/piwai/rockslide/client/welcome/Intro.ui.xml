@@ -20,9 +20,9 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
 	</ui:style>
 
 	<g:HTMLPanel>
-		<div class="header">Rockslide generates...</div>
+		<h1>Rockslide generates...</h1>
 		<div class="section">
-            <h1>... dynamic GWT slideshows</h1>
+            <h2>... dynamic GWT slideshows</h2>
             <ul>
               <li>Yes, GWT is cool!</li>
               <li><div class="{style.github}" >This project lives on <a target="_blank" href="https://github.com/pyricau/rockslide">Github</a></div></li>
@@ -35,6 +35,6 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
                 System.out.println("thanks to SyntaxHighlighter !");
                 </pre>
             </rs:Code>
-            </div>
+        </div>
 	</g:HTMLPanel>
 </ui:UiBinder>

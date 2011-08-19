@@ -4,7 +4,7 @@
 
     <div>
         <div class="section intro">
-            <h1>Hello!</h1>
+            <h2>Hello!</h2>
             <p>Welcome to <strong>Rockslide</strong> documentation</p>
             <p>Press <span class="tag">←</span> <span class="tag">→</span> to navigate</p>
         </div>
