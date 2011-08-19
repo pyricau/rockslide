@@ -8,27 +8,27 @@ import com.google.gwt.user.client.ui.InlineLabel;
 public class PresentationHeader extends Composite {
 
     public PresentationHeader(ChapterHolder chapterHolder) {
-        
+
         FlowPanel holder = new FlowPanel();
-        
+
         boolean first = true;
-        for(ChapterName chapterName : chapterHolder.getChapterNames()) {
+        for (ChapterName chapterName : chapterHolder.getChapterNames()) {
             if (first) {
                 first = false;
             } else {
                 InlineLabel separator = new InlineLabel(" | ");
                 holder.add(separator);
             }
-            
+
             String readableName = chapterName.getReadableName();
             String historyName = chapterName.getHistoryName();
-            
+
             Anchor anchor = new Anchor(readableName);
-            anchor.setHref("#"+historyName);
-            
+            anchor.setHref("#" + historyName);
+
             holder.add(anchor);
         }
-        
+
         initWidget(holder);
     }
 
