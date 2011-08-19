@@ -27,44 +27,28 @@ public abstract class PresentationEntryPoint implements EntryPoint, Presentation
     public final void onModuleLoad() {
         String showNotes = Location.getParameter(SHOW_NOTES_PARAM);
         if ("true".equals(showNotes)) {
-            GWT.runAsync(new RunAsyncCallback() {
-                public void onFailure(Throwable caught) {
-                    Window.alert("Error: could not download shownotes code");
-                }
-
-                public void onSuccess() {
-                    initNotes();
-                    ShowNotesViewer showNotesViewer = new ShowNotesViewer();
-                    showNotesViewer.load();
-                }
-            });
+            initNotes();
+            ShowNotesViewer showNotesViewer = new ShowNotesViewer();
+            showNotesViewer.load();
         } else {
-            GWT.runAsync(new RunAsyncCallback() {
-                public void onFailure(Throwable caught) {
-                    Window.alert("Error: could not download slides code");
-                }
-
-                public void onSuccess() {
-                    initSlides();
-                    SlideViewer slideViewer = new SlideViewer(PresentationEntryPoint.this);
-                    slideViewer.load();
-                }
-            });
-
+            initSlides();
+            SlideViewer slideViewer = new SlideViewer(PresentationEntryPoint.this);
+            slideViewer.load();
         }
     }
-    
+
     @Override
     public IsWidget getHeaderWidget() {
         return null;
     }
-    
+
     /**
-     * May be overriden to provide other implementations of PresentationMapFactory
+     * May be overriden to provide other implementations of
+     * PresentationMapFactory
      */
     @Override
     public TableOfContentFactory buildTableOfContentFactory(ChapterHolder chapterHolder) {
         return new UlTableOfContentFactory(chapterHolder);
     }
-    
+
 }
