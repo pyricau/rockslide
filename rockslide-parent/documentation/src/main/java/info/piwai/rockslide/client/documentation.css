@@ -52,6 +52,11 @@ a,a:visited,a:hover {
 	border-bottom: 2px solid sectionTextColor;
 }
 
+h2 a, h2 a:visited, h2 a:hover {
+	border-bottom: 2px solid titleColor;
+}
+
+
 .tag {
 	font-family: 'Arial';
 	color: sectionTextColor;

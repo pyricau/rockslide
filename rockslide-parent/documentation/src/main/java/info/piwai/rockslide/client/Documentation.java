@@ -1,5 +1,8 @@
 package info.piwai.rockslide.client;
 
+import info.piwai.rockslide.client.features.Features;
+import info.piwai.rockslide.client.gettingstarted.GettingStarted;
+import info.piwai.rockslide.client.history.History;
 import info.piwai.rockslide.client.slides.Analytics;
 import info.piwai.rockslide.client.slides.ChapterHolder;
 import info.piwai.rockslide.client.slides.PresentationHeader;
@@ -29,13 +32,15 @@ public class Documentation extends PresentationEntryPoint {
          * Will only work if the module info.piwai.rockslide.ga.SlideAnalytics
          * is imported
          */
-        Analytics.enable("UA-XXX");
+        Analytics.enable("UA-5875795-16");
     }
 
     @Override
     public void loadChapters(ChapterHolder holder) {
         holder.addChapter(new Welcome());
-        holder.addChapter(new Welcome());
+        holder.addChapter(new Features());
+        holder.addChapter(new GettingStarted());
+        holder.addChapter(new History());
         
         header = new PresentationHeader(holder);
     }

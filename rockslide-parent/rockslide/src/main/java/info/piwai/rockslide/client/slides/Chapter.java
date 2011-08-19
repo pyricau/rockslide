@@ -133,7 +133,7 @@ public abstract class Chapter implements Iterable<Presentable> {
         addPresentable(presentable, ClassHelper.getSimpleName(presentable.getClass()));
     }
     
-    protected final void addPresentationMap() {
+    protected final void addTableOfContent() {
         Presentable tableOfContent = tableOfContentFactory.buildTableOfContent();
         addPresentable(tableOfContent, tableOfContent.toString());
     }

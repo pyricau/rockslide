@@ -5,29 +5,21 @@ xmlns:rs='urn:import:info.piwai.rockslide.sh.client'
 xmlns:g='urn:import:com.google.gwt.user.client.ui'
 >
 
-    <ui:image field="github" src="github_logo.png" />
-    
     <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
-    
 
 	<ui:style>
-		@sprite .github {
-			gwt-image: 'github';
-			width: auto;
- 			padding-left: 64px;
- 			line-height: 64px;
-		}
+		
 	</ui:style>
 
 	<g:HTMLPanel>
-		<h1>Rockslide generates...</h1>
+		<h1>Rockslide</h1>
 		<div class="section">
-            <h2>... dynamic GWT slideshows</h2>
+            <h2>What's this?</h2>
             <ul>
-              <li>Yes, GWT is cool!</li>
-              <li><div class="{style.github}" >This project lives on <a target="_blank" href="https://github.com/pyricau/rockslide">Github</a></div></li>
+              <li>Rockslide generates dynamic presentations</li>
+              <li>Using <a href="http://code.google.com/webtoolkit">GWT</a> power</li>
+              <li><span class="tag">&lt;opinionated&gt;</span> GWT is <strong>cool</strong>! <span class="tag">&lt;/opinionated&gt;</span></li>
             </ul>
-            
 			
             <rs:Code firstLine="42" highlight="44" brush="{java.brush}"><pre>
                 System.out.println("You can include code in your slides,");

@@ -22,7 +22,7 @@ public class ShowNotesSender {
             if (showNotesWidget != null) {
                 showNotesHTML = showNotesWidget.getInnerHTML();
             } else {
-                showNotesHTML = "<div>Pas de notes</div>";
+                showNotesHTML = "<div>No show notes for this slide.</div>";
             }
 
             childWindow.sendMessage(LISTENER_NAME, showNotesHTML);

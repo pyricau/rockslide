@@ -29,4 +29,9 @@ public class ULTableOfContent extends WidgetSlide {
             ulPanel.add(anchor);
         }
     }
+    
+    @Override
+    public String toString() {
+        return "TableOfContents";
+    }
 }

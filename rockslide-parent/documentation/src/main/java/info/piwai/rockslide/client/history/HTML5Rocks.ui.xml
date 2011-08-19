@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+>
+  <div>
+  	<h1>HTML5 Rocks</h1>
+  	<div class="section">
+            <h2>It all started with a presentation</h2>
+            <ul>
+              <li><a href="http://slides.html5rocks.com">http://slides.html5rocks.com</a></li>
+              <li>Demonstrates the coming HTML5 features </li>
+              <li>
+                Created by <a href="mailto:mwichary@google.com">Marcin Wichary</a>,
+                enhanced by the
+                <a href="mailto:chrome-devrel@googlegroups.com">Chrome DevRel</a> Team,
+                <a href="mailto:slightlyoff@chromium.org">Alex Russell</a> and
+                Brad Neuberg
+              </li>
+              
+            </ul>
+        </div>
+  </div>
+</ui:UiBinder>

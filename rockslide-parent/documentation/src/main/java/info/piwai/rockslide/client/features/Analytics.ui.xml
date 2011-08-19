@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+xmlns:rs='urn:import:info.piwai.rockslide.sh.client'
+xmlns:g='urn:import:com.google.gwt.user.client.ui'
+>
+
+  <ui:image field="analytics" src="analytics.png" />
+    
+  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+   
+  <ui:style>
+	  @sprite .analytics {
+	    gwt-image: 'analytics';
+	  }
+  </ui:style>
+
+
+  <g:HTMLPanel>
+    <h1>Google Analytics</h1>
+    <div class="section">
+            <h2>Who reads your slides?</h2>
+            <rs:Code brush="{java.brush}">
+                Analytics.enable("UA-XXX");
+            </rs:Code>            
+            <ul>
+              <li>Each slide is recorded as a page</li>
+            </ul>
+            <div class="{style.analytics}"/>
+        </div>
+  </g:HTMLPanel>
+    
+</ui:UiBinder>

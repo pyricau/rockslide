@@ -27,18 +27,11 @@ public class Welcome extends Chapter {
         Intro binder = GWT.create(Intro.class);
     }
 
-
-    @UiTemplate("SomePage.ui.xml")
-    interface SomePage extends UiBinder<Element, ElementSlide> {
-        SomePage binder = GWT.create(SomePage.class);
-    }
-
     @Override
     protected void buildSlides() {
         addSlide(Hello.binder);
         addWidgetSlide(Intro.binder);
-        addSlide(SomePage.binder);
         addWidgetSlide(CreateYours.binder);
-        addPresentationMap();
+        addTableOfContent();
     }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+>
+
+    <ui:image field="github" src="github_logo.png" />
+    
+	<ui:style>
+		@sprite .github {
+			gwt-image: 'github';
+  			padding-left: 64px; 
+  			padding-bottom: 18px;
+		}
+	</ui:style>
+
+	<div>
+		<h1>Getting started in one slide</h1>
+		<div class="section">
+            <h2>Rockslide is a <a href="#History">young</a> project...</h2>
+            <ul>
+              <li>Fork Rockslide on <span class="{style.github}" /><a  target="_blank" href="https://github.com/pyricau/rockslide">Github</a></li>
+              <li>Import <em>rockslide-parent</em> and its subprojects in your IDE</li>
+              <li>Enable <strong>GWT</strong> on <em>documentation</em></li>
+              <li>Read the source &amp; hack around</li>
+            </ul>
+        </div>
+	</div>
+</ui:UiBinder>

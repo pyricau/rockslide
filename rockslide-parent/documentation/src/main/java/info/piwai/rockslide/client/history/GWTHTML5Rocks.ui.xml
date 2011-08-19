@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+>
+  <div>
+  	<h1>GWT HTML5 Rocks</h1>
+  	<div class="section">
+            <h2><a href="http://www.sfeir.com">Sfeir</a> ported <em>HTML5 Rocks</em> to GWT</h2>
+            <ul>
+              <li><a href="http://gwthtml5.appspot.com">http://gwthtml5.appspot.com</a></li>
+              <li>Shows that GWT developers can benefit from HTML5 support</li>
+              <li>Done by  
+                <a href="mailto:diaz.s@sfeir.com">Salvador Diaz</a>,
+                <a href="mailto:bostoen.v@sfeir.com">Vincent Bostoen</a>,
+                <a href="mailto:desaintsteban.p@sfeir.com">Patrice de Saint Steban</a> and
+                <a href="mailto:phu.c@sfeir.com">Christophe Phu</a>
+               </li>
+            </ul>
+        </div>
+  </div>
+</ui:UiBinder>

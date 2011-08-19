@@ -38,7 +38,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
             </rs:Code>
             </li>
             <li>
-              <div class="{style.octocat}" >Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">Github!</a></div>
+              <div class="{style.octocat}" >Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">GitHub!</a></div>
             </li>
           </ul>
 		</div>

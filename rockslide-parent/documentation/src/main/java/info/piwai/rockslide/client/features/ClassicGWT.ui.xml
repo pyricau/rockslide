@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+xmlns:ui='urn:ui:com.google.gwt.uibinder'
+xmlns:g='urn:import:com.google.gwt.user.client.ui'
+>
+
+    <ui:style>
+     .bigButton {
+     font-size: 40px;
+     }
+    </ui:style>
+    
+  <g:HTMLPanel>
+  	<h1>GWT Rocks!</h1>
+  	<div class="section">
+            <h2>Benefit from GWT power</h2>
+            <ul>
+              <li>IDE integration &amp; Java tooling</li>
+              <li>Full i18n support</li>
+              <li>Enables dynamic presentations</li>
+              
+              <g:Button addStyleNames="{style.bigButton}"  ui:field="button">Click me!</g:Button>
+            </ul>
+        </div>
+  </g:HTMLPanel>
+</ui:UiBinder>
