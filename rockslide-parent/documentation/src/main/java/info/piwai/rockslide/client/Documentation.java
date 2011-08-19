@@ -9,7 +9,9 @@ import info.piwai.rockslide.client.slides.PresentationHeader;
 import info.piwai.rockslide.client.welcome.Welcome;
 import info.piwai.rockslide.sh.client.SyntaxHighlighter;
 
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.RootPanel;
 
 public class Documentation extends PresentationEntryPoint {
 
@@ -17,6 +19,8 @@ public class Documentation extends PresentationEntryPoint {
 
     @Override
     public void initSlides() {
+        
+        RootPanel.get().add(new Ribbon());
 
         /**
          * Custom CSS injection

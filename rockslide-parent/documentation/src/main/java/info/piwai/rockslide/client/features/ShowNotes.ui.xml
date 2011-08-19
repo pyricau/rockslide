@@ -8,7 +8,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
   
   <g:HTMLPanel>
-    <div ui:field="notes">This is a <em>show note!</em></div>
+    <div ui:field="notes">This is a <em>show note</em>!</div>
     <h1>Show Notes</h1>
     <div class="section">
       <h2>Try it <a href="?trainer=true#Features_ShowNotes">now</a>!</h2>
@@ -18,7 +18,7 @@ xmlns:g='urn:import:com.google.gwt.user.client.ui'
       </ul>
             <rs:Code brush="{xml.brush}"><pre>
               &lt;g:HTMLPanel&gt;
-                &lt;div ui:field="notes"&gt;This is a &lt;em&gt;show note!&lt;/em&gt;&lt;/div&gt;
+                &lt;div ui:field="notes"&gt;This is a &lt;em&gt;show note&lt;/em&gt;!&lt;/div&gt;
                 &lt;h1&gt;Show Notes&lt;/h1&gt;
                 &lt;div class="section"&gt;
                   &lt;h2&gt;Try it now!&lt;/h2&gt;
