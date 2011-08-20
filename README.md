@@ -1,8 +1,5 @@
 # Rockslide
 
-Rockslide generates dynamic web slideshows using GWT & UiBinder
+Rockslide generates dynamic web presentations using GWT
 
-Examples : 
-
-http://cv.piwai.info
-http://gwt.formation.excilys.com/
+Documentation: http://pyricau.github.com/rockslide
