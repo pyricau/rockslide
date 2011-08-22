@@ -13,6 +13,7 @@
 
   <groupId>info.piwai.rockslide</groupId>
   <artifactId>rockslide</artifactId>
+  <packaging>jar</packaging>
 
   <name>Rockslide</name>
   <description>Rockslide generates dynamic web slideshows with GWT.</description>

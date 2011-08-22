@@ -16,7 +16,7 @@
   <packaging>war</packaging>
 
   <name>Documentation</name>
-  <description>Online doc that uses Rockslide.</description>
+  <description>Rockslide online doc, generated using Rockslide.</description>
 
   <dependencies>
     <dependency>
