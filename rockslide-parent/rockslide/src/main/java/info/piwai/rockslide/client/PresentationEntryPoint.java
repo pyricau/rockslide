@@ -17,14 +17,11 @@ package info.piwai.rockslide.client;
 
 import info.piwai.rockslide.client.shownotes.ShowNotesViewer;
 import info.piwai.rockslide.client.slides.ChapterHolder;
-import info.piwai.rockslide.client.slides.TableOfContentFactory;
 import info.piwai.rockslide.client.slides.SlideViewer;
+import info.piwai.rockslide.client.slides.TableOfContentFactory;
 import info.piwai.rockslide.client.slides.UlTableOfContentFactory;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.core.client.RunAsyncCallback;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.Window.Location;
 import com.google.gwt.user.client.ui.IsWidget;
 
