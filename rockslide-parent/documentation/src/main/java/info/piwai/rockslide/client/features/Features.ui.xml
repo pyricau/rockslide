@@ -30,9 +30,9 @@
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
    
   <ui:style>
-    @sprite .analytics {
-      gwt-image: 'analytics';
-    }
+	@sprite .analytics {
+		gwt-image: 'analytics';
+	}
 	.bigButton {
 		font-size: 40px;
 	}
