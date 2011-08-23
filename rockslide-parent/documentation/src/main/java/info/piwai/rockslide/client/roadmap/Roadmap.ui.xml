@@ -32,19 +32,12 @@
     </rs:Slide>
     
     <rs:Slide hid="Issues">
-        <notes>
-          <ul>
-            <li>Note 1!</li>
-            <li>Note 2!</li>
-          </ul>
-        </notes>
         <h1>Issues</h1>
         <div class="section">
             <h2>It's all on GitHub</h2>
             <ul>
               <li>It depends on what <strong>you</strong> want from Rockslide</li>
-              <li>You <strong>issues</strong> to let us know!</li>
-              <li><a href="http://github.com/pyricau/rockslide/issues">http://github.com/pyricau/rockslide/issues</a></li>
+              <li>Create &amp; comment on <a href="http://github.com/pyricau/rockslide/issues">issues</a> to let us know!</li>
             </ul>
         </div>
     </rs:Slide>
