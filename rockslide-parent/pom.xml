@@ -10,7 +10,7 @@
 
   <groupId>info.piwai.rockslide</groupId>
   <artifactId>rockslide-parent</artifactId>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Rockslide parent</name>
