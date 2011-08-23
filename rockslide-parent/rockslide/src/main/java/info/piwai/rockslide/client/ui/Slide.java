@@ -63,7 +63,10 @@ public class Slide extends HTMLPanel implements Presentable {
     }
     
     public void setHid(String historyId) {
-        this.historyId = historyId;
+        historyId = historyId.trim();
+        if (!"".equals(historyId)) {
+            this.historyId = historyId;
+        }
     }
 
 }
