@@ -1,0 +1,140 @@
+<!--
+
+    Copyright (C) 2011 Pierre-Yves Ricau (py.ricau at gmail.com)
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not
+    use this file except in compliance with the License. You may obtain a copy of
+    the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed To in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and limitations under
+    the License.
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+    xmlns:doc='urn:import:info.piwai.rockslide.client.ui'
+>
+
+  <ui:image field="analytics" src="analytics.png" />
+    
+  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
+  <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
+   
+  <ui:style>
+    @sprite .analytics {
+      gwt-image: 'analytics';
+    }
+	.bigButton {
+		font-size: 40px;
+	}
+  </ui:style>
+
+  <rs:Slides>
+  
+    <rs:Slide>
+      <div class="section intro">
+        <h2>Features</h2>
+        <p>What's inside the beast</p>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="SlidesAsCode">
+      <h1>Slides As Code</h1>
+      <div class="section">
+      	<h2>No more obscure binary file!</h2>
+        <ul>
+          <li>Enables native <a href="http://en.wikipedia.org/wiki/Revision_control">VCS</a> integration</li>
+          <li>Much easier to collaborate on slides!</li>
+          <li>Each chapter is a <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideUiBinder.html">UiBinder</a> template</li>
+        </ul>
+      </div>    
+    </rs:Slide>
+    
+    <rs:Slide hid="Webapp">
+      <h1>Presentation as a Website</h1>
+      <div class="section">
+        <h2>All you need is a browser</h2>
+        <ul>
+          <li>Forget about PPS, PPSX, PDF &amp; ODP...</li>
+          <li>Take advantage of HTTP caching</li>
+          <li>And enjoy your CSS skills!</li>
+        </ul>
+      </div>    
+    </rs:Slide>
+    
+    <rs:Slide hid="Analytics">
+      <h1>Google Analytics</h1>
+      <div class="section">
+        <h2>Who reads your slides?</h2>
+        <sh:Code brush="{java.brush}">
+            Analytics.enable("UA-XXX");
+        </sh:Code>            
+        <ul>
+          <li>Each slide is recorded as a page</li>
+        </ul>
+        <div class="{style.analytics}"/>
+      </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="ShowNotes">
+      <notes>This is a <em>show note</em>!</notes>
+      <h1>Show Notes</h1>
+      <div class="section">
+        <h2>Try it <a href="?trainer=true#Features_ShowNotes">now</a>!</h2>
+        <ul>
+          <li>Separate window, nice with dual screen</li>
+          <li>Write your notes next to your content</li>
+        </ul>
+        <sh:Code brush="{xml.brush}"><pre>
+          &lt;rs:Slide hid="ShowNotes"&gt;
+            &lt;notes&gt;This is a &lt;em&gt;show note&lt;/em&gt;!&lt;/notes&gt;
+            &lt;h1&gt;Show Notes&lt;/h1&gt;
+            &lt;div class="section"&gt;
+              &lt;h2&gt;Try it now!&lt;/h2&gt;
+              &lt;ul&gt;
+                &lt;li&gt;Separate window, nice with dual screen&lt;/li&gt;
+                &lt;li&gt;Write your notes next to your content&lt;/li&gt;
+              &lt;/ul&gt;    
+            &lt;/div&gt;  
+          &lt;/rs:Slide&gt;
+        </pre></sh:Code>      
+      </div>      
+    </rs:Slide>
+    
+    <rs:Slide hid="ClassicGWT">
+      <h1>GWT Rocks!</h1>
+      <div class="section">
+        <h2>Benefit from GWT power</h2>
+        <ul>
+          <li>IDE integration &amp; Java tooling</li>
+          <li>Full i18n support</li>
+          <li>Enables dynamic presentations</li>
+          <doc:ExampleButton addStyleNames="{style.bigButton}">Click me!</doc:ExampleButton>
+        </ul>
+      </div>    
+    </rs:Slide>
+    
+    <rs:Slide hid="ManyMore">
+      <h1>And... much more!</h1>
+      <div class="section">
+        <ul>
+          <li>Code snippets with <a href="http://alexgorbatchev.com/SyntaxHighlighter">SyntaxHighlighter</a></li>
+          <li>Pretty bookmarkable URLs, one per slide</li>
+          <li>Will <strong>you</strong> contribute new <a href="https://github.com/pyricau/rockslide/issues">features</a>?</li>
+        </ul>
+        <h2>Rockslide needs you!</h2>
+      </div>    
+    </rs:Slide>    
+    
+  </rs:Slides>
+
+</ui:UiBinder>

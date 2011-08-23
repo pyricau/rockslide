@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.rockslide.client.history;
+package info.piwai.rockslide.client.roadmap;
 
 import info.piwai.rockslide.client.slides.Chapter;
 import info.piwai.rockslide.client.ui.Slides;
@@ -21,12 +21,12 @@ import info.piwai.rockslide.client.ui.Slides;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 
-public class History extends Chapter {
-    
+public class Roadmap extends Chapter {
+
     interface Binder extends UiBinder<Slides, Void> {
         Binder binder = GWT.create(Binder.class);
     }
-
+    
     @Override
     protected void buildSlides() {
         addMultiSlide(Binder.binder);

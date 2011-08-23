@@ -18,6 +18,7 @@ package info.piwai.rockslide.client;
 import info.piwai.rockslide.client.features.Features;
 import info.piwai.rockslide.client.gettingstarted.GettingStarted;
 import info.piwai.rockslide.client.history.History;
+import info.piwai.rockslide.client.roadmap.Roadmap;
 import info.piwai.rockslide.client.slides.Analytics;
 import info.piwai.rockslide.client.slides.ChapterHolder;
 import info.piwai.rockslide.client.slides.PresentationHeader;
@@ -59,6 +60,7 @@ public class Documentation extends PresentationEntryPoint {
         holder.addChapter(new Features());
         holder.addChapter(new GettingStarted());
         holder.addChapter(new History());
+        holder.addChapter(new Roadmap());
         
         header = new PresentationHeader(holder);
     }

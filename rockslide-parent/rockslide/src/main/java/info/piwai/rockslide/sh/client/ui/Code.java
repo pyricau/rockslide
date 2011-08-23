@@ -13,7 +13,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.rockslide.sh.client;
+package info.piwai.rockslide.sh.client.ui;
+
+import info.piwai.rockslide.sh.client.SyntaxHighlighter;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.Scheduler;
