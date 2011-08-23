@@ -21,6 +21,7 @@
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:doc='urn:import:info.piwai.rockslide.client.ui'    
 >
 
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
@@ -43,7 +44,7 @@
       <div class="section intro">
         <h2>Hello!</h2>
         <p>Welcome to <strong>Rockslide</strong> documentation</p>
-        <p>Press <span class="tag">←</span> <span class="tag">→</span> to navigate</p>
+        <p>Press <doc:Tag>←</doc:Tag> <doc:Tag>→</doc:Tag> to navigate</p>
       </div>    
     </rs:Slide>
     
@@ -54,7 +55,7 @@
               <ul>
                 <li>Rockslide generates dynamic presentations</li>
                 <li>Using <a href="http://code.google.com/webtoolkit">GWT</a> power</li>
-                <li><span class="tag">&lt;opinionated&gt;</span> GWT is <strong>cool</strong>! <span class="tag">&lt;/opinionated&gt;</span></li>
+                <li><doc:Tag>&lt;opinionated&gt;</doc:Tag> GWT is <strong>cool</strong>! <doc:Tag>&lt;/opinionated&gt;</doc:Tag></li>
               </ul>
       	
               <sh:Code firstLine="42" highlight="44" brush="{java.brush}"><pre>

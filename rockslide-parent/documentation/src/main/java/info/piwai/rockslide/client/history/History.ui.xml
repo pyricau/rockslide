@@ -20,6 +20,7 @@
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:doc='urn:import:info.piwai.rockslide.client.ui'
 >
 
   <rs:Slides>
@@ -112,7 +113,7 @@
         <h2>A source of inspiration</h2>
         <ul>
           <li><a href="http://github.com/adamzap/landslide">http://github.com/adamzap/landslide</a></li>
-          <li>Markdown <span class="tag">=></span> HTML5 presentations</li>
+          <li>Markdown <doc:Tag>=></doc:Tag> HTML5 presentations</li>
           <li>Rockslide is named after Landslide</li>
         </ul>
       </div>    
