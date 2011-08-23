@@ -18,8 +18,8 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
-    xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
     xmlns:doc='urn:import:info.piwai.rockslide.client.ui'
 >
