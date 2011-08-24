@@ -23,11 +23,8 @@ You can help with [issues](http://github.com/pyricau/rockslide/issues), [fork](h
 If you don't like **GWT**, but still want to create **code based** web presentations, here are some great alternatives:
 
 * [Landslide](http://adamzap.com/random/landslide.html)
-
 * [Slippy](http://slides.seld.be/?file=2010-05-30+Example.html)
-
 * [deck.js](http://imakewebthings.github.com/deck.js)
-
 * [HTML5Rocks](http://slides.html5rocks.com)
 
 ## Credits & Thanks
