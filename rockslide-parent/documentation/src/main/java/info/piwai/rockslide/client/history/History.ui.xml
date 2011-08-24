@@ -107,14 +107,14 @@
       </div>
     </rs:Slide>
     
-    <rs:Slide hid="Landslide">
-      <h1>Landslide</h1>
+    <rs:Slide hid="Inspiration">
+      <h1>Sources of inspiration</h1>
       <div class="section">
-        <h2>A source of inspiration</h2>
+        <h2>Other <strong>code</strong> based presentation frameworks</h2>
         <ul>
-          <li><a href="http://github.com/adamzap/landslide">http://github.com/adamzap/landslide</a></li>
-          <li>Markdown <doc:Tag>=></doc:Tag> HTML5 presentations</li>
-          <li>Rockslide is named after Landslide</li>
+          <li><a href="http://slides.seld.be/?file=2010-05-30+Example.html" target="_blank">Slippy</a></li>
+          <li><a href="http://imakewebthings.github.com/deck.js" target="_blank">deck.js</a></li>
+          <li>Rockslide is named after <a href="http://github.com/adamzap/landslide" target="_blank">Landslide</a></li>
         </ul>
       </div>    
     </rs:Slide>

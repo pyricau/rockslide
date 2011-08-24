@@ -33,8 +33,9 @@
     @sprite .octocat {
       gwt-image: 'octocat';
       width: auto;
-      padding-left: 177px;
+      padding-left: 187px;
       line-height: 82px;
+      margin-top:20px;
     }
   </ui:style>
 
@@ -84,12 +85,24 @@
                 </pre>
             </sh:Code>
           </li>
-          <li>
-            <div class="{style.octocat}" >Fork me on <a target="_blank" href="https://github.com/pyricau/rockslide">GitHub!</a></div>
-          </li>
+          <li>Rockslide has many <a href="#Features">features</a></li>
+          <li><a href="GettingStarted">Get started</a> now!</li>
         </ul>
       </div>
     </rs:Slide>
+    
+    <rs:Slide hid="WhatElse">
+      <h1>What else?</h1>
+      <div class="section">
+        <h2>You might also want to</h2>
+        <ul>
+          <li>Report a <a href="http://github.com/pyricau/rockslide/issues">bug</a></li>
+          <li>Read <a href="#Manual">more doc</a></li>
+          <li>Understand <a href="http://github.com/pyricau/rockslide/wiki">how it works</a></li>
+        </ul>
+        <div class="{style.octocat}" ><a target="_blank" href="https://github.com/pyricau/rockslide">Fork me</a> on GitHub!</div>
+      </div>
+    </rs:Slide>    
     
   </rs:Slides>
 

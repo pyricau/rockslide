@@ -27,17 +27,32 @@
     <rs:Slide>
         <div class="section intro">
             <h2>Roadmap</h2>
-            <p>What's next</p>
+            <p>What's coming</p>
         </div>
     </rs:Slide>
     
-    <rs:Slide hid="Issues">
-        <h1>Issues</h1>
+    <rs:Slide hid="1.0">
+        <h1>1.0</h1>
         <div class="section">
-            <h2>It's all on GitHub</h2>
+            <h2>Before reaching 1.0, we need:</h2>
             <ul>
-              <li>It depends on what <strong>you</strong> want from Rockslide</li>
-              <li>Create &amp; comment on <a href="http://github.com/pyricau/rockslide/issues">issues</a> to let us know!</li>
+              <li>Better documentation</li>
+              <li>A good <a href="http://github.com/pyricau/rockslide/issues/1" target="_blank" >logo</a> (the current is ugly!)</li>
+              <li>A Maven <a href="http://github.com/pyricau/rockslide/issues/2" target="_blank" >archetype</a></li>
+              <li>Support for <a href="http://github.com/pyricau/rockslide/issues/13" target="_blank" >800*600</a> &amp; <a href="http://github.com/pyricau/rockslide/issues/7" target="_blank" >mobile browsers</a></li>
+              <li>Anything else? Create <a href="http://github.com/pyricau/rockslide/issues" target="_blank" >issues</a> to let us know!</li>
+            </ul>
+        </div>
+    </rs:Slide>
+    
+    <rs:Slide hid="Future">
+        <h1>Future</h1>
+        <div class="section">
+            <h2>And after 1.0?</h2>
+            <ul>
+              <li>Who really cares?</li>
+              <li>All your slide are <a href="http://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" target="_blank">belong to us</a></li>
+              <li>Rockslide will (probably) <a href="http://en.wikipedia.org/wiki/Pinky_and_the_Brain" target="_blank">take over the world</a></li>
             </ul>
         </div>
     </rs:Slide>
