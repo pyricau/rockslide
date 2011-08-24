@@ -1,11 +1,11 @@
-# Rockslide
-
-## Rockslide generates dynamic presentations
+# Rockslide generates dynamic presentations
 
 ## Documentation
 
 [![Documentation](https://github.com/pyricau/rockslide/raw/master/assets/doc.png)](http://pyricau.github.com/rockslide)
 
-http://pyricau.github.com/rockslide
+## Getting Started
 
-Documentation: http://pyricau.github.com/rockslide
+[![Getting Started](https://github.com/pyricau/rockslide/raw/master/assets/gettingStarted.png)](http://pyricau.github.com/rockslide#GettingStarted)
+
+
