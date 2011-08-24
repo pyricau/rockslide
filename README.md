@@ -1,6 +1,6 @@
 # Rockslide generates dynamic presentations
 
-### Rockslide helps you create great **code based** web presentations, using [GWT](http://code.google.com/webtoolkit) power.
+Rockslide helps you create great **code based** web presentations, using [GWT](http://code.google.com/webtoolkit) power.
 
 ## Documentation
 
@@ -14,9 +14,7 @@ Just read the [Getting Started](http://pyricau.github.com/rockslide#GettingStart
 
 [![Getting Started](https://github.com/pyricau/rockslide/raw/master/assets/gettingStarted.png)](http://pyricau.github.com/rockslide#GettingStarted)
 
-## Contributing
-
-### Contributions are welcome!
+## Contributions are welcome!
 
 You can help with [issues](http://github.com/pyricau/rockslide/issues), [fork](https://github.com/pyricau/rockslide#fork_box) Rockslide and send [pull requests](https://github.com/pyricau/rockslide/pull/new/master).
 
