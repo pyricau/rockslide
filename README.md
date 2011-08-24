@@ -1,14 +1,14 @@
 # Rockslide generates dynamic presentations
 
-Rockslide helps you create great **code based** web presentations, using [GWT](http://code.google.com/webtoolkit) power.
+### Rockslide helps you create great **code based** web presentations, using [GWT](http://code.google.com/webtoolkit) power.
 
 ## Documentation
 
-Rockslide **documentation** is a Rockslide presentation. Eat your own [dog food](http://en.wikipedia.org/wiki/Eating_your_own_dog_food), FTW !
+Rockslide [documentation](http://pyricau.github.com/rockslide) is a Rockslide presentation. Eat your own [dog food](http://en.wikipedia.org/wiki/Eating_your_own_dog_food), FTW !
 
 [![Documentation](https://github.com/pyricau/rockslide/raw/master/assets/doc.png)](http://pyricau.github.com/rockslide)
 
-## Getting Started
+## Get Started
 
 Just read the [Getting Started](http://pyricau.github.com/rockslide#GettingStarted) slides!
 
@@ -16,9 +16,9 @@ Just read the [Getting Started](http://pyricau.github.com/rockslide#GettingStart
 
 ## Contributing
 
-Contributions are welcome!
+### Contributions are welcome!
 
-You can help with [issues](http://github.com/pyricau/rockslide/issues), **fork** Rockslide and send **pull requests**.
+You can help with [issues](http://github.com/pyricau/rockslide/issues), [fork](https://github.com/pyricau/rockslide#fork_box) Rockslide and send [pull requests](https://github.com/pyricau/rockslide/pull/new/master).
 
 ## Alternatives
 
