@@ -4,15 +4,15 @@ Rockslide helps you create great **code based** web presentations, using [GWT](h
 
 ## Documentation
 
-[![Documentation](https://github.com/pyricau/rockslide/raw/master/assets/doc.png)](http://pyricau.github.com/rockslide)
-
 Rockslide **documentation** is a Rockslide presentation. Eat your own [dog food](http://en.wikipedia.org/wiki/Eating_your_own_dog_food), FTW !
+
+[![Documentation](https://github.com/pyricau/rockslide/raw/master/assets/doc.png)](http://pyricau.github.com/rockslide)
 
 ## Getting Started
 
-[![Getting Started](https://github.com/pyricau/rockslide/raw/master/assets/gettingStarted.png)](http://pyricau.github.com/rockslide#GettingStarted)
-
 Just read the [Getting Started](http://pyricau.github.com/rockslide#GettingStarted) slides!
+
+[![Getting Started](https://github.com/pyricau/rockslide/raw/master/assets/gettingStarted.png)](http://pyricau.github.com/rockslide#GettingStarted)
 
 ## Contributing
 
