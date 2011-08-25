@@ -7,10 +7,15 @@ import com.google.gwt.user.client.ui.HasHTML;
 
 public class Markdown extends Composite implements HasHTML {
     
-    public static native String convertMarkdownToHTML(String text) /*-{
-        var converter = new $wnd.Showdown.converter();
-        return converter.makeHtml(text);
-    }-*/;
+    public static String convertMarkdownToHTML(String text) {
+        String html = convertMarkdownToHTMLJS(text);
+        return html.replaceAll("&amp;", "&");
+    }
+    
+    private static native String convertMarkdownToHTMLJS(String text) /*-{
+    var converter = new $wnd.Showdown.converter();
+    return converter.makeHtml(text);
+}-*/;
 
     private HTML panel = new HTML();
 

@@ -31,12 +31,12 @@
 
   <rs:Slides>
   
-    <rs:Slide>
+    <rs:Slide intro="true">
         <h2>Manual</h2>
         <p>Let's get into details</p>
     </rs:Slide>
     
-    <rs:Slide hid="Maven">
+    <rs:Slide hid="Maven" intro="true">
       <h2>Maven</h2>
       <p>Rockslide integrates well with Maven</p>
     </rs:Slide>
