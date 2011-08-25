@@ -7,7 +7,7 @@ import com.google.gwt.user.client.ui.HasHTML;
 
 public class Markdown extends Composite implements HasHTML {
     
-    private static native String convertMarkdownToHTML(String text) /*-{
+    public static native String convertMarkdownToHTML(String text) /*-{
         var converter = new $wnd.Showdown.converter();
         return converter.makeHtml(text);
     }-*/;

@@ -22,7 +22,6 @@
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
 >
-
   
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
@@ -33,251 +32,219 @@
   <rs:Slides>
   
     <rs:Slide>
-      <div class="section intro">
         <h2>Manual</h2>
         <p>Let's get into details</p>
-      </div>
     </rs:Slide>
     
     <rs:Slide hid="Maven">
-      <div class="section intro">
-        <h2>Maven</h2>
-        <p>Rockslide integrates well with Maven</p>
-      </div>
+      <h2>Maven</h2>
+      <p>Rockslide integrates well with Maven</p>
     </rs:Slide>
     
     <rs:Slide hid="GWTMavenPlugin">
       
       <h1>GWT &amp; Maven</h1>
-      <div class="section">
-          <h2>Configure the <a href="http://mojo.codehaus.org/gwt-maven-plugin">GWT Maven Plugin</a></h2>
-          <sh:Code brush="{xml.brush}" highlight="3"><pre>
-                &lt;plugin&gt;
-                  &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
-                  &lt;artifactId&gt;gwt-maven-plugin&lt;/artifactId&gt;
-                  &lt;version&gt;2.3.0-1&lt;/version&gt;
-                  &lt;executions&gt;
-                    &lt;execution&gt;
-                      &lt;configuration&gt;
-                        &lt;modules&gt;
-                          &lt;module&gt;com.mycompany.presentation.Slides&lt;/module&gt;
-                        &lt;/modules&gt;
-                      &lt;/configuration&gt;
-                      &lt;goals&gt;
-                        &lt;goal&gt;compile&lt;/goal&gt;
-                      &lt;/goals&gt;
-                    &lt;/execution&gt;
-                  &lt;/executions&gt;
-                &lt;/plugin&gt;
-          </pre></sh:Code>          
-      </div>
+      <h2>Configure the <a href="http://mojo.codehaus.org/gwt-maven-plugin">GWT Maven Plugin</a></h2>
+      <sh:Code brush="{xml.brush}" highlight="3"><pre>
+            &lt;plugin&gt;
+              &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+              &lt;artifactId&gt;gwt-maven-plugin&lt;/artifactId&gt;
+              &lt;version&gt;2.3.0-1&lt;/version&gt;
+              &lt;executions&gt;
+                &lt;execution&gt;
+                  &lt;configuration&gt;
+                    &lt;modules&gt;
+                      &lt;module&gt;com.mycompany.presentation.Slides&lt;/module&gt;
+                    &lt;/modules&gt;
+                  &lt;/configuration&gt;
+                  &lt;goals&gt;
+                    &lt;goal&gt;compile&lt;/goal&gt;
+                  &lt;/goals&gt;
+                &lt;/execution&gt;
+              &lt;/executions&gt;
+            &lt;/plugin&gt;
+      </pre></sh:Code>          
 
     </rs:Slide>
     
     <rs:Slide hid="Dependencies">
       
       <h1>Dependencies</h1>
-      <div class="section">
-          <h2>Add Rockslide dependency</h2>
-          <ul>
-            <li>With compile scope
-          
-          <sh:Code brush="{xml.brush}" highlight="5"><pre>
-            &lt;dependency&gt;
-              &lt;groupId&gt;info.piwai.rockslide&lt;/groupId&gt;
-              &lt;artifactId&gt;rockslide&lt;/artifactId&gt;
-              &lt;version&gt;0.1&lt;/version&gt;
-              &lt;scope&gt;compile&lt;/scope&gt;
-            &lt;/dependency&gt;
-          </pre></sh:Code>
-          
-          </li>
-          <li>You may need <em>javax.validation:validation-api</em></li> 
-          </ul>   
-      </div>
+      <h2>Add Rockslide dependency</h2>
+      <ul>
+        <li>With compile scope
+      
+      <sh:Code brush="{xml.brush}" highlight="5"><pre>
+        &lt;dependency&gt;
+          &lt;groupId&gt;info.piwai.rockslide&lt;/groupId&gt;
+          &lt;artifactId&gt;rockslide&lt;/artifactId&gt;
+          &lt;version&gt;0.1&lt;/version&gt;
+          &lt;scope&gt;compile&lt;/scope&gt;
+        &lt;/dependency&gt;
+      </pre></sh:Code>
+      
+      </li>
+      <li>You may need <em>javax.validation:validation-api</em></li> 
+      </ul>   
 
     </rs:Slide>
     
     <rs:Slide hid="Module">
       <h1>GWT Module</h1>
-      <div class="section">
-          <h2>Inherit <em>info.piwai.rockslide.Rockslide</em></h2>
-          <ul>
-            <li>It's a classic GWT Module</li>
-          </ul>   
-          <sh:Code brush="{xml.brush}" highlight="4"><pre>
-            &lt;!-- Slides.gwt.xml --&gt;
-            &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-            &lt;module rename-to='slides'&gt;
-                &lt;inherits name='info.piwai.rockslide.Rockslide' /&gt;
+      <h2>Inherit <em>info.piwai.rockslide.Rockslide</em></h2>
+      <ul>
+        <li>It's a classic GWT Module</li>
+      </ul>   
+      <sh:Code brush="{xml.brush}" highlight="4"><pre>
+        &lt;!-- Slides.gwt.xml --&gt;
+        &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        &lt;module rename-to='slides'&gt;
+            &lt;inherits name='info.piwai.rockslide.Rockslide' /&gt;
+        
+            &lt;source path='client' /&gt;
             
-                &lt;source path='client' /&gt;
-                
-                &lt;entry-point class='com.mycompany.presentation.Slideshow' /&gt;
-            &lt;/module&gt;          
-          </pre></sh:Code>          
-      </div>
+            &lt;entry-point class='com.mycompany.presentation.Slideshow' /&gt;
+        &lt;/module&gt;          
+      </pre></sh:Code>          
     </rs:Slide>
     
     <rs:Slide hid="EntryPoint">
       <h1>Entry Point</h1>
-      <div class="section">
-          <h2>Create a <em>PresentationEntryPoint</em></h2>
-          <ul>
-            <li>You must implement <em>loadChapters()</em></li>
-          </ul>   
-          <sh:Code brush="{java.brush}" highlight="11"><pre>
-            /* Slideshow.java */
-            package com.mycompany.presentation;
+      <h2>Create a <em>PresentationEntryPoint</em></h2>
+      <ul>
+        <li>You must implement <em>loadChapters()</em></li>
+      </ul>   
+      <sh:Code brush="{java.brush}" highlight="11"><pre>
+        /* Slideshow.java */
+        package com.mycompany.presentation;
 
-            import info.piwai.rockslide.client.PresentationEntryPoint;
-            import info.piwai.rockslide.client.slides.ChapterHolder;
-            
-            public class Slideshow extends PresentationEntryPoint {
-            
-              @Override
-              public void loadChapters(ChapterHolder holder) {
-            	// We will add chapters here
-              }
-            
-            }
-          </pre></sh:Code>          
-      </div>
+        import info.piwai.rockslide.client.PresentationEntryPoint;
+        import info.piwai.rockslide.client.slides.ChapterHolder;
+        
+        public class Slideshow extends PresentationEntryPoint {
+        
+          @Override
+          public void loadChapters(ChapterHolder holder) {
+        	// We will add chapters here
+          }
+        
+        }
+      </pre></sh:Code>          
     </rs:Slide>
     
     <rs:Slide hid="Chapter">
       <h1>Chapter</h1>
-      <div class="section">
-          <h2>Create a <em>Chapter</em></h2>
-          <ul>
-            <li>A chapter is a set of slides</li>
-          </ul>   
-          <sh:Code brush="{java.brush}" highlight="12"><pre>
-            /* MyFirstChapter.java */          
-            public class MyFirstChapter extends Chapter {
-            
-                // GWT UiBinder looks for a MyFirstChapter.ui.xml file
-                interface Binder extends UiBinder&lt;Slides, Void&gt; {
-                    Binder binder = GWT.create(Binder.class);
-                }
-            
-                @Override
-                protected void buildSlides() {
-                    // Adds all slides defined in MyFirstChapter.ui.xml
-                    addMultiSlide(Binder.binder);
-                    // Adds a Table Of Content slide
-                    addTableOfContent();
-                }
+      <h2>Create a <em>Chapter</em></h2>
+      <ul>
+        <li>A chapter is a set of slides</li>
+      </ul>   
+      <sh:Code brush="{java.brush}" highlight="12"><pre>
+        /* MyFirstChapter.java */          
+        public class MyFirstChapter extends Chapter {
+        
+            // GWT UiBinder looks for a MyFirstChapter.ui.xml file
+            interface Binder extends UiBinder&lt;Slides, Void&gt; {
+                Binder binder = GWT.create(Binder.class);
             }
-          </pre></sh:Code>          
-      </div>
+        
+            @Override
+            protected void buildSlides() {
+                // Adds all slides defined in MyFirstChapter.ui.xml
+                addMultiSlide(Binder.binder);
+                // Adds a Table Of Content slide
+                addTableOfContent();
+            }
+        }
+      </pre></sh:Code>
     </rs:Slide>
     
     <rs:Slide hid="ChapterContent">
       <h1>Chapter content</h1>
-      <div class="section">
-          <h2>Add content with <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideUiBinder.html">UiBinder</a></h2>
-          <sh:Code brush="{xml.brush}"><pre>
-            &lt;!-- MyFirstChapter.ui.xml --&gt;
-            &lt;ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-            xmlns:rs='urn:import:info.piwai.rockslide.client.ui'&gt;
-              &lt;rs:Slides&gt;
-              
-                &lt;rs:Slide&gt;
-                  &lt;div class="section intro"&gt;
-                    &lt;h2&gt;Intro Slide&lt;/h2&gt;
-                    &lt;p&gt;I Can Has Cheezburger?&lt;/p&gt;
-                  &lt;/div&gt;
-                &lt;/rs:Slide&gt;
-                
-                &lt;rs:Slide hid="SlideNameInUrl"&gt;
-                  &lt;h1&gt;Slide title&lt;/h1&gt;
-                  &lt;div class="section"&gt;
-                      &lt;h2&gt;Slide subtitle&lt;/h2&gt;
-                      &lt;ul&gt;&lt;li&gt;Some content&lt;/li&gt;&lt;/ul&gt;
-                  &lt;/div&gt;
-                &lt;/rs:Slide&gt;
-                
-              &lt;/rs:Slides&gt;
-            &lt;/ui:UiBinder&gt;
-          </pre></sh:Code>          
-      </div>
+      <h2>Add content with <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideUiBinder.html">UiBinder</a></h2>
+      <sh:Code brush="{xml.brush}"><pre>
+        &lt;!-- MyFirstChapter.ui.xml --&gt;
+        &lt;ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:rs='urn:import:info.piwai.rockslide.client.ui'&gt;
+          &lt;rs:Slides&gt;
+          
+            &lt;rs:Slide intro="true"&gt;
+              &lt;h2&gt;Intro Slide&lt;/h2&gt;
+              &lt;p&gt;I Can Has Cheezburger?&lt;/p&gt;
+            &lt;/rs:Slide&gt;
+            
+            &lt;rs:Slide hid="SlideNameInUrl"&gt;
+              &lt;h1&gt;Slide title&lt;/h1&gt;
+                &lt;h2&gt;Slide subtitle&lt;/h2&gt;
+                &lt;ul&gt;&lt;li&gt;Some content&lt;/li&gt;&lt;/ul&gt;
+            &lt;/rs:Slide&gt;
+            
+          &lt;/rs:Slides&gt;
+        &lt;/ui:UiBinder&gt;
+      </pre></sh:Code>
     </rs:Slide>
     
     <rs:Slide hid="AddChapter">
       <h1>Adding a chapter</h1>
-      <div class="section">
-          <h2>Back to Slideshow.java</h2>
-          <sh:Code brush="{java.brush}"><pre>
-            /* Slideshow.java */
-            public class Slideshow extends PresentationEntryPoint {
-            
-              @Override
-              public void loadChapters(ChapterHolder holder) {
-                // MyFirstChapter will be the default chapter
-                holder.addChapter(new MyFirstChapter());
-                // Add other chapters here
-              }
-            
-            }
-          </pre></sh:Code>          
-      </div>
+      <h2>Back to Slideshow.java</h2>
+      <sh:Code brush="{java.brush}"><pre>
+        /* Slideshow.java */
+        public class Slideshow extends PresentationEntryPoint {
+        
+          @Override
+          public void loadChapters(ChapterHolder holder) {
+            // MyFirstChapter will be the default chapter
+            holder.addChapter(new MyFirstChapter());
+            // Add other chapters here
+          }
+        
+        }
+      </pre></sh:Code>
     </rs:Slide>
     
-    <rs:Slide hid="Custom CSS">
-      <div class="section intro">
-        <h2>Custom CSS</h2>
-        <p>Doc not available yet</p>
-      </div>
+    <rs:Slide hid="Custom CSS" intro="true">
+      <h2>Custom CSS</h2>
+      <p>Doc not available yet</p>
     </rs:Slide>
     
-    <rs:Slide hid="Custom CSS">
-      <div class="section intro">
+    <rs:Slide hid="Custom CSS" intro="true">
         <h2>Show Notes</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>
     
-    <rs:Slide hid="SyntaxHighligher">
-      <div class="section intro">
+    <rs:Slide hid="SyntaxHighligher" intro="true">
         <h2>Syntax Highligher</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>    
     
-    <rs:Slide hid="GoogleAnalytics">
-      <div class="section intro">
+    <rs:Slide hid="GoogleAnalytics" intro="true">
         <h2>Google Analytics</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>    
     
-    <rs:Slide hid="Headers">
-      <div class="section intro">
+    <rs:Slide hid="Headers" intro="true">
         <h2>Headers</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>
 
-    <rs:Slide hid="">
-      <div class="section intro">
+    <rs:Slide hid="" intro="true">
         <h2>Custom chapter name</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>
     
-    <rs:Slide hid="">
-      <div class="section intro">
+    <rs:Slide hid="" intro="true">
+        <h2>Using Markdown</h2>
+        <p>Doc not available yet</p>
+    </rs:Slide>
+        
+    
+    <rs:Slide hid="" intro="true">
         <h2>Custom slides</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>    
 
-    <rs:Slide hid="">
-      <div class="section intro">
+    <rs:Slide hid="" intro="true">
         <h2>Custom Table Of Content</h2>
         <p>Doc not available yet</p>
-      </div>
     </rs:Slide>
 
   </rs:Slides>

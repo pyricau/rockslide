@@ -124,7 +124,7 @@ public abstract class Chapter implements Iterable<Presentable> {
     protected final void addMultiSlide(UiBinder<Slides, Void> uiBinder) {
         Slides multiSlide = uiBinder.createAndBindUi(null);
         for(SlidePresentable slide : multiSlide.getSlides()) {
-            slide.extractShowNotes();
+            slide.transform();
             addPresentable(slide, slide.getHistoryName());
         }
     }

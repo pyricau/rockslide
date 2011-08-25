@@ -42,6 +42,7 @@ div.slide {
 	background-color: slideColor;
 	border: 1px solid headerColor;
 	box-shadow: 5px 5px 10px headerColor;
+	color: sectionTextColor;
 }
 
 @sprite h1 {
@@ -59,10 +60,6 @@ h3 {
 	color: titleColor;
 }
 
-div.section {
-	color: sectionTextColor;
-}
-
 a,a:visited,a:hover {
 	border-bottom: 2px solid sectionTextColor;
 }
@@ -73,6 +70,28 @@ h2 a, h2 a:visited, h2 a:hover {
 
 
 .tag {
+	font-family: 'Arial';
+	color: sectionTextColor;
+	display: inline-block;
+	padding: 6px 10px 3px 10px;
+	font-size: 25px;
+	line-height: 30px;
+	text-shadow: none;
+	letter-spacing: 0;
+	bottom: 10px;
+	position: relative;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: slideColor;
+	box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-webkit-box-shadow: rgba(40, 47, 54, 0.1) 0 2px 5px;
+	-moz-box-shadow: rgba(40, 47, 54.1) 0 2px 5px;
+	background: literal("-webkit-gradient(linear, left top, left bottom, from(#C4baa4), to(#e5dbc5) )");
+	background-color: #e5dbc5;
+	background: literal("-moz-linear-gradient(left top, #C4baa4, #e5dbc5)");
+}
+
+code {
 	font-family: 'Arial';
 	color: sectionTextColor;
 	display: inline-block;

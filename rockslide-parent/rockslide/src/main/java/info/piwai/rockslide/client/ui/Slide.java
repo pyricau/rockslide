@@ -17,15 +17,19 @@ package info.piwai.rockslide.client.ui;
 
 import info.piwai.rockslide.client.slides.SlidePresentable;
 
+import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Node;
+import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
 public class Slide extends HTMLPanel implements SlidePresentable {
 
-    private String historyId = "Slide";
-    
+    private String historyId = "MDSlide";
+
     private Element notes;
+
+    private boolean intro = false;
 
     public Slide(String html) {
         super(html);
@@ -35,18 +39,18 @@ public class Slide extends HTMLPanel implements SlidePresentable {
     public Element getShowNotes() {
         return notes;
     }
-    
+
     @Override
     public String getHistoryName() {
         return historyId;
     }
-    
+
     @Override
-    public void extractShowNotes() {
+    public void transform() {
         com.google.gwt.user.client.Element element = getElement();
         int childCount = element.getChildCount();
-        
-        for (int i = 0; i< childCount; i++) {
+
+        for (int i = 0; i < childCount; i++) {
             Node child = element.getChild(i);
             if ("NOTES".equals(child.getNodeName().toUpperCase())) {
                 notes = Element.as(child);
@@ -54,21 +58,40 @@ public class Slide extends HTMLPanel implements SlidePresentable {
                 return;
             }
         }
+
         
+        
+        if (intro == true) {
+            com.google.gwt.user.client.Element introDiv = DOM.createDiv();
+            introDiv.addClassName("intro");
+            
+            childCount = element.getChildCount();
+            
+            for (int i = 0; i < childCount; i++) {
+                Node child = element.getFirstChild();
+                introDiv.appendChild(child);
+            }
+            
+            element.appendChild(introDiv);
+        }
     }
-    
+
     /**
      * May be overridden
      */
     @Override
     public void visible() {
     }
-    
+
     public void setHid(String historyId) {
         historyId = historyId.trim();
         if (!"".equals(historyId)) {
             this.historyId = historyId;
         }
+    }
+
+    public void setIntro(boolean intro) {
+        this.intro = intro;
     }
 
 }

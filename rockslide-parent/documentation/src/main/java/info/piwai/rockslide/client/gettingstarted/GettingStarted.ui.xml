@@ -20,6 +20,7 @@
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'    
 >
 
   <ui:image field="github" src="github_logo.png" />
@@ -34,25 +35,19 @@
 
   <rs:Slides>
   
-    <rs:Slide>
-      <div class="section intro">
-        <h2>Getting Started</h2>
-        <p>Create your first Rockslide presentation</p>
-      </div>    
-    </rs:Slide>
-    
-    <rs:Slide hid="DIY">
-      <h1>Getting started in one slide</h1>
-      <div class="section">
-        <h2>Rockslide is a <a href="#History">young</a> project...</h2>
-        <ul>
-          <li>Fork Rockslide on <span class="{style.github}" /><a  target="_blank" href="https://github.com/pyricau/rockslide">Github</a></li>
-          <li>Import <em>rockslide-parent</em> and its subprojects in your IDE</li>
-          <li>Enable <strong>GWT</strong> on <em>documentation</em></li>
-          <li>Read the source &amp; hack around</li>
-        </ul>
-      </div>
-    </rs:Slide>
+    <md:MDSlide intro="true"><pre>
+## Getting Started
+Create your first Rockslide presentation
+    </pre></md:MDSlide>
+
+    <md:MDSlide hid="DIY"><pre>
+# Getting started in one slide
+## Rockslide is a [young](#History) project...
+ * Fork Rockslide on <span class="{style.github}" />[Github](https://github.com/pyricau/rockslide)
+ * Import *rockslide-parent* and its subprojects in your IDE
+ * Enable **GWT** on *documentation*
+ * Read the source &amp; hack around
+    </pre></md:MDSlide>
     
   </rs:Slides>
 

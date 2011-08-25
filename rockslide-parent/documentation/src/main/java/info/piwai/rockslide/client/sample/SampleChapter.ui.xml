@@ -45,10 +45,8 @@
         </ul>
       </notes>    
       
-      <div class="section intro">
-        <h2></h2>
-        <p></p>
-      </div>
+      <h2></h2>
+      <p></p>
       
     </rs:Slide>
     
@@ -62,13 +60,11 @@
       </notes>
       
       <h1></h1>
-      <div class="section">
-          <h2></h2>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-      </div>
+      <h2></h2>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
       <sh:Code brush="{java.brush}">
       </sh:Code>
       

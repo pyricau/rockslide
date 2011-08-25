@@ -4,6 +4,6 @@ public interface SlidePresentable extends Presentable {
     
     String getHistoryName();
     
-    void extractShowNotes();
+    void transform();
 
 }
