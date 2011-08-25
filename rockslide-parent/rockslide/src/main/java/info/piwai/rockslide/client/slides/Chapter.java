@@ -18,7 +18,6 @@ package info.piwai.rockslide.client.slides;
 import info.piwai.rockslide.client.shownotes.ElementSlideNotes;
 import info.piwai.rockslide.client.shownotes.VisibleSlideNotes;
 import info.piwai.rockslide.client.shownotes.WidgetSlideNotes;
-import info.piwai.rockslide.client.ui.Slide;
 import info.piwai.rockslide.client.ui.Slides;
 
 import java.util.ArrayList;
@@ -124,7 +123,7 @@ public abstract class Chapter implements Iterable<Presentable> {
     
     protected final void addMultiSlide(UiBinder<Slides, Void> uiBinder) {
         Slides multiSlide = uiBinder.createAndBindUi(null);
-        for(Slide slide : multiSlide.getSlides()) {
+        for(SlidePresentable slide : multiSlide.getSlides()) {
             slide.extractShowNotes();
             addPresentable(slide, slide.getHistoryName());
         }

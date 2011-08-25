@@ -46,7 +46,7 @@
         <h2>Hello!</h2>
         <p>Welcome to <strong>Rockslide</strong> documentation</p>
         <p>Press <doc:Tag>←</doc:Tag> <doc:Tag>→</doc:Tag> to navigate</p>
-      </div>    
+      </div>
     </rs:Slide>
     
     <rs:Slide hid="Intro">

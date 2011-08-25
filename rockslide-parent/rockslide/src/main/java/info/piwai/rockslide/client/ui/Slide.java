@@ -15,13 +15,13 @@
  */
 package info.piwai.rockslide.client.ui;
 
-import info.piwai.rockslide.client.slides.Presentable;
+import info.piwai.rockslide.client.slides.SlidePresentable;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Node;
 import com.google.gwt.user.client.ui.HTMLPanel;
 
-public class Slide extends HTMLPanel implements Presentable {
+public class Slide extends HTMLPanel implements SlidePresentable {
 
     private String historyId = "Slide";
     
@@ -36,10 +36,12 @@ public class Slide extends HTMLPanel implements Presentable {
         return notes;
     }
     
+    @Override
     public String getHistoryName() {
         return historyId;
     }
     
+    @Override
     public void extractShowNotes() {
         com.google.gwt.user.client.Element element = getElement();
         int childCount = element.getChildCount();

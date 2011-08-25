@@ -94,3 +94,10 @@ h2 a, h2 a:visited, h2 a:hover {
 	background: literal("-moz-linear-gradient(left top, #C4baa4, #e5dbc5)");
 }
 
+/*
+Default syntaxhighlighter is in overflow auto, which leads to having scrollbars although the code has the right size
+*/
+.syntaxhighlighter {
+	overflow:inherit !important;	
+}
+

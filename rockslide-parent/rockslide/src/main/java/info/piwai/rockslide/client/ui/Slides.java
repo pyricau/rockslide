@@ -15,6 +15,8 @@
  */
 package info.piwai.rockslide.client.ui;
 
+import info.piwai.rockslide.client.slides.SlidePresentable;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,19 +27,19 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class Slides extends Composite implements HasWidgets {
 
-    private final List<Slide> slides = new ArrayList<Slide>();
+    private final List<SlidePresentable> slides = new ArrayList<SlidePresentable>();
 
     @Override
     public void add(Widget w) {
-        if (! (w instanceof Slide)) {
+        if (! (w instanceof SlidePresentable)) {
             return;
         }
-        Slide slide = (Slide) w;
+        SlidePresentable slide = (SlidePresentable) w;
         
         slides.add(slide);
     }
     
-    public List<Slide> getSlides() {
+    public List<SlidePresentable> getSlides() {
         return slides;
     }
 

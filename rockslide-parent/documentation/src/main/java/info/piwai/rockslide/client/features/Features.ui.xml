@@ -22,12 +22,14 @@
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
     xmlns:doc='urn:import:info.piwai.rockslide.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
 
   <ui:image field="analytics" src="analytics.png" />
     
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
+  <ui:with field="md" type="info.piwai.rockslide.sh.md.client.MDSH"/>
    
   <ui:style>
 	@sprite .analytics {
@@ -120,6 +122,28 @@
           <li>Enables dynamic presentations</li>
           <doc:ExampleButton addStyleNames="{style.bigButton}">Click me!</doc:ExampleButton>
         </ul>
+      </div>    
+    </rs:Slide>
+    
+    <rs:Slide hid="Markdown">
+      <h1>Limited Markdown support</h1>
+      
+      <md:Markdown addStyleNames="section"><pre>
+## *This slide* has been written in *Markdown*
+
+ * See [Markdown](http://daringfireball.net/projects/markdown)
+ * **Markdown** support will improve
+ * Content of this slide :
+      </pre></md:Markdown>
+      
+      <div class="section">
+        <sh:Code brush="{md.brush}"><pre>
+          ## *This slide* has been written in *Markdown*
+          
+           * See [Markdown](http://daringfireball.net/projects/markdown)
+           * **Markdown** support will improve
+           * Content of this slide :
+        </pre></sh:Code>
       </div>    
     </rs:Slide>
     

@@ -26,7 +26,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHTML;
 
 /**
- * 
+ * See {@link SyntaxHighlighter}
  */
 public class Code extends Composite implements HasHTML {
 

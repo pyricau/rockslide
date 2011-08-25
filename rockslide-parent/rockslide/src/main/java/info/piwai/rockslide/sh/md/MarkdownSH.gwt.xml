@@ -16,26 +16,12 @@
     the License.
 
 -->
-<module rename-to='documentation'>
+<module>
 
-    <inherits name="com.google.gwt.user.theme.standard.Standard" /> 
+    <inherits name='info.piwai.rockslide.sh.SyntaxHighlighter'/>
 
-    <inherits name='info.piwai.rockslide.Rockslide'/>
-    
-    <!-- Syntax Highlighting -->
-    <inherits name='info.piwai.rockslide.sh.java.JavaSH'/>
-    <inherits name='info.piwai.rockslide.sh.xml.XmlSH'/>
-    <inherits name='info.piwai.rockslide.sh.md.MarkdownSH'/>
-    <stylesheet src="styles/shThemeEclipse.css"/>
-    
-    <!-- Markdown support -->
-    <inherits name='info.piwai.rockslide.md.Markdown'/>
-    
-    <!-- Injects ga.js -->
-    <inherits name='info.piwai.rockslide.ga.SlideAnalytics'/>
-    
+	<script src="shBrushMarkdown.js"/>
+  
     <source path='client' />
-    
-    <entry-point class='info.piwai.rockslide.client.Documentation' />
 
 </module>
