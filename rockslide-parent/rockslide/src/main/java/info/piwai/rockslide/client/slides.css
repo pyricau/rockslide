@@ -55,9 +55,9 @@ a,a:visited,a:hover {
 div.presentation {
 	position: absolute;
 	width: 1500px;
-	height: 800px;
+	height: 750px;
 	margin-left: -750px;
-	margin-top: -400px;
+	margin-top: -375px;
 	left: 50%;
 	top: 50%;
 	display: block;
@@ -67,7 +67,7 @@ div.presentation {
 	font-size: 20px;
 	height: 50px;
 	left: 0;
-	margin-top: -400px;
+	margin-top: -375px;
 	position: absolute;
 	text-align: center;
 	top: 50%;
@@ -99,11 +99,11 @@ div.slide {
 	display: none;
 	position: absolute;
 	overflow: hidden;
-	width: 900px;
-	height: 700px;
+	width: 880px;
+	height: 680px;
 	left: 50%;
 	top: 50%;
-	margin-top: -350px;
+	margin-top: -340px;
 	-webkit-transition: margin 0.25s ease-in-out;
 	-moz-transition: margin 0.25s ease-in-out;
 	-o-transition: margin 0.25s ease-in-out;
@@ -122,17 +122,17 @@ div.slide {
 
 .slide.past {
 	display: block;
-	margin-left: -1400px;
+	margin-left: -1360px;
 }
 
 .slide.current {
 	display: block;
-	margin-left: -450px;
+	margin-left: -440px;
 }
 
 .slide.future {
 	display: block;
-	margin-left: 500px;
+	margin-left: 480px;
 }
 
 .slide.far-future {
@@ -168,12 +168,17 @@ div.slide > h2, div.slide > h3, div.slide > ul, div.slide > p, div.slide > div, 
 }
 
 .intro {
+	display: table;
 	text-align: center;
+	height: 100%;
+	width: 100%;
+  	position: absolute;
+  	overflow: hidden;
+}
+
+.introHolder {
 	display: table-cell;
-	vertical-align: middle;
-	height: 700px;
-	width: 900px;
-	padding-top: 5px;
+  	vertical-align: middle;
 }
 
 .intro h2 {

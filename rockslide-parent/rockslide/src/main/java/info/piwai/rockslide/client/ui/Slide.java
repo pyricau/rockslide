@@ -63,14 +63,18 @@ public class Slide extends HTMLPanel implements SlidePresentable {
         
         if (intro == true) {
             com.google.gwt.user.client.Element introDiv = DOM.createDiv();
+            com.google.gwt.user.client.Element introHolderDiv = DOM.createDiv();
             introDiv.addClassName("intro");
+            introHolderDiv.addClassName("introHolder");
             
             childCount = element.getChildCount();
             
             for (int i = 0; i < childCount; i++) {
                 Node child = element.getFirstChild();
-                introDiv.appendChild(child);
+                introHolderDiv.appendChild(child);
             }
+            
+            introDiv.appendChild(introHolderDiv);
             
             element.appendChild(introDiv);
         }
