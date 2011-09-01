@@ -55,7 +55,7 @@ public class Slide extends HTMLPanel implements SlidePresentable {
             if ("NOTES".equals(child.getNodeName().toUpperCase())) {
                 notes = Element.as(child);
                 notes.removeFromParent();
-                return;
+                break;
             }
         }
 
