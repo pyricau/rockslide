@@ -31,6 +31,25 @@ public class MDSlide extends Slide {
     public void transform() {
         extractPreToMarkdown();
         
+        com.google.gwt.user.client.Element element = getElement();
+        int childCount = element.getChildCount();
+
+        for (int i = 0; i < childCount; i++) {
+            Node child = element.getChild(i);
+            if ("MDNOTES".equals(child.getNodeName().toUpperCase())) {
+                notes = Element.as(child);
+                notes.removeFromParent();
+                break;
+            }
+        }
+        
+        if (notes != null) {
+        	String markdownHTML = notes.getInnerHTML();
+        	markdownHTML = markdownHTML.replaceFirst("<pre>", "").replaceFirst("</pre>", "");
+            String realHTML = Markdown.convertMarkdownToHTML(markdownHTML);
+            notes.setInnerHTML(realHTML);
+        }
+        
         super.transform();
     }
 

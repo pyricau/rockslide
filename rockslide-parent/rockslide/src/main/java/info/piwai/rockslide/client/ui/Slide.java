@@ -27,7 +27,7 @@ public class Slide extends HTMLPanel implements SlidePresentable {
 
     private String historyId = "MDSlide";
 
-    private Element notes;
+    protected Element notes;
 
     private boolean intro = false;
 
