@@ -28,9 +28,9 @@ public class Markdown extends Composite implements HasHTML {
     }
     
     private static native String convertMarkdownToHTMLJS(String text) /*-{
-    var converter = new $wnd.Showdown.converter();
-    return converter.makeHtml(text);
-}-*/;
+    	var converter = new $wnd.Showdown.converter();
+    	return converter.makeHtml(text);
+	}-*/;
 
     private HTML panel = new HTML();
 
