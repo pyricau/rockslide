@@ -162,7 +162,12 @@ h1 {
 	-moz-border-radius-bottomright: 20px;
 }
 
-div.slide > h2, div.slide > h3, div.slide > ul, div.slide > p, div.slide > div, div.slide > button {
+div.slide > h2, div.slide > h3, div.slide > p, div.slide > div, div.slide > button {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+div.slide > ul {
 	margin-left: 30px;
 	margin-right: 30px;
 }
