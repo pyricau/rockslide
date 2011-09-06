@@ -25,7 +25,7 @@ import com.google.gwt.user.client.ui.HTMLPanel;
 
 public class Slide extends HTMLPanel implements SlidePresentable {
 
-    private String historyId = "MDSlide";
+    private String historyId = "Slide";
 
     protected Element notes;
 
