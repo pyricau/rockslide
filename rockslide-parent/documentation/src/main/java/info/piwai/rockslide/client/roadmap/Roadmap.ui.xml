@@ -20,37 +20,26 @@
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+   	xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
 
   <rs:Slides>
+
+    <md:MDSlide intro="true"><pre>
+## Roadmap
+What's coming
+    </pre></md:MDSlide>   
   
-    <rs:Slide intro="true">
-      <h2>Roadmap</h2>
-      <p>What's coming</p>
-    </rs:Slide>
-    
-    <rs:Slide hid="1.0">
-        <h1>1.0</h1>
-        <h2>Before reaching 1.0, we need:</h2>
-        <ul>
-          <li>Better documentation</li>
-          <li>A good <a href="http://github.com/pyricau/rockslide/issues/1" target="_blank" >logo</a> (the current is ugly!)</li>
-          <li>A Maven <a href="http://github.com/pyricau/rockslide/issues/2" target="_blank" >archetype</a></li>
-          <li>Support for <a href="http://github.com/pyricau/rockslide/issues/13" target="_blank" >800*600</a> &amp; <a href="http://github.com/pyricau/rockslide/issues/7" target="_blank" >mobile browsers</a></li>
-          <li>Anything else? Create <a href="http://github.com/pyricau/rockslide/issues" target="_blank" >issues</a> to let us know!</li>
-        </ul>
-    </rs:Slide>
-    
-    <rs:Slide hid="Future">
-        <h1>Future</h1>
-        <h2>And after 1.0?</h2>
-        <ul>
-          <li>Who really cares?</li>
-          <li>All your slide are <a href="http://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" target="_blank">belong to us</a></li>
-          <li>Rockslide will (probably) <a href="http://en.wikipedia.org/wiki/Pinky_and_the_Brain" target="_blank">take over the world</a></li>
-        </ul>
-    </rs:Slide>
-    
+    <md:MDSlide hid="1.0"><pre>
+# 1.0
+## Before reaching 1.0, we need:
+* Better documentation
+* A good [logo](http://github.com/pyricau/rockslide/issues/1)
+* A Maven [archetype](http://github.com/pyricau/rockslide/issues/2)
+* Support for [800*600](http://github.com/pyricau/rockslide/issues/13) &amp; [mobile browsers](http://github.com/pyricau/rockslide/issues/7)
+* Anything else? Create [issues](http://github.com/pyricau/rockslide/issues) to let us know!
+    </pre></md:MDSlide>  
+
   </rs:Slides>
 
 </ui:UiBinder>

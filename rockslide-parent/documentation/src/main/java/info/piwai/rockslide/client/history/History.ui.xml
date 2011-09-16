@@ -20,89 +20,74 @@
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
     xmlns:g='urn:import:com.google.gwt.user.client.ui'
+   	xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
 
   <rs:Slides>
   
-    <rs:Slide intro="true">
-          <h2>History</h2>
-          <p>Where <strong>Rockslide</strong> comes from</p>
-    </rs:Slide>
-    
-    <rs:Slide hid="HTML5Rocks">
-      <h1>HTML5 Rocks</h1>
-      <h2>It all started with a presentation</h2>
-      <ul>
-        <li><a href="http://slides.html5rocks.com">http://slides.html5rocks.com</a></li>
-        <li>Demonstrates the coming HTML5 features </li>
-        <li>
-          Created by <a href="mailto:mwichary@google.com">Marcin Wichary</a>,
-          enhanced by the
-          <a href="mailto:chrome-devrel@googlegroups.com">Chrome DevRel</a> Team,
-          <a href="mailto:slightlyoff@chromium.org">Alex Russell</a> and
+    <md:MDSlide intro="true"><pre>
+## History
+Where **Rockslide** comes from
+    </pre></md:MDSlide>    
+  
+    <md:MDSlide hid="HTML5Rocks"><pre>
+# HTML5 Rocks
+## It all started with a presentation
+* [http://slides.html5rocks.com](http://slides.html5rocks.com)
+* Demonstrates the coming HTML5 features
+* Created by [Marcin Wichary](mailto:mwichary@google.com),
+          enhanced by
+          the [Chrome DevRel](mailto:chrome-devrel@googlegroups.com) Team,
+          [Alex Russell](mailto:slightlyoff@chromium.org) and
           Brad Neuberg
-        </li>
-      </ul>
-    </rs:Slide>
+    </pre></md:MDSlide>   
+  
+    <md:MDSlide hid="GWTHTML5Rocks"><pre>
+# GWT HTML5 Rocks
+## [Sfeir](http://www.sfeir.com) ported *HTML5 Rocks* to GWT
+* [http://gwthtml5.appspot.com](http://gwthtml5.appspot.com)
+* Shows that GWT developers can benefit from HTML5 support
+* Done by
+          [Salvador Diaz](mailto:diaz.s@sfeir.com),
+          [Vincent Bostoen](mailto:bostoen.v@sfeir.com),
+          [Patrice de Saint Steban](mailto:desaintsteban.p@sfeir.com) and
+          [Christophe Phu](mailto:phu.c@sfeir.com)        
+    </pre></md:MDSlide>   
+
+    <md:MDSlide hid="GWTTraining"><pre>
+# GWT Training
+## [Excilys](https://www.excilys.com) modified it for a GWT training
+* [http://gwt.formation.excilys.com](http://gwt.formation.excilys.com)
+* HTML4 compatible, chapters, nice URLs, show notes, syntax highlighting
+* Done by
+  [Mathieu Boniface](mailto:mboniface@excilys.com),
+  [Pierre Merienne](mailto:pmerienne@excilys.com) and
+  [Pierre-Yves Ricau](mailto:py.ricau@gmail.com)
+    </pre></md:MDSlide> 
+        
+    <md:MDSlide hid="CV"><pre>
+# A modern CV
+## [Pierre-Yves Ricau](http://twitter.com/piwai) modified it for his CV
+* [http://cv.piwai.info](http://cv.piwai.info)
+* Google Analytics (one page per slide), header quick links, and many bug fixes
+    </pre></md:MDSlide> 
     
-    <rs:Slide hid="GWTHTML5Rocks">
-      <h1>GWT HTML5 Rocks</h1>
-      <h2><a href="http://www.sfeir.com">Sfeir</a> ported <em>HTML5 Rocks</em> to GWT</h2>
-      <ul>
-        <li><a href="http://gwthtml5.appspot.com">http://gwthtml5.appspot.com</a></li>
-        <li>Shows that GWT developers can benefit from HTML5 support</li>
-        <li>Done by  
-          <a href="mailto:diaz.s@sfeir.com">Salvador Diaz</a>,
-          <a href="mailto:bostoen.v@sfeir.com">Vincent Bostoen</a>,
-          <a href="mailto:desaintsteban.p@sfeir.com">Patrice de Saint Steban</a> and
-          <a href="mailto:phu.c@sfeir.com">Christophe Phu</a>
-         </li>
-      </ul>
-    </rs:Slide>
-    
-    <rs:Slide hid="GWTTraining">
-      <h1>GWT Training</h1>
-      <h2><a href="https://www.excilys.com">Excilys</a> modified it for a GWT training</h2>
-      <ul>
-        <li><a href="http://gwt.formation.excilys.com">http://gwt.formation.excilys.com</a></li>
-        <li>HTML4 compatible, chapters, nice URLs, show notes, syntax highlighting</li>
-        <li>Done by  
-          <a href="mailto:mboniface@excilys.com">Mathieu Boniface</a>,
-          <a href="mailto:pmerienne@excilys.com">Pierre Merienne</a> and
-          <a href="mailto:py.ricau@gmail.com">Pierre-Yves Ricau</a>
-        </li>
-      </ul>
-    </rs:Slide>
-    
-    <rs:Slide hid="CV">
-      <h1>A modern CV</h1>
-      <h2><a href="http://twitter.com/piwai">Pierre-Yves Ricau</a> modified it for his CV</h2>
-      <ul>
-        <li><a href="http://cv.piwai.info">http://cv.piwai.info</a></li>
-        <li>Google Analytics (one page per slide), header quick links, and many bug fixes</li>
-      </ul>
-    </rs:Slide>
-    
-    <rs:Slide hid="Rockslide">
-      <h1>Rockslide</h1>
-      <h2>Time for a standard solution</h2>
-      <ul>
-        <li>Cleaner code, mavenised &amp; modularised</li>
-        <li>Many <a href="#Features">features</a>!</li>
-        <li>Created by <a href="mailto:py.ricau@gmail.com">Pierre-Yves Ricau</a></li>
-        <li>Enhanced by <a href="http://github.com/pyricau/rockslide/issues">you</a>?</li>
-      </ul>
-    </rs:Slide>
-    
-    <rs:Slide hid="Inspiration">
-      <h1>Sources of inspiration</h1>
-      <h2>Other <strong>code</strong> based presentation frameworks</h2>
-      <ul>
-        <li><a href="http://slides.seld.be/?file=2010-05-30+Example.html" target="_blank">Slippy</a></li>
-        <li><a href="http://imakewebthings.github.com/deck.js" target="_blank">deck.js</a></li>
-        <li>Rockslide is named after <a href="http://github.com/adamzap/landslide" target="_blank">Landslide</a></li>
-      </ul>
-    </rs:Slide>
+    <md:MDSlide hid="Rockslide"><pre>
+# Rockslide
+## Time for a standard solution
+* Cleaner code, mavenised &amp; modularised
+* Many [features](#Features)!
+* Created by [Pierre-Yves Ricau](mailto:py.ricau@gmail.com)
+* Enhanced by [you](http://github.com/pyricau/rockslide/issues)?
+    </pre></md:MDSlide>     
+
+    <md:MDSlide hid="Inspiration"><pre>
+# Sources of inspiration
+## Other **code** based presentation frameworks
+* [Slippy](http://slides.seld.be/?file=2010-05-30+Example.html)
+* [deck.js](http://imakewebthings.github.com/deck.js)
+* Rockslide is named after [Landslide](http://github.com/adamzap/landslide)
+    </pre></md:MDSlide>     
     
   </rs:Slides>
 
