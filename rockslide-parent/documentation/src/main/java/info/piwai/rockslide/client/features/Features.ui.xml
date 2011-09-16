@@ -68,7 +68,7 @@ What's inside the beast
       <h2>Who reads your slides?</h2>
       <sh:Code brush="{java.brush}">
           Analytics.enable("UA-XXX");
-      </sh:Code>            
+      </sh:Code>
       <ul>
         <li>Each slide is recorded as a page</li>
       </ul>
@@ -83,19 +83,19 @@ What's inside the beast
         <li>Separate window, nice with dual screen</li>
         <li>Write your notes next to your content</li>
       </ul>
-      <sh:Code brush="{xml.brush}"><pre>
-        &lt;rs:Slide hid="ShowNotes"&gt;
-          &lt;notes&gt;This is a &lt;em&gt;show note&lt;/em&gt;!&lt;/notes&gt;
-          &lt;h1&gt;Show Notes&lt;/h1&gt;
-          &lt;div class="section"&gt;
-            &lt;h2&gt;Try it now!&lt;/h2&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Separate window, nice with dual screen&lt;/li&gt;
-              &lt;li&gt;Write your notes next to your content&lt;/li&gt;
-            &lt;/ul&gt;    
-          &lt;/div&gt;  
-        &lt;/rs:Slide&gt;
-      </pre></sh:Code>
+      <sh:Code brush="{xml.brush}"><pre><![CDATA[
+        <rs:Slide hid="ShowNotes">
+          <notes>This is a <em>show note</em>!</notes>
+          <h1>Show Notes</h1>
+          <div class="section">
+            <h2>Try it now!</h2>
+            <ul>
+              <li>Separate window, nice with dual screen</li>
+              <li>Write your notes next to your content</li>
+            </ul>    
+          </div>  
+        </rs:Slide>
+      ]]></pre></sh:Code>
     </rs:Slide>
     
     <md:MDSlide hid="ClassicGWT"><pre>
@@ -109,19 +109,19 @@ What's inside the beast
     </md:MDSlide>
     
     <md:MDSlide hid="Markdown"><pre>
-# Limited Markdown support
-## *This slide* has been written in *Markdown*
+# Markdown support
+## Easy writing of slides and shownotes
 
  * See [Markdown](http://daringfireball.net/projects/markdown)
- * **Markdown** support will improve
+ * *This slide* is written in *Markdown*
  * Content of this slide :
      </pre>
      <sh:Code brush="{md.brush}"><pre>
-        # Limited Markdown support
-        ## *This slide* has been written in *Markdown*
+        # Markdown support
+        ## Easy writing of slides and shownotes
         
          * See [Markdown](http://daringfireball.net/projects/markdown)
-         * **Markdown** support will improve
+         * *This slide* is written in *Markdown*
          * Content of this slide :
       </pre></sh:Code>
     </md:MDSlide>
@@ -130,6 +130,7 @@ What's inside the beast
 # And... much more!
  * Code snippets with [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter)
  * Pretty bookmarkable URLs, one per slide
+ * Default CSS fits in 1280*1024 screens
  * Will **you** contribute new [features](https://github.com/pyricau/rockslide/issues)?
 ## Rockslide needs you!
     </pre></md:MDSlide>

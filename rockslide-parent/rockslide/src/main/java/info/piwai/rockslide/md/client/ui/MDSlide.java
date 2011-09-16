@@ -55,9 +55,8 @@ public class MDSlide extends Slide {
 
     private void extractPreToMarkdown() {
         com.google.gwt.user.client.Element element = getElement();
-        int childCount = element.getChildCount();
         
-        for (int i = 0; i< childCount; i++) {
+        for (int i = 0; i< element.getChildCount(); i++) {
             Node child = element.getChild(i);
             if ("PRE".equals(child.getNodeName().toUpperCase())) {
                 Element pre = Element.as(child);

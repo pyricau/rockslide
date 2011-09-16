@@ -68,15 +68,15 @@ Press `←` `→` to navigate
       <h2>GWT &amp; UiBinder written slides</h2>
       <ul>
         <li>It's really easy!
-          <sh:Code brush="{xml.brush}"><pre>
-                &lt;rs:Slide&gt;
-                  &lt;div class="intro"&gt;
-                    &lt;h2&gt;Hello!&lt;/h2&gt;
-                    &lt;p&gt;Welcome to Rockslide documentation&lt;/p&gt;
-                    &lt;p&gt;Press ← → to navigate.&lt;/p&gt;
-                  &lt;/div&gt;
-                &lt;/rs:Slide&gt;
-              </pre>
+          <sh:Code brush="{xml.brush}"><pre><![CDATA[
+                <rs:Slide>
+                  <div class="intro">
+                    <h2>Hello!</h2>
+                    <p>Welcome to Rockslide documentation</p>
+                    <p>Press ← → to navigate.</p>
+                  </div>
+                </rs:Slide>
+              ]]></pre>
           </sh:Code>
         </li>
         <li>Rockslide has many <a href="#Features">features</a></li>
