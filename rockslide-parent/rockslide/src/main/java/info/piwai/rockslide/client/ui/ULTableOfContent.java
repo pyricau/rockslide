@@ -13,28 +13,45 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.rockslide.client.slides;
+package info.piwai.rockslide.client.ui;
+
+import info.piwai.rockslide.client.slides.ChapterName;
+import info.piwai.rockslide.client.slides.SlidePresentable;
+import info.piwai.rockslide.client.slides.TableOfContent;
+import info.piwai.rockslide.client.slides.ULPanel;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Anchor;
+import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
-public class ULTableOfContent extends WidgetSlide {
+public class ULTableOfContent extends Composite implements SlidePresentable{
 
     interface Binder extends UiBinder<Widget, ULTableOfContent> {
     }
 
     private static final Binder binder = GWT.create(Binder.class);
     
+    private String historyId = "TableOfContents";
+    
     @UiField
     ULPanel ulPanel;
 
-    public ULTableOfContent(ChapterHolder chapterHolder) {
-        super(binder);
-        
-        for (ChapterName chapterName : chapterHolder.getChapterNames()) {
+    public ULTableOfContent() {
+    	initWidget(binder.createAndBindUi(this));
+    }
+    
+	@Override
+	public String getHistoryName() {
+		return historyId;
+	}
+
+	@Override
+	public void init(TableOfContent tableOfContent) {
+        for (ChapterName chapterName : tableOfContent.getChapterNames()) {
             String readableName = chapterName.getReadableName();
             String historyName = chapterName.getHistoryName();
 
@@ -43,10 +60,21 @@ public class ULTableOfContent extends WidgetSlide {
 
             ulPanel.add(anchor);
         }
+	}
+	
+    public void setHid(String historyId) {
+        historyId = historyId.trim();
+        if (!"".equals(historyId)) {
+            this.historyId = historyId;
+        }
     }
-    
-    @Override
-    public String toString() {
-        return "TableOfContents";
-    }
+
+	@Override
+	public Element getShowNotes() {
+		return null;
+	}
+
+	@Override
+	public void visible() {
+	}
 }

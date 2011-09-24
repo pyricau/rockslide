@@ -87,7 +87,9 @@ Where **Rockslide** comes from
 * [Slippy](http://slides.seld.be/?file=2010-05-30+Example.html)
 * [deck.js](http://imakewebthings.github.com/deck.js)
 * Rockslide is named after [Landslide](http://github.com/adamzap/landslide)
-    </pre></md:MDSlide>     
+    </pre></md:MDSlide>   
+    
+    <rs:ULTableOfContent />  
     
   </rs:Slides>
 

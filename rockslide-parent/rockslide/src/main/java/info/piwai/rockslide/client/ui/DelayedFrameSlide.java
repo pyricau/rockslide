@@ -16,6 +16,7 @@
 package info.piwai.rockslide.client.ui;
 
 import info.piwai.rockslide.client.slides.SlidePresentable;
+import info.piwai.rockslide.client.slides.TableOfContent;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.ui.Frame;
@@ -64,7 +65,7 @@ public class DelayedFrameSlide extends Frame implements SlidePresentable {
     }
 
 	@Override
-	public void transform() {
+	public void init(TableOfContent tableOfContent) {
 	}
 
 }

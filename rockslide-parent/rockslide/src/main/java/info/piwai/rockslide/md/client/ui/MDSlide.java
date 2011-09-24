@@ -15,6 +15,7 @@
  */
 package info.piwai.rockslide.md.client.ui;
 
+import info.piwai.rockslide.client.slides.TableOfContent;
 import info.piwai.rockslide.client.ui.Slide;
 
 import com.google.gwt.dom.client.Element;
@@ -28,7 +29,7 @@ public class MDSlide extends Slide {
     }
     
     @Override
-    public void transform() {
+    public void init(TableOfContent tableOfContent) {
         extractPreToMarkdown();
         
         com.google.gwt.user.client.Element element = getElement();
@@ -50,7 +51,7 @@ public class MDSlide extends Slide {
             notes.setInnerHTML(realHTML);
         }
         
-        super.transform();
+        super.init(tableOfContent);
     }
 
     private void extractPreToMarkdown() {

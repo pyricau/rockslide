@@ -15,61 +15,75 @@
  */
 package info.piwai.rockslide.client;
 
-import info.piwai.rockslide.client.features.Features;
-import info.piwai.rockslide.client.gettingstarted.GettingStarted;
-import info.piwai.rockslide.client.history.History;
-import info.piwai.rockslide.client.manual.Manual;
-import info.piwai.rockslide.client.roadmap.Roadmap;
+import static info.piwai.rockslide.client.PresentationBuilder.create;
+import info.piwai.rockslide.client.res.DocumentationResources;
 import info.piwai.rockslide.client.slides.Analytics;
-import info.piwai.rockslide.client.slides.ChapterHolder;
-import info.piwai.rockslide.client.slides.PresentationHeader;
-import info.piwai.rockslide.client.welcome.Welcome;
+import info.piwai.rockslide.client.ui.Slides;
+import info.piwai.rockslide.client.widget.Ribbon;
 import info.piwai.rockslide.sh.client.SyntaxHighlighter;
 
-import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiTemplate;
 import com.google.gwt.user.client.ui.RootPanel;
 
-public class Documentation extends PresentationEntryPoint {
+public class Documentation implements EntryPoint {
 
-    private PresentationHeader header;
+	@UiTemplate("Welcome.ui.xml")
+	interface Welcome extends UiBinder<Slides, Void> {
+		Welcome binder = GWT.create(Welcome.class);
+	}
 
-    @Override
-    public void initSlides() {
-        
-        RootPanel.get().add(new Ribbon());
+	@UiTemplate("Features.ui.xml")
+	interface Features extends UiBinder<Slides, Void> {
+		Features binder = GWT.create(Features.class);
+	}
 
-        /**
-         * Custom CSS injection
-         */
-        DocumentationResources.instance.documentation().ensureInjected();
+	@UiTemplate("GettingStarted.ui.xml")
+	interface GettingStarted extends UiBinder<Slides, Void> {
+		GettingStarted binder = GWT.create(GettingStarted.class);
+	}
 
-        /**
-         * Default options of SyntaxHighlighter
-         */
-        SyntaxHighlighter.toolbar = false;
+	@UiTemplate("Manual.ui.xml")
+	interface Manual extends UiBinder<Slides, Void> {
+		Manual binder = GWT.create(Manual.class);
+	}
 
-        /**
-         * Will only work if the module info.piwai.rockslide.ga.SlideAnalytics
-         * is imported
-         */
-        Analytics.enable("UA-5875795-16");
-    }
+	@UiTemplate("History.ui.xml")
+	interface History extends UiBinder<Slides, Void> {
+		History binder = GWT.create(History.class);
+	}
 
-    @Override
-    public void loadChapters(ChapterHolder holder) {
-        holder.addChapter(new Welcome());
-        holder.addChapter(new Features());
-        holder.addChapter(new GettingStarted());
-        holder.addChapter(new Manual());
-        holder.addChapter(new History());
-        holder.addChapter(new Roadmap());
-        
-        header = new PresentationHeader(holder);
-    }
-    
-    @Override
-    public IsWidget getHeaderWidget() {
-        return header;
-    }
+	@UiTemplate("Roadmap.ui.xml")
+	interface Roadmap extends UiBinder<Slides, Void> {
+		Roadmap binder = GWT.create(Roadmap.class);
+	}
+
+	@Override
+	public void onModuleLoad() {
+		RootPanel.get().add(new Ribbon());
+
+		/**
+		 * Default options of SyntaxHighlighter
+		 */
+		SyntaxHighlighter.toolbar = false;
+
+		/**
+		 * Will only work if the module info.piwai.rockslide.ga.SlideAnalytics
+		 * is imported
+		 */
+		Analytics.enable("UA-5875795-16");
+
+		create().defaultHeader() //
+				.chapter(Welcome.binder) //
+				.chapter(Features.binder) //
+				.chapter("GettingStarted", "Getting Started", GettingStarted.binder) //
+				.chapter(Manual.binder) //
+				.chapter(History.binder) //
+				.chapter(Roadmap.binder) //
+				.presentationCss(DocumentationResources.instance.documentation()) //
+				.inject();
+	}
 
 }

@@ -16,7 +16,6 @@
 package info.piwai.rockslide.client.slides;
 
 import info.piwai.rockslide.client.PresentationBuilder;
-import info.piwai.rockslide.client.PresentationEntryPoint;
 import info.piwai.rockslide.client.Resources;
 import info.piwai.rockslide.client.shownotes.ShowNotesSender;
 import info.piwai.rockslide.client.window.ChildWindow;
@@ -38,7 +37,7 @@ import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window.Location;
 import com.google.gwt.user.client.ui.RootPanel;
 
-public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
+public class SlideViewer implements ValueChangeHandler<String>, TableOfContent {
 
     public static final String TRAINER_PARAM = "trainer";
 
@@ -53,17 +52,20 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
     private ChildWindow childWindow;
 
-    private final PresentationBuilder presentationBuilder;
-
     private LoadingWidget loadingWidget;
 
     private List<ChapterName> chapterNamesHolder = new ArrayList<ChapterName>();
 
-    public SlideViewer(PresentationBuilder presentationBuilder) {
-        this.presentationBuilder = presentationBuilder;
+	private HeaderWidget header;
+
+    public SlideViewer() {
     }
 
-    public void load() {
+    public void load(List<Chapter> chapters, HeaderWidget header) {
+    	this.header = header;
+		this.chapters.addAll(chapters);
+    	
+    	
         startLoading();
         if ("true".equals(Location.getParameter(SlideViewer.TRAINER_PARAM))) {
             String features = "menubar=no," //
@@ -78,7 +80,7 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
             String showNotesUrl = Location.createUrlBuilder() //
                     .removeParameter(SlideViewer.TRAINER_PARAM) //
-                    .setParameter(PresentationEntryPoint.SHOW_NOTES_PARAM, "true") //
+                    .setParameter(PresentationBuilder.SHOW_NOTES_PARAM, "true") //
                     .setHash(null) //
                     .buildString();
             childWindow = ChildWindow.open(showNotesUrl, "_blank", features);
@@ -115,14 +117,12 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
 
     private void loadSlideModule() {
         Resources.instance.slides().ensureInjected();
-        presentationBuilder.loadChapters(this);
         
-        TableOfContentFactory presentationMapFactory = presentationBuilder.buildTableOfContentFactory(this);
-        for(Chapter chapter : chapters) {
-            chapter.setSlideMapFactory(presentationMapFactory);
-        }
-
-        presentation = new Presentation(new ShowNotesSender(childWindow), presentationBuilder);
+        loadChapters();
+        
+        header.init(this);
+        
+        presentation = new Presentation(new ShowNotesSender(childWindow), header);
         stopLoading();
         RootPanel rootPanel = RootPanel.get();
         rootPanel.add(presentation);
@@ -146,23 +146,23 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
         });
     }
 
-    @Override
-    public void addChapter(Chapter chapter) {
-        chapters.add(chapter);
-        String historyName = chapter.getHistoryName();
-        historyName = historyName.replace("_", "");
-        String finalHistoryName;
-        if (chapterNames.contains(historyName)) {
-            int i = 1;
-            do {
-                i++;
-                finalHistoryName = historyName + i;
-            } while (chapterNames.contains(finalHistoryName));
-        } else {
-            finalHistoryName = historyName;
-        }
-        chapterNames.add(finalHistoryName);
-        chapterNamesHolder.add(new ChapterName(finalHistoryName, chapter.getReadableName()));
+    private void loadChapters() {
+    	for(Chapter chapter : chapters) {
+		    String historyName = chapter.getHistoryName();
+		    historyName = historyName.replace("_", "");
+		    String finalHistoryName;
+		    if (chapterNames.contains(historyName)) {
+		        int i = 1;
+		        do {
+		            i++;
+		            finalHistoryName = historyName + i;
+		        } while (chapterNames.contains(finalHistoryName));
+		    } else {
+		        finalHistoryName = historyName;
+		    }
+		    chapterNames.add(finalHistoryName);
+		    chapterNamesHolder.add(new ChapterName(finalHistoryName, chapter.getReadableName()));
+    	}
     }
 
     private void displayChapter(int chapterIndex) {
@@ -175,6 +175,7 @@ public class SlideViewer implements ValueChangeHandler<String>, ChapterHolder {
         if (chapterIndex != currentChapter) {
             currentChapter = chapterIndex;
             Chapter chapter = chapters.get(chapterIndex);
+            chapter.loadSlides(this);
             String chapterName = chapterNames.get(currentChapter);
             presentation.updateSlides(chapterName, chapter);
         }

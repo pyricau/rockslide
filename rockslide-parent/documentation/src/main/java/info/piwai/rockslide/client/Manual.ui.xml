@@ -206,6 +206,8 @@ Rockslide integrates well with Maven
     <doc:DocNotAvailable>Custom slides</doc:DocNotAvailable>
     <doc:DocNotAvailable>Custom Table Of Content</doc:DocNotAvailable>
     
+    <rs:ULTableOfContent />
+    
   </rs:Slides>
 
 </ui:UiBinder>

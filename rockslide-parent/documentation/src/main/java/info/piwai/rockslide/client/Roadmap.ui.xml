@@ -39,6 +39,8 @@ What's coming
 * Support for [800*600](http://github.com/pyricau/rockslide/issues/13) &amp; [mobile browsers](http://github.com/pyricau/rockslide/issues/7)
 * Anything else? Create [issues](http://github.com/pyricau/rockslide/issues) to let us know!
     </pre></md:MDSlide>  
+    
+    <rs:ULTableOfContent />
 
   </rs:Slides>
 

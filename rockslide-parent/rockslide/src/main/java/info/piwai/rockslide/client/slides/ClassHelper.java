@@ -16,6 +16,8 @@
 package info.piwai.rockslide.client.slides;
 
 public class ClassHelper {
+	
+	private static final String IMPL_SUFFIX = "Impl";
 
     public static String getSimpleName(Object instance) {
         return getSimpleName(instance.getClass());
@@ -40,5 +42,30 @@ public class ClassHelper {
             return fullyQualifiedName;
         }
     }
+    
+	public static String getUiBinderName(Object uiBinder) {
+		String uiBinderClassSimpleName = ClassHelper.getSimpleName(uiBinder.getClass());
+
+		int separatorIndex = uiBinderClassSimpleName.indexOf('_');
+
+		String nameWithoutChapterClassName;
+		if (separatorIndex != -1) {
+			nameWithoutChapterClassName = uiBinderClassSimpleName.substring(separatorIndex);
+		} else {
+			nameWithoutChapterClassName = uiBinderClassSimpleName;
+		}
+		
+		if (nameWithoutChapterClassName.startsWith("_")) {
+			nameWithoutChapterClassName = nameWithoutChapterClassName.substring(1);
+		}
+
+		if (nameWithoutChapterClassName.endsWith(IMPL_SUFFIX)) {
+			int finalNameLength = nameWithoutChapterClassName.length() - IMPL_SUFFIX.length();
+			return nameWithoutChapterClassName.substring(0, finalNameLength);
+		} else {
+			return nameWithoutChapterClassName;
+		}
+
+	}
 
 }

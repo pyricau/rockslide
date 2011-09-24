@@ -25,6 +25,9 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
 
+/**
+ * Maybe create a HasSlidePresentable interface ??
+ */
 public class Slides extends Composite implements HasWidgets {
 
     private final List<SlidePresentable> slides = new ArrayList<SlidePresentable>();

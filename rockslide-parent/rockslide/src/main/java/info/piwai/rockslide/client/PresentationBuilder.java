@@ -15,14 +15,88 @@
  */
 package info.piwai.rockslide.client;
 
-import info.piwai.rockslide.client.slides.ChapterHolder;
-import info.piwai.rockslide.client.slides.HasHeaderWidget;
-import info.piwai.rockslide.client.slides.TableOfContentFactory;
+import info.piwai.rockslide.client.shownotes.ShowNotesViewer;
+import info.piwai.rockslide.client.slides.Chapter;
+import info.piwai.rockslide.client.slides.HeaderWidget;
+import info.piwai.rockslide.client.slides.PresentationHeader;
+import info.piwai.rockslide.client.slides.SlideViewer;
+import info.piwai.rockslide.client.ui.Slides;
 
-public interface PresentationBuilder extends HasHeaderWidget {
+import java.util.ArrayList;
+import java.util.List;
 
-    void loadChapters(ChapterHolder chapterHolder);
-    
-    TableOfContentFactory buildTableOfContentFactory(ChapterHolder chapterHolder);
-    
+import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.Window.Location;
+
+public final class PresentationBuilder {
+
+	public static final String SHOW_NOTES_PARAM = "showNotes";
+
+	private final List<Chapter> chapters = new ArrayList<Chapter>();
+	
+	private final List<CssResource> presentationCssResources = new ArrayList<CssResource>();
+
+    private HeaderWidget header;
+
+	public PresentationBuilder header(HeaderWidget header) {
+		this.header = header;
+		return this;
+	}
+	
+	public PresentationBuilder defaultHeader() {
+		return header(new PresentationHeader());
+	}
+	
+	public PresentationBuilder chapter(Chapter chapter) {
+		chapters.add(chapter);
+		return this;
+	}
+	
+	public PresentationBuilder chapter(String historyName, String readableName, UiBinder<Slides, Void> slideDefinitions) {
+		Chapter chapter = new Chapter();
+		
+		chapter.setSlideDefinitions(slideDefinitions);
+		chapter.setHistoryName(historyName);
+		chapter.setReadableName(readableName);
+		
+		return chapter(chapter);
+	}
+	
+	public PresentationBuilder chapter(UiBinder<Slides, Void> slideDefinitions) {
+		return chapter(null, slideDefinitions);
+	}
+	
+	public PresentationBuilder chapter(String name, UiBinder<Slides, Void> slideDefinitions) {
+		return chapter(name, name, slideDefinitions);
+	}
+		
+	public PresentationBuilder presentationCss(CssResource cssResource) {
+		presentationCssResources.add(cssResource);
+		return this;
+	}
+
+	HeaderWidget getHeaderWidget() {
+		return header;
+	}
+
+	public void inject() {
+		String showNotes = Location.getParameter(SHOW_NOTES_PARAM);
+		if ("true".equals(showNotes)) {
+			ShowNotesViewer showNotesViewer = new ShowNotesViewer();
+			showNotesViewer.load();
+		} else {
+			for(CssResource cssResource : presentationCssResources) {
+				cssResource.ensureInjected();
+			}
+			SlideViewer slideViewer = new SlideViewer();
+			slideViewer.load(chapters, header);
+		}
+	}
+	
+	public static PresentationBuilder create() {
+		return new PresentationBuilder();
+	}
+	
+
 }

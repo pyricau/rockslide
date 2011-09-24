@@ -20,14 +20,19 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.InlineLabel;
 
-public class PresentationHeader extends Composite {
+public class PresentationHeader extends Composite implements HeaderWidget {
 
-    public PresentationHeader(ChapterHolder chapterHolder) {
+    private FlowPanel holder;
 
-        FlowPanel holder = new FlowPanel();
+	public PresentationHeader() {
+        holder = new FlowPanel();
+        initWidget(holder);
+    }
 
+	@Override
+	public void init(TableOfContent tableOfContent) {
         boolean first = true;
-        for (ChapterName chapterName : chapterHolder.getChapterNames()) {
+        for (ChapterName chapterName : tableOfContent.getChapterNames()) {
             if (first) {
                 first = false;
             } else {
@@ -43,8 +48,6 @@ public class PresentationHeader extends Composite {
 
             holder.add(anchor);
         }
-
-        initWidget(holder);
-    }
+	}
 
 }

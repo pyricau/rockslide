@@ -16,8 +16,8 @@
 package info.piwai.rockslide.client.ui;
 
 import info.piwai.rockslide.client.slides.SlidePresentable;
+import info.piwai.rockslide.client.slides.TableOfContent;
 
-import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Node;
 import com.google.gwt.user.client.DOM;
@@ -46,7 +46,7 @@ public class Slide extends HTMLPanel implements SlidePresentable {
     }
 
     @Override
-    public void transform() {
+    public void init(TableOfContent tableOfContent) {
         com.google.gwt.user.client.Element element = getElement();
         int childCount = element.getChildCount();
 

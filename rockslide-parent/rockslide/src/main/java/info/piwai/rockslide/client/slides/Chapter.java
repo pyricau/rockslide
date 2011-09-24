@@ -15,9 +15,6 @@
  */
 package info.piwai.rockslide.client.slides;
 
-import info.piwai.rockslide.client.shownotes.ElementSlideNotes;
-import info.piwai.rockslide.client.shownotes.VisibleSlideNotes;
-import info.piwai.rockslide.client.shownotes.WidgetSlideNotes;
 import info.piwai.rockslide.client.ui.Slides;
 
 import java.util.ArrayList;
@@ -25,189 +22,145 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Widget;
 
-public abstract class Chapter implements Iterable<Presentable> {
+public class Chapter implements Iterable<Presentable> {
+	
+	private List<Presentable> slides;
 
-    private static final String IMPL_SUFFIX = "Impl";
-    
-    private List<Presentable> slides;
-    
-    private final List<String> slideNames = new ArrayList<String>();
-    
-    private TableOfContentFactory tableOfContentFactory;
+	private final List<String> slideNames = new ArrayList<String>();
 
-    public final Presentable getSlide(int slideIndex) {
-        return ensureSlides().get(doCheckIndex(slideIndex));
-    }
+	private UiBinder<Slides, Void> slideDefinitions;
 
-    public final Presentable getSlideOrNull(int slideIndex) {
-        ensureSlides();
-        if (slideIndex < 0) {
-            return null;
-        } else if (slideIndex >= slides.size()) {
-            return null;
-        }
-        return slides.get(slideIndex);
-    }
+	private String readableName;
 
-    public final int getSlideCount() {
-        return ensureSlides().size();
-    }
+	private String historyName;
 
-    @Override
-    public final Iterator<Presentable> iterator() {
-        return ensureSlides().iterator();
-    }
+	final Presentable getSlide(int slideIndex) {
+		return slides.get(checkIndex(slideIndex));
+	}
 
-    public final boolean isLastSlide(int slideIndex) {
-        ensureSlides();
-        return doCheckIndex(slideIndex) == slides.size() - 1;
-    }
+	final Presentable getSlideOrNull(int slideIndex) {
+		if (slideIndex < 0) {
+			return null;
+		} else if (slideIndex >= slides.size()) {
+			return null;
+		}
+		return slides.get(slideIndex);
+	}
 
-    public final boolean isFirstSlide(int slideIndex) {
-        ensureSlides();
-        return doCheckIndex(slideIndex) == 0;
-    }
+	final int getSlideCount() {
+		return slides.size();
+	}
 
-    /**
-     * Unsafe: does not ensure slides
-     */
-    private final int doCheckIndex(int index) {
-        if (index < 0) {
-            index = 0;
-        } else if (index >= slides.size()) {
-            index = slides.size() - 1;
-        }
-        return index;
-    }
+	@Override
+	public final Iterator<Presentable> iterator() {
+		return slides.iterator();
+	}
 
-    public final int checkIndex(int index) {
-        ensureSlides();
-        return doCheckIndex(index);
-    }
+	final boolean isLastSlide(int slideIndex) {
+		return checkIndex(slideIndex) == slides.size() - 1;
+	}
 
-    private List<Presentable> ensureSlides() {
-        if (slides == null) {
-            slides = new ArrayList<Presentable>();
-            buildSlides();
-            slides = Collections.unmodifiableList(slides);
-        }
-        return slides;
-    }
+	final boolean isFirstSlide(int slideIndex) {
+		return checkIndex(slideIndex) == 0;
+	}
 
-    protected abstract void buildSlides();
+	/**
+	 * Unsafe: does not ensure slides
+	 */
+	final int checkIndex(int index) {
+		if (index < 0) {
+			index = 0;
+		} else if (index >= slides.size()) {
+			index = slides.size() - 1;
+		}
+		return index;
+	}
 
-    private String getUiBinderName(Object uiBinder) {
-        String uiBinderClassSimpleName = ClassHelper.getSimpleName(uiBinder.getClass());
+	void loadSlides(TableOfContent tableOfContent) {
+		if (slides == null) {
+			slides = new ArrayList<Presentable>();
+			buildSlides(tableOfContent);
+			slides = Collections.unmodifiableList(slides);
+		}
+	}
 
-        int separatorIndex = uiBinderClassSimpleName.indexOf('_');
+	protected void buildSlides(TableOfContent tableOfContent) {
+		if (slideDefinitions != null) {
+			Slides multiSlide = slideDefinitions.createAndBindUi(null);
+			for (SlidePresentable slide : multiSlide.getSlides()) {
+				slide.init(tableOfContent);
+				addPresentable(slide, slide.getHistoryName());
+			}
+		}
+	}
 
-        String nameWithoutChapterClassName;
-        if (separatorIndex != -1) {
-            nameWithoutChapterClassName = uiBinderClassSimpleName.substring(separatorIndex);
-        } else {
-            nameWithoutChapterClassName = uiBinderClassSimpleName;
-        }
+	private final void addPresentable(Presentable presentable, String historyName) {
+		slides.add(presentable);
+		String realSlideName;
+		historyName = historyName.replace("_", "");
 
-        if (nameWithoutChapterClassName.endsWith(IMPL_SUFFIX)) {
-            int finalNameLength = nameWithoutChapterClassName.length() - IMPL_SUFFIX.length();
-            return nameWithoutChapterClassName.substring(0, finalNameLength);
-        } else {
-            return nameWithoutChapterClassName;
-        }
+		if (slideNames.contains(historyName)) {
+			int i = 1;
+			do {
+				i++;
+				realSlideName = historyName + i;
+			} while (slideNames.contains(realSlideName));
+		} else {
+			realSlideName = historyName;
+		}
+		slideNames.add(realSlideName);
+	}
 
-    }
-    
-    protected final void addMultiSlide(UiBinder<Slides, Void> uiBinder) {
-        Slides multiSlide = uiBinder.createAndBindUi(null);
-        for(SlidePresentable slide : multiSlide.getSlides()) {
-            slide.transform();
-            addPresentable(slide, slide.getHistoryName());
-        }
-    }
+	/**
+	 * May be overriden if you want to change the chapter history name (defaults
+	 * to chapter class name)
+	 */
+	String getHistoryName() {
+		if (historyName == null) {
+			if (slideDefinitions != null) {
+				historyName = ClassHelper.getUiBinderName(slideDefinitions);
+			} else {
+				historyName = ClassHelper.getSimpleName(getClass());
+			}
+		}
+		return historyName;
+	}
 
-    protected final void addSlide(UiBinder<Element, ElementSlide> uiBinder) {
-        addPresentable(new ElementSlide(uiBinder), getUiBinderName(uiBinder));
-    }
+	public void setHistoryName(String historyName) {
+		this.historyName = historyName;
+	}
 
-    protected final void addNotesSlide(UiBinder<Element, ElementSlideNotes> uiBinder) {
-        addPresentable(new ElementSlideNotes(uiBinder), getUiBinderName(uiBinder));
-    }
+	/**
+	 * May be overriden to change the chapter readable name for table of content
+	 * (defaults to history name)
+	 */
+	String getReadableName() {
+		if (readableName != null) {
+			return readableName;
+		} else {
+			return getHistoryName();
+		}
+	}
 
-    protected final void addWidgetNotesSlide(UiBinder<Widget, WidgetSlideNotes> uiBinder) {
-        addPresentable(new WidgetSlideNotes(uiBinder), getUiBinderName(uiBinder));
-    }
+	public void setReadableName(String readableName) {
+		this.readableName = readableName;
+	}
 
-    protected final void addVisibleNotesSlide(UiBinder<Widget, VisibleSlideNotes> uiBinder) {
-        addPresentable(new VisibleSlideNotes(uiBinder), getUiBinderName(uiBinder));
-    }
+	/**
+	 * Returns the slide index.
+	 */
+	final int getSlideIndex(String slideName) {
+		return checkIndex(slideNames.indexOf(slideName));
+	}
 
-    protected final void addWidgetSlide(UiBinder<Widget, WidgetSlide> uiBinder) {
-        addPresentable(new WidgetSlide(uiBinder), getUiBinderName(uiBinder));
-    }
+	final String getSlideName(int slideIndex) {
+		return slideNames.get(checkIndex(slideIndex));
+	}
 
-    protected final void addVisibleSlide(UiBinder<Widget, VisibleSlide> uiBinder) {
-        addPresentable(new VisibleSlide(uiBinder), getUiBinderName(uiBinder));
-    }
-
-    protected final void addPresentable(Presentable presentable) {
-        addPresentable(presentable, ClassHelper.getSimpleName(presentable.getClass()));
-    }
-    
-    protected final void addTableOfContent() {
-        Presentable tableOfContent = tableOfContentFactory.buildTableOfContent();
-        addPresentable(tableOfContent, tableOfContent.toString());
-    }
-
-    protected final void addPresentable(Presentable presentable, String slideName) {
-        slides.add(presentable);
-        String realSlideName;
-        slideName = slideName.replace("_", "");
-
-        if (slideNames.contains(slideName)) {
-            int i = 1;
-            do {
-                i++;
-                realSlideName = slideName + i;
-            } while (slideNames.contains(realSlideName));
-        } else {
-            realSlideName = slideName;
-        }
-        slideNames.add(realSlideName);
-    }
-
-    /**
-     * May be overriden if you want to change the chapter history name (defaults to chapter class name)
-     */
-    public String getHistoryName() {
-        return ClassHelper.getSimpleName(getClass());
-    }
-    
-    /**
-     * May be overriden to change the chapter readable name (defaults to history name)
-     */
-    public String getReadableName() {
-        return getHistoryName();
-    }
-    
-    /**
-     * Returns the slide index. The
-     */
-    public final int getSlideIndex(String slideName) {
-        ensureSlides();
-        return doCheckIndex(slideNames.indexOf(slideName));
-    }
-
-    public final String getSlideName(int slideIndex) {
-        ensureSlides();
-        return slideNames.get(doCheckIndex(slideIndex));
-    }
-
-    public void setSlideMapFactory(TableOfContentFactory slideMapFactory) {
-        this.tableOfContentFactory = slideMapFactory;
-    }
+	public void setSlideDefinitions(UiBinder<Slides, Void> slideDefinitions) {
+		this.slideDefinitions = slideDefinitions;
+	}
 
 }

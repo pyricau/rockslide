@@ -18,57 +18,38 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder
     xmlns:ui='urn:ui:com.google.gwt.uibinder'
-    xmlns:g='urn:import:com.google.gwt.user.client.ui'
     xmlns:rs='urn:import:info.piwai.rockslide.client.ui'
-    xmlns:sh='urn:import:info.piwai.rockslide.sh.client.ui'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'
+    xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
 
-  <ui:image field="myImage" src="myImage.png" />
-  
-  <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
-  <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
-
+  <ui:image field="github" src="img/github_logo.png" />
+    
   <ui:style>
-	@sprite .myImage {
-		gwt-image: 'myImage';
+	@sprite .github {
+		gwt-image: 'github';
+		padding-left: 64px; 
+		padding-bottom: 18px;
 	}
   </ui:style>
 
   <rs:Slides>
   
-    <rs:Slide>
+    <md:MDSlide intro="true"><pre>
+## Getting Started
+Create your first Rockslide presentation
+    </pre></md:MDSlide>
+
+    <md:MDSlide hid="DIY"><pre>
+# Getting started in one slide
+## Rockslide is a [young](#History) project...
+ * Fork Rockslide on <span class="{style.github}" />[Github](https://github.com/pyricau/rockslide)
+ * Import *rockslide-parent* and its subprojects in your IDE
+ * Enable **GWT** on *documentation*
+ * Read the source &amp; hack around
+    </pre></md:MDSlide>
     
-      <notes>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </notes>    
-      
-      <h2></h2>
-      <p></p>
-      
-    </rs:Slide>
-    
-    <rs:Slide hid="">
-    
-      <notes>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </notes>
-      
-      <h1></h1>
-      <h2></h2>
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-      <sh:Code brush="{java.brush}">
-      </sh:Code>
-      
-    </rs:Slide>
+    <rs:ULTableOfContent />
     
   </rs:Slides>
 

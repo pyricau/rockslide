@@ -13,27 +13,22 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.rockslide.client.shownotes;
+package info.piwai.rockslide.client.widget;
 
-import info.piwai.rockslide.client.slides.Presentable;
-import info.piwai.rockslide.client.slides.VisibleSlide;
-
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.Widget;
 
-public class VisibleSlideNotes extends VisibleSlide implements Presentable {
-
-    @UiField
-    public Element notes;
-
-    public VisibleSlideNotes(UiBinder<?, ?> uiBinder) {
-        super(uiBinder);
-        notes.removeFromParent();
+public class Ribbon extends Widget{
+    
+    interface Binder extends UiBinder<Element, Ribbon> {
+    }
+    
+    private static final Binder binder = GWT.create(Binder.class);
+    
+    public Ribbon() {
+        setElement(binder.createAndBindUi(this));
     }
 
-    @Override
-    public Element getShowNotes() {
-        return notes;
-    }
 }

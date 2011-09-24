@@ -51,11 +51,10 @@ public class Presentation extends Composite {
 
     private final ShowNotesSender showNotesSender;
 
-    public Presentation(ShowNotesSender showNotesSender, HasHeaderWidget hasHeaderWidget) {
+    public Presentation(ShowNotesSender showNotesSender, IsWidget headerWidget) {
         this.showNotesSender = showNotesSender;
         initWidget(uiBinder.createAndBindUi(this));
         
-        IsWidget headerWidget = hasHeaderWidget.getHeaderWidget();
         if (headerWidget != null) {
             header.setWidget(headerWidget);
         }

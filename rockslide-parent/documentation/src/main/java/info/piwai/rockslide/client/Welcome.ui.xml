@@ -27,7 +27,7 @@
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
 
-  <ui:image field="octocat" src="octocat_social.png" />
+  <ui:image field="octocat" src="img/octocat_social.png" />
 
   <ui:style>
     @sprite .octocat {
@@ -91,7 +91,9 @@ Press `←` `→` to navigate
  * Read [more doc](#Manual)
  * Understand [how it works](http://github.com/pyricau/rockslide/wiki)
  <div class="{style.octocat}" >[Fork me](https://github.com/pyricau/rockslide) on GitHub!</div>
-    </pre></md:MDSlide>        
+    </pre></md:MDSlide> 
+    
+    <rs:ULTableOfContent />
     
   </rs:Slides>
 

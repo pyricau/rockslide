@@ -25,7 +25,7 @@
     xmlns:md='urn:import:info.piwai.rockslide.md.client.ui'
 >
 
-  <ui:image field="analytics" src="analytics.png" />
+  <ui:image field="analytics" src="img/analytics.png" />
     
   <ui:with field="java" type="info.piwai.rockslide.sh.java.client.JavaSH"/>
   <ui:with field="xml" type="info.piwai.rockslide.sh.xml.client.XmlSH"/>
@@ -134,6 +134,8 @@ What's inside the beast
  * Will **you** contribute new [features](https://github.com/pyricau/rockslide/issues)?
 ## Rockslide needs you!
     </pre></md:MDSlide>
+    
+    <rs:ULTableOfContent />
     
   </rs:Slides>
 

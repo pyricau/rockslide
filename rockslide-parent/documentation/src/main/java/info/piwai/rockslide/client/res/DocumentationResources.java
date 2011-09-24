@@ -13,23 +13,22 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package info.piwai.rockslide.client.history;
-
-import info.piwai.rockslide.client.slides.Chapter;
-import info.piwai.rockslide.client.ui.Slides;
+package info.piwai.rockslide.client.res;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.CssResource;
+import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.resources.client.CssResource.NotStrict;
 
-public class History extends Chapter {
+public interface DocumentationResources extends ClientBundle {
     
-    interface Binder extends UiBinder<Slides, Void> {
-        Binder binder = GWT.create(Binder.class);
-    }
+    public static final DocumentationResources instance = GWT.create(DocumentationResources.class);
+    
+    @Source("../img/headerLogo.png")
+    ImageResource headerLogo();
+    
+    @NotStrict
+    CssResource documentation();
 
-    @Override
-    protected void buildSlides() {
-        addMultiSlide(Binder.binder);
-        addTableOfContent();
-    }
 }

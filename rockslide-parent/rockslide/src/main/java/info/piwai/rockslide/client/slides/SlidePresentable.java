@@ -19,6 +19,6 @@ public interface SlidePresentable extends Presentable {
     
     String getHistoryName();
     
-    void transform();
+    void init(TableOfContent tableOfContent);
 
 }
